@@ -1,0 +1,12 @@
+#### Learn from the following generating examples.
+Query Result: count(*): 0
+Dialect explanation: The query returns a result set with 1 column [count(*)] and 0 row, filtered by [stadium id] equal to the ones with the maximum [stadium capacity]. The result, stadium id equal to the ones with the maximum stadium capacity, has no concert, so the number of concert is 0.
+#### Polished natural language explanation: The query returns an empty-result set, which is filtered by the stadium id with the maximum capacity. In this specific result, since the stadium id with the maximum capacity does not hold any concerts, the number of concert is 0.
+
+Query Result: pets.weight: 9.3
+Dialect explanation: The query returns a result set with 1 column [pets.weight (float)] and 1 row, sorted in ascending order of [pet age ] with a limit 1 (the minimum ) returned. The result, pets, weight 9.3, pet age is 1 that is the minimum pet age.
+#### Polished natural language explanation: The query output is a result set with one column, "pets.weight (float)", and one single row, sorted as the minimum age record returned. Here, the pet weight is 9.3, its age is 1, which is the minimum one.
+
+Query Result: max(pets.weight): 13.4, pets.pettype: dog
+Dialect explanation: The query returns a result set with 2 columns [max(pets.weight), pets.pettype (str)] and 2 rows. Among them, the result, for example, for pettype dog, there are 2 pets, weight is 9.3, 13.4 the maximum weight is 13.40.
+#### Polished natural language explanation: The query returns a result set with 2 columns, "max(pets.weight)" and "pets.pettype (str)", and 2 rows. Among them, there are 2 pet dogs, their weight are 9.3, 13.4; so the maximum weight is 13.40.
