@@ -1,7 +1,7 @@
 # <span style="font-size:0.8em;">C</span>losing the Feedback Loop: Improving Natural Language to SQL Translation Using Natural Language Explanations
 > Improve NL2SQL with Natural Language Explanations as Self-provided Feeback
 > 
-The official repository contains the code and pre-trained models for our paper [Closing the Feedback Loop: Improving Natural Language to SQL Translation Using Natural Language Explanations](https://arxiv.org/) (Paper coming soon😊).
+The official repository contains the code and pre-trained models for our paper [Closing the Feedback Loop: Improving Natural Language to SQL Translation Using Natural Language Explanations](https://arxiv.org/) (The paper will be public after acceptance😊).
 
 <p align="center">
    <a href="https://github.com/kaimary/CycleSQL/blob/main/LICENSE">
