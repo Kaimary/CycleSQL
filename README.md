@@ -1,7 +1,7 @@
-# <span style="font-size:0.8em;">C</span>losing the Feedback Loop: Improving Natural Language to SQL Translation Using Natural Language Explanations
+# <span style="font-size:0.8em;">G</span>rounding Natural Language to SQL Translation with Data-Based Self-Explanations
 > Improve NL2SQL with Natural Language Explanations as Self-provided Feeback
 > 
-The official repository contains the code and pre-trained models for our paper [Closing the Feedback Loop: Improving Natural Language to SQL Translation Using Natural Language Explanations](https://arxiv.org/) (The paper will be public after acceptance😊).
+The official repository contains the code and pre-trained models for our paper [Grounding Natural Language to SQL Translation with Data-Based Self-Explanations](https://arxiv.org/) (The paper will be public after acceptance😊).
 
 <p align="center">
    <a href="https://github.com/kaimary/CycleSQL/blob/main/LICENSE">
@@ -23,11 +23,11 @@ The official repository contains the code and pre-trained models for our paper [
 
 This code implements:
 
-* A unified iterative framework built upon <strong>self-provided feedback</strong> to enhance the translation accuracy of existing end-to-end models.
+* A plug-and-play iterative framework built upon <strong>self-provided feedback</strong> to enhance the translation accuracy of existing end-to-end models.
 
 ### 🚀 About CycleSQL
-> **TL;DR:** We introduce CycleSQL --  a unified framework that enables flexible integration into existing end-to-end NL2SQL models.
-> Inspired by the *feedback mechanisms* used in modern recommendation systems and *iterative refinement* methods introduced in LLMs, CycleSQL introduces NL explanations of query
+> **TL;DR:** We introduce CycleSQL --  a plug-and-play framework that enables flexible integration into existing end-to-end NL2SQL models.
+> Inspired by the *feedback mechanisms* used in modern recommendation systems and *iterative refinement* methods introduced in LLMs, CycleSQL introduces data-grounded NL explanations of query
 results as a form of internal feedback to create a self-contained feedback loop within the end-to-end translation process, facilitating iterative self-evaluation of translation correctness.
 
 The objective of NL2SQL translation is to convert a natural language query into an SQL query. 
@@ -36,7 +36,7 @@ While significant advancements in enhancing overall translation accuracy, curren
 
 To tackle the problem, Cyclesql introduces natural language explanations of query results as self-provided feedback and uses the feedback to validate the correctness of the translation iteratively, hence improving the overall translation accuracy. 
 
-This is the approach taken by the CycleSQL method.
+This is the approach used in the CycleSQL method.
 
 ### ❓ How it works
 
