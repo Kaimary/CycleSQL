@@ -1,7 +1,7 @@
 # <span style="font-size:0.8em;">G</span>rounding Natural Language to SQL Translation with Data-Based Self-Explanations
 > Improve NL2SQL with Natural Language Explanations as Self-provided Feeback
 > 
-The official repository contains the code and pre-trained models for our paper [Grounding Natural Language to SQL Translation with Data-Based Self-Explanations](https://arxiv.org/pdf/2411.02948) (The paper will be public after acceptance😊).
+The official repository contains the code and pre-trained models for our paper [Grounding Natural Language to SQL Translation with Data-Based Self-Explanations](https://arxiv.org/pdf/2411.02948).
 
 <p align="center">
    <a href="https://github.com/kaimary/CycleSQL/blob/main/LICENSE">
