@@ -79,6 +79,20 @@ pip install -r requirements.txt
 │   └── train.json
 ```
 
+### 📚 Code Structure
+
+- Here is an overview of the code structure:
+
+```shell
+|-- src 
+    |-- annotator 
+    |   |-- annotate.py # add semantics annotations over provenance information
+    |-- translator 
+    |   |-- xql2nl.py # translate provenace into natural language
+    |-- explainer.py # asemble all parts and build up CycleSQL pipeline
+    |-- util.py # some utility functions
+    |-- word_dict.py # word dictionary for sql2nl translation
+```
 
 ## 🏋️‍♀️ Training
 
@@ -93,7 +107,7 @@ $ python scripts/run_classification.py --model_name_or_path t5-large --shuffle_t
 
 The natural language inference model checkpoint will be uploaded in the following link:
 
-Model  | Download Model
+Model  | Download Link
 ----|----
 `nli-classifier`  | [nli-classifier.tar.gz](https://drive.google.com/file/d/1Efe3zsh9HaxX3FVhu7SvwynLFs6KJaLp/view?usp=sharing)
 
@@ -106,10 +120,6 @@ You can run it with:
 $ bash run_infer.sh <dataset_name> <model_name> <test_file_path> <model_raw_beam_output_file_path> <table_path> <db_dir> <test_suite_db_dir>
 ```
 
-Here is a running example for CycleSQL with the RESDSQL model on the Spider Dev dataset:
-```
-$ bash run_infer.sh spider_dev resdsql data/spider/dev.json beam_outputs/raw/spider/resdsql.dev.beam8.txt data/spider/tables.json data/spider/database data/spider/ts_database
-```
 The evaluation script will create the directory `outputs` in the current directory and generate the following result outcomes:
 ```shell
 |-- <dataset_name>
