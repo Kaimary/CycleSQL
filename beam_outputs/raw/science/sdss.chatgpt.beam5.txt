@@ -1,0 +1,500 @@
+SELECT DISTINCT photoobj.objid, photo_type.name FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'star';
+SELECT Please see the corresponding SQL statement below for the given question:
+SELECT Since the question is about identifying photometrically observed stars, we will need to join multiple tables and filter based on certain conditions. Here's the SQL query for this question:
+SELECT value FROM photo_type WHERE description = 'photometrically observed star';
+SELECT value FROM photo_type WHERE description = 'photometrically observed star';
+SELECT photoobj.*  FROM photo_type  JOIN photoobj ON photoobj.type = photo_type.value  WHERE photo_type.name = 'star'
+SELECT objid, ra, dec, clean, flags, rowc, colc, cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  WHERE T2.name = 'STAR';
+SELECT objid, ra, dec FROM photoobj WHERE type = 'star';
+SELECT photoobj.*  FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star'
+SELECT p.objid, p.ra, p.dec, p.u, p.g, p.r, p.i, p.z FROM photoobj p JOIN photo_type pt ON p.type = pt.value WHERE pt.name = 'STAR'
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON photo_type.value = neighbors.neighbortype JOIN specobj ON specobj.bestobjid = photoobj.objid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid WHERE photo_type.value = 'star';
+SELECT objid, ra, dec FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid JOIN specobj AS T3 ON T2.objid = T3.bestobjid WHERE T1.type = (SELECT value FROM photo_type WHERE name = 'STAR') AND T2.neighbortype = (SELECT value FROM photo_type WHERE name = 'STAR') AND T2.neighbormode = 'photometric' AND T3
+SELECT objid, ra, dec FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid JOIN photo_type AS T3 ON T1.type = T3.value JOIN specobj AS T4 ON T4.bestobjid = T1.objid JOIN spplines AS T5 ON T5.specobjid = T4.specobjid JOIN galspecline AS T6 ON T6.specobjid = T4
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value AND photo_type.name = 'STAR' JOIN neighbors ON neighbors.objid = photoobj.objid JOIN specobj ON specobj.bestobjid = photoobj.objid
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN specobj ON photoobj.objid = specobj.bestobjid;
+SELECT objid, ra, dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN specobj ON specobj.bestobjid = photoobj.objid WHERE photo_type.value = 'star';
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star' AND photoobj.objid IN (     SELECT specobj.bestobjid     FROM specobj )
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN specobj ON specobj.bestobjid = photoobj.objid;
+SELECT objid  FROM photoobj  WHERE type = 'GALAXY';
+SELECT photoobj.objid, photoobj.ra, photoobj.dec, photoobj.type FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy';
+SELECT In order to find the photometrically observed galaxy, we need to select the necessary columns and tables, join them based on the foreign key relationships, and filter the data based on the required conditions. Here is the SQL query that achieves this:
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Galaxy';
+SELECT  SELECT DISTINCT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'GALAXY';
+SELECT galspecline.specobjid FROM galspecline JOIN specobj ON galspecline.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'photometric' or photo_type.name = 'observable';
+SELECT DISTINCT s.specobjid FROM spplines AS s JOIN galspecline AS g ON s.specobjid = g.specobjid JOIN specobj AS so ON s.specobjid = so.specobjid JOIN photo_type AS pt ON s.type = pt.value WHERE pt.name = 'PHOTOMETRIC'
+SELECT specobj.bestobjid FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'photometric'
+SELECT DISTINCT specobjid  FROM galspecline  WHERE specobjid IN (     SELECT specobjid      FROM photoobj      WHERE type IN (         SELECT value          FROM photo_type          WHERE name = 'photometric'     ) );
+SELECT DISTINCT galspecline.specobjid FROM galspecline JOIN specobj ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type AND photo_type.name = 'photometrically observable
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value JOIN neighbors ON photo_type.value = neighbors.neighbortype JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN spplines ON spplines.specobjid = specobj.specobjid;
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value JOIN neighbors ON photo_type.value = neighbors.neighbortype JOIN specobj ON specobj.bestobjid = photoobj.objid
+SELECT photoobj.objid, photoobj.ra, photoobj.dec  FROM photoobj  JOIN photo_type ON photo_type.value = photoobj.type  JOIN neighbors ON photo_type.value = neighbors.neighbortype  JOIN specobj ON specobj.bestobjid = photoobj.objid  JOIN spplines ON spplines.specobjid = specobj.specobjid  JOIN galspecline ON galspecline.specobjid = specobj.specobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value JOIN neighbors ON photo_type.value = neighbors.neighbortype JOIN specobj ON photoobj.objid = specobj.bestobjid JOIN galspecline ON specobj.specobjid = galspecline.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN specobj ON specobj.bestobjid = photoobj.objid
+SELECT p.objid, p.ra, p.dec FROM photoobj AS p JOIN neighbors AS n ON p.objid = n.objid JOIN specobj AS s ON s.bestobjid = p.objid JOIN galspecline AS g ON g.specobjid = s.specobjid;
+SELECT objid, ra, dec  FROM photoobj  WHERE type = 'Galaxy' AND objid IN      (SELECT bestobjid       FROM specobj);
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON photo_type.value = neighbors.neighbortype JOIN galspecline ON galspecline.specobjid = photoobj.objid JOIN specobj ON specobj.specobjid = galspecline.specobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN specobj ON specobj.bestobjid = photoobj.objid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN galspecline ON neighbors.neighborobjid = galspecline.specobjid;
+SELECT objid, ra, dec  FROM photoobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec  FROM photoobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec  FROM photoobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'galaxy' AND photoobj.ra BETWEEN 185 AND 186 AND photoobj.dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16 AND type = 'GALAXY';
+SELECT objid, ra, dec  FROM photoobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec  FROM photoobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec  FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star' AND ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec  FROM photoobj  WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT specobj.bestobjid, specobj.ra, specobj.dec, photo_type.name FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE specobj.ra > 185 AND specobj.ra < 186 AND specobj.dec > 15 AND specobj.dec < 16;
+SELECT objid, ra, dec, type FROM specobj AS T1 JOIN photoobj AS T2 ON T1.bestobjid = T2.objid JOIN photo_type AS T3 ON T2.type = T3.value WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT specobjid, ra, dec, photo_type.name  FROM specobj  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, type FROM specobj AS T1 JOIN photoobj AS T2 ON T1.bestobjid = T2.objid JOIN photo_type AS T3 ON T2.type = T3.value WHERE T1.ra > 185 AND T1.ra < 186 AND T1.dec > 15 AND T1.dec < 16;
+SELECT objid, ra, dec, type FROM specobj AS T1 JOIN photoobj AS T2 ON T1.bestobjid = T2.objid JOIN photo_type AS T3 ON T2.type = T3.value WHERE T1.ra > 185 AND T1.ra < 186 AND T1.dec > 15 AND T1.dec < 16;
+SELECT objid, ra, dec, z FROM specobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, z FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT objid, ra, dec, z FROM specobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, z   FROM specobj   WHERE ra > 185 AND ra < 186   AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, z FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16;
+SELECT * FROM specobj AS s  WHERE s.ra > 185 AND s.ra < 186 AND s.dec > 15 AND s.dec < 16;
+SELECT *  FROM specobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, run, rerun, field, mode, type, clean, flags, rowc, colc, cmodelmag_u, cmodelmag_g, cmodelmag_r, ra, dec, b, l, extinction_r, mjd, loadversion, u, g, r, i, z FROM photoobj  JOIN spplines ON photoobj.objid = spplines.specobjid  JOIN specobj ON spplines.specobjid = specobj
+SELECT  SELECT *  FROM specobj  WHERE ra > 185 AND ra < 186  AND dec > 15 AND dec < 16;
+SELECT photoobj.ra, photoobj.dec, photoobj.z, photo_type.description FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photoobj.ra > 185 AND photoobj.ra < 186  AND photoobj.dec > 15 AND photoobj.dec < 16;
+SELECT objid, ra, dec, z FROM specobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, z  FROM specobj  WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, z   FROM specobj   WHERE ra > 185 AND ra < 186   AND dec > 15 AND dec < 16;
+SELECT objid, ra, dec, z FROM specobj WHERE ra >= 185 AND ra < 186 AND dec >= 15 AND dec < 16;
+SELECT specobj.objid, specobj.ra, specobj.dec, specobj.z FROM specobj WHERE specobj.ra BETWEEN 185 AND 186 AND specobj.dec BETWEEN 15 AND 16;
+SELECT objid, cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj WHERE cmodelmag_u - cmodelmag_g < 0.4 AND cmodelmag_g - cmodelmag_r < 0.7 AND cmodelmag_r - cmodelmag_i > 0.4 AND cmodelmag_i - cmodelmag_z > 0.4;
+SELECT DISTINCT photoobj.objid  FROM photoobj  JOIN photo_type ON photo_type.value = photoobj.type  WHERE       (photo_type.name = 'star') AND      (abs(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4) AND      (abs(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7) AND      (abs(photoobj.cmodelmag_r - photoobj.cmodel
+SELECT objid FROM photoobj WHERE (cmodelmag_u - cmodelmag_g) < 0.4  AND (cmodelmag_g - cmodelmag_r) < 0.7  AND (cmodelmag_r - cmodelmag_i) > 0.4  AND (cmodelmag_i - cmodelmag_z) > 0.4;
+SELECT photo_type.name FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE (photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4 AND (photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7 AND (photoobj.cmodelmag_r - photoobj.cmodelmag_i) > 0.4 AND (photoobj.cmodelmag_i - photoobj.cmodelmag
+SELECT photoobj.objid FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE (photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4 AND (photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7 AND (photoobj.cmodelmag_r - photoobj.cmodelmag_i) > 0.4 AND (photoobj.cmodelmag_i - photoobj.c
+SELECT photoobj.objid FROM photoobj WHERE photoobj.u - photoobj.g < 0.4 AND photoobj.g - photoobj.r < 0.7 AND photoobj.r - photoobj.i > 0.4 AND photoobj.i - photoobj.z > 0.4;
+SELECT (SELECT      po.objid,     po.ra,     po.dec FROM      photoobj AS po JOIN      photo_type AS pt ON po.type = pt.value WHERE      pt.name = 'STAR'     AND (po.cmodelmag_u - po.cmodelmag_g) < 0.4     AND (po.cmodelmag_g - po.cmodelmag_r) < 0.7     AND (po.cmodelmag_r - po.cmodel
+SELECT (SELECT p.objid, p.ra, p.dec  FROM photoobj AS p   WHERE (p.cmodelmag_u - p.cmodelmag_g) < 0.4   AND (p.cmodelmag_g - p.cmodelmag_r) < 0.7   AND (p.cmodelmag_r - p.cmodelmag_i) > 0.4   AND (p.cmodelmag_i - p.cmodelmag_z) > 0.4)
+SELECT objid, cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj WHERE  (cmodelmag_u - cmodelmag_g) < 0.4 AND (cmodelmag_g - cmodelmag_r) < 0.7 AND (cmodelmag_r - cmodelmag_i) > 0.4 AND (cmodelmag_i - cmodelmag_z) > 0.4
+SELECT (`photoobj`.`objid`, `u`, `g`, `r`, `i`, `z`) FROM `photoobj` WHERE (`u` - `g` < 0.4) AND (`g` - `r` < 0.7) AND (`r` - `i` > 0.4) AND (`i` - `z` > 0.4);
+SELECT (SELECT DISTINCT photoobj.objid FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE neighbors.distance < 0.05 AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4 AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7 AND ABS(photoobj.cmodelmag_r - photoobj.c
+SELECT objid  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T3.value = T1.type  WHERE T2.distance < 0.05  AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND ABS(T1.cmodelmag_g - T1.cmodelmag_r) < 0.7  AND ABS(T1.c
+SELECT DISTINCT photoobj.objid FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON neighbors.neighbortype = photo_type.value WHERE neighbors.distance < 0.05 AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4 AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7 AND ABS(photoobj.cmodelmag_r - photoobj
+SELECT FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T1.type = T3.value  JOIN photo_type AS T4 ON T2.neighbortype = T4.value  WHERE T2.distance < 0.05  AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND ABS(T1.cmodelmag_g - T1.c
+SELECT This is a complex query that involves multiple tables and conditions. Here is the SQLite SQL query based on the provided schema and question requirements:
+SELECT DISTINCT p1.objid  FROM neighbors AS n  JOIN photoobj AS p1 ON n.objid = p1.objid  JOIN photoobj AS p2 ON n.neighborobjid = p2.objid  WHERE n.distance < 0.05  AND (p1.u - p1.g) < 0.4  AND (p1.g - p1.r) < 0.7  AND (p1.r - p1.i) > 0
+SELECT g.specobjid FROM neighbors AS n JOIN photoobj AS p ON n.neighborobjid = p.objid JOIN spplines AS s ON s.specobjid = p.specobjid JOIN galspecline AS g ON g.specobjid = p.specobjid JOIN photo_type AS ph ON ph.value = p.type WHERE n.distance < 0.05 AND (p.g - p.u < 0.4) AND (p.r
+SELECT objid, ra, dec, type FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE neighbors.distance < 0.05 AND (photoobj.u - photoobj.g) < 0.4 AND (photoobj.g - photoobj.r) < 0.7 AND (photoobj.r - photoobj.i) > 0.4 AND (photoobj.i -
+SELECT photoobj.objid FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE neighbors.distance < 0.05 AND (photoobj.g - photoobj.u) < 0.4 AND (photoobj.r - photoobj.g) < 0.7 AND (photoobj.i - photoobj.r) > 0.4 AND (photoobj.z - photoobj.i)
+SELECT Since this question involves multiple tables and conditions, the SQL query needs to handle joins and the specified constraints. Here is the SQLite SQL query based on the provided information:
+SELECT COUNT(galspecline.specobjid)  FROM galspecline  JOIN spplines ON galspecline.specobjid = spplines.specobjid  JOIN specobj ON galspecline.specobjid = specobj.specobjid  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photoobj.r < 17 AND photoobj.extinction_r > 0.2;
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  JOIN neighbors AS T3 ON T1.objid = T3.objid  JOIN galspecline AS T4 ON T3.neighborobjid = T4.specobjid  WHERE T1.r < 17 AND T1.extinction_r > 0.2 AND T2.value = 'GALAXY';
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  JOIN photo_type ON photo_type.value = photoobj.type  JOIN neighbors ON photo_type.value = neighbors.neighbortype  WHERE photoobj.type = 'GALAXY'  AND photoobj.r < 17  AND photoobj.extinction_r > 0.2;
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photoobj.type = 'GALAXY'  AND photoobj.r < 17  AND photoobj.extinction_r > 0.2;
+SELECT COUNT(DISTINCT galspecline.specobjid) FROM galspecline JOIN specobj ON galspecline.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'GALAXY' AND photoobj.r < 17 AND photoobj.extinction_r > 0.2;
+SELECT COUNT(*)  FROM photoobj  WHERE type = 'GALAXY' AND r < 17 AND extinction_r > 0.2;
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN specobj AS T2 ON T1.objid = T2.bestobjid  JOIN photo_type AS T3 ON T1.type = T3.value  WHERE T3.name = 'GALAXY'  AND T1.cmodelmag_r < 17  AND T1.extinction_r > 0.2;
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'GALAXY'  AND photoobj.extinction_r > 0.2  AND photoobj.r < 17;
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  WHERE T2.name = 'GALAXY'  AND T1.extinction_r > 0.2  AND T1.r < 17;
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  WHERE T2.name = 'GALAXY'  AND T1.r < 17  AND T1.extinction_r > 0.2;
+SELECT objid, magnitude_g FROM photoobj WHERE type = 'GALAXY'  AND cmodelmag_g > 22  AND (cmodelmag_u - cmodelmag_g) BETWEEN -0.27 AND 0.71  AND (cmodelmag_g - cmodelmag_r) BETWEEN -0.24 AND 0.35  AND (cmodelmag_r - cmodelmag_i) BETWEEN -0.27 AND 0.57  AND (
+SELECT photoobj.objid, photoobj.g FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photoobj.type = 'GALAXY'  AND photoobj.g < 22 AND (photoobj.u - photoobj.g) BETWEEN -0.27 AND 0.71 AND (photoobj.g - photoobj.r) BETWEEN -0.24 AND 0.35 AND (photoobj.r - photoobj.i) BETWEEN -0
+SELECT objid, cmodelmag_g FROM photoobj WHERE type = 'GALAXY' AND cmodelmag_g > 22 AND (cmodelmag_u - cmodelmag_g) BETWEEN -0.27 AND 0.71 AND (cmodelmag_g - cmodelmag_r) BETWEEN -0.24 AND 0.35 AND (cmodelmag_r - cmodelmag_i) BETWEEN -0.27 AND 0.57 AND
+SELECT objid, g FROM photoobj WHERE type = 'GALAXY' AND g < 22 AND (u - g) BETWEEN -0.27 AND 0.71 AND (g - r) BETWEEN -0.24 AND 0.35 AND (r - i) BETWEEN -0.27 AND 0.57 AND (i - z) BETWEEN -0.35 AND 0.7 ORDER BY g DESC;
+SELECT objid, g FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'GALAXY' AND g < 22 AND (cmodelmag_u - cmodelmag_g) BETWEEN -0.27 AND 0.71 AND (cmodelmag_g - cmodelmag_r) BETWEEN -0.24 AND 0.35 AND (cmodelmag_r - cmodelmag_i) BETWEEN -0.
+SELECT p.objid, p.ra, p.dec, p.z, p.ra, p.dec, p.u, p.g, p.r, p.i, p.z  FROM photoobj AS p  JOIN photo_type AS pt ON p.type = pt.value  WHERE p.g < 22 AND p.u - p.g >= -0.27 AND p.u - p.g < 0.71 AND p.g - p.r >= -0.24 AND p.g - p.r < 
+SELECT objid, ra, dec, g, r, i, z FROM photoobj WHERE g < 22 AND u - g >= -0.27 AND u - g < 0.71 AND g - r >= -0.24 AND g - r < 0.35 AND r - i >= -0.27 AND r - i < 0.57 AND i - z >= -0.35 AND i - z < 0.7
+SELECT objid FROM photoobj WHERE cmodelmag_g > 22 AND cmodelmag_u - cmodelmag_g >= -0.27 AND cmodelmag_u - cmodelmag_g < 0.71 AND  cmodelmag_g - cmodelmag_r >= -0.24 AND cmodelmag_g - cmodelmag_r < 0.35 AND  cmodelmag_r - cmodelmag_i >= -0.27 AND cmodelmag_r -
+SELECT objid, g, u, r, i, z FROM photoobj WHERE g > 22 AND  u - g >= -0.27 AND u - g < 0.71 AND  g - r >= -0.24 AND g - r < 0.35 AND  r - i >= -0.27 AND r - i < 0.57 AND  i - z >= -0.35 AND i - z < 0.7 ORDER
+SELECT objid, g, r, u, z FROM photoobj WHERE g > 22 AND (u - g) >= -0.27 AND (u - g) < 0.71 AND (g - r) >= -0.24 AND (g - r) < 0.35 AND (r - i) >= -0.27 AND (r - i) < 0.57 AND (i - z) >= -0.
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photoobj.i < 0 AND photoobj.i > 19  AND (photoobj.g - photoobj.r) > 2.26  AND (photoobj.i - photoobj.z) < 0.25  AND ((photoobj.u - photoobj.g) > 2.0 OR photoobj.u < 22.3
+SELECT photoobj.objid, photoobj.ra, photoobj.dec  FROM photoobj  WHERE photoobj.i < 19 AND photoobj.i > 0  AND (photoobj.g - photoobj.r) > 2.26  AND (photoobj.i - photoobj.z) < 0.25  AND ((photoobj.u - photoobj.g) > 2.0 OR photoobj.u < 22.3);
+SELECT objid, ra, dec FROM photoobj WHERE    i < 0 AND i > 19    AND (g - r) > 2.26    AND (i - z) < 0.25    AND (u - g) > 2.0 OR u < 22.3;
+SELECT objid, ra, dec FROM photoobj WHERE i < 19 AND i > 0  AND (g - r) > 2.26  AND (i - z) < 0.25  AND (u - g) > 2.0 OR u < 22.3;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.i < 0 AND photoobj.i > 19 AND (photoobj.g - photoobj.r) > 2.26 AND (photoobj.i - photoobj.z) < 0.25 AND ((photoobj.u - photoobj.g) > 2.0 OR photoobj.u < 22.3
+SELECT photoobj.objid FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'star' AND photoobj.i < 19 AND photoobj.i > 0 AND (photoobj.g - photoobj.r) > 2.26 AND (photoobj.i - photoobj.z) < 0.25 AND ((photoobj.u - photoobj.g) > 2.0 OR photoobj.u < 22.
+SELECT photoobj.objid  FROM photoobj  WHERE  photoobj.i < 19 AND  photoobj.i > 0 AND  (photoobj.g - photoobj.r) > 2.26 AND  (photoobj.i - photoobj.z) < 0.25 AND  ((photoobj.u - photoobj.g) > 2.0 OR photoobj.u < 22.3)
+SELECT objid FROM photoobj WHERE      (i < 19 AND i > 0)      AND (g - r > 2.26)      AND (i - z < 0.25)      AND (u - g > 2.0 OR u < 22.3);
+SELECT photoobj.* FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE     photoobj.i < 19 AND photoobj.i > 0     AND (photoobj.g - photoobj.r) > 2.26     AND (photoobj.i - photoobj.z) < 0.25     AND ((photoobj.u - photoobj.g) > 2.0 OR photoobj.u < 22.3);
+SELECT objid, u, g, r, i, z FROM photoobj AS T1 JOIN photo_type AS T2 ON T1.type = T2.value WHERE i < 19 AND i > 0 AND (g - r) > 2.26 AND (i - z) < 0.25 AND ((u - g) > 2.0 OR u < 22.3);
+SELECT po.objid, po.ra, po.dec  FROM photoobj AS po JOIN photo_type AS ptype ON po.type = ptype.value WHERE ptype.name = 'GALAXY' AND po.ra BETWEEN 140.9 AND 141.1 AND po.cmodelmag_g < 18.0 AND (po.cmodelmag_u - po.cmodelmag_g) > 2.2;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photoobj.ra BETWEEN 140.9 AND 141.1  AND photoobj.cmodelmag_g < 18.0  AND (photoobj.cmodelmag_u - photoobj.cmodelmag_g) > 2.2;
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND (u - g) > 2.2;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy' AND photoobj.ra BETWEEN 140.9 AND 141.1 AND photoobj.g < 18.0 AND (photoobj.u - photoobj.g) > 2.2;
+SELECT objid, ra, dec  FROM photo_type AS pt  JOIN photoobj AS po ON pt.value = po.type  WHERE pt.name = 'Galaxy'  AND ra BETWEEN 140.9 AND 141.1  AND g < 18.0  AND (u - g) > 2.2;
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy'  AND ra >= 140.9 AND ra <= 141.1  AND g < 18.0  AND (u - g) > 2.2;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Galaxy' AND photoobj.ra >= 140.9 AND photoobj.ra <= 141.1 AND photoobj.g < 18.0 AND (photoobj.u - photoobj.g) > 2.2;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy' AND photoobj.ra >= 140.9 AND photoobj.ra <= 141.1 AND photoobj.cmodelmag_g < 18.0 AND (photoobj.cmodelmag_u - photoobj.cmodelmag_g) > 2.2;
+SELECT objid, ra, dec FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid JOIN photo_type AS T3 ON T1.type = T3.value WHERE T3.name = 'Galaxy'  AND T1.ra >= 140.9 AND T1.ra <= 141.1  AND T1.cmodelmag_g < 18.0  AND (T1.cmodelmag_u - T1.cmodel
+SELECT This is the SQL query corresponding to the question you provided:
+SELECT objid, ra, dec  FROM specobj AS T1  JOIN spplines AS T2 ON T1.specobjid = T2.specobjid  JOIN photo_type AS T3 ON T3.value = T1.class  JOIN photoobj AS T4 ON T1.bestobjid = T4.objid  WHERE T3.name = 'GALAXY' AND T4.g >= 17 AND T4.g < 18 AND T1.z < 0.
+SELECT objid, ra, dec FROM specobj AS s JOIN photoobj AS p ON s.bestobjid = p.objid WHERE p.cmodelmag_g BETWEEN 17 AND 18 AND s.z < 0.05;
+SELECT objid, ra, dec  FROM specobj  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.value = 'g'  AND photoobj.cmodelmag_g BETWEEN 17 AND 18  AND specobj.z < 0.05;
+SELECT objid, ra, dec  FROM specobj AS T1  JOIN photoobj AS T2 ON T1.bestobjid = T2.objid  JOIN photo_type AS T3 ON T2.type = T3.value  WHERE T3.name = 'g'  AND T2.g BETWEEN 17 AND 18  AND T1.z < 0.05;
+SELECT objid, ra, dec FROM specobj AS s JOIN photoobj AS p ON s.bestobjid = p.objid JOIN photo_type AS pt ON pt.value = p.type WHERE pt.name = 'g' AND p.cmodelmag_g BETWEEN 17 AND 18 AND s.z < 0.05;
+SELECT photoobj.objid, specobj.ra, specobj.dec FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid WHERE photoobj.cmodelmag_g > 17 AND photoobj.cmodelmag_g < 18.0 AND specobj.z < 0.05;
+SELECT objid, ra, dec FROM specobj AS s JOIN photoobj AS p ON s.bestobjid = p.objid WHERE p.cmodelmag_g > 17 AND p.cmodelmag_g < 18 AND s.z < 0.05;
+SELECT photoobj.objid, specobj.ra, specobj.dec  FROM photoobj  JOIN specobj ON specobj.bestobjid = photoobj.objid  WHERE photoobj.cmodelmag_g > 17 AND photoobj.cmodelmag_g < 18 AND specobj.z < 0.05;
+SELECT objid, ra, dec  FROM specobj AS T1  JOIN photo_type AS T2 ON T1.bestobjid = T2.value  JOIN photoobj AS T3 ON T1.bestobjid = T3.objid  WHERE T3.cmodelmag_g > 17 AND T3.cmodelmag_g < 18 AND T1.z < 0.05;
+SELECT objid, ra, dec FROM specobj AS T1 JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid JOIN photoobj AS T3 ON T1.bestobjid = T3.objid JOIN photo_type AS T4 ON T3.type = T4.value WHERE T3.cmodelmag_g > 17 AND T3.cmodelmag_g < 18 AND T1.z < 0.05;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'star' AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.5;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star' AND abs(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.5;
+SELECT objid, ra, dec FROM photoobj WHERE cmodelmag_u - cmodelmag_g < 0.5 AND type = (SELECT value FROM photo_type WHERE name = 'STAR' AND description = 'photometric')
+SELECT DISTINCT photoobj.objid,photoobj.ra,photoobj.dec FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'STAR' AND abs(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.5;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star' AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.5;
+SELECT objid, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star' AND (u - g) < 0.5;
+SELECT To generate the SQL statement for the given question, we can follow the steps outlined in the previous examples:
+SELECT objid, ra, dec FROM photoobj WHERE (u - g) < 0.5;
+SELECT objid, ra, dec  FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  WHERE T2.name = 'Star'  AND (T1.u - T1.g) < 0.5
+SELECT objid, ra, dec FROM photoobj AS T1 JOIN photo_type AS T2 ON T1.type = T2.value WHERE T2.name = 'Star' AND (T1.g - T1.u) < 0.5;
+SELECT objid, cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z  FROM photoobj  WHERE type = 'Star'  AND ABS(cmodelmag_u - cmodelmag_g) < 0.5;
+SELECT u, g, r, i, z FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star' AND ABS(u - g) < 0.5;
+SELECT DISTINCT p.objid, p.cmodelmag_u, p.cmodelmag_g, p.cmodelmag_r, p.cmodelmag_i, p.cmodelmag_z FROM photoobj AS p JOIN photo_type AS pt ON p.type = pt.value JOIN neighbors AS n ON n.objid = p.objid WHERE pt.name = 'STAR' AND ABS(p.cmodelmag_u - p.cmodelmag_g) < 0.5;
+SELECT mag_u, mag_g, mag_r, mag_i, mag_z FROM    photoobj AS T1 JOIN    photo_type AS T2 ON T1.type = T2.value WHERE   T2.name = 'Star' AND     abs(T1.cmodelmag_u - T1.cmodelmag_g) < 0.5;
+SELECT photoobj.cmodelmag_u, photoobj.cmodelmag_g, photoobj.cmodelmag_r, photoobj.cmodelmag_i, photoobj.cmodelmag_z FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star' AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.5;
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj WHERE cmodelmag_u - cmodelmag_g < 0.5;
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj WHERE cmodelmag_u - cmodelmag_g < 0.5;
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj WHERE cmodelmag_u - cmodelmag_g < 0.5;
+SELECT objid, cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj WHERE cmodelmag_u - cmodelmag_g < 0.5
+SELECT photoobj.cmodelmag_u, photoobj.cmodelmag_g, photoobj.cmodelmag_r, photoobj.cmodelmag_i, photoobj.cmodelmag_z FROM photoobj WHERE (photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.5;
+SELECT objid, ra, dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid WHERE specobj.class = 'GALAXY'  AND photoobj.cmodelmag_g > 17  AND photoobj.cmodelmag_g < 18  AND specobj.z < 0.05;
+SELECT objid, ra, dec  FROM specobj AS s  JOIN photoobj AS p ON s.bestobjid = p.objid  WHERE s.class = 'GALAXY'  AND p.cmodelmag_g > 17  AND p.cmodelmag_g < 18  AND s.z < 0.05;
+SELECT objid, ra, dec FROM photoobj AS T1 JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.cmodelmag_g > 17 AND T1.cmodelmag_g < 18 AND T2.z < 0.05 AND T1.type = 'GALAXY';
+SELECT objid, ra, dec  FROM specobj AS T1  JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'GALAXY'  AND T2.cmodelmag_g > 17  AND T2.cmodelmag_g < 18  AND T1.z < 0.05;
+SELECT objid, ra, dec FROM photoobj AS p JOIN specobj AS s ON s.bestobjid = p.objid JOIN photo_type AS pt ON pt.value = p.type WHERE pt.name = 'GALAXY' AND p.g > 17 AND p.g < 18 AND s.z < 0.05;
+SELECT objid, ra, dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid WHERE class = 'Galaxy' AND cmodelmag_g BETWEEN 17 AND 18 AND z < 0.05;
+SELECT objid, ra, dec FROM specobj AS T1  JOIN photoobj AS T2 ON T1.bestobjid = T2.objid  WHERE T2.cmodelmag_g BETWEEN 17 AND 18  AND T1.z < 0.05;
+SELECT objid, ra, dec FROM galspecline AS gs  JOIN specobj AS so ON gs.specobjid = so.specobjid  JOIN photoobj AS po ON so.bestobjid = po.objid WHERE po.cmodelmag_g BETWEEN 17 AND 18 AND so.z < 0.05;
+SELECT objid, ra, dec FROM specobj AS T1 JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T2.cmodelmag_g BETWEEN 17 AND 18 AND T1.z < 0.05;
+SELECT objid, ra, dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid WHERE photoobj.type = '3' -- Assuming '3' represents the galaxy object type AND photoobj.cmodelmag_g >= 17 AND photoobj.cmodelmag_g < 18 AND specobj.z < 0.05;
+SELECT ``` SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj AS po JOIN specobj AS so ON po.objid = so.bestobjid WHERE photo_type.value = 'GALAXY' AND po.cmodelmag_g BETWEEN 17 AND 18 AND so.z < 0.05; ```
+SELECT u, g, r, i, z  FROM photoobj  JOIN specobj ON photoobj.objid = specobj.bestobjid  WHERE photoobj.type = 'GALAXY'  AND g BETWEEN 17 AND 18  AND z < 0.05;
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj AS T1 JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.cmodelmag_g BETWEEN 17 AND 18 AND T2.z < 0.05;
+SELECT DISTINCT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM specobj AS T1  JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid JOIN photoobj AS T3 ON T1.bestobjid = T3.objid WHERE cmodelmag_g BETWEEN 17 AND 18 AND z < 0.05 AND T3.type = 'GALAX
+SELECT `u`,`g`,`r`,`i`,`z`  FROM photoobj  JOIN photo_type ON photo_type.value = photoobj.type  JOIN specobj ON specobj.bestobjid = photoobj.objid  WHERE photo_type.value = 'GALAXY'  AND photoobj.g BETWEEN 17 AND 18  AND specobj.z < 0.05;
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj AS po JOIN specobj AS so ON so.bestobjid = po.objid WHERE po.type = 'galaxy' AND po.cmodelmag_g < 17 AND po.cmodelmag_g > 18 AND so.z < 0.05;
+SELECT **SQLite SQL Query:**
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj JOIN specobj ON photoobj.objid = specobj.bestobjid WHERE cmodelmag_g > 17 AND cmodelmag_g < 18 AND z < 0.05;
+SELECT objid, cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid WHERE cmodelmag_g > 17 AND cmodelmag_g < 18 AND z < 0.05;
+SELECT cmodelmag_u, cmodelmag_g, cmodelmag_r, cmodelmag_i, cmodelmag_z FROM photoobj JOIN specobj ON photoobj.objid = specobj.bestobjid WHERE cmodelmag_g > 17 AND cmodelmag_g < 18 AND z < 0.05;
+SELECT objid, neighborobjid, distance, type FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid;
+SELECT objid, neighborobjid, distance, type FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid;
+SELECT objid, neighborobjid, distance, type FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid;
+SELECT objid, neighborobjid, distance, type FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid;
+SELECT objid, neighborobjid, distance, type FROM neighbors;
+SELECT neighbors.objid, neighbors.neighborobjid, neighbors.distance, neighbors.type FROM neighbors;
+SELECT objid, neighborobjid, distance, neighbortype FROM neighbors
+SELECT objid, neighborobjid, distance, type FROM neighbors;
+SELECT objid, neighborobjid, distance, type  FROM neighbors;
+SELECT objid, neighborobjid, distance, type FROM neighbors
+SELECT DISTINCT photoobj.type  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photo_type.value FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photoobj.type  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photo_type.value FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photo_type.value  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photo_type.value FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photoobj.type FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT  DISTINCT photo_type.name FROM photo_type JOIN photoobj ON photo_type.value = photoobj.type WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photoobj.type FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT DISTINCT photoobj.type FROM photoobj  WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  WHERE T2.name = 'STAR';
+SELECT COUNT(*)  FROM photoobj  WHERE type = 'STAR';
+SELECT COUNT(*)  FROM photoobj  WHERE type = (SELECT value FROM photo_type WHERE name = 'STAR' AND description = 'STAR')
+SELECT COUNT(*)  FROM photo_type AS pt JOIN photoobj AS po ON pt.value = po.type WHERE pt.name = 'STAR';
+SELECT COUNT(*)  FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'STAR'
+SELECT COUNT(*) FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'STAR';
+SELECT COUNT(*)  FROM photoobj  WHERE type = "STAR";
+SELECT COUNT(*)  FROM photoobj  WHERE type = 'STAR';
+SELECT COUNT(*)  FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'STAR' 
+SELECT COUNT(*) FROM photoobj AS T1 JOIN photo_type AS T2 ON T1.type = T2.value WHERE T2.name = 'STAR';
+SELECT DISTINCT photo_type.name  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value;
+SELECT DISTINCT photo_type.value  FROM photo_type
+SELECT DISTINCT photo_type.name FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value;
+SELECT DISTINCT photo_type.name FROM photo_type JOIN photoobj ON photo_type.value = photoobj.type;
+SELECT DISTINCT photoobj.type FROM photoobj;
+SELECT Distinct value FROM photo_type;
+SELECT DISTINCT value FROM photo_type;
+SELECT DISTINCT value FROM photo_type;
+SELECT DISTINCT value FROM photo_type;
+SELECT  DISTINCT value  FROM photo_type;
+SELECT *  FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy'
+SELECT *  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'Galaxy';
+SELECT All columns FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'photometrically observable Galaxy';
+SELECT *  FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Galaxy' ORDER BY photoobj.objid;
+SELECT *  FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Galaxy';
+SELECT * FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy';
+SELECT *  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'Galaxy';
+SELECT * FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy'
+SELECT value, name, description  FROM photo_type  WHERE value = 'Galaxy';
+SELECT *  FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy'
+SELECT objid, ra, dec, value  FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star';
+SELECT objid, ra, dec, value FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star';
+SELECT objid, ra, dec, type  FROM photoobj  WHERE type = 'Star'
+SELECT objid, ra, dec, photoobj.type FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star'
+SELECT objid, ra, dec, type FROM photoobj WHERE type = 'Star';
+SELECT DISTINCT photoobj.ra, photoobj.dec, photo_type.name  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'Star'
+SELECT photoobj.ra, photoobj.dec, photo_type.name FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star';
+SELECT photoobj.ra, photoobj.dec, photoobj.type FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.type = 'Star';
+SELECT photoobj.ra, photoobj.dec, photo_type.name FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star'
+SELECT photoobj.ra, photoobj.dec, photo_type.description FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Star';
+SELECT photoobj.objid, photoobj.type FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE specobj.class = 'GALAXY' AND (photoobj.cmodelmag_u - photoobj.cmodelmag_r) > 2.22 AND (photoobj.cmodelmag_g - photoobj.cmodelmag_i) > 1;
+SELECT photoobj.objid, photoobj.type, galspecline.specobjid FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN galspecline ON galspecline.specobjid = neighbors.neighborobjid JOIN photo_type ON photo_type.value = photoobj.type JOIN specobj ON specobj.specobjid = galspecline.specobjid WHERE specobj.class = 'GALAXY' AND (photoobj.cmodel
+SELECT photoobj.objid, photoobj.specobjid  FROM photoobj  JOIN specobj ON photoobj.objid = specobj.bestobjid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE specobj.class = 'GALAXY'  AND (photoobj.cmodelmag_u - photoobj.cmodelmag_r) > 2.22  AND (photoobj.cmodelmag_g - photoobj.cmodelmag_i) > 1;
+SELECT  photoobj.objid, photoobj.specobjid FROM photoobj JOIN specobj ON photoobj.objid = specobj.bestobjid JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON neighbors.objid = photoobj.objid WHERE specobj.class = 'GALAXY' AND (photoobj.cmodelmag_u - photoobj.cmodelmag_r) > 2.22 AND (photoobj.cmodelmag_g - photoobj.cmodelmag
+SELECT photoobj.objid, photoobj.specobjid  FROM photoobj  JOIN specobj ON photoobj.objid = specobj.bestobjid  JOIN photo_type ON photo_type.value = photoobj.type  JOIN neighbors ON photo_type.value = neighbors.neighbortype  WHERE specobj.class = 'GALAXY'  AND (photoobj.cmodelmag_u - photoobj.cmodelmag_r) > 2.22  AND (photoobj.cmodelmag_g - photoobj
+SELECT photoobj.objid, galspecline.specobjid FROM photoobj JOIN galspecline ON photoobj.objid = galspecline.specobjid JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN specobj ON specobj.bestobjid = photoobj.objid AND specobj.specobjid = galspecline.specobjid WHERE photo_type.name = 'ugri' AND (
+SELECT photoobj.objid, galspecline.specobjid  FROM photoobj  JOIN galspecline ON photoobj.objid = galspecline.specobjid  JOIN photo_type ON photo_type.value = photoobj.type  JOIN neighbors ON photo_type.value = neighbors.neighbortype  JOIN spplines ON spplines.specobjid = galspecline.specobjid  WHERE (photoobj.cmodelmag_u - photoobj.cmodelmag_r) > 2
+SELECT objid AS photometric_objid, specobj.specobjid AS spectroscopic_objid FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON neighbors.objid = photoobj.objid AND photo_type.value = neighbors.neighbortype JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE (u - r) > 
+SELECT photoobj.objid, galspecline.specobjid FROM photoobj JOIN galspecline ON galspecline.specobjid = photoobj.bestobjid JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON neighbors.objid = photoobj.objid WHERE (photo_type.name = 'u' AND neighbors.neighbortype = 'g')  AND (photo_type.name = 'r' AND neighbors.neighbortype = 'i')
+SELECT objid,specobj.specobjid FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON photo_type.value = neighbors.neighbortype AND photoobj.objid = neighbors.objid JOIN specobj ON specobj.bestobjid = photoobj.objid WHERE (photoobj.cmodelmag_u - photoobj.cmodelmag_r) > 2.22 AND (photoobj.cmodelmag_g - photoobj.cmodelmag_i)
+SELECT photoobj.objid, photoobj.mjd FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'K'
+SELECT photoobj.objid, photoobj.mjd FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'K'
+SELECT objid, mjd FROM photoobj AS T1  JOIN photo_type AS T2 ON T1.type = T2.value  WHERE T2.name = 'K';
+SELECT objid, mjd FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'K'
+SELECT objid, mjd FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'K Star';
+SELECT photoobj.objid, specobj.mjd FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star' AND photo_type.description = 'spectral type K';
+SELECT photoobj.objid, specobj.mjd FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star' AND specobj.subclass = 'K'
+SELECT photphooobj.objid,  photoobj.mjd FROM specobj   JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'K'
+SELECT photoobj.objid, specobj.mjd FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'spectral type' AND photo_type.description = 'K';
+SELECT photoobj.objid, specobj.mjd FROM specobj JOIN photo_type ON specobj.bestobjid = photo_type.value WHERE photo_type.name = 'spectral type' AND photo_type.description = 'K'
+SELECT photoobj.z, photoobj.ra, photoobj.dec  FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Starforming Galaxy';
+SELECT photoobj.z, photoobj.ra, photoobj.dec FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Starforming Galaxy';
+SELECT z, ra, dec FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Starforming Galaxy';
+SELECT specobj.z, photoobj.ra, photoobj.dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Starforming Galaxy';
+SELECT ra, dec, z  FROM photoobj AS P  JOIN photo_type AS PT ON P.type = PT.value  JOIN neighbors AS N ON P.objid = N.objid  JOIN specobj AS S ON S.bestobjid = P.objid  WHERE PT.name = 'Starforming Galaxy';
+SELECT photoobj.ra, photoobj.dec, specobj.z  FROM photoobj  JOIN photo_type ON photo_type.value = photoobj.type  JOIN neighbors ON photo_type.value = neighbors.neighbortype  JOIN specobj ON specobj.bestobjid = photoobj.objid  JOIN galspecline ON galspecline.specobjid = specobj.specobjid  WHERE photo_type.name = 'STARFORMING GALAXY'  AND neighbors.mode = 'photometric';
+SELECT ra,dec,z  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  JOIN specobj ON specobj.bestobjid = photoobj.objid  WHERE photo_type.name = 'STARFORMING GALAXY'
+SELECT specobj.ra, specobj.dec, specobj.z FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'STARFORMING GALAXY'  AND photo_type.description = 'galaxy that can be observed photometrically';
+SELECT specobj.ra, specobj.dec, specobj.z FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'STARFORMING GALAXY'  AND photo_type.description = 'photometric'
+SELECT s.ra, s.dec, s.z FROM specobj AS s JOIN photoobj AS p ON s.bestobjid = p.objid JOIN photo_type AS pt ON p.type = pt.value WHERE pt.name = 'STARFORMING GALAXY' AND pt.description = 'photometric'
+SELECT MIN(p.extinction_r), p.run FROM photoobj AS p JOIN photo_type AS pt ON p.type = pt.value  WHERE pt.name = 'Galaxy' GROUP BY p.run;
+SELECT MIN(extinction_r),run  FROM photoobj  GROUP BY run;
+SELECT MIN(extinction_r), run FROM photoobj GROUP BY run;
+SELECT min(p.extinction_r) FROM photoobj AS p JOIN photo_type AS pt ON p.type = pt.value WHERE pt.name = 'photometric Galaxy' GROUP BY p.run;
+SELECT MIN(extinction_r), photoobj.run FROM photoobj GROUP BY photoobj.run;
+SELECT MIN(extinction_r), run FROM photoobj GROUP BY run;
+SELECT MIN(p.extinction_r), p.run  FROM photoobj AS p  JOIN photo_type AS pt ON p.type = pt.value  WHERE pt.name = 'Galaxy'  GROUP BY p.run;
+SELECT MIN(cmodelmag_r) FROM photoobj GROUP BY run;
+SELECT MIN(extinction_r)  FROM photoobj  JOIN neighbors ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.name = 'Galaxy'  GROUP BY run;
+SELECT MIN(extinction_r), run FROM photoobj WHERE type = 'GALAXY' GROUP BY run;
+SELECT b,l FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'QSO';
+SELECT specobj.ra, specobj.dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'QSO';
+SELECT specobj.ra, specobj.dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'QSO';
+SELECT specobj.b, specobj.l FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN photo_type ON photo_type.value = 'QSO' JOIN photoobj ON specobj.bestobjid = photoobj.objid WHERE photoobj.type = 'QSO';
+SELECT b, l FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid WHERE specobj.class = 'QSO';
+SELECT b, l FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'QSO';
+SELECT ``` ra, dec, b, l FROM photoobj AS T1 JOIN specobj AS T2 ON T1.objid = T2.bestobjid JOIN neighbors AS T3 ON T1.objid = T3.objid JOIN photo_type AS T4 ON T1.type = T4.value WHERE T4.name = 'QSO' ```
+SELECT b,l FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'QSO';
+SELECT photoobj.b, photoobj.l FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'QSO';
+SELECT b,l FROM photoobj AS T1 JOIN specobj AS T2 ON T1.objid = T2.bestobjid  JOIN photo_type AS T3  ON T1.type = T3.value  WHERE T3.name = 'QSO';
+SELECT COUNT(*)  FROM neighbors AS n  JOIN photoobj AS p ON n.objid = p.objid  JOIN photo_type AS pt ON pt.value = p.type  WHERE n.distance < 0.05  AND ABS(p.cmodelmag_u - p.cmodelmag_g) < 0.4  AND ABS(p.cmodelmag_g - p.cmodelmag_r) < 0.7  AND ABS(p.cmodelmag_r - p.cmodelmag_i) > 0
+SELECT COUNT(*)  FROM photo_type  JOIN photoobj ON photo_type.value = photoobj.type  JOIN neighbors ON photoobj.objid = neighbors.objid  WHERE neighbors.distance < 0.05  AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4  AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7  AND ABS(photoobj.cmodelmag_r - photoobj.cmodelmag_i)
+SELECT COUNT(*)  FROM photo_type  JOIN neighbors ON photo_type.value = neighbors.neighbortype  JOIN photoobj ON neighbors.objid = photoobj.objid  WHERE neighbors.distance < 0.05  AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4  AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7  AND ABS(photoobj.cmodelmag_r - photoobj.cmodelmag
+SELECT COUNT(DISTINCT photoobj.objid) FROM neighbors JOIN photoobj ON neighbors.objid = photoobj.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE neighbors.distance < 0.05 AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4 AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7 AND ABS(photoobj.cmodelmag_r - photo
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T1.type = T3.value AND T2.neighbortype = T3.value  WHERE T2.distance < 0.05  AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND ABS(T1.cmodelmag_g - T1.cmodelmag_r)
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T1.type = T3.value  WHERE T3.name = 'BINARY'  AND T2.distance < 0.05  AND (T1.u - T1.g) < 0.4  AND (T1.g - T1.r) < 0.7  AND (T1.r - T
+SELECT COUNT(DISTINCT(galspecline.specobjid)) FROM galspecline JOIN specobj ON galspecline.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photoobj.type = photo_type.value WHERE neighbors.distance < 0.05 AND (photoobj.g - photoobj.u) < 0.4 
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T1.type = T3.value AND T2.neighbortype = T3.value  WHERE T2.distance < 0.05  AND (T1.u - T1.g) < 0.4  AND (T1.g - T1.r) < 0.7  AND (T1.r -
+SELECT COUNT(*)  FROM neighbors AS n  JOIN photoobj AS po ON n.objid = po.objid  JOIN photo_type AS pt ON pt.value = n.neighbortype  WHERE n.distance < 0.05  AND (po.u - po.g < 0.4)  AND (po.g - po.r < 0.7)  AND (po.r - po.i > 0.4)  AND (po.i - po.z > 0.4
+SELECT COUNT(DISTINCT photoobj.objid) FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE neighbors.distance < 0.05 AND photo_type.name = 'Binary Star' AND (photoobj.g - photoobj.u) < 0.4 AND (photoobj.r - photoobj.g) < 0.7 AND (photoobj.i - photoobj.r) > 0
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T3.value = T2.neighbortype  WHERE T2.distance < 0.05  AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND ABS(T1.cmodelmag_g - T1.cmodelmag_r) < 0.7  AND ABS
+SELECT COUNT(*)  FROM neighbors AS n  JOIN photo_type AS pt ON n.neighbortype = pt.value  JOIN photoobj AS po ON n.neighborobjid = po.objid  WHERE n.distance < 0.05  AND ABS(po.cmodelmag_u - po.cmodelmag_g) < 0.4  AND ABS(po.cmodelmag_g - po.cmodelmag_r) < 0.7  AND (po.cmodelmag_r - po.cmodelmag
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid  JOIN photo_type AS T3 ON T3.value = T1.type  WHERE T2.distance < 0.05  AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND ABS(T1.cmodelmag_g - T1.cmodelmag_r) < 0.7  AND ABS(T1.c
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05  AND abs(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND abs(T1.cmodelmag_g - T1.cmodelmag_r) < 0.7  AND abs(T1.cmodelmag_r - T1.cmodelmag_i) > 0.
+SELECT COUNT(photoobj.objid)  FROM photoobj  JOIN neighbors ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE neighbors.distance < 0.05  AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4  AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7  AND ABS(photoobj.cmodelmag_r - photoobj.c
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  JOIN neighbors ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE neighbors.distance < 0.05  AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4  AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7  AND ABS(photoobj.cmodelmag_r -
+SELECT COUNT(*)  FROM photoobj AS T1  JOIN neighbors AS T2 ON T1.objid = T2.objid JOIN photo_type AS T3 ON T1.type = T3.value AND T3.value = T2.neighbortype  WHERE T2.distance < 0.05  AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4  AND ABS(T1.cmodelmag_g - T1.cmodelmag_r)
+SELECT COUNT(*)  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE neighbors.distance < 0.05  AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4  AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7  AND ABS(photoobj.cmodelmag_r - photoobj.cmodelmag_i)
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE neighbors.distance < 0.05 AND ABS(photoobj.cmodelmag_u - photoobj.cmodelmag_g) < 0.4  AND ABS(photoobj.cmodelmag_g - photoobj.cmodelmag_r) < 0.7  AND ABS(photoobj.cmodelmag_r -
+SELECT COUNT(*)   FROM photoobj AS T1   JOIN neighbors AS T2 ON T1.objid = T2.objid   JOIN photo_type AS T3 ON T1.type = T3.value AND T2.neighbortype = T3.value   WHERE T2.distance < 0.05   AND ABS(T1.cmodelmag_u - T1.cmodelmag_g) < 0.4   AND ABS(T1.cmodelmag_g - T1.cmodelmag_r)
+SELECT ``` SELECT DISTINCT photoobj.objid FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN photo_type ON photo_type.value = photoobj.type WHERE photoobj.type = 'Carbon' AND neighbors
+SELECT objid FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid JOIN specobj AS T3 ON T3.bestobjid = T1.objid JOIN photo_type AS T4 ON T4.value = T1.type JOIN photo_type AS T5 ON T5.value = T2.neighbortype WHERE T4.description = 'star' AND T5.description = 'star' AND T3.subclass = '
+SELECT DISTINCT photoobj.objid  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN specobj ON photoobj.objid = specobj.bestobjid  JOIN spplines ON specobj.specobjid = spplines.specobjid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.value = 'Carbon';
+SELECT ``` SELECT DISTINCT sp.specobjid  FROM specobj AS sp JOIN galspecline AS gs ON gs.specobjid = sp.specobjid JOIN spplines AS sl ON sl.specobjid = sp.specobjid JOIN photoobj AS po ON sp.bestobjid = po.objid JOIN photo_type AS pt ON po.type = pt.value JOIN neighbors AS nb ON po.objid = nb.objid AND pt.value = nb.neighbortype WHERE
+SELECT DISTINCT photoobj.objid  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN specobj ON specobj.bestobjid = photoobj.objid  JOIN spplines ON spplines.specobjid = specobj.specobjid  WHERE photo_type.value = 'Carbon';
+SELECT photoobj.objid FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE photo_type.value = 'Star'  AND specobj.subclass
+SELECT photoobj.objid FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE photo_type.value = 'Star' AND photo_type.value = neighbors.neighbortype AND specobj.class = 'Carbon'
+SELECT (SELECT   photoobj.objid FROM  photoobj JOIN photo_type  ON photo_type.value = photoobj.type JOIN neighbors  ON photo_type.value = neighbors.neighbortype JOIN specobj  ON specobj.bestobjid = photoobj.objid WHERE  photo_type.value = 'Star'  AND specobj.class = 'Carbon');
+SELECT objid, type, clean, flags, rowc, colc, cmodelmag_u, cmodelmag_g, cmodelmag_r, ra, dec, b, l, extinction_r, mjd, loadversion, u, g, r, i, z FROM photoobj AS T1 JOIN neighbors AS T2 ON T1.objid = T2.objid JOIN photo_type AS T3 ON T1.type = T3.value WHERE T3.name =
+SELECT photoobj.objid FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value JOIN neighbors ON photo_type.value = neighbors.neighbortype JOIN spplines ON spplines.specobjid = neighbors.objid JOIN specobj ON spplines.specobjid = specobj.specobjid JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE specobj.subclass = 'Carbon'
+SELECT COUNT(*)  FROM photoobj WHERE type = 'Galaxy';
+SELECT COUNT(*)  FROM photoobj  WHERE type = 'Galaxy';
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  WHERE photo_type.value = 'Galaxy';
+SELECT COUNT(objid) FROM photoobj  WHERE type = 'GALAXY';
+SELECT COUNT(*)  FROM photoobj  WHERE type = 'GALAXY';
+SELECT COUNT(photoobj.objid) FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy'
+SELECT COUNT(DISTINCT photoobj.objid) FROM photoobj JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Galaxy';
+SELECT COUNT(*)  FROM photoobj  WHERE type = 'GALAXY';
+SELECT COUNT(DISTINCT photoobj.objid)  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value WHERE photo_type.name = 'Galaxy';
+SELECT COUNT(DISTINCT galspecline.specobjid)  FROM galspecline  JOIN specobj ON galspecline.specobjid = specobj.specobjid  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'GALAXY';
+SELECT objid, class, subclass FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE class = 'GALAXY' AND subclass = 'AGN';
+SELECT objid, class, subclass  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN specobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.description = 'Galaxy with AGN';
+SELECT objid, class, subclass  FROM specobj AS T1  JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid  JOIN photoobj AS T3 ON T1.bestobjid = T3.objid  JOIN neighbors AS T4 ON T3.objid = T4.objid  JOIN photo_type AS T5 ON T3.type = T5.value AND T4.neighbortype = T5.value  WHERE T1.class =
+SELECT objid, class, subclass  FROM neighbors AS n JOIN photoobj AS p ON n.objid = p.objid JOIN galspecline AS g ON g.specobjid = p.bestobjid JOIN specobj AS s ON s.specobjid = g.specobjid JOIN photo_type AS pt ON pt.value = p.type WHERE s.class = 'Galaxy' AND s.subclass = 'AGN' AND pt.name = 'Galaxy'  
+SELECT objid, class, subclass FROM specobj JOIN spplines ON specobj.specobjid = spplines.specobjid JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON photo_type.value = neighbors.neighbortype WHERE specobj.class = 'GALAXY'
+SELECT sp.specobjid, sp.class, sp.subclass FROM specobj AS sp JOIN galspecline AS gsp ON sp.specobjid = gsp.specobjid JOIN spplines AS spl ON sp.specobjid = spl.specobjid JOIN photoobj AS po ON sp.bestobjid = po.objid JOIN photo_type AS pt ON po.type = pt.value JOIN neighbors AS n ON po.objid = n.objid AND n.neighbortype
+SELECT ```sql specobj.specobjid, specobj.class, specobj.subclass FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN neighbors ON neighbors.objid = photoobj.objid AND photo_type.value = neighbors.neighbortype WHERE specobj
+SELECT specobj.specobjid, specobj.class, specobj.subclass  FROM specobj  JOIN galspecline ON specobj.specobjid = galspecline.specobjid  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  JOIN neighbors ON neighbors.neighborobjid = photoobj.objid  WHERE photo_type.name = 'Galaxy with AGN observed both spectroscopically and photometric
+SELECT specobj.specobjid, specobj.class, specobj.subclass FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN neighbors ON photo_type.value = photoobj.type AND photo_type.value = neighbors.neighbortype WHERE specobj.class = 'Gal
+SELECT specobj.specobjid, specobj.class, specobj.subclass FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.value
+SELECT MIN(neighbors.distance)  FROM neighbors  INNER JOIN photo_type ON neighbors.neighbortype = photo_type.value WHERE photo_type.name = 'Star - Photometric'
+SELECT MIN(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'Star';
+SELECT DISTINCT(neighbors.distance)  FROM neighbors WHERE photo_type.value = 'Star' ORDER BY neighbors.distance ASC LIMIT 1;
+SELECT MIN(distance) AS least_distance FROM neighbors WHERE type = 'Star' AND mode = 'photometric' AND neighbormode = 'observable';
+SELECT MIN(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.name = 'Star'	AND neighbors.neighbortype = 'PhotoObj'
+SELECT MIN(distance)  FROM neighbors  WHERE type = 'Star';
+SELECT MIN(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.name = 'star';
+SELECT MIN(distance)  FROM neighbors  WHERE type = 'Star'  AND mode = 'photometric'
+SELECT MIN(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.name = 'Star';
+SELECT MIN(neighbors.distance)  FROM neighbors  INNER JOIN photo_type ON neighbors.neighbortype = photo_type.value  WHERE photo_type.name = 'Star';
+SELECT MAX(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'GALAXY';
+SELECT MAX(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.neighborobjid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'GALAXY';
+SELECT MAX(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  WHERE photoobj.type = 'GALAXY';
+SELECT MAX(neighbors.distance)  FROM neighbors  JOIN photo_type ON neighbors.neighbortype = photo_type.value WHERE photo_type.name = 'GALAXY'
+SELECT MAX(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.neighborobjid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.name = 'GALAXY';
+SELECT MAX(neighbors.distance)  FROM neighbors JOIN photoobj ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.name = 'Star';
+SELECT MAX(distance)  FROM neighbors  WHERE type = 'Star';
+SELECT MAX(distance)  FROM neighbors  WHERE type = 'Star'  AND value = 'Star';
+SELECT MAX(neighbors.distance)  FROM neighbors  WHERE photo_type.name = 'Star';
+SELECT MAX(neighbors.distance)  FROM neighbors  JOIN photoobj ON neighbors.objid = photoobj.objid  JOIN photo_type ON photoobj.type = photo_type.value  WHERE photo_type.name = 'Star';
+SELECT specobj.ra, specobj.dec, neighbors.distance  FROM specobj  JOIN neighbors ON specobj.bestobjid = neighbors.objid  ORDER BY neighbors.distance  LIMIT 1;
+SELECT b,l,distance FROM neighbors ORDER BY distance ASC LIMIT 1;
+SELECT b, l, distance  FROM neighbors  JOIN galspecline ON neighbors.objid = galspecline.specobjid  ORDER BY distance ASC LIMIT 1;
+SELECT b, l, distance FROM neighbors  WHERE distance = (     SELECT MIN(distance)      FROM neighbors )
+SELECT neighbors.b, neighbors.l, neighbors.distance FROM neighbors JOIN (SELECT objid, MIN(distance) AS min_distance       FROM neighbors       GROUP BY objid) AS min_dist_table ON neighbors.objid = min_dist_table.objid AND neighbors.distance = min_dist_table.min_distance;
+SELECT DISTINCT neighbors.distance, neighbors.b, neighbors.l FROM neighbors ORDER BY neighbors.distance LIMIT 1;
+SELECT MIN(distance) AS min_distance,        galactic.latitude AS galactic_latitude,        galactic.longitude AS galactic_longitude FROM neighbors AS n JOIN galspecline AS g ON n.neighborobjid = g.specobjid JOIN specobj AS s ON s.specobjid = g.specobjid JOIN photoobj AS p ON s.bestobjid = p.objid JOIN photo_type AS pt ON pt.value = p.type JOIN galactic_table AS galactic ON
+SELECT MIN(distance) AS least_distance, b AS galactic_latitude, l AS galactic_longitude FROM neighbors  JOIN specobj ON neighbors.neighborobjid = specobj.bestobjid WHERE distance > 0;
+SELECT DISTINCT neighbors.distance, neighbors.b, neighbors.l FROM neighbors ORDER BY neighbors.distance LIMIT 1;
+SELECT MIN(n.distance) AS least_distance,         n.objid AS nearest_neighbor_objid,         pobj.b AS galactic_latitude,         pobj.l AS galactic_longitude  FROM neighbors AS n  JOIN photoobj AS pobj ON n.neighborobjid = pobj.objid  GROUP BY n.objid, pobj.b, pobj.l;
+SELECT MIN(n.distance) as closest_distance, n.neighborobjid as center_object, s.b, s.l FROM neighbors as n JOIN specobj as s ON n.objid = s.bestobjid GROUP BY n.objid ORDER BY closest_distance LIMIT 1;
+SELECT T1.ra, T1.dec, T2.distance FROM specobj AS T1  JOIN neighbors AS T2 ON T1.specobjid = T2.objid WHERE T2.distance = (SELECT MIN(distance) FROM neighbors);
+SELECT To generate the SQL query for the given question "What are the galactic coordinates of the center object with the least distance to its nearest neighbor. Please retrieve the distance also", we can follow these steps:
+SELECT objid, ra, dec, distance FROM neighbors ORDER BY distance LIMIT 1;
+SELECT p.ra, p.dec, n.distance FROM photoobj AS p JOIN neighbors AS n ON p.objid = n.objid ORDER BY n.distance LIMIT 1;
+SELECT b, l, distance FROM galspecline AS gal JOIN neighbors AS n ON gal.specobjid = n.neighborobjid ORDER BY distance LIMIT 1;
+SELECT objid, ra, dec, MIN(distance) FROM galspecline AS T1 JOIN neighbors AS T2 ON T1.specobjid = T2.objid WHERE T2.distance = (SELECT MIN(distance) FROM neighbors) GROUP BY objid, ra, dec;
+SELECT MIN(n.distance) AS min_distance, n.b, n.l FROM neighbors AS n GROUP BY n.objid, n.b, n.l ORDER BY min_distance LIMIT 1;
+SELECT obj.ra, obj.dec, n.distance FROM (     SELECT objid, ra, dec     FROM neighbors     WHERE distance = (         SELECT MIN(distance)         FROM neighbors     ) ) obj JOIN neighbors n ON obj.objid = n.objid;
+SELECT b,l,distance FROM galspecline AS T1 JOIN neighbors AS T2 ON T1.specobjid = T2.objid ORDER BY T2.distance ASC LIMIT 1;
+SELECT b.z  FROM specobj AS a  JOIN neighbors AS b ON a.specobjid = b.neighborobjid   ORDER BY b.distance ASC  LIMIT 1;
+SELECT spec.z  FROM neighbors  JOIN  specobj ON neighbors.objid = specobj.bestobjid ORDER BY neighbors.distance ASC LIMIT 1;
+SELECT redshift  FROM specobj AS S  JOIN neighbors AS N ON S.specobjid = N.objid WHERE N.distance = (     SELECT MIN(distance)      FROM neighbors     )
+SELECT specobj.z  FROM specobj JOIN neighbors ON neighbors.objid = specobj.bestobjid ORDER BY neighbors.distance LIMIT 1;
+SELECT specobj.z FROM specobj JOIN neighbors ON specobj.specobjid = neighbors.objid WHERE neighbors.distance = (SELECT MIN(distance) FROM neighbors);
+SELECT specobj.z FROM specobj JOIN neighbors ON specobj.specobjid = neighbors.objid WHERE neighbors.distance = (     SELECT MIN(distance)     FROM neighbors )
+SELECT specobj.z FROM neighbors JOIN specobj ON neighbors.objid = specobj.bestobjid ORDER BY neighbors.distance LIMIT 1;
+SELECT specobj.z FROM specobj JOIN neighbors ON specobj.specobjid = neighbors.objid WHERE neighbors.distance = (     SELECT MIN(distance)     FROM neighbors );
+SELECT specobj.z FROM specobj JOIN neighbors ON specobj.specobjid = neighbors.objid WHERE neighbors.distance = (SELECT MIN(distance) FROM neighbors)
+SELECT specobj.z FROM specobj JOIN neighbors ON specobj.specobjid = neighbors.objid WHERE neighbors.distance = (     SELECT MIN(distance) FROM neighbors )
+SELECT `z`  FROM specobj  JOIN neighbors ON specobj.specobjid = neighbors.objid  ORDER BY neighbors.distance  LIMIT 1;
+SELECT It seems like your question is to show the redshift of the center object with the least distance to its nearest neighbor. To achieve this, you will need to join the necessary tables and filter the data accordingly. Here is a possible SQL query based on the provided schema:
+SELECT MIN(z)  FROM specobj  WHERE specobjid IN      (SELECT objid       FROM neighbors       WHERE distance = (SELECT MIN(distance) FROM neighbors));
+SELECT min(z)  FROM specobj  WHERE specobjid IN (     SELECT objid      FROM neighbors      WHERE distance = (         SELECT min(distance)          FROM neighbors     ) )
+SELECT specobj.z  FROM  specobj  JOIN neighbors ON specobj.specobjid = neighbors.objid WHERE  neighbors.distance = (     SELECT MIN(distance)      FROM neighbors )
+SELECT To answer the question "What is the redshift of the center object that has the minimal distance to the nearest neighbor?", we can follow these steps:
+SELECT objid, ra, dec, z FROM specobj AS s JOIN neighbors AS n ON s.specobjid = n.objid ORDER BY n.distance LIMIT 1;
+SELECT To generate the corresponding SQL query for the given question "What is the redshift of the center object that has the minimal distance to the nearest neighbor" based on the provided tables, columns, foreign keys, and primary keys, we will follow these steps:
+SELECT The SQL query for the given question would be:
+SELECT Based on the provided schema and the question, the SQL statement to find the redshift of the center object that has the minimal distance to the nearest neighbor can be written as follows:
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run FROM photoobj
+SELECT DISTINCT run  FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run  FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT DISTINCT run  FROM photoobj;
+SELECT COUNT(DISTINCT run)  FROM photoobj;
+SELECT DISTINCT run  FROM photoobj;
+SELECT COUNT(DISTINCT run) FROM photoobj;
+SELECT COUNT(DISTINCT run) FROM photoobj;
+SELECT COUNT(DISTINCT run) FROM photoobj;
+SELECT COUNT(DISTINCT run) AS unique_run_numbers FROM photoobj;
+SELECT COUNT(DISTINCT run) AS unique_runs FROM photoobj;
+SELECT COUNT(DISTINCT run)  FROM photoobj;
+SELECT DISTINCT run FROM photoobj;
+SELECT COUNT(objid), name FROM photo_type AS PT JOIN photoobj AS PO ON PT.value = PO.type GROUP BY name;
+SELECT COUNT(*), photo_type.name  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  GROUP BY photo_type.name;
+SELECT COUNT(photometricType.name)  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  GROUP BY photo_type.name;
+SELECT COUNT(objid), photo_type.name FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  GROUP BY photo_type.name;
+SELECT COUNT(objid), name  FROM photo_type JOIN photoobj ON photo_type.value = photoobj.type  GROUP BY name;
+SELECT COUNT(objid), value FROM photoobj GROUP BY type;
+SELECT COUNT(objid), value FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value GROUP BY value;
+SELECT COUNT(*), pt.name FROM photoobj AS po JOIN photo_type AS pt ON po.type = pt.value GROUP BY po.type, pt.name;
+SELECT COUNT(objid), value FROM photo_type JOIN photoobj ON photo_type.value = photoobj.type GROUP BY value;
+SELECT COUNT(*), photo_type.name  FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value  GROUP BY photoobj.type;
+SELECT s.ra, s.dec, pt.name FROM specobj AS s JOIN photoobj AS p ON s.bestobjid = p.objid JOIN photo_type AS pt ON pt.value = p.type WHERE s.specobjid IN (     SELECT g.specobjid      FROM galspecline AS g )
+SELECT ra, dec, photo_type.name FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid JOIN spplines ON specobj.specobjid = spplines.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN neighbors ON neighbors.objid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type AND photo_type.value = neighbors.neighbortype;
+SELECT specobj.ra, specobj.dec, photo_type.class FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.value = 'galactic-stars';
+SELECT ra, dec, photo_type.name  FROM specobj  JOIN galspecline ON specobj.specobjid = galspecline.specobjid  JOIN spplines ON specobj.specobjid = spplines.specobjid  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  WHERE photo_type.name = 'equivalent width estimates of galactic-stars';
+SELECT ra, dec, class FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN photo_type ON photo_type.value = specobj.class JOIN photoobj ON specobj.bestobjid = photoobj.objid;
+SELECT ra,dec  FROM specobj  JOIN galspecline ON specobj.specobjid = galspecline.specobjid  JOIN photoobj ON specobj.bestobjid = photoobj.objid  JOIN neighbors ON photo_type.value = neighbors.neighbortype WHERE photo_type.value = 'galactic-stars';
+SELECT ra, dec FROM specobj WHERE specobjid IN (     SELECT specobjid     FROM galspecline     WHERE specobjid IN (         SELECT specobjid         FROM spplines     ) )
+SELECT ra, dec FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.description = 'galactic-stars';
+SELECT  ra, dec FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type WHERE photo_type.value = 'galactic-stars';
+SELECT RA,DEC FROM specobj  JOIN spplines ON specobj.specobjid = spplines.specobjid  JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE spplines.specobjid = galspecline.specobjid;
+SELECT photoobj.objid, photo_type.value FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100;
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100;
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100;
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100;
+SELECT photoobj.objid, photo_type.name FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT photoobj.objid, photo_type.name FROM photoobj  JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT photoobj.objid, photo_type.name FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT photoobj.objid, photo_type.name FROM photoobj JOIN photo_type ON photoobj.type = photo_type.value WHERE photoobj.ra > 100 AND photoobj.dec < 100;
+SELECT po.objid, pt.name FROM photoobj AS po JOIN photo_type AS pt ON po.type = pt.value WHERE po.ra > 100 AND po.dec < 100;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj  JOIN neighbors ON neighbors.objid = photoobj.objid JOIN galspecline ON galspecline.specobjid = neighbors.neighborobjid;
+SELECT objid, ra, dec FROM photoobj AS po JOIN neighbors AS n ON po.objid = n.objid JOIN galspecline AS gs ON n.specobjid = gs.specobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON photoobj.objid = neighbors.objid JOIN galspecline ON neighbors.neighborobjid = galspecline.specobjid
+SELECT photoobj.objid, photoobj.ra, photoobj.dec  FROM photoobj  JOIN neighbors ON photoobj.objid = neighbors.objid  JOIN galspecline ON neighbors.neighborobjid = galspecline.specobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN neighbors ON neighbors.objid = photoobj.objid JOIN galspecline ON galspecline.specobjid = neighbors.neighborobjid;
+SELECT photoobj.objid, photoobj.ra, photoobj.dec  FROM photoobj  JOIN neighbors ON neighbors.objid = photoobj.objid  JOIN photo_type ON photo_type.value = photoobj.type  JOIN galspecline ON galspecline.specobjid = specobj.specobjid  WHERE photo_type.name = 'spectroscopic' AND photo_type.description = 'galaxies' AND neighbors.neighbortype = 'photometric';
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE EXISTS (     SELECT 1     FROM neighbors     JOIN photo_type ON photo_type.value = neighbors.neighbortype     WHERE neighbors.objid = photoobj.objid          AND photo_type.name = 'GALAX
+SELECT objid, ra, dec FROM neighbors JOIN photoobj ON neighbors.neighborobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = neighbors.objid JOIN specobj ON specobj.specobjid = galspecline.specobjid WHERE neighbors.type = 'photometric' AND photoobj.type = 'best' AND specobj.class = 'galaxy';
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM photoobj JOIN specobj ON specobj.bestobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid
+SELECT photoobj.objid, photoobj.ra, photoobj.dec FROM specobj JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE specobjclass = 'galaxy'
+SELECT Spplines.specobjid  FROM galspecline JOIN spplines ON galspecline.specobjid = spplines.specobjid  WHERE galspecline.specobjid IN (     SELECT specobj.specobjid      FROM specobj      WHERE specobj.class = 'galaxy' AND specobj.subclass = 'star' );
+SELECT specobj.specobjid  FROM galspecline  JOIN specobj ON galspecline.specobjid = specobj.specobjid  JOIN spplines ON spplines.specobjid = specobj.specobjid  JOIN neighbors ON neighbors.objid = photoobj.objid  WHERE photo_type.value = 'galactic-star'  AND photo_type.value = neighbors.neighbortype;
+SELECT `specobjid`   FROM galspecline   WHERE specobjid IN (       SELECT specobjid       FROM spplines   ); 
+SELECT specobjid FROM galspecline AS g JOIN specobj AS s ON g.specobjid = s.specobjid JOIN spplines AS sp ON sp.specobjid = s.specobjid WHERE s.bestobjid = p.objid AND p.type = 'galactic-stars';
+SELECT spplines.specobjid FROM spplines JOIN specobj ON spplines.specobjid = specobj.specobjid JOIN galspecline ON galspecline.specobjid = specobj.specobjid;
+SELECT In order to retrieve the equivalent width estimates of galactic stars of spectroscopic objects, you can use the following SQL query:
+SELECT EQUIVALENTWIDTH FROM galspecline
+SELECT `SELECT specobj.thing_name_here FROM galspecline AS T1 JOIN spplines AS T2 ON T1.specobjid = T2.specobjid JOIN specobj AS T3 ON T1.specobjid = T3.specobjid WHERE specobj.bestobjid = photoobj.objid AND photo_type.value = neighbors.neighbortype AND photo_type.value = 'galactic-stars';`
+SELECT EquivalentWidth FROM galspecline
+SELECT The SQLite SQL query for the question "What is the equivalent width estimates of galactic-stars of spectroscopic objects" based on the provided schema would be as follows:
+SELECT COUNT(galspecline.specobjid)  FROM galspecline  JOIN specobj ON galspecline.specobjid = specobj.specobjid  WHERE specobj.class = 'galaxy' AND specobj.subclass = 'star'
+SELECT COUNT(specobjid) FROM galspecline AS g JOIN spplines AS s ON g.specobjid = s.specobjid WHERE s.bestobjid IN (     SELECT objid     FROM photoobj     WHERE type = (         SELECT value         FROM photo_type         WHERE name = 'GALAXY'     ) );
+SELECT COUNT(DISTINCT specobj.specobjid) FROM galspecline JOIN specobj ON galspecline.specobjid = specobj.specobjid JOIN spplines ON specobj.specobjid = spplines.specobjid JOIN photoobj ON specobj.bestobjid = photoobj.objid JOIN photo_type ON photo_type.value = photoobj.type JOIN neighbors ON photo_type.value = neighbors.neighbortype;
+SELECT COUNT(specobj.specobjid) FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid;
+SELECT COUNT(specobjid)  FROM galspecline  WHERE specobjid IN (SELECT specobjid FROM spplines WHERE specobjid IN (SELECT specobjid FROM specobj WHERE bestobjid IN (SELECT objid  FROM photoobj  WHERE type IN (SELECT value  FROM photo_type  WHERE name = 'galaxy'  AND description = 'star'))) AND specobjid IN (SELECT objid FROM neighbors WHERE neighbortype = 'star'));
+SELECT COUNT(specobj.specobjid)  FROM specobj  WHERE specobj.bestobjid IN (SELECT photoobj.objid                              FROM photo_type                              JOIN photoobj ON photo_type.value = photoobj.type                              WHERE photo_type.name = 'Galactic-Star')
+SELECT COUNT(specobj.specobjid)  FROM specobj  JOIN galspecline ON specobj.specobjid = galspecline.specobjid  JOIN spplines ON specobj.specobjid = spplines.specobjid;
+SELECT COUNT(specobjid)  FROM galspecline  WHERE specobjid IN  (     SELECT specobjid      FROM specobj      WHERE subclass = 'galactic-star' );
+SELECT COUNT(specobj.specobjid)  FROM specobj  JOIN galspecline  ON specobj.specobjid = galspecline.specobjid  JOIN spplines  ON spplines.specobjid = specobj.specobjid
+SELECT COUNT(specobj.specobjid) FROM specobj JOIN galspecline ON galspecline.specobjid = specobj.specobjid WHERE specobj.bestobjid = photoobj.objid AND photo_type.value = 'galactic-star';
+SELECT specobj.*, spplines.*, galspecline.*  FROM specobj  JOIN spplines ON specobj.specobjid = spplines.specobjid  JOIN galspecline ON galspecline.specobjid = specobj.specobjid;
+SELECT specobj.*, spplines.*, galspecline.* FROM specobj JOIN spplines ON specobj.specobjid = spplines.specobjid JOIN galspecline ON specobj.specobjid = galspecline.specobjid;
+SELECT specobj.*, galspecline.* FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid;
+SELECT specobj.*, spplines.*, galspecline.*  FROM specobj  JOIN galspecline ON specobj.specobjid = galspecline.specobjid JOIN spplines ON spplines.specobjid = specobj.specobjid;
+SELECT specobj.*, galspecline.* FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid;
+SELECT *  FROM galspecline AS T1  JOIN specobj AS T2 ON T1.specobjid = T2.specobjid  JOIN spplines AS T3 ON T1.specobjid = T3.specobjid;
+SELECT specobj.*, galspecline.* FROM specobj JOIN galspecline ON specobj.specobjid = galspecline.specobjid;
+SELECT *  FROM galspecline AS G  JOIN specobj AS S ON G.specobjid = S.specobjid;
+SELECT spplines.*, galspecline.*, specobj.* FROM spplines  JOIN galspecline ON spplines.specobjid = galspecline.specobjid JOIN specobj ON galspecline.specobjid = specobj.specobjid;
+SELECT *  FROM galspecline AS T1  JOIN specobj AS T2 ON T1.specobjid = T2.specobjid;

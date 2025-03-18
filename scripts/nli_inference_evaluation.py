@@ -171,7 +171,7 @@ def main(model_name, test_file, nli_output_file, nli_prob_output_file, beam_outp
 if __name__ == "__main__":
     dataset = "spider"
     test_file = f"data/{dataset}/dev.json"
-    model_name = "picard"
+    model_name = "resdsql-3b"
     beam_size = 8
     checkpoint = 500
     nli_output_file = f"output/inference/{dataset}/{model_name}/{model_name}.predictions.ckpt={checkpoint}.txt"

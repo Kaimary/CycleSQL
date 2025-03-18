@@ -1,0 +1,800 @@
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t1.name = 'photometrically observed star'
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > 0
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t1.name = 'photometrically observed star'
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > (select max(dec) from photoobj)
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > -0.75
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > 0
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > -0.55
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > -0.50
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 2
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 550
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 0
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -0.75
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 550
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -100
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 420
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -22.0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = 'normal'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.type = 'photometric'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = 'rerun'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = "normal"
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = "auto"
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.type = 'photometry'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.type = 'spectroscopic'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid
+select objid, ra, dec from photoobj intersect select specobjid from specobj
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = 'auto'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = 'Auto'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = 'Automatic'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = "auto"
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.mode = "normal"
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t2.specobjid = t1.objid
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid join galspecline as t3 on t2.objid = t3.specobjid where t1.name = 'photometrically observed galaxy'
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid join galspecline as t3 on t2.objid = t3.specobjid where t1.name = 'Photometrically Observed Galaxy'
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > 0
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid join galspecline as t3 on t2.objid = t3.specobjid
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid join galspecline as t3 on t2.objid = t3.specobjid where t1.name = 'Photometrically observed Galaxy'
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid join galspecline as t3 on t2.objid = t3.specobjid where t1.name = 'photometrically observed Galaxy'
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid join galspecline as t3 on t3.specobjid = t2.objid
+select distinct t1.name from photo_type as t1 join galspecline as t2 on t1.value = t2.specobjid
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t1.description like '%photo_type%'
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.mjd
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t1.description like '%photometric%'
+select distinct t1.name from photo_type as t1 join galspecline as t2 on t1.value = t2.specobjid where t1.description like '%photo_type%'
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > -0.75
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dec > 0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select objid, ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select objid, ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid)
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.mode = 'normal'
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.mode = 'photometric'
+select objid, ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select objid from photoobj)
+select objid, ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.r = 10)
+select objid, ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra = 10)
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid)
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 270 and t1.dec < 60
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select t1.objid from photoobj as t3 join galspecline as t4 on t3.objid = t2.specobjid)
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 0 and t1.dec < 0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 90 and t1.dec < 60
+select objid, ra, dec from photoobj join galspecline on objid = specobjid where objid in (select objid from photoobj)
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.objid in (select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid)
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 270 and t1.dec <= 60
+select objid, ra, dec from photoobj where ra > 185 or dec < 16
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dEC > 15 or t1.dEC < 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dec < 16
+select objid, ra, dec from photoobj where ra > 185 or dec < 186
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dEC > 15 or t1.dec < 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dec <= 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dec < 15
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dEC > 16
+select objid, ra, dec from photoobj where ra between 185 and 186 and dec between 15 and 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dEC >= 15 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dEC >= 15 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra = 185
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dEC >= 15 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra = 185 and t1.dec >= 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dEC >= 15 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec >= 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 185 and 186 and t1.dec between 15 and 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dEC >= 15 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 186
+select objid, ra, dec from photoobj where ra > 185 or dec < 186
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 185 or t1.dEC > 15 or t1.dEC < 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 185 or t1.dec < 16
+select objid, ra, dec from photoobj where ra > 185 or dec < 186 or ra > 15 intersect select objid, ra, dec from photoobj
+select objid, ra, dec from photoobj where ra > 185 or dec < 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185 or t1.dec < 16
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 185 or t1.dEC > 15 or t1.ra < 16
+select objid, ra, dec from photoobj where ra > 185 or dec < 186 or ra > 15 intersect select objid, ra, dec from photoobj where ra > 15 or ra < 16
+select objid, ra, dec from photoobj where ra between 185 and 186 and dec between 15 and 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 185 and t1.dec <= 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dEC >= 15 and t1.ra >= 185
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 185 and t1.dec <= 15
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra between 185 and 186 and t1.dec between 15 and 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 185 and t1.dec < 16
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra >= 185 and t1.dEC <= 16
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dEC >= 15 and t1.ra >= 186
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 and t1.ra > 185
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 intersect select t1.objid, t1.ra from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 intersect select t1.objid, t1.ra from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185 and t1.dec <= 16
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 intersect select t1.objid, t1.ra from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185 and t1.dec < 16
+select objid, ra, dec, type from photoobj where dec > 15 intersect select objid, ra, dec from photoobj where type = 'photometric'
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 intersect select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 intersect select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185 and t1.dec < 16
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > 15 intersect select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra > 185 and t1.dec <= 16
+select objid, ra, dec, z from photoobj where ra between 185 and 186 and dec between 15 and 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra between 185 and 186 and t1.dec between 15 and 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec < 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 15 and t1.z >= 14
+select objid, ra, dec, z from photoobj where ra >= 185 and dec <= 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 15 intersect select t1.objid, t1.ra, t1.dec, t2.mjd from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec = 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 15 intersect select t1.objid, t1.ra, t1.dec, t2.mjd from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec = 15
+select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > 185 and t2.dec > 15 and t2.dec < 16
+select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > 185 and t2.dec > 15 intersect select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.dec > 15 and t2.ra <= 16
+select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > 185 and t2.dec > 15 intersect select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.dec > 15 and t2.ra < 16
+select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > 185 and t2.dec > 15 intersect select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.dec > 15 and t2.dec <= 16
+select t1.specobjid, t1.dec from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 185 and t1.dec > 15 intersect select t1.specobjid, t1.dec from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.dec > 15 and t1.ra < 16
+select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > 185 and t2.dec > 15 intersect select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.dec > 15 and t2.dec < 16
+select t1.specobjid, t1.dec from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 185 and t1.dec > 15 intersect select t1.specobjid, t1.dec from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.dec > 15 and t1.ra <= 16
+select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > 185 and t2.dec > 15 intersect select t1.specobjid from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.dec > 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 16
+select objid, ra, dec, z from photoobj where ra between 185 and 186 and dec between 15 and 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 185 and 186 and t1.dec between 15 and 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec < 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 15 and t1.z >= 14
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 185 and 186 and t1.dec between 15 and 16;
+select t1.objid, t1.ra, t1.dec, t1.ra from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 16
+select t1.objid, t1.ra, t1.dec, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra >= 185 and t1.dec <= 15
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u = 0.4 and t2.g = 0.7
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u > 0.4 and t2.g = 0.7
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u = 0.5 and t2.g = 0.7
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.g) > 0.4
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u = 0.04 and t2.g = 0.7
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u > 0.4 and t2.g > 0.7
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u = 0.4 and g = 0.7
+select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where avg(t2.u) > 0.4 and avg(t2.g) < 0.7 intersect select t2.objid from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.u = 0.45 and t2.g = 0.7
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g > 0.7 and t2.r > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g > 0.7 and t2.r > 0.4 and t2.i > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g > 0.4 and t2.r > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g > 0.7 and t2.i > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g - r > 0.7 and t2.i - z > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where r - i > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g > 0.7 and t2.r - i > 0.4
+select t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 0.4 and t2.g > 0.4 and t2.r > 0.4 and t2.i > 0.4
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance > 0.05 and t2.distance > 0.7
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.objid having t2.distance > 0.4
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance > 0.05
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance > 0.05 and t2.distance > 0.4
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t1.objid having t2.distance > 0.4
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance > 0.05 and t2.distance >= 0.4
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.objid having t2.distance > 0.5
+select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t2.neighborobjid having t2.distance < 0.05 intersect select t1.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance > 0.05 and t2.distance >= 0.7
+select t1.name, t1.description from photo_type as t1 join neighbors as t2 on t1.neighborobj
+select t1.name, t1.description from photo_type as t1 join neighbors
+select t1.name from photo_type as t1 join neighbors
+select t2.name from photoobj as t1 join neighbors as t3 on t1.objid = t2.neighborobj
+select t2.name from photoobj as t1 join neighbors as t3 on t1.objid = t3.neighborobj
+select t2.name from photoobj as t1 join neighbors as t3 on t1.objid = t2.neighborobjI
+select t2.name from photoobj as t1 join neighbors as t3 on t1.objid = t3.neighborobjI
+select t1.name, t1.description from photo_type as t1 join
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r > 0.2
+select count(*) from photoobj where cmodelmag_r < 17 intersect select count(*) from photoobj where extinction_r > 0.2
+select count(*) from photoobj where r < 17 and extinction_r > 0.2
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r > 0.22
+select count(*) from photoobj where cmodelmag_u < 17 and extinction_r > 0.2
+select count(*) from photoobj where cModelmag_r < 17 and extinction_r > 0.2
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r> 0.2
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r > 0.02
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r > 0.2
+select count(*) from photoobj where cmodelmag_r < 17 intersect select count(*) from photoobj where extinction_r > 0.2
+select count(*) from photoobj where r < 17 and extinction_r > 0.2
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r > 0.22
+select count(*) from photoobj where r < 17 intersect select count(*) from photoobj where extinction_r > 0.2
+select count(*) from photoobj where cmodelmag_r < 17 and extinction_r > 0.02
+select count(*) from photoobj where cmodelmag_r < -17 and extinction_r > 0.2
+select count(*) from photoobj where cModelmag_r < 17 and extinction_r > 0.2
+select objid, g from photoobj where g > 22 and avg(g) between -0.27 and 0.71 order by g
+select objid, g from photoobj where g > 22 order by g
+select objid, g from photoobj where g > 22 and avg(g) between -0.27 and 0.71 order by avg(g)
+select objid, g from photoobj where g > 22 and avg(g) between -0.24 and 0.71 order by g
+select objid, g from photoobj where g > 22 and avg(g) between 0.27 and 0.71 order by g
+select objid, g from photoobj where g > 22 and avg(g) between -0.27 and 0.71 order by avg(g) desc
+select objid, g from photoobj where g > 22 and avg(g) between 0.71 and 0.71 order by g
+select objid, g from photoobj where g > 22 and avg(g) between -0.35 and 0.7 order by g
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 22 and t1.r - i >= -0.35 except select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 22 and t1.g - r >= -0.27 except select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 22 and t1.r - i >= -0.35 order by t1.g
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 22 and t1.r - i >= 0.35 order by t1.g
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 22 and t1.r - i >= 0.35 order by t1.g
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 22 and t1.r - i >= 0.57 order by t1.g
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 22 intersect select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > -0.25
+select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 22 and t1.g - r >= -0.27 except select t1.objid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g = -0.27 and t1.i = 0.7
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.26 intersect select objid, ra, dec from photoobj where g > 2.0 or u < 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.26 intersect select objid, ra, dec from photoobj where u > 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.0 intersect select objid, ra, dec from photoobj where u > 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.0 intersect select objid, ra, dec from photoobj where g > 2.0 or u < 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.26 union select objid, ra, dec from photoobj where g > 2.0 or u < 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.26 intersect select objid, ra, dec from photoobj where g > 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.26 intersect select objid, ra, dec from photoobj where g > 2.0 and u < 22.3
+select objid, ra, dec from photoobj where i > 19 and z < 0 and g > 2.0 intersect select objid, ra, dec from photoobj where g > 2.0 and u < 22.3
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 intersect select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u < 22.3
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 except select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 22.3
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 except select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 22.3
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 except select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 22.3 and t2.g > 2.0
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 intersect select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u < 223.0
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 except select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 22 and t2.g > 2.0
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 except select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u > 22.3 and t2.g > 2.2
+select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.i > 19 and t2.g > 2.26 intersect select t2.objid from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.u < 22.3 and t2.g > 2.0
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where g > 18.0
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where u > 18.0
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where u > 18.0 and g > 2.2
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where g > 18.0 and u > 2.2
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where u > 2.2
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where g > 18 and u > 2.2
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj where g > 18
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g > 18.0 intersect select objid, ra, dec from photoobj
+select objid, ra, dec from photoobj where ra between 140.9 and 141.1 and g < 18.0 intersect select objid, ra, dec from photoobj where g > 18.0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.mjd = t2.specobjid where t1.u = 18.0 and t1.g = 18.0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.mjd = t2.specobjid join galspecline as t3 on t2.specobjid = t3.specobjid where t1.g = 18.0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.mjd = t2.specobjid where t1.g = 18.0 and t1.u = 18.0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 and t1.u > 2.2
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.mjd = t2.specobjid where t1.g = 18.0 and t1.u > 2.2
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.mjd = t2.specobjid where t1.u > 2.2
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.ra between 140.9 and 141.1 and t1.g < 18.0 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.mjd = t2.specobjid where t1.g = 18.0 and t1.u = 2.2
+select objid, ra, dec from photoobj where g between 17 and 18 and z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g <= 0.05
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g <= 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where g between 17 and 18 and z < 0.05
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 or t1.g <= 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 or t1.g < 0.05
+select objid, ra, dec from photoobj where g > 18.0 intersect select objid, ra, dec from photoobj where z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 except select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 17
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 and t1.z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 except select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 except select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where g > 17
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 except select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 and t1.r < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18.0 except select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t2.specobjid = t1.objid where t1.g > 17
+select objid, ra, dec from photoobj where cmodelmag_u > 0.5 and cmodelmag_g < 0.5
+select objid, ra, dec from photoobj where cmodelmag_u - cmodelmag_g < 0.5
+select objid, ra, dec from photoobj where cmodelmag_u > cmodelmag_g intersect select objid, ra, dec from photoobj where cmodelmag_u > 0.5
+select objid, ra, dec from photoobj where cmodelmag_g > 0.5 and cmodelmag_u < 0.5
+select objid, ra, dec from photoobj where cmodelmag_u > cmodelmag_g intersect select objid, ra, dec from photoobj where cmodelmag_g < 0.5
+select objid, dec from photoobj where cmodelmag_u > 0.5 and cmodelmag_g < 0.5
+select objid, ra, dec from photoobj where cmodelmag_u > cmodelmag_g intersect select objid, ra, dec from photoobj
+select objid, ra, dec from photoobj where cmodelmag_u > cmodelmag_g intersect select objid from photoobj where cmodelmag_u > 0.5
+select objid, ra, dec from photoobj where z >= 2
+select objid, ra, dec from photoobj where z >= 1
+select objid, ra, dec from photoobj where z > -0.5
+select objid, ra, dec from photoobj where z > 0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where dec > 0
+select objid, dec from photoobj where dec > 0 and ra <= 0
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where dec > 90
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.u > 0.5 and t1.g < 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.u > 0.5 and t1.g < 0.5
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.u > 0.5 intersect select t1.u, t1.g from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.g < 0.5
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u > 0.5 and t1.g < 0.5
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.u > 0.5 intersect select t1.u, t1.g from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.g <= 0.5
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.u = 0.5 and t1.g < 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u > 0.5 and t1.g < 0.5
+select u, g, r, i, z from photoobj where cmodelmag_u > 0.5 and cmodelmag_g < 0.5
+select distinct cmodelmag_u, g, r, i, z from photoobj where cmodelmag_u < 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u > 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u >= 0.5
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u > 0.5
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u >= 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u >= 0.5 and t1.r >= 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u > 0.5 and t1.r > 0.5
+select distinct t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join photo_type as t2 on t1.cmodelmag_u = t2.value where t1.u > t2.value and t2.value < 0.5
+select objid, ra, dec from photoobj where g < 17 intersect select objid, ra, dec from photoobj where z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 and t1.b > 18 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 and t1.b > 18 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18 and t1.z < 0.05
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 and t1.b > 18 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g = 18 and t1.z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 and t1.b > 18 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z <= 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 and t1.b > 18 intersect select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18 and t1.z <= 0.05
+select objid, ra, dec from photoobj where g between 17 and 18 and z < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g <= 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.r < 0.05
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g < 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.r <= 0.05
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.g <= 0.05
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 or t1.g <= 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 intersect select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 and t1.r < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 intersect select t1.u, t1.g, t1.r, t1.i from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 intersect select t1.u, t1.g from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g between 17 and 18
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 intersect select t1.u, t1.g from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g = 18
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 intersect select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z <= 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g >= 17 intersect select t1.u, t1.g, t1.r from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.u, t1.g from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g > 18
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.u, t1.g, t1.r, t1.i from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z <= 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 intersect select t1.u, t1.g, t1.r, t1.i from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z <= 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.u < 17 and t1.g > 18 intersect select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.g < 17 and t1.r < 0.05
+select t1.u, t1.g, t1.r, t1.i, t1.z from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.u < 17 and t1.g > 18 intersect select t1.u, t1.g from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.z = 0.05
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having count(*) >= 2
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid
+select t1.objid, t1.neighborobjid, t1.distance, t1.neighbortype from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having count(*) >= 2
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having t1.distance > (select max(distance) from neighbors)
+select t1.objid, t1.neighborobjid, t1.distance, t1.neighbortype from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid
+select t1.objid, t2.neighborobjid, t3.distance, t3.type from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid join neighbors as t3 on t2.neighborobjid = t3.objid where t3.type = "center"
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid join neighbors as t3 on t1.neighborobjid = t3.objid where t3.type = "center"
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid
+select objid, neighborobjid, distance, type from neighbors order by distance desc limit 1
+select objid, neighborobjid, distance, type from neighbors order by distance asc limit 1
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t2.objid = t1.objid group by t1.objid order by t1.distance desc limit 1
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid order by t1.distance desc limit 1
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t2.objid = t1.objid order by t1.neighborobjid limit 1
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t2.objid = t1.objid order by t1.distance desc limit 1
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t2.objid = t1.objid group by t1.objid order by count(*) desc limit 1
+select t1.objid, t1.neighborobjid, t1.distance, t1.type from neighbors as t1 join photoobj as t2 on t2.objid = t1.objid
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 or t2.dec < 100
+select distinct t1.name, t1.description, t1.value from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 or t2.dec < 100
+select distinct t1.name, description from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec <= 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and dec < 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 or t2.dec < 100
+select distinct t1.name, t1.description, t2.type from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 or t2.dec < 100
+select distinct t1.name, description from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec < 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and t2.dec <= 100
+select distinct t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type where t2.ra > 100 and dec < 100
+select count(*) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t1.name = 'Star'
+select count(*) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select count(*) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t1.name = 'STAR'
+select count(*) from photo_type as t1 join photoobj as t2 on t1.value = t2.mjd
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 550
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 550 and t1.dec < -50
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 550 and t1.dec < -55
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 550 and t1.dec < -45
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.ra > (select max(ra) from photoobj)
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.ra > 550
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.dec > 0
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.ra > 0
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > (select max(ra) from photoobj)
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.dec > -0.75
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.dec > -100
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 550
+select distinct type from photoobj
+select type from photoobj group by type having count(*) >= 1
+select type from photoobj group by type having count(distinct objid) >= 1
+select distinct type, t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type
+select type from photoobj group by type having count(*) >= 2
+select type from photoobj group by type having count(distinct objid) >= 2
+select distinct type, t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.type
+select distinct type, t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select distinct
+sdss
+select distinct
+select distinct
+select distinct
+sdss
+select distinct photo_types
+select distinct photo_type
+select * from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dec > -0.75
+select * from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dec > -1.5
+select * from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dec > (select max(dec) from photoobj)
+select * from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dec > -22.0
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -0.75
+select * from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dec > (select min(dec) from photoobj)
+select * from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra >= 550
+select * from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.dec > -0.70
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > 0
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -0.75
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -1.5
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > (select max(dec) from photoobj)
+select * from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid
+select * from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.dec > -0.70
+select * from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select objid, ra, dec, type from photoobj
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select objid, ra, dec, type from photoobj where type = 'star'
+select objid, ra, dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select objid, ra, dec, type from photoobj where type = 'Star'
+select objid, ra, dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = 'Star'
+select t1.objid, t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = 'Star'
+select objid, ra, dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = 'star'
+select t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select ra, dec, type from photoobj
+select t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = 'photometrically observable'
+select ra, dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = 'A'
+select ra, dec, type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = 'photo'
+select t1.ra, t1.dec, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.type = "star"
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALAXY' and t1.u > 2.22 and t1.g > 1
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALACTY' and t1.u > 2.22 and t1.g > 1
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALACTIC' and t1.u > 2.22 and t1.g > 1
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALAXY' and t1.u > 2 and t1.g > 1
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALAXY' and t1.u > 2.22 and t1.g > 1;
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALAXY' and t1.u > 2.22 and t1.i > 1
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALAXY' and t1.u > 2.22
+select t1.objid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t2.class = 'GALACTY' and t1.u > 2.22 and t1.g > 1;
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u - r > 2.22 and g - i > 1
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u - r > 2.22 and t1.g - i > 1
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid join galspecline as t3 on t2.specobjid = t3.specobjid where t1.u - r > 2.22 and g - i > 1
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u - t1.r > 2.22 and t1.g - i > 1
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u - t1.r > 2.22 and t1.g - t1.i > 1
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid join galspecline as t3 on t2.specobjid = t3.specobjid where t1.u - r > 2.22 and g - i > 1;
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid join galspecline as t3 on t2.specobjid = t3.specobjid
+select t1.objid, t2.specobjid from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.u - r > 2.22 and g - i > 1;
+select objid, max(t2.dec) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where type = 'K'
+select objid, max(mjd) from photoobj where type = 'K'
+select objid, max(t1.dec) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where type = 'K'
+select objid, mjd from photoobj where type = 'K'
+select objid, max(t2.dec) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where type = "K"
+select objid, max(t2.dec) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select objid, max(t2.dec) from photo_type as t1 join photoobj as t2 on t1.value = (select max(t1.value) from photo_type)
+select objid, max(t2.dec) from photo_type as t1 join photoobj as t2 on t1.value = 0
+select t1.objid, t1.mjd from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid
+select objid, max(t1.dec) from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.mjd from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t
+select t1.objid, t1.mjd from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjI
+select objid, max(t1.dec) from photoobj as t1 join specobj as t2 on t1.objid = t2.obj
+select t1.objid, t1.mjd from photoobj as t1 join photo_type
+select objid, max(t1.dec) from photoobj as t1 join photo_type
+select objid, max(t1.dec) from photoobj as t1 join
+select ra, ra, dec from photoobj where type = 'SFP'
+select ra, ra, dec from photoobj where type = 'Starforming Galaxy'
+select ra, ra, dec from photoobj where type = 'S'
+select ra, ra, dec from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid join spplines
+select ra, ra, dec from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid join spplines as t3 on t3.specobjid = t2.specobj
+select ra, ra, dec from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid join spplines as t3 on t3.specobjid
+select ra, ra, dec from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid join spplines as t3 on t3.obj
+select ra, ra, dec from photoobj as t1 join photoobj as t2 on t1.objid = t2.spec
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'Starforming Galaxy'
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'STARFORMING GALAXY'
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'STARFORMING'
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'Starformer'
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'Starforming Galaxies'
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'Starforming Galaxy'
+select ra, dec from photoobj where type = 'STARFORMING GALAXY'
+select ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.type = 'STARFORMING GALAxY'
+select min(extinction_r), count(*) from photoobj group by count(*)
+select min(extinction_r), run from photoobj group by run
+select min(extinction_r), count(*), t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.run
+select min(extinction_r), count(*) from photoobj group by run
+select min(extinction_r), count(run) from photoobj group by count(run)
+select min(extinction_r), count(*), t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid group by t1.run
+select min(extinction_r), count(*), t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.run order by count(*) asc
+select min(extinction_r), count(run) from photoobj group by run
+select min(extinction_r), run from photoobj group by run
+select min(extinction_r), count(*) from photoobj group by count(*)
+select min(extinction_r), count(*) from photoobj group by run
+select min(extinction_r), run, rerun from photoobj group by run
+select min(extinction_r), run from photoobj
+select min(extinction_r), run, r from photoobj group by run
+select min(extinction_r), count(*), run from photoobj group by run
+select min(extinction_r), run, rerun from photoobj
+select t1.
+select
+sdss
+select
+select
+select t
+select
+select t
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'QSO'
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'Quasi stellar object'
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'Quasi-stellar'
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = "Quasi stellar object"
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'Quasi-stellar object'
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'Quasi-Stellar'
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'Quasi-Stellar Object'
+select l, l from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = "Quasi-stellar"
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance = 0.7 and t1.i = 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance > 0.7
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance <= 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance = 0.7 and t1.i = 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance = 0.75 and t1.i = 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where avg(t1.i) > 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance >= 0.7
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) > 0.4 intersect select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance >= 0.7 and t1.i = 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and avg(t1.u) = 0.4 and avg(t1.g) = 0.7 and avg(t1.i) > 0.4
+select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance < 0.05 intersect select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance > 0.4
+select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance < 0.05 intersect select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance > 0.05
+select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance < 0.05 intersect select count(*) from photoobj as t2 join neighbors as t3 on t2.objid = t3.objid where t3.distance > 0.4
+select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance < 0.05 and t2.r - i > 0.4
+select count(*) from neighbors where distance < 0.05 intersect select count(*) from photoobj where r - i > 0.4
+select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance < 0.05 and t2.i - z > 0.4
+select count(*) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.distance < 0.05 intersect select count(*) from photoobj
+select count(*) from neighbors where distance < 0.05 intersect select count(*) from photoobj where ra > 0.4
+select count(*) from photoobj where ra < 0.05 and g > 0.4 and i > 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t2.distance between t1.u and t1.g
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t2.distance between t1.u and
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and t2.distance between t1.u and t1.
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t2.distance between t1.u and t
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t2.distance < 0.05 and t2.distance between t1.u and t1.g
+select count(*) from photoobj where r > 0.4 and g < 0.4 and i > 0.4
+select count(*) from photoobj where r > 0.4 and g < 0.4 and i > 0.4 and z > 0.4
+select count(*) from photoobj where r > 0.4 and g < 0.4 and z > 0.4
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t2.distance between t1.g and t1.u
+select count(*) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.distance < 0.05 and t2.distance between
+select count(*) from photoobj where r > 0.4 and g < 0.4
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = t2.specobjid join photoobj as t3 on t2.specobjid = t3.objid where t2.subclass = 'Carbon'
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = t2.specobjid join photoobj as t3 on t2.specobjid = t3.objid where t2.subclass = "Carbon"
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = t2.specobjid join photoobj as t3 on t1.description = t3.objid where t2.subclass = 'Carbon'
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = t2.specobjid join photoobj as t3 on t2.specobjid = t3.objid where t2.subclass = 'Cr'
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = 'Value' join photoobj as t3 on t2.specobjid = t3.objid where t2.subclass = 'Carbon'
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = t2.specobjid join photoobj as t3 on t2.specobjid = t3.objid where t2.subclass = 'Chem'
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = 'Value'
+select t1.name, t1.description from photo_type as t1 join photoobj as t2 on avg(t1.value) = t2.objid join specobj as t3 on t1.description = t3.specobjid where t3.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.description = t2.specobjid join photoobj as t3 on t2.specobjid = t3.objid where t2.subclass = 'Carbon'
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Ozone"
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Oxygen"
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.class where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Ozone"
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Silver"
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Silicon"
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.class where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Oxygen"
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = 'Carbon' intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = 'Ozone'
+select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Carbon" intersect select t1.name from photo_type as t1 join specobj as t2 on t1.value = t2.specobjid where t2.subclass = "Selective absorption"
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = "Nearby"
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = "observe"
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = 'None'
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = "Nearest"
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = "Nearest Neighbor"
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = "None"
+select count(*) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.mode = 'Normal'
+select count(*) from photoobj
+select count(*) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid where t1.dec > -0.75
+select count(*) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid
+select count(*) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid where t1.dec > -100
+select count(*) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid where t1.dec > (select max(dec) from photoobj)
+select count(*) from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid
+select count(*) from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.dec > -0.75
+select count(*) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid where t1.dec > -273
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.type = 'AGN'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'Galaxy' and t1.subclass = 'AGN'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'Galactic' and t1.subclass = 'AGN'
+select t1.objid, t2.class, t2.subclass from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid where t1.type = 'AGN'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'Galactic Nucleus'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'Galaxy' and t1.subclass = 'Nebula'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'Galactic' and t1.subclass = 'None'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.dec = 'AGN'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.ra = 'AGN'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid join photoobj as t3 on t1.specobjid = t3.objid where t1.dec = 'AGN'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid join photoobj as t3 on t2.objid = t3.objid where t1.dec = 'AGN'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.dec = 'Gala'
+select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select t1.specobjid, t1.class, t1.subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.dec = 'AGN'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.dec = 'Galax'
+select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.class = 'AGN' and t2.mode = 'spectroscopic' intersect select specobjid, class, subclass from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid where t1.dec = 'A'
+select min(distance) from neighbors where objid in (select objid from photoobj)
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 1
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 0.001
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 550
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 1 and t2.z < 0
+select t1.distance from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid order by t1.distance limit 1
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 1 and t2.z < 1
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t1.type = 'Star'
+select min(distance) from neighbors where objid in (select objid from photoobj)
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 1
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 550
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra = (select min(ra) from photoobj)
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra > 0
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 420
+select min(distance) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.ra > 550 and t2.distance <= 100
+select min(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra > 550 and t2.z < 0
+select max(distance) from neighbors where objid in (select objid from photoobj)
+select max(distance) from neighbors where objid in ( select neighborobjid from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.type = 'GALAXY' )
+select max(distance) from neighbors where objid in ( select neighborobjid from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t1.type = 'GALAXY' )
+select max(distance) from neighbors where objid in ( select neighborobjid from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.type = 'GALACTIC' )
+select max(distance) from neighbors where objid in ( select neighborobjid from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.type = 'photometrically observable' )
+select max(distance) from neighbors as t1 join photoobj as t2 on t1.neighborobjid = t2.objid where t1.type = 'GALAXY'
+select max(distance) from neighbors where objid in (select neighborobjid from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid)
+select max(distance) from neighbors where objid in ( select neighborobjid from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid where t2.type = 'photometric' )
+select max(distance) from neighbors where objid in (select objid from photoobj)
+select max(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra = (select max(ra) from photoobj)
+select max(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra > 0
+select max(t1.distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra > (select max(ra) from photoobj)
+select max(t2.distance) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.ra > (select max(ra) from photoobj)
+select max(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 1
+select max(distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra >= 550
+select max(t1.distance) from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid where t2.ra > 0
+select t1.
+sdss
+select
+select t
+select
+select t
+sdss
+select t1.co
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.neighborobjid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid order by t1.distance)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.neighborobjid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid order by distance)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.objid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid order by t1.distance)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.objid from neighbors as t1 join galspecline as t2 on t1.neighborobjid = t2.specobjid order by t1.distance)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.neighborobjid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.neighborobjid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid order by distance asc limit 1)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.neighborobjid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid order by t1.distance limit 1)
+select avg(t1.distance) from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid where t1.neighborobjid = (select t1.objid from neighbors as t1 join galspecline as t2 on t1.objid = t2.specobjid order by t1.distance limit 1)
+select t1.
+sdss
+select
+select t
+select
+select t
+sdss
+select t1.co
+select t1.
+sdss
+select
+select t
+select
+select t
+sdss
+select t1.cm
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance asc limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance asc limit 1
+select t2.z from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid order by t1.distance limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by distance limit 1
+select t2.z from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid order by t1.distance asc limit 1
+select max(z) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by distance limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(t2.distance) limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance asc limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(t2.distance) asc limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) asc limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) asc limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance asc limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance asc limit 1
+select t2.z from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid order by t1.distance limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by distance limit 1
+select t2.z from neighbors as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid order by t1.distance asc limit 1
+select max(z) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by distance limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(t2.distance) limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by t2.distance asc limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(t2.distance) asc limit 1
+select t1.z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) asc limit 1
+select z from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t2.objid order by min(distance) asc limit 1
+select distinct run from photoobj
+select count(distinct run) from photoobj
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having count(distinct t1.run) >= 1
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having count(distinct t1.run) >= 2
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having count(distinct t1.run) > 100
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.run order by count(distinct t1.run) desc limit 1
+select run from photoobj except select t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid
+select run from photoobj except select t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.objid having count(*) >= 2
+select run from photoobj except select run from photoobj group by run having count(*) >= 2
+select run from photoobj except select t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid
+select run from photoobj group by run having count(*) >= 2
+select run from photoobj except select t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.run having count(*) >= 2
+select run from photoobj except select t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.run order by count(*) desc limit 1
+select distinct run from photoobj except select t1.run from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid
+select count(distinct run) from photoobj
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.objid
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.objid having count(distinct t1.run) >= 2
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.objid having count(distinct t1.run) >= 1
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t2.neighborobjid = t1.objid
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid group by t1.run
+select count(distinct run) from photoobj
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid
+select count(distinct t1.run) from photoobj as t1 join photo_type as t2 on t1.objid = t2.value
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid having count(distinct t1.run) >= 1
+select count(distinct t1.run) from photoobj as t1 join photoobj as t2 on t1.objid = t2.objid group by t1.objid
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.objid where t1.mode = "Nearest Neighbor"
+select count(distinct t1.run) from photoobj as t1 join neighbors as t2 on t1.objid = t2.neighborobjid
+select count(*), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name, t2.mode from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name, t2.type from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count( *), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name;
+select count(*), t1.Name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.Name
+select count (*), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid
+select count(*), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.type group by t1.name
+select count(*), t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select t1.name, count(*) from photo_type as t1 join photoobj as t2 on t1.value = t2.type group by t1.name
+select t1.name, count(*) from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name, t2.type from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.name
+select count(*), t1.name, t2.type from photo_type as t1 join photoobj as t2 on t1.value = t2.type group by t1.name
+select count(*), t1.name, t1.description from photo_type as t1 join photoobj as t2 on t1.value = t2.objid group by t1.description
+select t1.ra, t1.dec, t1.class from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid
+select ra, dec, class from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid
+select t1.ra, t1.dec, t1.class from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid
+select t1.ra, t1.dec, t1.class from specobj as t1 join galspecline as t2 on t2.specobjid = t1.specobjid
+select t1.ra, t1.dec, t1.class from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjId
+select t1.ra, t1.dec, t1.class from specobj as t1 join galspecline as t2 on t1.specobjid=t2.specobjid
+select t1.ra, t1.dec, t1.class from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objId
+select t1.ra, t1.dec, t1.class from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobj
+select ra, dec from specobj where ra >= (select max(ra) from specobj where dec = 1)
+select ra, dec from specobj where ra = (select max(ra) from specobj) intersect select ra, dec from specobj where z = (select max(ra) from specobj where z = 0)
+select ra, dec from specobj where ra >= (select max(ra) from specobj)
+select ra, dec from specobj where ra = (select max(ra) from specobj where dec = -1)
+select ra, dec from specobj where ra = (select max(ra) from specobj)
+select ra, dec from specobj where ra = (select max(ra) from specobj) intersect select ra, dec from specobj where z = (select max(ra) from specobj where z = 1)
+select ra, dec from specobj where ra > 0 and dec <= 0
+select ra, dec from specobj where z = (select max(z) from specobj)
+select objid, type from photoobj where ra > 100 and dec < 100
+select t1.objid, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 and t1.dec < 100
+select t1.objid, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 or t1.dec < 100
+select objid, type from photoobj where ra > 100 and dec <= 100
+select t1.objid, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 and t1.dec <= 100
+select t1.objid, t1.type from photoobj as t1 join photo_type as t2 on t1.mjd = t2.value where t1.ra > 100 and t1.dec < 100
+select t1.objid, t1.type from photoobj as t1 join photo_type as t2 on t1.objId = t2.value where t1.ra > 100 and t1.dec < 100
+select t1.objid, t1.type from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where ra > 100 and dec < 100
+select objid, t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.ra > 100 and t2.dec < 100
+select t1.objid, t2.name from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 and t1.dec < 100
+select objid, t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.ra > 100 or t2.dec < 100
+select objid, t2.name from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 and t1.dec < 100
+select t1.objid, t2.name from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 or t1.dec < 100
+select t1.objid, t2.name from photoobj as t1 join photo_type as t2 on t1.objid = t2.value where t1.ra > 100 and t1.dec <= 100
+select t1.objid, t2.name from photoobj as t1 join photo_type as t2 on t1.objid = t2.value join neighbors as t3 on t3.objid = t1.objid where t1.ra > 100 and t1.dec < 100
+select objid, t1.name from photo_type as t1 join photoobj as t2 on t1.value = t2.objid where t2.dEC > 100
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.ra, t1.dEC from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.ra, t1.dec, t2.specobjid from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid join galspecline as t3 on t2.specobjid = t3.specobjid
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid where t2.specobjid = t2.specobjid
+select objid, ra, dec from photoobj as t1 join galspecline as t2 on t1.objid = t2.specobjid
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join galspecline as t2 on t2.specobjid = t1.objid
+select t1.objid, t1.ra, t1.dec from photoobj as t1 join specobj as t2 on t1.objid = t2.specobjid join galspecline as t3 on t2.specobjid = t3.specobjid where t3.specobjid = t2.specobjid
+select bestobjid, ra, dec from specobj where specobjid in (select specobjid from galspecline)
+select bestobjid, ra, dec from specobj where specobjid in (select bestobjid from specobj)
+select bestobjid, ra, dec from specobj where specobjid in (select bestobjid from specobj where specobjid = 'galaxy')
+select bestobjid, ra, dec from specobj where specobjid in (select bestobjid from specobj where specobjid = 'specobjid')
+select bestobjid, ra, dec from specobj where specobjid in (select bestobjid from specobj where specobjid = 'galspecline')
+select bestobjid, ra, dec from specobj where specobjid in (select bestobjid from specobj where specobjid = specobjid)
+select bestobjid, ra, dec from specobj where specobjid in(select specobjid from galspecline)
+select bestobjid, ra, dec from specobj where specobjid = (select specobjid from galspecline)
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.ra) >= 2
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra = (select max(ra) from specobj)
+select t1.specobjid from galspecline as t1 join specobj as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t2.ra) >= 2
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.ra) >= 2.4
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.ra) >= 3.5
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.ra) = t2.specobjid
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra >= 550
+select t1.specobjid from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.ra) = 0.02
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 1
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 2 and t3.distance <= 1
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 2 and t3.distance < 1
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 2 and t3.distance <= 2
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 2 and t3.distance < 2
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 1 and t3.distance <= 1
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 1 and t3.distance < 1
+select t2.z, ra from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid join neighbors as t3 on t2.objid = t3.objid where t3.distance > 2
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.dec = (select max(dec) from specobj)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.dec) >= 2
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.dec) >= 1
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.dec = (select max(dec) from specobj as t3 join spplines as t4 on t3.specobjid = t4.specobjid)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid group by t1.specobjid having avg(t1.dec) > 0
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.dec = (select max(dec) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid)
+select count(*) from specobj as t1 join photoobj as t2 on t1.specobjid = t2.objid group by t1.specobjid having avg(t1.ra) >= 2
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.dec > -100
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra = (select max(ra) from specobj)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > (select max(ra) from specobj)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra = (select max(ra) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra = (select avg(ra) from specobj)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > (select max(ra) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid)
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.dec <= 550
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.dec <= 500
+select count(*) from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.dec < 550
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid
+select * from galspecline as t1 join specobj as t2 on t1.specobjid = t2.specobjid
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.z > 550
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 0.7 and t1.z > 0.7
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 0.7 and t1.z > 0.4
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.z > -500
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.z > -450
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > 550 and t1.z > 500
+select * from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid
+select * from galspecline as t1 join specobj as t2 on t1.specobjid = t2.specobjid
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid
+select * from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > (select max(ra) from specobj)
+select * from galspecline as t1 join specobj as t2 on t1.specobjid = t2.specobjid where t2.ra > (select max(ra) from specobj)
+select * from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objid where t2.ra > (select max(ra) from photoobj)
+select * from specobj as t1 join galspecline as t2 on t1.specobjid = t2.specobjid where t1.ra > (select max(ra) from specobj)
+select * from galspecline as t1 join photoobj as t2 on t1.specobjid = t2.objId

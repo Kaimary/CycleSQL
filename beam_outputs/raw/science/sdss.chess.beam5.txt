@@ -1,0 +1,500 @@
+SELECT CASE WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 0.0 AND g - r < 1.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'main sequence star' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'red giant' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 1.0 AND r - i < 2.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'white dwarf' ELSE 'neither' END AS result FROM photoobj
+SELECT CASE WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 0.0 AND g - r < 1.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'main sequence star' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'red giant' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 1.0 AND r - i < 2.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'white dwarf' ELSE 'neither' END AS result FROM photoobj
+SELECT CASE WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 0.0 AND g - r < 1.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'main sequence star' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'red giant' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 1.0 AND r - i < 2.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'white dwarf' ELSE 'neither' END AS result FROM photoobj
+SELECT CASE WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 0.0 AND g - r < 1.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'main sequence star' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'red giant' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 1.0 AND r - i < 2.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'white dwarf' ELSE 'neither' END AS result FROM photoobj
+SELECT CASE WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 0.0 AND g - r < 1.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'main sequence star' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 0.0 AND r - i < 1.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'red giant' WHEN u - g > 0.0 AND u - g < 1.0 AND g - r > 1.0 AND g - r < 2.0 AND r - i > 1.0 AND r - i < 2.0 AND i - z > 0.0 AND i - z < 1.0 THEN 'white dwarf' ELSE 'neither' END AS result FROM photoobj
+SELECT ra, dec FROM photoobj WHERE g < 19 AND r < 19
+SELECT ra, dec FROM photoobj WHERE g < 19 AND r < 19
+SELECT ra, dec FROM photoobj WHERE g < 19 AND r < 19
+SELECT ra, dec FROM photoobj WHERE g < 19 AND r < 19
+SELECT ra, dec FROM photoobj WHERE g < 19 AND r < 19
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.ra = T2.ra AND T1.dec = T2.dec
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.ra = T2.ra AND T1.dec = T2.dec
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.ra = T2.ra AND T1.dec = T2.dec
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.ra = T2.ra AND T1.dec = T2.dec
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.ra = T2.ra AND T1.dec = T2.dec
+SELECT T1.g, T1.r, T1.z FROM photoobj AS T1 INNER JOIN galspecline AS T2 ON T1.objid = T2.specobjid
+SELECT T1.g, T1.r, T1.z FROM photoobj AS T1 INNER JOIN galspecline AS T2 ON T1.objid = T2.specobjid WHERE T1.type = 3
+SELECT T1.g, T1.r, T1.z FROM photoobj AS T1 INNER JOIN galspecline AS T2 ON T1.objid = T2.specobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value WHERE T2.name = 'Galaxy'
+SELECT T1.objid, T1.run, T1.rerun, T1.field, T1.mode, T1.type, T1.clean, T1.flags, T1.rowc, T1.colc, T1.cmodelmag_u, T1.cmodelmag_g, T1.cmodelmag_r, T1.ra, T1.dec, T1.b, T1.l, T1.extinction_r, T1.mjd, T1.loadversion, T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value WHERE T2.name = 'Galaxy'
+SELECT COUNT(*) FROM photoobj WHERE g < 22 AND u - g > 2 AND u - g < 2.5 AND g - ra > 0.5 AND g - ra < 2.5
+SELECT COUNT(*) FROM photoobj WHERE g < 22 AND u - g > 2 AND u - g < 2.5 AND g - ra > 0.5 AND g - ra < 2.5
+SELECT COUNT(*) FROM photoobj WHERE g < 22 AND u - g > 2 AND u - g < 2.5 AND g - ra > 0.5 AND g - ra < 2.5
+SELECT COUNT(*) FROM photoobj WHERE g < 22 AND u - g > 2 AND u - g < 2.5 AND g - ra > 0.5 AND g - ra < 2.5
+SELECT COUNT(*) FROM photoobj WHERE g < 22 AND u - g > 2 AND u - g < 2.5 AND g - ra > 0.5 AND g - ra < 2.5
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.type = (SELECT value FROM photo_type WHERE name = 'Galaxy' AND description = 'Photometrically Observable')
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.type = (SELECT value FROM photo_type WHERE name = 'Galaxy' AND description = 'photometrically observable') AND T2.specobjid IS NOT NULL
+SELECT objid, ra, dec FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra > 185 AND ra < 186 AND dec > 15 AND dec < 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec, T2.type FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16 AND T1.class = 'STAR'
+SELECT T1.specobjid, T1.ra, T1.dec, T2.type FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16 AND T1.class = 'STAR'
+SELECT T1.specobjid, T1.ra, T1.dec, T2.type FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16 AND T1.class = 'STAR'
+SELECT T1.specobjid, T1.ra, T1.dec, T2.type FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16 AND T1.class = 'STAR'
+SELECT T1.specobjid, T1.ra, T1.dec, T2.type FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16 AND T1.class = 'STAR'
+SELECT T1.specobjid, T1.ra, T1.dec, T2.z FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec, T2.z FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec, T2.z FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec, T2.z FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec, T2.z FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT * FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT * FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT * FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT * FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT * FROM specobj WHERE ra BETWEEN 185 AND 186 AND dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.ra BETWEEN 185 AND 186 AND T1.dec BETWEEN 15 AND 16
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT * FROM photoobj WHERE u - g < 0.4 AND g - r < 0.7 AND r - i > 0.4 AND i - z > 0.4
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT CASE WHEN COUNT(T1.u) > 0 THEN 'star' ELSE 'galaxy' END FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.neighborobjid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT CASE WHEN COUNT(T1.u) > 0 THEN 'star' ELSE 'galaxy' END FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.neighborobjid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT CASE WHEN COUNT(T1.objid) > 0 THEN 'star' ELSE 'galaxy' END FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.neighborobjid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT CASE WHEN COUNT(T1.objid) > 0 THEN 'star' ELSE 'galaxy' END FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.neighborobjid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT CASE WHEN COUNT(T1.u) > 0 THEN 'star' ELSE 'galaxy' END FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.neighborobjid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT COUNT(T1.class) FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'GALAXY' AND T2.r < 17 AND T2.extinction_r > 0.2
+SELECT COUNT(T1.class) FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid WHERE T1.class = 'GALAXY' AND T2.r < 17 AND T2.extinction_r > 0.2
+SELECT COUNT(T1.class) FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid WHERE T1.class = 'GALAXY' AND T2.r < 17 AND T2.extinction_r > 0.2
+SELECT COUNT(T1.class) FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid WHERE T1.class = 'GALAXY' AND T2.r < 17 AND T2.extinction_r > 0.2
+SELECT COUNT(T1.class) FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid WHERE T1.class = 'GALAXY' AND T2.r < 17 AND T2.extinction_r > 0.2
+SELECT COUNT(*) FROM photoobj WHERE r < 17 AND extinction_r > 0.2
+SELECT COUNT(*) FROM photoobj WHERE r < 17 AND extinction_r > 0.2
+SELECT COUNT(*) FROM photoobj WHERE r < 17 AND extinction_r > 0.2
+SELECT COUNT(*) FROM photoobj WHERE r < 17 AND extinction_r > 0.2
+SELECT COUNT(*) FROM photoobj WHERE r < 17 AND extinction_r > 0.2
+SELECT T1.objid, T1.cmodelmag_g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g < 22 AND T1.g - T1.cmodelmag_u BETWEEN -0.27 AND 0.71 AND T1.cmodelmag_g - T1.cmodelmag_r BETWEEN -0.24 AND 0.35 AND T1.cmodelmag_r - T1.cmodelmag_i BETWEEN -0.27 AND 0.57 AND T1.cmodelmag_i - T1.cmodelmag_z BETWEEN -0.35 AND 0.7 ORDER BY T1.cmodelmag_g DESC
+SELECT T1.objid, T1.cmodelmag_g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g < 22 AND T1.g - T1.cmodelmag_u BETWEEN -0.27 AND 0.71 AND T1.cmodelmag_g - T1.cmodelmag_r BETWEEN -0.24 AND 0.35 AND T1.cmodelmag_r - T1.cmodelmag_i BETWEEN -0.27 AND 0.57 AND T1.cmodelmag_i - T1.cmodelmag_z BETWEEN -0.35 AND 0.7 ORDER BY T1.cmodelmag_g DESC
+SELECT T1.objid, T1.cmodelmag_g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g < 22 AND T1.u - T1.cmodelmag_u BETWEEN -0.27 AND 0.71 AND T1.cmodelmag_g - T1.cmodelmag_r BETWEEN -0.24 AND 0.35 AND T1.cmodelmag_r - T1.cmodelmag_i BETWEEN -0.27 AND 0.57 AND T1.cmodelmag_i - T1.cmodelmag_z BETWEEN -0.35 AND 0.7 ORDER BY T1.cmodelmag_g DESC
+SELECT T1.objid, T1.cmodelmag_g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g - T1.u BETWEEN -0.27 AND 0.71 AND T1.cmodelmag_g - T1.cmodelmag_r BETWEEN -0.24 AND 0.35 AND T1.cmodelmag_r - T1.cmodelmag_i BETWEEN -0.27 AND 0.57 AND T1.cmodelmag_i - T1.cmodelmag_z BETWEEN -0.35 AND 0.7 AND T1.g < 22 ORDER BY T1.cmodelmag_g DESC
+SELECT T1.objid, T1.cmodelmag_g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g < 22 AND T1.u - T1.cmodelmag_u BETWEEN -0.27 AND 0.71 AND T1.cmodelmag_g - T1.cmodelmag_r BETWEEN -0.24 AND 0.35 AND T1.cmodelmag_r - T1.cmodelmag_i BETWEEN -0.27 AND 0.57 AND T1.cmodelmag_i - T1.cmodelmag_z BETWEEN -0.35 AND 0.7 ORDER BY T1.cmodelmag_g DESC
+SELECT * FROM photoobj WHERE g < 22 AND u - g BETWEEN -0.27 AND 0.71 AND g - r BETWEEN -0.24 AND 0.35 AND r - i BETWEEN -0.27 AND 0.57 AND i - z BETWEEN -0.35 AND 0.7 ORDER BY g DESC
+SELECT * FROM photoobj WHERE g < 22 AND u - g BETWEEN -0.27 AND 0.71 AND g - r BETWEEN -0.24 AND 0.35 AND r - i BETWEEN -0.27 AND 0.57 AND i - z BETWEEN -0.35 AND 0.7 ORDER BY g DESC
+SELECT * FROM photoobj WHERE g < 22 AND u - g BETWEEN -0.27 AND 0.71 AND g - r BETWEEN -0.24 AND 0.35 AND r - i BETWEEN -0.27 AND 0.57 AND i - z BETWEEN -0.35 AND 0.7 ORDER BY g DESC
+SELECT * FROM photoobj WHERE g < 22 AND u - g BETWEEN -0.27 AND 0.71 AND g - r BETWEEN -0.24 AND 0.35 AND r - i BETWEEN -0.27 AND 0.57 AND i - z BETWEEN -0.35 AND 0.7 ORDER BY g DESC
+SELECT * FROM photoobj WHERE g < 22 AND u - g BETWEEN -0.27 AND 0.71 AND g - r BETWEEN -0.24 AND 0.35 AND r - i BETWEEN -0.27 AND 0.57 AND i - z BETWEEN -0.35 AND 0.7 ORDER BY g DESC
+SELECT objid, ra, dec FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT objid, ra, dec FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT objid, ra, dec FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT objid, ra, dec FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT objid, ra, dec FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT * FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT * FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT * FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT * FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT * FROM photoobj WHERE i < 19 AND i > 0 AND g - r > 2.26 AND i - z < 0.25 AND (u - g > 2.0 OR u < 22.3)
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND cmodelmag_u - cmodelmag_g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND cmodelmag_u - cmodelmag_g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND cmodelmag_u - cmodelmag_g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND cmodelmag_u - cmodelmag_g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND cmodelmag_u - cmodelmag_g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND u - g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND u - g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND u - g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND u - g > 2.2
+SELECT objid, ra, dec FROM photoobj WHERE ra BETWEEN 140.9 AND 141.1 AND g < 18.0 AND u - g > 2.2
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g BETWEEN 17 AND 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g BETWEEN 17 AND 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g BETWEEN 17 AND 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g BETWEEN 17 AND 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g BETWEEN 17 AND 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT objid, ra, dec FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT u, g, r, i, z FROM photoobj WHERE u - g < 0.5
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.bestobjid WHERE T1.class = 'GALAXY' AND T2.g < 18 AND T2.g > 17 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.bestobjid WHERE T1.class = 'GALAXY' AND T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.segue2_target1 = T2.segue2_target1 WHERE T1.class = 'GALAXY' AND T2.g < 18 AND T2.g > 17 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.segue2_target1 = T2.segue2_target1 WHERE T1.class = 'GALAXY' AND T2.g > 17 AND T2.g < 18 AND T1.z < 0.05
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.segue2_target1 = T2.segue2_target1 WHERE T1.class = 'GALAXY' AND T2.g < 18 AND T2.g > 17 AND T1.z < 0.05
+SELECT T1.objid, T2.ra, T2.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.objid, T2.ra, T2.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.objid, T2.ra, T2.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.objid, T2.ra, T2.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.objid, T2.ra, T2.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.u, T1.g, T1.r, T1.i, T1.z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.g BETWEEN 17 AND 18 AND T2.z < 0.05
+SELECT T1.cmodelmag_u, T1.cmodelmag_g, T1.cmodelmag_r, T1.cmodelmag_i, T1.cmodelmag_z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.cmodelmag_g > 17 AND T1.cmodelmag_g < 18 AND T2.z < 0.05 AND T2.class = 'GALAXY'
+SELECT T1.cmodelmag_u, T1.cmodelmag_g, T1.cmodelmag_r, T1.cmodelmag_i, T1.cmodelmag_z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.cmodelmag_g > 17 AND T1.cmodelmag_g < 18 AND T2.z < 0.05 AND T2.class = 'GALAXY'
+SELECT T1.cmodelmag_u, T1.cmodelmag_g, T1.cmodelmag_r, T1.cmodelmag_i, T1.cmodelmag_z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.cmodelmag_g > 17 AND T1.cmodelmag_g < 18 AND T2.z < 0.05 AND T2.class = 'GALAXY'
+SELECT T1.cmodelmag_u AS u, T1.cmodelmag_g AS g, T1.cmodelmag_r AS r, T1.cmodelmag_i AS i, T1.cmodelmag_z AS z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.cmodelmag_g BETWEEN 17 AND 18 AND T2.z < 0.05 AND T2.class = 'GALAXY'
+SELECT T1.cmodelmag_u, T1.cmodelmag_g, T1.cmodelmag_r, T1.cmodelmag_i, T1.cmodelmag_z FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.cmodelmag_g BETWEEN 17 AND 18 AND T2.z < 0.05 AND T2.class = 'GALAXY'
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN specobj AS T3 ON T1.objid = T3.specobjid WHERE T3.subclass = 'GALAXY'
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN specobj AS T3 ON T1.objid = T3.specobjid WHERE T3.subclass = 'GALAXY'
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN specobj AS T3 ON T1.objid = T3.specobjid WHERE T3.subclass = 'GALAXY'
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN specobj AS T3 ON T1.objid = T3.specobjid WHERE T3.subclass = 'GALAXY'
+SELECT T1.objid, T1.neighborobjid, T1.distance, T1.type FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN specobj AS T3 ON T1.objid = T3.specobjid WHERE T3.subclass = 'GALAXY'
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT DISTINCT type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT COUNT(T1.mjd) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'STAR'
+SELECT COUNT(T1.mjd) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'STAR' AND T1.type = (SELECT value FROM photo_type WHERE name = 'STAR')
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value WHERE T2.name = 'STAR'
+SELECT COUNT(DISTINCT T1.mjd) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'STAR'
+SELECT COUNT(T1.mjd) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'STAR' AND T1.type = (SELECT value FROM photo_type WHERE name = 'STAR')
+SELECT COUNT(*) FROM specobj WHERE class = 'STAR'
+SELECT COUNT(*) FROM specobj WHERE class = 'STAR'
+SELECT COUNT(*) FROM specobj WHERE class = 'STAR'
+SELECT COUNT(class) FROM specobj WHERE class = 'STAR'
+SELECT COUNT(*) FROM specobj WHERE class = 'STAR'
+SELECT DISTINCT type FROM photoobj
+SELECT DISTINCT type FROM photoobj
+SELECT DISTINCT type FROM photoobj
+SELECT DISTINCT type FROM photoobj
+SELECT DISTINCT type FROM photoobj
+SELECT DISTINCT T2.name FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value
+SELECT DISTINCT T2.name FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value
+SELECT DISTINCT T2.name FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value
+SELECT DISTINCT T2.name FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value
+SELECT DISTINCT T2.name FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value
+SELECT T1.ra, T1.g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T2.subclass = 'BCG'
+SELECT T1.ra, T1.g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T2.subclass = 'BCG'
+SELECT T1.ra, T1.g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T2.subclass = 'BCG'
+SELECT T1.ra, T1.g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T2.subclass = 'BCG'
+SELECT T1.ra, T1.g FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T2.subclass = 'BCG'
+SELECT cmodelmag_g, dec, r FROM photoobj
+SELECT cmodelmag_g, dec, r FROM photoobj
+SELECT cmodelmag_g, dec, r FROM photoobj
+SELECT cmodelmag_g, dec, r FROM photoobj
+SELECT cmodelmag_g, dec, r FROM photoobj WHERE type = (SELECT value FROM photo_type WHERE name = 'Galaxy')
+SELECT objid, ra, dec, type FROM photoobj WHERE type = 6
+SELECT objid, ra, dec, type FROM photoobj WHERE type = 6
+SELECT objid, ra, dec, type FROM photoobj WHERE type = 6
+SELECT objid, ra, dec, type FROM photoobj WHERE type = 6
+SELECT objid, ra, dec, type FROM photoobj WHERE type = 6
+SELECT ra, dec, type FROM photoobj WHERE type = 6
+SELECT ra, dec, type FROM photoobj WHERE type = 6
+SELECT ra, dec, type FROM photoobj WHERE type = 6
+SELECT ra, dec, type FROM photoobj WHERE type = 6
+SELECT ra, dec, type FROM photoobj WHERE type = 6
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY' AND T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT T1.objid, T2.specobjid FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.specobjid WHERE T1.u - T1.r > 2.22 AND T1.g - T1.i > 1
+SELECT objid, mjd FROM photoobj WHERE type = 'K'
+SELECT objid, mjd FROM photoobj WHERE type = 'K'
+SELECT objid, mjd FROM photoobj WHERE type = 'K'
+SELECT objid, mjd FROM photoobj WHERE type = 'K'
+SELECT objid, mjd FROM photoobj WHERE type = 'K'
+SELECT T1.bestobjid, T2.mjd FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'STAR' AND T1.subclass = 'K'
+SELECT T1.bestobjid, T2.mjd FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'STAR' AND T1.subclass = 'K'
+SELECT T1.bestobjid, T2.mjd FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'STAR' AND T1.subclass = 'K'
+SELECT T1.bestobjid, T2.mjd FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'STAR' AND T1.subclass = 'K'
+SELECT T1.bestobjid, T2.mjd FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.bestobjid = T2.objid WHERE T1.class = 'STAR' AND T1.subclass = 'K'
+SELECT T2.z, T2.ra, T2.dec FROM photo_type AS T1 INNER JOIN photoobj AS T2 ON T1.value = T2.type WHERE T1.name = 'Starforming Galaxy'
+SELECT T2.z, T2.ra, T2.dec FROM photo_type AS T1 INNER JOIN photoobj AS T2 ON T1.value = T2.type WHERE T1.name = 'Starforming Galaxy'
+SELECT T2.z, T2.ra, T2.dec FROM photo_type AS T1 INNER JOIN photoobj AS T2 ON T1.value = T2.type WHERE T1.name = 'Starforming Galaxy'
+SELECT T2.z, T2.ra, T2.dec FROM photo_type AS T1 INNER JOIN photoobj AS T2 ON T1.value = T2.type WHERE T1.name = 'Starforming Galaxy'
+SELECT T2.z, T2.ra, T2.dec FROM photo_type AS T1 INNER JOIN photoobj AS T2 ON T1.value = T2.type WHERE T1.name = 'Starforming Galaxy'
+SELECT T1.z FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'STARFORMING GALAXY' AND T2.name = 'GALAXY'
+SELECT T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'STARFORMING GALAXY' AND T2.name = 'GALAXY'
+SELECT T1.z, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'STARFORMING GALAXY' AND T2.name = 'GALAXY'
+SELECT T1.z, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'STARFORMING GALAXY' AND T2.name = 'GALAXY'
+SELECT T1.z, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'STARFORMING GALAXY' AND T2.name = 'GALAXY'
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT MIN(extinction_r) FROM photoobj GROUP BY run
+SELECT ra, dec FROM specobj WHERE class = 'QSO'
+SELECT ra, dec FROM specobj WHERE class = 'QSO'
+SELECT ra, dec FROM specobj WHERE class = 'QSO'
+SELECT ra, dec FROM specobj WHERE class = 'QSO'
+SELECT ra, dec FROM specobj WHERE class = 'QSO'
+SELECT dec, ra FROM specobj WHERE subclass = 'QSO'
+SELECT dec, ra FROM specobj WHERE subclass = 'QSO'
+SELECT dec, ra FROM specobj WHERE subclass = 'QSO'
+SELECT dec, ra FROM specobj WHERE subclass = 'QSO'
+SELECT dec, ra FROM specobj WHERE subclass = 'QSO'
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(*) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.u - T1.g < 0.4 AND T1.g - T1.r < 0.7 AND T1.r - T1.i > 0.4 AND T1.i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.z < 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.z < 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance < 0.05 AND T1.cmodelmag_u - T1.cmodelmag_g < 0.4 AND T1.cmodelmag_g - T1.cmodelmag_r < 0.7 AND T1.cmodelmag_r - T1.cmodelmag_i > 0.4 AND T1.cmodelmag_i - T1.cmodelmag_z > 0.4
+SELECT bestobjid FROM specobj WHERE subclass = 'Carbon'
+SELECT bestobjid FROM specobj WHERE subclass = 'Carbon'
+SELECT bestobjid FROM specobj WHERE subclass = 'Carbon'
+SELECT bestobjid FROM specobj WHERE subclass = 'Carbon'
+SELECT bestobjid FROM specobj WHERE subclass = 'Carbon'
+SELECT DISTINCT T1.class FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.class = T2.colc WHERE T1.subclass = 'Carbon' AND T2.colc IS NOT NULL
+SELECT DISTINCT T1.class FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.class = T2.colc WHERE T1.subclass = 'Carbon' AND T2.colc IS NOT NULL
+SELECT DISTINCT T1.class FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.class = T2.colc WHERE T1.subclass = 'Carbon' AND T2.colc IS NOT NULL
+SELECT DISTINCT T1.class FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.class = T2.colc WHERE T1.subclass = 'Carbon' AND T2.colc IS NOT NULL
+SELECT DISTINCT T1.class FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.class = T2.colc WHERE T1.subclass = 'Carbon' AND T2.colc IS NOT NULL
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY'
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY'
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY'
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY'
+SELECT COUNT(T1.objid) FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T2.class = 'GALAXY'
+SELECT COUNT(*) FROM photoobj WHERE g < 23.6 AND r < 23.6
+SELECT COUNT(*) FROM photoobj WHERE g < 23.6 AND r < 23.6
+SELECT COUNT(*) FROM photoobj WHERE g < 23.6 AND r < 23.6
+SELECT COUNT(*) FROM photoobj WHERE g < 23.6 AND r < 23.6
+SELECT COUNT(*) FROM photoobj WHERE g < 23.6 AND r < 23.6
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'AGN'
+SELECT T1.specobjid, T1.class, T1.subclass FROM specobj AS T1 INNER JOIN photo_type AS T2 ON T1.class = T2.name WHERE T1.subclass = 'AGN'
+SELECT MIN(T1.distance) FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.dec
+SELECT MIN(T1.distance) FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.dec
+SELECT MIN(T1.distance) FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.distance
+SELECT MIN(T1.distance) FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.dec
+SELECT MIN(T1.distance) FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.dec
+SELECT MIN(distance) FROM neighbors
+SELECT MIN(distance) FROM neighbors
+SELECT MIN(distance) FROM neighbors
+SELECT MIN(distance) FROM neighbors
+SELECT MIN(distance) FROM neighbors
+SELECT T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.g INNER JOIN specobj AS T3 ON T2.g = T3.class WHERE T3.class = 'GALAXY' ORDER BY T1.distance DESC LIMIT 1
+SELECT T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.neighborobjid = T2.objid INNER JOIN specobj AS T3 ON T2.objid = T3.bestobjid WHERE T3.class = 'GALAXY' ORDER BY T1.distance DESC LIMIT 1
+SELECT T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.g INNER JOIN specobj AS T3 ON T2.g = T3.class WHERE T3.class = 'GALAXY' ORDER BY T1.distance DESC LIMIT 1
+SELECT T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.neighborobjid = T2.objid INNER JOIN specobj AS T3 ON T2.objid = T3.specobjid WHERE T3.class = 'GALAXY' ORDER BY T1.distance DESC LIMIT 1
+SELECT T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.distance = T2.g INNER JOIN specobj AS T3 ON T2.g = T3.class WHERE T3.class = 'GALAXY' ORDER BY T1.distance DESC LIMIT 1
+SELECT MAX(distance) FROM neighbors
+SELECT MAX(distance) FROM neighbors
+SELECT MAX(distance) FROM neighbors
+SELECT MAX(distance) FROM neighbors
+SELECT MAX(distance) FROM neighbors
+SELECT T2.l, T2.b, T3.distance FROM neighbors AS T3 INNER JOIN photoobj AS T2 ON T3.objid = T2.objid WHERE T3.distance = (SELECT MIN(distance) FROM neighbors)
+SELECT T2.ra, T2.l, T3.distance FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.ra = T2.ra INNER JOIN neighbors AS T3 ON T1.objid = T3.objid WHERE T3.distance = (SELECT MIN(distance) FROM neighbors)
+SELECT T2.ra, T2.l, T3.distance FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.ra = T2.ra INNER JOIN neighbors AS T3 ON T1.objid = T3.objid WHERE T3.distance = (SELECT MIN(distance) FROM neighbors)
+SELECT T2.ra, T2.l, T3.distance FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.ra = T2.ra INNER JOIN neighbors AS T3 ON T1.objid = T3.objid WHERE T3.distance = (SELECT MIN(distance) FROM neighbors)
+SELECT T2.ra, T2.l, T3.distance FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.ra = T2.ra INNER JOIN neighbors AS T3 ON T1.objid = T3.objid WHERE T3.distance = (SELECT MIN(distance) FROM neighbors)
+SELECT T2.distance, T1.b, T1.l FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.distance FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.distance, T1.b, T1.l FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.distance FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.distance, T1.b, T1.l FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T2.l, T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T2.l, T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T2.l, T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T2.l, T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T2.l, T1.distance FROM neighbors AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T1.distance FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.specobjid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T1.distance FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.specobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T1.distance FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.specobjid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T1.distance FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.specobjid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.ra, T2.dec, T1.distance FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.specobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT T1.z FROM specobj AS T1 INNER JOIN neighbors AS T2 ON T1.bestobjid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM specobj AS T1 INNER JOIN neighbors AS T2 ON T1.bestobjid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.z FROM specobj AS T1 INNER JOIN neighbors AS T2 ON T1.bestobjid = T2.neighborobjid WHERE T2.distance IS NOT NULL ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM specobj AS T1 INNER JOIN neighbors AS T2 ON T1.bestobjid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM specobj AS T1 INNER JOIN neighbors AS T2 ON T1.bestobjid = T2.neighborobjid WHERE T1.z IS NOT NULL AND T2.distance IS NOT NULL ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.neighborobjid = T2.objid ORDER BY T1.distance ASC LIMIT 1
+SELECT T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance IS NOT NULL ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance IS NOT NULL ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T1.z IS NOT NULL AND T2.distance IS NOT NULL ORDER BY T2.distance ASC LIMIT 1
+SELECT T1.z FROM photoobj AS T1 INNER JOIN neighbors AS T2 ON T1.objid = T2.objid WHERE T2.distance IS NOT NULL ORDER BY T2.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT T2.z FROM neighbors AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid WHERE T1.distance IS NOT NULL ORDER BY T1.distance ASC LIMIT 1
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT DISTINCT run FROM photoobj WHERE run IS NOT NULL
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(DISTINCT run) FROM photoobj
+SELECT COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T2.name
+SELECT COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T2.name
+SELECT COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T2.name
+SELECT COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T2.name
+SELECT COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T2.name
+SELECT T2.name, COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T1.type
+SELECT T2.name, COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T1.type
+SELECT T2.name, COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T1.type
+SELECT T2.name, COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T1.type
+SELECT T2.name, COUNT(T1.type) FROM photoobj AS T1 INNER JOIN photo_type AS T2 ON T1.type = T2.value GROUP BY T1.type
+SELECT T1.ra, T1.dec, T3.name FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid INNER JOIN photo_type AS T3 ON T2.type = T3.value
+SELECT T1.ra, T1.dec, T4.name FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN photo_type AS T3 ON T2.type = T3.value
+SELECT T1.ra, T1.dec, T3.name FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN photo_type AS T3 ON T2.type = T3.value
+SELECT T1.ra, T1.dec, T4.name FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN photo_type AS T3 ON T2.type = T3.value INNER JOIN photo_type AS T4 ON T2.class = T4.value
+SELECT T1.ra, T1.dec, T3.name FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.objid = T2.objid INNER JOIN photo_type AS T3 ON T2.type = T3.value
+SELECT T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.ra, T1.dec FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT objid, type FROM photoobj WHERE ra > 100 AND dec < 100
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.objid, T1.ra, T1.dec FROM photoobj AS T1 INNER JOIN specobj AS T2 ON T1.objid = T2.bestobjid
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'GALAXY' GROUP BY T1.specobjid, T1.ra, T1.dec ORDER BY COUNT(T1.specobjid) DESC LIMIT 1
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'GALAXY' GROUP BY T1.specobjid, T1.ra, T1.dec ORDER BY COUNT(T1.specobjid) DESC LIMIT 1
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'GALAXY' GROUP BY T1.specobjid, T1.ra, T1.dec ORDER BY COUNT(T1.specobjid) DESC LIMIT 1
+SELECT T1.specobjid, T2.ra, T2.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'GALAXY' GROUP BY T1.specobjid, T2.ra, T2.dec ORDER BY COUNT(T1.specobjid) DESC LIMIT 1
+SELECT T1.specobjid, T1.ra, T1.dec FROM specobj AS T1 INNER JOIN photoobj AS T2 ON T1.specobjid = T2.objid WHERE T1.subclass = 'GALAXY' GROUP BY T1.specobjid, T1.ra, T1.dec ORDER BY COUNT(T1.specobjid) DESC LIMIT 1
+SELECT T1.specobjid FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.specobjid FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.specobjid FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.specobjid FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.specobjid FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT class FROM specobj WHERE class = 'galactic-stars'
+SELECT class FROM specobj WHERE class = 'galactic-stars'
+SELECT class FROM specobj WHERE class = 'galactic-stars'
+SELECT class FROM specobj WHERE class = 'galactic-stars'
+SELECT class FROM specobj WHERE class = 'galactic-stars'
+SELECT COUNT(T1.specobjid) FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.class = 'GALAXY' AND T1.z > 0.02
+SELECT COUNT(T1.specobjid) FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.class = 'GALAXY' AND T1.z > 0.02
+SELECT COUNT(T1.specobjid) FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.class = 'GALAXY' AND T1.z > 0.02
+SELECT COUNT(T1.specobjid) FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.class = 'GALAXY' AND T1.z > 0.02
+SELECT COUNT(T1.specobjid) FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid WHERE T1.class = 'GALAXY' AND T1.z > 0.02
+SELECT COUNT(*) FROM specobj WHERE class = 'Galaxy'
+SELECT COUNT(*) FROM specobj WHERE class = 'Galaxy'
+SELECT COUNT(class) FROM specobj WHERE class = 'Galaxy'
+SELECT COUNT(class) FROM specobj WHERE class = 'Galaxy'
+SELECT COUNT(class) FROM specobj WHERE class = 'Galaxy'
+SELECT T1.*, T2.* FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.*, T2.* FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.*, T2.* FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM specobj AS T1 INNER JOIN galspecline AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM galspecline AS T1 INNER JOIN specobj AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM galspecline AS T1 INNER JOIN specobj AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM galspecline AS T1 INNER JOIN specobj AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM galspecline AS T1 INNER JOIN specobj AS T2 ON T1.specobjid = T2.specobjid
+SELECT T1.* FROM galspecline AS T1 INNER JOIN specobj AS T2 ON T1.specobjid = T2.specobjid

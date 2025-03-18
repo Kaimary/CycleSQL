@@ -1,0 +1,792 @@
+SELECT disease.name FROM disease_mutation WHERE disease_mutation.aa_pos_uniprotkb = 'E'
+SELECT disease.name FROM disease_mutation WHERE disease.name = 'E'
+SELECT disease_mutation.aa_pos_uniprotkb FROM disease_mutation WHERE disease_mutation.aa_pos_uniprotkb = 'E'
+SELECT disease_mutation.aa_pos_uniprotkb FROM disease_mutation WHERE disease.name = 'E'
+SELECT disease.name FROM disease, disease_mutation WHERE disease_mutation.aa_pos_uniprotkb = 'E'
+SELECT disease.name FROM disease WHERE disease_mutation.ref_nt = 'E'
+SELECT disease.name FROM disease_mutation WHERE disease_mutation.ref_nt = 'E'
+SELECT disease.name FROM disease, disease_mutation WHERE disease.name = 'E'
+SELECT COUNT( * ) FROM disease WHERE disease.name = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission JOIN disease ON biomarker_fda_test_use.test_submission = disease.id
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission JOIN disease ON biomarker_fda_test_use.test_trade_name = disease.id
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission JOIN disease ON biomarker_fda_test_trial.test_submission = disease.id
+SELECT COUNT( * ) FROM biomarker_fda_test JOIN biomarker_fda ON biomarker_fda_test.test_submission = biomarker_fda.test_submission JOIN disease ON biomarker_fda_test_use.test_submission = disease.id
+SELECT COUNT( * ) FROM biomarker_fda_test JOIN biomarker_fda ON biomarker_fda_test.test_submission = biomarker_fda.test_submission JOIN disease ON biomarker_fda_test_use.test_trade_name = disease.id
+SELECT COUNT( * ) FROM biomarker_fda_test JOIN biomarker_fda ON biomarker_fda_test.test_submission = biomarker_fda.test_trade_name JOIN disease ON biomarker_fda_test_use.test_submission = disease.id
+SELECT COUNT( * ) FROM biomarker_fda_test JOIN biomarker_fda ON biomarker_fda_test.test_submission = biomarker_fda.test_trade_name JOIN disease ON biomarker_fda_test_use.test_trade_name = disease.id
+SELECT anatomical_entity.name FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN species ON anatomical_entity.id = species.speciesid WHERE species.genus = 'Mus'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN species ON anatomical_entity.id = species.speciesid WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.speciesid WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.speciesid WHERE species.genus = 'Mus'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE anatomical_entity.name = 'Mus'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN species ON anatomical_entity.name = species.speciesid WHERE species.genus = 'Mus'
+SELECT DISTINCT species.species FROM species
+SELECT DISTINCT species.species FROM species
+SELECT DISTINCT species.species FROM species
+SELECT DISTINCT species.species FROM species
+SELECT DISTINCT species.species FROM species
+SELECT DISTINCT species.species FROM species
+SELECT COUNT( * ) FROM species
+SELECT COUNT( * ) FROM species
+SELECT DISTINCT disease.name FROM disease
+SELECT disease.name FROM disease INTERSECT SELECT disease_mutation_article.disease_mutation_id FROM disease
+SELECT disease.name FROM disease UNION SELECT disease_mutation_article.disease_mutation_id FROM disease
+SELECT disease_mutation_article.pmid FROM disease INTERSECT SELECT disease_mutation_article.pmid FROM disease
+SELECT disease_mutation_site_annotation.description FROM disease INTERSECT SELECT disease_mutation_article.pmid FROM disease
+SELECT disease.name FROM disease UNION SELECT disease_mutation_article.pmid FROM disease
+SELECT disease.name FROM disease UNION SELECT disease_mutation_site_annotation.feature_key FROM disease
+SELECT disease.name FROM disease UNION SELECT disease_mutation_site_annotation.description FROM disease
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT DISTINCT biomarker.biomarker_description FROM biomarker
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'false'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer biomark' AND biomarker.test_is_a_panel = 'false'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer biomark' AND biomarker.test_is_a_panel = 'false'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer biomark' AND biomarker.biomarker_description = 'false'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.test_is_a_panel = 'cancer biomark' AND biomarker.test_is_a_panel = 'false'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.test_is_a_panel = 'cancer biomark' AND biomarker.test_is_a_panel = 'false'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.biomarker_description = 'false'
+SELECT * FROM disease WHERE disease.name = 'cancer'
+SELECT * FROM disease WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE disease.name = 'cancer'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE disease.name = 'cancer'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE disease.name = 'cancer'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = '2'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker.id = 'EDRN' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = '2'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = '2'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'phase Two' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'phase Two' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title , biomarker_edrn.qa_state FROM biomarker_edrn WHERE biomarker_edrn.phase = 'qa states for biomarker in phase Two' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn JOIN biomarker ON biomarker_edrn.id = biomarker.id WHERE biomarker_edrn.biomarker_type != 'EDRN' INTERSECT SELECT biomarker.biomarker_id FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type != 'protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type != 'EDRN'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_fda_test.platform_method = 'EDRN' AND biomarker_edrn.biomarker_type != 'Protein'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.biomarker_description = 'breast cancer' INTERSECT SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.biomarker_description = 'breast cancer' INTERSECT SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.qa_state = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.qa_state = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.qa_state = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE disease_mutation.ref_aa = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE disease_mutation.ref_aa = 'EDRN'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_study_design FROM biomarker_fda_test WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_trade_name FROM biomarker_fda_test WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_number_genes FROM biomarker_fda_test WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_approval_status FROM biomarker_fda_test WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_study_design FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_study_design FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda_test.test_study_design FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_adoption_evidence = 'Dako Denmark A/S'
+SELECT biomarker_article.pmid FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_article.pmid FROM biomarker_article JOIN disease_mutation_tissue ON biomarker_article.biomarker_internal_id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_article.pmid FROM disease_mutation JOIN disease_mutation_tissue ON disease_mutation.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_article.pmid FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE biomarker_article.pmid = 'lung cancer'
+SELECT biomarker_article.pmid FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_article.pmid FROM biomarker_article JOIN disease_mutation ON biomarker_article.biomarker_internal_id = disease_mutation.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_article.pmid FROM biomarker_article JOIN disease_mutation_tissue ON biomarker_article.biomarker_internal_id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_article.pmid FROM disease_mutation JOIN disease_mutation_tissue ON disease_mutation.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT disease_mutation.chromosome_id FROM disease_mutation WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.chromosome_pos FROM disease_mutation WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.mutation_freq FROM disease_mutation WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.chromosome_id FROM disease_mutation WHERE disease_mutation.mutation_freq = 'skin cancer'
+SELECT DISTINCT disease_mutation.mutation_freq FROM disease_mutation WHERE disease.name = 'skin cancer'
+SELECT DISTINCT disease_mutation.mutation_freq FROM disease_mutation WHERE disease.name = 'skin cancer'
+SELECT DISTINCT disease_mutation.mutation_freq FROM disease_mutation WHERE disease.name = 'skin cancer'
+SELECT DISTINCT disease_mutation.mutation_freq FROM disease_mutation WHERE disease_mutation.mutation_freq = 'skin cancer'
+SELECT disease_mutation.chromosome_id FROM disease_mutation JOIN disease ON disease_mutation.id = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.chromosome_id FROM disease_mutation JOIN disease ON disease_mutation.id = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.data_source FROM disease_mutation JOIN disease ON disease_mutation.id = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.chromosome_id FROM disease_mutation JOIN disease ON disease_mutation.mutation_freq = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.chromosome_pos FROM disease_mutation JOIN disease ON disease_mutation.mutation_freq = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.data_source FROM disease_mutation JOIN disease ON disease_mutation.mutation_freq = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.mutation_freq FROM disease_mutation JOIN disease ON disease_mutation.id = disease.id WHERE disease.name = 'skin cancer'
+SELECT disease_mutation.data_source FROM disease_mutation JOIN disease ON disease_mutation.id = disease.id WHERE disease.name = 'skin cancer'
+SELECT * FROM disease_mutation WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.id = disease.name WHERE disease_mutation.ref_aa = 'E'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE disease.name = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE disease.name = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE disease.name = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = '23andMe'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = '23andMe'
+SELECT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_level_anatomical_relative = 'A1BG'
+SELECT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_level_gene_relative = 'A1BG'
+SELECT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE healthy_expression.expression_level_anatomical_relative = 'A1BG'
+SELECT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE healthy_expression.expression_level_gene_relative = 'A1BG'
+SELECT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_rank_score = 'A1BG'
+SELECT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE healthy_expression.expression_score = 'A1BG'
+SELECT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score = 'A1BG'
+SELECT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE healthy_expression.expression_rank_score = 'A1BG'
+SELECT * FROM species
+SELECT * FROM species
+SELECT * FROM species
+SELECT * FROM species
+SELECT * FROM species
+SELECT * FROM species
+SELECT * FROM species
+SELECT * FROM species
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.biomarker_description = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.biomarker_description = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.biomarker_description = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.biomarker_description = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND biomarker_article.pmid = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol , biomarker_article.pmid FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker.gene_symbol = 'EGFR' AND disease.name = 'lung cancer'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_impact_prediction ON disease.id = disease_mutation_impact_prediction.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_impact_prediction ON disease.id = disease_mutation_impact_prediction.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_site_annotation ON disease.id = disease_mutation_site_annotation.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_site_annotation ON disease.id = disease_mutation_site_annotation.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_impact_prediction ON disease.id = disease_mutation_impact_prediction.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_site_annotation ON disease.id = disease_mutation_site_annotation.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_article ON disease.id = disease_mutation_article.disease_mutation_id
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id JOIN disease_mutation_article ON disease.id = disease_mutation_article.disease_mutation_id
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_anatomical_relative > (SELECT AVG( healthy_expression.expression_level_anatomical_relative ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_rank_score ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_anatomical_relative > (SELECT AVG( healthy_expression.expression_level_anatomical_relative ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_anatomical_relative > (SELECT AVG( healthy_expression.expression_level_gene_relative ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_anatomical_relative > (SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_gene_relative > (SELECT AVG( healthy_expression.expression_level_anatomical_relative ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_gene_relative > (SELECT AVG( healthy_expression.expression_level_gene_relative ) FROM healthy_expression)
+SELECT COUNT( * ) FROM healthy_expression WHERE healthy_expression.expression_level_gene_relative > (SELECT AVG( healthy_expression.expression_rank_score ) FROM healthy_expression)
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON differential_expression.doid = disease.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON differential_expression.doid = disease.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON differential_expression.doid = disease.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON differential_expression.doid = disease.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON differential_expression.doid = disease.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON differential_expression.doid = disease.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'Yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG' AND differential_expression.statistical_significance = 'Yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_level_anatomical_relative = 'Yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_level_gene_relative = 'Yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG' AND differential_expression.statistical_significance = 'yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_level_anatomical_relative = 'yes'
+SELECT disease.name FROM disease WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_level_gene_relative = 'yes'
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.biomarker_description FROM biomarker
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.test_is_a_panel = 'cancer' EXCEPT SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker, biomarker_edrn WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'cancer' AND biomarker.test_is_a_panel != 'cancer'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_trade_name = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_trade_name = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN disease ON biomarker_fda.test_submission = disease.id WHERE biomarker_fda_test.test_trade_name = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_adoption_evidence = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_study_design = 'predisposition'
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.gene_symbol FROM biomarker
+SELECT biomarker.biomarker_id FROM biomarker_edrn WHERE biomarker_edrn.phase = 'two' AND biomarker_edrn.biomarker_type = 'protein'
+SELECT biomarker.biomarker_id FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 'two'
+SELECT biomarker.biomarker_id FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker.biomarker_id FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.id FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 'two'
+SELECT biomarker_edrn.id FROM biomarker_edrn WHERE biomarker_edrn.phase = 'two' AND biomarker_edrn.biomarker_type = 'protein'
+SELECT biomarker_edrn.id FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.id FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.phase = 'Two' AND biomarker_edrn.biomarker_type = 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.phase = 'Two' AND biomarker_edrn.biomarker_type = 'Protein'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'EDRN' AND biomarker_edrn.phase = 2
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'Protein' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.biomarker_type = 'Protein' AND biomarker_edrn.phase = 'Two'
+SELECT biomarker_edrn.biomarker_title FROM biomarker_edrn WHERE biomarker_edrn.phase = 'Two' AND biomarker_edrn.biomarker_type = 'EDRN'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation_site_annotation ON anatomical_entity.id = disease_mutation_site_annotation.disease_mutation_id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation_site_annotation ON anatomical_entity.id = disease_mutation_site_annotation.disease_mutation_id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation_site_annotation ON anatomical_entity.id = disease_mutation_site_annotation.disease_mutation_id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation_site_annotation ON anatomical_entity.id = disease_mutation_site_annotation.disease_mutation_id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation_site_annotation ON disease_mutation.id = disease_mutation_site_annotation.disease_mutation_id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation_site_annotation ON disease_mutation.id = disease_mutation_site_annotation.disease_mutation_id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON anatomical_entity.id = disease.id WHERE disease.name = 'breast cancer'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON anatomical_entity.id = disease.id WHERE disease.name = 'breast cancer'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn WHERE biomarker_edrn.phase = 'EDRN'
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn
+SELECT DISTINCT biomarker_edrn.phase FROM biomarker_edrn
+SELECT biomarker_article.pmid FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction = 'lung cancer'
+SELECT biomarker_article.pmid FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction = 'lung cancer'
+SELECT differential_expression.expression_change_direction FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction = 'lung cancer'
+SELECT differential_expression.expression_change_direction FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction = 'lung cancer'
+SELECT biomarker_article.pmid FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction<(SELECT MAX( differential_expression.expression_change_direction ) FROM differential_expression)
+SELECT biomarker_article.pmid FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction<(SELECT MAX( differential_expression.expression_change_direction ) FROM differential_expression)
+SELECT differential_expression.expression_change_direction FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction<(SELECT MAX( differential_expression.expression_change_direction ) FROM differential_expression)
+SELECT differential_expression.expression_change_direction FROM disease JOIN differential_expression ON disease.id = differential_expression.doid WHERE differential_expression.expression_change_direction<(SELECT MAX( differential_expression.expression_change_direction ) FROM differential_expression)
+SELECT COUNT( * ) FROM species WHERE species.species = 'Homo'
+SELECT species.species FROM species WHERE species.species = 'Homo'
+SELECT COUNT( * ) FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT species.species FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT COUNT( * ) FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id JOIN species ON anatomical_entity.name = species.species
+SELECT COUNT( * ) FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id JOIN species ON anatomical_entity.name = species.species
+SELECT COUNT( * ) FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN species ON anatomical_entity.name = species.species
+SELECT COUNT( * ) FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN species ON anatomical_entity.name = species.species
+SELECT COUNT( * ) FROM species WHERE species.genus = 'Homo'
+SELECT species.species FROM species WHERE species.genus = 'Homo'
+SELECT COUNT( * ) FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT COUNT( * ) FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT species.species FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT species.species FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT species.genus FROM species WHERE species.genus = 'Homo'
+SELECT species.genus FROM species WHERE anatomical_entity.name = 'Homo'
+SELECT disease.name FROM disease WHERE disease.name = 'Roche'
+SELECT disease.name FROM disease WHERE disease.name LIKE '%Roche%'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.test_approval_status = 'Roche'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.test_trade_name = 'Roche'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.test_adoption_evidence = 'Roche'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.test_study_design = 'Roche'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.test_approval_status = 'Roche'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.test_manufacturer = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_trade_name = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_trade_name = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_adoption_evidence = 'Roche'
+SELECT biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'Roche'
+SELECT disease.name FROM disease WHERE disease.name = '102997'
+SELECT anatomical_entity.name FROM disease WHERE disease.name = '102997'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id
+SELECT anatomical_entity.name FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id
+SELECT anatomical_entity.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id JOIN disease ON disease_mutation.doid = disease.id
+SELECT disease.name FROM disease WHERE disease.name = '102997'
+SELECT disease.name FROM disease WHERE disease.name LIKE '%102997%'
+SELECT disease.name FROM disease WHERE disease.name LIKE '%102997%'
+SELECT disease.name FROM disease WHERE disease.name = 'cds_pos) of 102997'
+SELECT disease.name FROM disease, disease_mutation WHERE disease_mutation.mutation_freq = '102997' ORDER BY disease.name DESC LIMIT disease.name
+SELECT disease.name FROM disease, disease_mutation WHERE disease_mutation.mutation_freq = '102997' ORDER BY disease.name DESC LIMIT disease.name
+SELECT disease.name FROM disease WHERE disease_mutation.mutation_freq = '102997'
+SELECT disease.name FROM disease, disease_mutation WHERE disease_mutation.mutation_freq = '102997' ORDER BY disease.name DESC
+SELECT biomarker.gene_symbol FROM biomarker, biomarker_article WHERE biomarker_article.pmid = (SELECT differential_expression.gene_symbol FROM xref_gene_ensembl WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41)
+SELECT biomarker.gene_symbol FROM biomarker, biomarker_article WHERE biomarker_article.pmid = (SELECT xref_gene_ensembl.gene_symbol FROM xref_gene_ensembl WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41)
+SELECT biomarker.gene_symbol FROM biomarker, biomarker_article WHERE biomarker_article.pmid = (SELECT differential_expression.gene_symbol FROM biomarker_alias WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41)
+SELECT differential_expression.gene_symbol FROM biomarker WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 41 INTERSECT SELECT differential_expression.gene_symbol FROM biomarker WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 41
+SELECT differential_expression.gene_symbol FROM biomarker_alias WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41 GROUP BY biomarker_article.pmid
+SELECT differential_expression.gene_symbol FROM biomarker_alias WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41 GROUP BY biomarker_article.pmid
+SELECT xref_gene_ensembl.gene_symbol FROM biomarker_alias WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41 GROUP BY biomarker_article.pmid
+SELECT xref_gene_ensembl.gene_symbol FROM biomarker_alias WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41 GROUP BY biomarker_article.pmid
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 0.41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 39 and 0 AND biomarker_article.pmid <= 0.41
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id WHERE biomarker_article.pmid >= 0.39 AND biomarker_article.pmid <= 41
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_id FROM disease_mutation WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_id FROM disease_mutation WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_id FROM disease_mutation WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation, biomarker_edrn WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation, biomarker_edrn WHERE disease.name = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_id FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_id FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_id FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT DISTINCT disease_mutation.chromosome_pos FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT disease_mutation.chromosome_pos FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT disease_mutation.chromosome_id FROM disease_mutation WHERE biomarker_edrn.biomarker_title = 'breast cancer'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'LOW' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'LOW' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'LOW' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'LOW' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_score<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_anatomical_relative<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative = 'HIGH' INTERSECT SELECT anatomical_entity.name FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_level_gene_relative<'HIGH'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%bone%'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%bone%' ORDER BY anatomical_entity.name ASC
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%the name of all anatomical entities starting with %'bone'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%the name of all anatomical entities starting with %'bone'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%the name of all anatomical entities starting with %'bone'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%anatomical entities starting with %'bone'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%anatomical entities starting with %'bone'
+SELECT anatomical_entity.name FROM anatomical_entity WHERE anatomical_entity.name LIKE '%anatomical entities starting with %'bone'
+SELECT species.species FROM species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT anatomical_entity.name FROM species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species WHERE species.genus = 'Mus'
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_rank_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_rank_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_rank_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_rank_score LIKE '%A1BG%'
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE biomarker.gene_symbol = 'A1BG' AND healthy_expression.expression_score LIKE '%A1BG%'
+SELECT COUNT( * ) FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT COUNT( * ) FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT healthy_expression.expression_score FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT healthy_expression.expression_level_anatomical_relative FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT healthy_expression.expression_level_anatomical_relative FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT healthy_expression.expression_level_gene_relative FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT healthy_expression.expression_level_gene_relative FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT healthy_expression.expression_score FROM stage JOIN healthy_expression ON stage.id = healthy_expression.uberon_anatomical_id WHERE stage.name = 'late adult'
+SELECT COUNT( * ) FROM biomarker_fda_test WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT COUNT( * ) FROM biomarker_fda_test_trial JOIN biomarker_fda_test ON biomarker_fda_test_trial.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'ABBOTT MOLECULAR INC'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_adoption_evidence = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_number_genes = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_study_design = 'predisposition'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_trade_name = 'predisposition'
+SELECT disease.name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_trade_name = 'predisposition'
+SELECT disease.name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_study_design = 'predisposition'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_alias ON biomarker.id = biomarker_alias.biomarker_internal_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_article ON biomarker.id = biomarker_article.biomarker_internal_id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT DISTINCT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT DISTINCT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'lung cancer'
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda.test_trade_name = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.biomarker_origin = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda, biomarker_fda_test WHERE biomarker_fda.test_trade_name = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.biomarker_origin = 'Dako Denmark A/S'
+SELECT biomarker_fda_test.platform_method , biomarker_fda.test_submission FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_adoption_evidence = 'Dako Denmark A/S'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'yes' INTERSECT SELECT biomarker.biomarker_description FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.test_is_a_panel = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.test_is_a_panel = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.histological_type = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.histological_type = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker.test_is_a_panel = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker.test_is_a_panel = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.histological_type = 'class II'
+SELECT biomarker.biomarker_description FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission WHERE biomarker_fda_test.histological_type = 'class II'
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score<(SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score<(SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score<(SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score<(SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score<(SELECT MAX( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT * FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_score ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_level_anatomical_relative ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_level_gene_relative ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_gene_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_level_gene_relative ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_level_gene_relative ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_rank_score ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_level_anatomical_relative ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_level_gene_relative ) FROM healthy_expression)
+SELECT DISTINCT healthy_expression.expression_level_anatomical_relative FROM healthy_expression WHERE healthy_expression.expression_score > (SELECT AVG( healthy_expression.expression_rank_score ) FROM healthy_expression)
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'genomic' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'genomic' INTERSECT SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE biomarker_edrn.biomarker_type = 'genomic' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE biomarker_edrn.biomarker_type = 'genomic' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE biomarker_edrn.biomarker_type = 'genomic' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE biomarker_edrn.biomarker_type = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE biomarker_edrn.biomarker_type = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker_edrn.biomarker_type = 'EDRN' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE biomarker_edrn.biomarker_type = 'EDRN' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE anatomical_entity.name = 'EDRN' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE anatomical_entity.name = 'EDRN' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE anatomical_entity.name = 'EDRN' AND anatomical_entity.name = 'breast'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id WHERE anatomical_entity.name = 'EDRN' AND anatomical_entity.name = 'breast'
+SELECT disease.name FROM disease WHERE disease.name = 'liver'
+SELECT COUNT( * ) FROM disease WHERE disease.name = 'liver'
+SELECT disease.name FROM disease WHERE disease.name IN (SELECT disease.name FROM disease)
+SELECT disease.name FROM disease WHERE disease.name IN (SELECT disease.name FROM disease)
+SELECT disease.name FROM disease WHERE disease.name IN (SELECT disease.name FROM disease)
+SELECT disease.name FROM disease WHERE disease.name IN (SELECT disease.name FROM disease)
+SELECT disease.name FROM disease WHERE disease.name IN (SELECT disease.name FROM disease)
+SELECT disease.name FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id INTERSECT SELECT disease.name FROM disease WHERE disease.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT disease.name FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name = 'liver'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT DISTINCT biomarker_fda.test_trade_name FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_manufacturer FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_number_genes FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_approval_status FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_trade_name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_study_design FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker.gene_symbol = 'BRAF'
+SELECT biomarker_fda_test.test_manufacturer FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_manufacturer = 'BRAF'
+SELECT biomarker_fda_test.test_manufacturer FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission WHERE biomarker_fda_test.test_approval_status = 'BRAF'
+SELECT anatomical_entity.name FROM anatomical_entity UNION SELECT species.species FROM species
+SELECT anatomical_entity.name FROM anatomical_entity UNION SELECT species.species FROM species
+SELECT anatomical_entity.name , species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species
+SELECT anatomical_entity.name , species.species FROM anatomical_entity JOIN species ON anatomical_entity.id = species.speciesid
+SELECT anatomical_entity.name , anatomical_entity.name FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species
+SELECT anatomical_entity.name , species.species FROM anatomical_entity JOIN cancer_tissue ON anatomical_entity.id = cancer_tissue.uberon_anatomical_id
+SELECT anatomical_entity.name , species.species FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id
+SELECT anatomical_entity.name , species.species FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT DISTINCT anatomical_entity.name FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id WHERE biomarker.gene_symbol = 'A1BG'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.phase = 'EDRN'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 'EDRN'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 'EDRN'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 'EDRN'
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 1
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 1
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 1
+SELECT biomarker.gene_symbol , biomarker.biomarker_description FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'breast' AND biomarker_edrn.phase = 1
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE healthy_expression.expression_rank_score = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE biomarker.gene_symbol = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE biomarker.gene_symbol = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE biomarker.gene_symbol = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT anatomical_entity.name , healthy_expression.expression_score FROM anatomical_entity JOIN healthy_expression ON anatomical_entity.id = healthy_expression.uberon_anatomical_id WHERE biomarker.gene_symbol = 'ENSMUSG00000000037' OR biomarker.gene_symbol = 'ENSMUSG00000000078'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker JOIN biomarker_fda_ncit_term ON biomarker.id = biomarker_fda_ncit_term.biomarker_fda_id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker JOIN biomarker_fda_ncit_term ON biomarker.id = biomarker_fda_ncit_term.biomarker_fda_id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker JOIN biomarker_fda_ncit_term ON biomarker.id = biomarker_fda_ncit_term.biomarker_fda_id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker_fda_ncit_term JOIN biomarker ON biomarker_fda_ncit_term.biomarker_fda_id = biomarker.id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker_fda_ncit_term JOIN biomarker ON biomarker_fda_ncit_term.biomarker_fda_id = biomarker.id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker_fda_ncit_term JOIN biomarker ON biomarker_fda_ncit_term.biomarker_fda_id = biomarker.id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker_fda_ncit_term JOIN biomarker ON biomarker_fda_ncit_term.biomarker_fda_id = biomarker.id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT biomarker_fda_ncit_term.ncit_biomarker FROM biomarker_fda_ncit_term JOIN biomarker ON biomarker_fda_ncit_term.biomarker_fda_id = biomarker.id WHERE biomarker.gene_symbol = 'ALDH4A1'
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_impact_prediction ON disease_mutation.id = disease_mutation_impact_prediction.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_site_annotation ON disease_mutation.id = disease_mutation_site_annotation.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_impact_prediction ON disease_mutation.id = disease_mutation_impact_prediction.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_site_annotation ON disease_mutation.id = disease_mutation_site_annotation.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_article ON disease_mutation.id = disease_mutation_article.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_article ON disease_mutation.id = disease_mutation_article.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_impact_prediction ON disease_mutation.id = disease_mutation_impact_prediction.disease_mutation_id
+SELECT * FROM anatomical_entity JOIN disease_mutation_tissue ON anatomical_entity.id = disease_mutation_tissue.uberon_anatomical_id JOIN disease_mutation_site_annotation ON disease_mutation.id = disease_mutation_site_annotation.disease_mutation_id
+SELECT disease.name FROM disease WHERE disease.name LIKE '%liver%'
+SELECT disease.name FROM disease WHERE disease.name = 'liver'
+SELECT disease.name FROM disease WHERE disease.name = 'liver'
+SELECT disease.name FROM disease WHERE anatomical_entity.name = 'liver'
+SELECT DISTINCT disease.name FROM disease WHERE disease.name LIKE '%liver%'
+SELECT disease.name FROM disease, disease_mutation_tissue WHERE anatomical_entity.name = 'liver'
+SELECT DISTINCT disease.name FROM disease WHERE anatomical_entity.name = 'liver'
+SELECT DISTINCT disease.name FROM disease WHERE disease.name = 'liver'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker_article.pmid = 'PMP'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker_article.pmid = 'PMP'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker_article.pmid = 'yes'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker_article.pmid = 'yes'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE xref_gene_ensembl.gene_symbol = 'PMP'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE xref_gene_ensembl.gene_symbol = 'PMP'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker_article.pmid = 'PMP'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id WHERE biomarker_article.pmid = 'PMP'
+SELECT biomarker_fda_test.test_adoption_evidence FROM disease WHERE disease.name = 'breast cancer'
+SELECT biomarker_fda_test.test_approval_status FROM disease WHERE disease.name = 'breast cancer'
+SELECT biomarker_fda_test.test_adoption_evidence FROM disease WHERE disease.name = 'breast cancer'
+SELECT biomarker.biomarker_id FROM disease WHERE disease.name = 'breast cancer'
+SELECT biomarker_fda.test_submission FROM disease WHERE disease.name = 'breast cancer'
+SELECT biomarker_fda.test_submission FROM disease WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT biomarker_fda_test.test_manufacturer FROM disease WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT biomarker_fda_test.test_approval_status FROM disease WHERE biomarker.biomarker_description = 'breast cancer'
+SELECT anatomical_entity.name , COUNT( * ) FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.name
+SELECT anatomical_entity.name , COUNT( * ) FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.id
+SELECT COUNT( * ) , anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.name
+SELECT COUNT( * ) , anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.name
+SELECT anatomical_entity.name , COUNT( * ) FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.name
+SELECT COUNT( * ) , anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.id
+SELECT anatomical_entity.name , COUNT( * ) FROM biomarker_edrn JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id GROUP BY anatomical_entity.name
+SELECT anatomical_entity.name , COUNT( * ) FROM biomarker_edrn JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id GROUP BY anatomical_entity.name
+SELECT * FROM disease_mutation WHERE disease_mutation.ref_aa = 'f'
+SELECT * FROM disease_mutation WHERE disease_mutation.ref_aa = 'f'
+SELECT * FROM disease_mutation WHERE disease_mutation.ref_nt = 'F'
+SELECT * FROM disease_mutation WHERE disease_mutation.ref_aa = 'F'
+SELECT * FROM disease_mutation WHERE disease_mutation.aa_pos_uniprotkb = 'f'
+SELECT * FROM disease_mutation WHERE disease_mutation.aa_pos_uniprotkb = 'F'
+SELECT disease_mutation.aa_pos_uniprotkb FROM disease_mutation WHERE disease_mutation.ref_aa = 'f'
+SELECT disease_mutation.aa_pos_uniprotkb FROM disease_mutation WHERE disease_mutation.ref_nt = 'f'
+SELECT * FROM disease WHERE disease.name = 'cancer'
+SELECT * FROM disease WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE disease.name = 'cancer'
+SELECT * FROM cancer_tissue JOIN disease ON cancer_tissue.doid = disease.id WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM disease JOIN cancer_tissue ON disease.id = cancer_tissue.uberon_anatomical_id JOIN disease ON cancer_tissue.doid = disease.id WHERE disease.name = 'cancer'
+SELECT * FROM disease_mutation JOIN disease ON disease_mutation.doid = disease.id WHERE disease.name = 'cancer'
+SELECT * FROM disease JOIN cancer_tissue ON disease.id = cancer_tissue.doid WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT * FROM disease JOIN cancer_tissue ON disease.id = cancer_tissue.uberon_anatomical_id WHERE anatomical_entity.name LIKE '%cancer%'
+SELECT DISTINCT biomarker_fda_test.test_approval_status FROM biomarker_fda
+SELECT DISTINCT biomarker_fda_test.test_manufacturer FROM biomarker_fda
+DISTINCT biomarker_fda_test.test_trade_name
+DISTINCT biomarker_fda_test.test_number_genes
+DISTINCT biomarker_fda_test.test_study_design
+DISTINCT biomarker_fda_test.test_study_design
+DISTINCT biomarker_fda_test.test_trade_name
+DISTINCT biomarker_fda_test.test_trade_name
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE biomarker.gene_symbol = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE disease.name = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE disease.name = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE disease.name = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE disease.name = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE disease.name = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE biomarker.biomarker_description = 'cancer'
+SELECT biomarker.test_is_a_panel FROM biomarker WHERE biomarker.biomarker_description = 'cancer'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.biomarker_origin = '23andMe'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.biomarker_origin = '23andMe'
+SELECT disease.name FROM disease WHERE biomarker_fda_test.biomarker_origin = '23andMe'
+SELECT disease.name FROM disease, biomarker_fda WHERE biomarker_fda.test_trade_name = '23andMe'
+SELECT disease.name FROM disease, biomarker_fda WHERE biomarker_fda.test_trade_name = '23andMe'
+SELECT disease.name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission
+SELECT disease.name FROM biomarker_fda JOIN disease ON biomarker_fda.test_trade_name = disease.id
+SELECT DISTINCT disease.name FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission
+SELECT disease.name FROM disease WHERE disease.name = 'breast cancer'
+SELECT disease.name FROM disease, biomarker_fda WHERE disease.name = 'breast cancer'
+SELECT disease.name FROM disease, biomarker_fda WHERE disease.name = 'breast cancer'
+SELECT disease.name FROM disease, biomarker_fda WHERE disease.name = 'breast cancer' INTERSECT SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid
+SELECT disease.name FROM disease, biomarker_fda WHERE disease.name = 'breast cancer' INTERSECT SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid
+SELECT disease.name FROM disease, biomarker_fda WHERE disease.name = 'breast cancer' INTERSECT SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid
+SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid INTERSECT SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid
+SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid INTERSECT SELECT disease.name FROM disease JOIN biomarker_fda_test ON disease.id = biomarker_fda_test.doid JOIN biomarker ON biomarker.id = biomarker_fda_test.doid
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer' ORDER BY biomarker_fda_test_use.approved_indication DESC LIMIT biomarker_fda_test_use.approved_indication
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer' ORDER BY biomarker_fda_test_use.approved_indication DESC LIMIT biomarker_fda_test_use.approved_indication
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer' ORDER BY biomarker_fda_test_use.approved_indication DESC LIMIT biomarker_fda_test_use.approved_indication
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer' ORDER BY biomarker_fda_test_use.approved_indication DESC LIMIT biomarker_fda_test_use.approved_indication
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer' ORDER BY biomarker_fda_test_use.approved_indication DESC
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer' ORDER BY biomarker_fda_test_use.approved_indication DESC
+SELECT biomarker_fda_test_use.approved_indication FROM disease WHERE biomarker_fda_test_use.approved_indication IN (SELECT biomarker_fda_test_use.approved_indication FROM biomarker_fda_test_use WHERE disease.name = 'breast cancer')
+SELECT biomarker_fda_test_use.approved_indication FROM disease, biomarker_fda_test_use WHERE disease.name = 'breast cancer'
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY biomarker_edrn.uberon_anatomical_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id JOIN biomarker ON biomarker_edrn.id = biomarker.id GROUP BY anatomical_entity.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY anatomical_entity.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id GROUP BY biomarker.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id GROUP BY biomarker.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id GROUP BY biomarker.gene_symbol ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id GROUP BY biomarker.gene_symbol ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id GROUP BY biomarker.id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id GROUP BY biomarker.gene_symbol ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id GROUP BY biomarker.gene_symbol ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id JOIN disease_mutation ON biomarker_edrn.uberon_anatomical_id = disease_mutation.data_source GROUP BY biomarker.gene_symbol ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT differential_expression.expression_change_direction FROM differential_expression GROUP BY differential_expression.expression_change_direction ORDER BY COUNT( * ) DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression GROUP BY differential_expression.expression_change_direction ORDER BY COUNT( * ) DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression GROUP BY differential_expression.expression_change_direction ORDER BY COUNT( * ) DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression GROUP BY differential_expression.expression_change_direction ORDER BY COUNT( * ) DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression ORDER BY differential_expression.expression_change_direction DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression ORDER BY differential_expression.expression_change_direction DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression ORDER BY differential_expression.expression_change_direction DESC LIMIT 3
+SELECT differential_expression.expression_change_direction FROM differential_expression ORDER BY differential_expression.expression_change_direction DESC LIMIT 3
+SELECT biomarker_fda_test_use.actual_use FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda.id FROM biomarker_fda)
+SELECT biomarker_fda_test_use.actual_use FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda.id FROM biomarker_fda)
+SELECT biomarker_edrn.id FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda.id FROM biomarker_fda)
+SELECT biomarker_fda_test_use.id FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda_test_use.approved_indication FROM biomarker_fda)
+SELECT biomarker_fda_test_use.actual_use FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda_test_use.approved_indication FROM biomarker_fda)
+SELECT biomarker_fda_test_use.id FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda.id FROM biomarker_fda_test_use)
+SELECT biomarker_fda_test_use.actual_use FROM biomarker_fda_test_use WHERE biomarker_edrn.id NOT IN (SELECT biomarker_fda.id FROM biomarker_fda_test_use)
+SELECT biomarker_fda_test_use.id FROM biomarker_fda_test_use WHERE biomarker_fda_test_use.approved_indication NOT IN (SELECT biomarker_fda.id FROM biomarker_fda)
+SELECT DISTINCT biomarker_fda_test_use.approved_indication FROM biomarker_fda_test_use
+SELECT DISTINCT biomarker_fda_test_use.approved_indication FROM biomarker_fda_test_use
+SELECT DISTINCT biomarker_fda_test_use.approved_indication FROM biomarker_fda_test_use
+SELECT DISTINCT biomarker_edrn.id FROM biomarker_fda_test_use WHERE biomarker_fda_test_use.approved_indication = 'yes'
+SELECT biomarker_fda_test_use.approved_indication FROM biomarker_fda_test_use
+SELECT biomarker.biomarker_id FROM biomarker_fda_test_use WHERE biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test_use.approved_indication FROM biomarker_edrn
+SELECT biomarker_edrn.id FROM biomarker_edrn INTERSECT SELECT biomarker_fda_test_use.approved_indication FROM biomarker_fda_test_use
+SELECT anatomical_entity.name , disease_mutation.chromosome_id FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_id FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_pos ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_id FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_pos FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_id FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_pos FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_id FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_pos ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT anatomical_entity.name , disease_mutation.chromosome_pos FROM anatomical_entity JOIN biomarker_edrn ON anatomical_entity.id = biomarker_edrn.uberon_anatomical_id GROUP BY disease_mutation.chromosome_pos ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'prostate cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'prostate cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'prostate cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE disease.name = 'prostate cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker.biomarker_description = 'prostate cancer'
+SELECT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker.biomarker_description = 'prostate cancer'
+SELECT DISTINCT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'prostate cancer'
+SELECT DISTINCT biomarker.gene_symbol FROM biomarker JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id WHERE biomarker_edrn.biomarker_type = 'prostate cancer'
+SELECT biomarker_fda.test_trade_name , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.id = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda.test_trade_name , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda.test_trade_name , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda_test.test_approval_status , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda_test.test_adoption_evidence , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.test_submission = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda_test.test_adoption_evidence , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.id = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda_test.test_approval_status , COUNT( * ) FROM biomarker_fda JOIN biomarker_fda_test ON biomarker_fda.id = biomarker_fda_test.test_submission GROUP BY biomarker_fda.test_trade_name
+SELECT biomarker_fda.test_trade_name , COUNT( * ) FROM biomarker_fda GROUP BY biomarker_fda.test_trade_name
+SELECT DISTINCT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission
+SELECT DISTINCT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_trade_name = biomarker_fda_test.test_submission
+SELECT DISTINCT biomarker_fda_test.test_approval_status FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_trade_name = biomarker_fda_test.test_submission
+SELECT DISTINCT biomarker_fda_test.test_approval_status FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.test_manufacturer FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.test_number_genes FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_submission = biomarker_fda_test.test_submission
+SELECT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test_use JOIN biomarker_fda_test ON biomarker_fda_test_use.test_trade_name = biomarker_fda_test.test_submission
+SELECT COUNT( DISTINCT biomarker_fda_test_use.test_submission ) FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT COUNT( DISTINCT biomarker_fda_test_use.test_trade_name ) FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test.test_manufacturer FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test.test_approval_status FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test.test_approval_status FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test.test_manufacturer FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT DISTINCT biomarker_fda_test.test_adoption_evidence FROM biomarker_fda_test, biomarker_fda_test_use WHERE disease.name = 'lung cancer' AND biomarker_fda_test_use.approved_indication = 'yes'
+SELECT MAX( disease.name ) FROM disease
+SELECT disease.name FROM disease
+SELECT DISTINCT disease.name FROM disease
+SELECT disease.name FROM disease
+SELECT disease.name FROM disease
+SELECT disease.name FROM disease
+SELECT disease.name FROM disease
+SELECT disease.name FROM disease
+SELECT * FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species
+SELECT * FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species
+SELECT * FROM anatomical_entity JOIN species ON anatomical_entity.id = species.species
+SELECT * FROM biomarker JOIN species ON biomarker.id = species.species
+SELECT * FROM biomarker JOIN species ON biomarker.biomarker_id = species.species
+SELECT anatomical_entity.name FROM species UNION SELECT species.species FROM species
+SELECT anatomical_entity.name FROM species UNION SELECT species.species FROM species
+SELECT anatomical_entity.name FROM species UNION SELECT species.species FROM species

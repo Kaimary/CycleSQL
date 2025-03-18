@@ -1,0 +1,800 @@
+select sum(total_cost) from projects
+select sum(total_cost) from projects where unics_id = 'Theseus'
+select sum(total_cost) from projects where acronym = 'Theseus'
+select sum(total_cost) from projects where acronym = "Theseus"
+select sum(total_cost) from projects where unics_id like "%theseus%"
+select sum(total_cost) from projects where unics_id = 'Thesus'
+select sum(total_cost), title from projects
+select sum(total_cost) from projects where unics_id = 'Theus'
+select sum(total_cost) from projects where title = "Theseus"
+select sum(total_cost) from projects where title = 'Theseus'
+select sum(total_cost) from projects where title = "Thesus"
+select sum(total_cost) from projects where title = 'Thesus'
+select sum(total_cost) from projects where title = "Theseus";
+select total_cost from projects where title = "Theseus"
+select sum(total_cost) from projects where title = "Theos"
+select sum(total_cost) from projects where title = "Theseus"
+select acronym from projects where start_year = 2018
+select acronym from projects where start_year like "2018%"
+select acronym from projects where start_year like "2018"
+select acronym from projects where start_year like 2018
+select acronym from projects where start_date like "2018%"
+select acronym from projects where start_year like "18%"
+select acronym from projects where start_year = 18
+select acronym from projects where start_year like "2018% "
+select acronym from projects where start_year like "2018%"
+select acronym from projects where start_year = 2018
+select acronym from projects where start_year like "2018"
+select acronym from projects where start_year like 2018
+select acronym from projects where start_year like "2018%" or end_year like "2018%"
+select acronym from projects where start_year like "18%"
+select acronym from projects where start_year like "2018%" or end_year like "2022%"
+select acronym from projects where start_year like "2018%" or end_year like "20%"
+select title from projects where start_year < 2016
+select title from projects where start_date < 2016
+select title, start_date from projects where start_date < 2016
+select title, start_date from projects where start_year < 2016
+select title from projects where start_year <= 2016
+select title from projects where start_date < '2016'
+select title from projects where start_date <= 2016
+select title from projects where start_year < 2016
+select title from projects where start_year < 2016
+select title from projects where start_date < 2016
+select title, start_date from projects where start_date < 2016
+select title, start_date from projects where start_year < 2016
+select title from projects where start_year <= 2016
+select title from projects where start_year < 2016
+select title from projects where start_date <= 2016
+select title from projects where start_date < 2016
+select institutions_name from institutions where geocode_regions_3 = "Nordjylland"
+select distinct institutions_name from institutions where geocode_regions_3 = "Nordjylland"
+select institutions_name from institutions where geocode_regions_3 = "Norgejylland"
+select institutions_name from institutions where geocode_regions_3 like "%nordjylland%"
+select institutions_name from institutions where geocode_regions_3 = 'Nordjylland'
+select institutions_name from institutions where geocode_regions_3 = "Norge-Jylland"
+select institutions_name from institutions where geocode_regions_3 = "Nordenjylland"
+select institutions_name from institutions where geocode_regions_3 = "Northjylland"
+select institutions_name from institutions where geocode_regions_3 = "Nordjylland"
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Nordjylland")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = 'NORDJYLLAND')
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = 'Nordjylland')
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = 'NORTHJYLLAND')
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Norge")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 like "%nordjylland%")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "NORDJYLLAND")
+select principal_investigator from projects where start_year = 2014
+select principal_investigator from projects where start_year like "2014%"
+select principal_investigator from projects where start_year like 2014
+select principal_investigator from projects where start_year like "2014"
+select principal_investigator from projects where start_date like "2014%"
+select distinct principal_investigator from projects where start_year = 2014
+select principal_investigator from projects where start_year = 2014
+select distinct principal_investigator from projects where start_year like "2014%"
+select t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id where t1.start_year = 2014
+select t3.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id join people as t3 on t1.principal_investigator = t3.unics_id where t1.start_year = 2014
+select distinct t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id where t1.start_year = 2014
+select t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id where t1.start_year like "2014%"
+select t3.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id join people as t3 on t1.principal_investigator = t3.unics_id where t1.start_year like "2014%"
+select t3.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id join people as t3 on t2.unics_id = t3.unics_id where t1.start_year = 2014
+select distinct t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id where t1.start_year like "2014%"
+select t3.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id join people as t3 on t2.unics_id = t3.unics_id where t1.start_year like "2014%"
+select project from project_subject_areas where subject_area = "Mathematics and Statistics"
+select project from project_subject_areas where subject_area = "Mathematics and statistics"
+select project from project_subject_areas where subject_area = "Mathematics and Statistics"
+select project from project_subject_areas where subject_area = "Maths and Statistics"
+select project from project_subject_areas where subject_area = "Mathematics and statistics"
+select project from project_subject_areas where subject_area = "Mathematics, statistics"
+select project from project_subject_areas where subject_area = "Mathematical and statistical methods"
+select project from project_subject_areas where subject_area = "Maths and Statistic"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematics and Statistics"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematics and Statistics"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematics and statistics"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathmatics and Statistics"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematical and Statistical"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematics, statistics"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = 2 join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematics and Statistics"
+select t1.acronym, t3.description from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project join subject_areas as t3 on t2.subject_area = t3.code where t2.subject_area = "Mathematics, statistic"
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year = 2014
+select distinct t1.topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year = 2014
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where end_year = 2014
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year like "2014%"
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_date like "2014%"
+select distinct t1.topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year like "2014%"
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year = 14
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.start_year = 2014
+select distinct topic from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year = 2014
+select distinct t2.title from project_topics as t1 join topics as t2 on t1.topic = t2.code join projects as t3 on t1.project = t3.unics_id where t3.end_year = 2014
+select distinct t2.title from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t2.end_year = 2014
+select distinct t1.title from topics as t1 join project_topics as t2 on t1.code = t2.topic join projects as t3 on t2.project = t3.unics_id where t3.end_year = 2014
+select distinct t1.title from topics as t1 join project_topics as t2 on t1.code = t2.topic join projects as t3 group by t2.topic having t3.end_year = 2014
+select distinct t2.title from project_topics as t1 join topics as t2 on t1.topic = t2.code join projects as t3 on t1.project = t3.unics_id where t3.end_year = 14
+select distinct t1.title from topics as t1 join project_topics as t2 on t1.code = t2.topic join projects as t3 group by t2.topic having t3.end_year like "2014%"
+select distinct t2.title from project_topics as t1 join topics as t2 on t1.topic = t2.code join projects as t3 on t1.project = t3.unics_id where end_year = 2014
+select acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = "GREECE"
+select acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = "Greece"
+select acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.member_short_name = "Greece"
+select t1.acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = "GREECE"
+select acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = 'GREECE'
+select t1.acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = "Greece"
+select acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = 'Greece'
+select t1.acronym from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.country = 'GREECE'
+select institutions_name from institutions where country_id = "France" or country_id = "Germany"
+select institutions_name from institutions where country_id in (select country_id from institutions where country_id = "France" or country_id = "Germany")
+select institutions_name from institutions where country_id in (select country_id from institutions where country_id = "France") or country_id in (select country_id from institutions where country_id = "Germany")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "France") or country_id in (select country_id from institutions where geocode_regions_3 = "Germany")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "FRANCE") or country_id in (select country_id from institutions where geocode_regions_3 = "GERMANY")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "FRANCE") or country_id in (select country_id from institutions where geocode_regions_3 = "DE")
+select institutions_name from institutions where country_id = "FRANCE" or country_id = "GERMANY"
+select institutions_name from institutions where country_id = "FR" or country_id = "DE"
+select institutions_name from institutions where country_id not in (select country_id from institutions where country_id = "France")
+select institutions_name from institutions where country_id not in (select country_id from institutions where country_id = 'France')
+select institutions_name from institutions where country_id not in (select country_id from institutions where country_id like "%france%")
+select institutions_name from institutions where country_id not in (select country_id from institutions where country_id = "FRANCE")
+select institutions_name from institutions where country_id not in(select country_id from institutions where country_id = "France")
+select institutions_name from institutions where country_id not in (select country_id from institutions where country_id like "FRANCE")
+select institutions_name from institutions where country_id not in (select country_id from institutions where country_id = 'FRANCE')
+select institutions_name from institutions where country_id != "France"
+select count(*) from projects where start_year = 2016
+select count(*) from projects where start_year like "2016%"
+select count(*) from projects where start_date like "2016%"
+select count(*), start_year from projects where start_year like "2016%"
+select count(*) from projects where start_year like 2016
+select count(*) from projects where start_year like "16/%"
+select count(*), start_year from projects where start_year = 2016
+select count(*) from projects where start_year = "2016"
+select title from projects order by total_cost desc limit 1
+select title, t1.ec_fund_scheme from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select title, ec_fund_scheme from projects order by total_cost desc limit 1
+select title, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select title, t1.ec_fund_scheme, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select title, ec_ref from projects order by total_cost desc limit 1
+select title, acronym from projects order by total_cost desc limit 1
+select title from projects order by sum(total_cost) desc limit 1
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.total_cost < (select avg(total_cost) from projects)
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id group by t2.unics_id having sum(t2.total_cost) < (select avg(total_cost) from projects)
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id where total_cost < (select avg(total_cost) from projects)
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.total_cost < ( select avg(total_cost) from projects )
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id group by t2.unics_id having t2.total_cost < (select avg(total_cost) from projects)
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id group by t1.project having avg(total_cost) < (select avg(total_cost) from projects)
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id group by t1.project having avg(t2.total_cost) < (select avg(t2.total_cost) from projects)
+select t1.member_name from project_members as t1 join projects as t2 on t1.project = t2.unics_id group by t1.project having avg(t2.total_cost) < (select avg(total_cost) from projects)
+select unics_id from project_members group by unics_id having count(*) >= 100
+select project from project_members group by project having count(*) >= 100
+select unics_id from project_members group by project having count(*) >= 100
+select unics_id from project_members group by unics_Id having count(*) >= 100
+select unics_id from project_members group by unics_id having count(*) >= 10
+select unics_id from project_members group by unics_id having count(*) >= 100
+select unics_id from project_members group by project having count(*) >= 10
+select unics_id from project_members group by unics_id having count(*) >= 100;
+select t1.code, t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by count(*) desc limit 1
+select t1.code, t1.title, t2.ec_fund_scheme from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by count(*) desc limit 1
+select t1.code, t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t2.ec_fund_scheme order by count(*) desc limit 1
+select t1.code, t1.title, t2.ec_fund_scheme from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t2.ec_fund_scheme order by count(*) desc limit 1
+select t1.code, t1.title, t2.ec_max_contribution from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by count(*) desc limit 1
+select t1.code, t1.title from funding_schemes as t1 join projects as t2 on t1.code=t2.ec_fund_scheme group by t1.code order by count(*) desc limit 1
+select code, title from funding_schemes group by code order by count(*) desc limit 1
+select code, t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by count(*) desc limit 1
+select sum(total_cost) from projects
+select sum(total_cost), t1.title from projects as t1 join activity_types as t2 on t1.cordis_ref = t2.code
+select sum(total_cost), t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select sum(total_cost), ec_fund_scheme from projects
+select sum(total_cost), t1.title from projects as t1 join project_subject_areas as t2 on t1.cordis_ref = 't2.ec_fund_scheme'
+select sum(total_cost), t1.title from projects as t1 join project_subject_areas as t2 on t1.cordis_ref = 't2.ec_ref'
+select sum(total_cost), ec_ref from projects
+select sum(total_cost), t1.title from projects as t1 join project_subject_areas as t2 on t1.cordis_ref = 't2.ec_funding_scheme'
+select title from projects where end_year > 2006 and start_year > 2006
+select title from projects where start_year > 2006 and end_year > 2006
+select title from projects where start_year > 2006 and end_year > 2007
+select title, start_year from projects where end_year > 2006 intersect select title from projects where start_year > 2006
+select title from projects where end_year > 2006 and start_year > 2007
+select title from projects where end_year > 2006 and start_date > 2006
+select title, start_year from projects where end_year > 2006 intersect select title, start_year from projects where end_year < 2006
+select title from projects where end_year > 2007 and start_year > 2006
+select title from projects order by end_year - start_year desc limit 1
+select title from projects order by end_year desc limit 1
+select title, end_year, start_year from projects order by end_year desc limit 1
+select title, start_year, end_year from projects order by end_year desc limit 1
+select title, start_year from projects order by end_year desc limit 1
+select title from projects order by start_year - end_year desc limit 1
+select title from projects order by end_year - start_year limit 1
+select title from projects order by end_date - start_year desc limit 1
+select title from topics where title like '%raw materials%'
+select title from topics where title like '%raw%'
+select title from topics where title like 'Raw materials%'
+select title from topics where title like '%raw materials%'
+select title from topics where title like '%raw%' or title like '%process%'
+select title from topics where title like '%raw%' or title like '%texture%'
+select title from topics where title like '%raw%' or title like '%processing%'
+select title from topics where title like '%raw materials%' or title like '%processing%'
+select title from topics where title like '%climate%'
+select title from topics where title like "%climate%"
+select title from topics where title like '%climate%' or title like '%ec_fund_scheme%'
+select title from topics where title like '%climate%' or title like '%ec_ref%'
+select title from topics where title like '%climate%' or title like '%environment%'
+select title from topics where title like '%climate%' or title like '%ec_research_domains%'
+select title from projects where title like '%climate%'
+select title from topics where title like '%climate%' or title like '%ec_funding_scheme%'
+select count(*) from projects where principal_investigator = "Thomas Bell"
+select count(*) from projects where principal_investigator = 'Thomas Bell'
+select count(*) from projects where principal_investigator = 'Thomas_Bell'
+select count(*) from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id where t2.full_name = "Thomas Bell"
+select count(*) from projects where principal_investigator = 'Thomas_Bellamy'
+select count(*) from projects where principal_investigator = 'Thomas_Bellon'
+select count(*) from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id where t2.full_name = "Thomas"
+select count(*) from projects where principal_investigator = 'Thomas_Bella'
+select distinct full_name from people
+select distinct FULL_NAME from people
+select distinct full_name from people;
+select distinct full_name from people
+select distinct FULL_NAME from people
+select distinct full_Name from people
+select distinct FULL_NAME FROM people
+select distinct FULL_NAME FROM people
+select acronym from projects where total_cost between 100000 and 200000
+select acronym from projects where total_cost between 100000 and 20000
+select acronym from projects where total_cost between 100000 and 200000
+select acronym from projects where total_cost between 10000 and 200000
+select acronym from projects where total_cost between 100000 and 200000
+select acronym from projects where total_cost between 100001 and 200000
+select acronym from projects where total_cost between 100000 and 2000000
+select acronym from projects where total_cost between 100000 and 2000000;
+select title from projects where total_cost > 1000000
+select t1.title from projects as t1 join projects as t2 on t1.unics_id = t2.unics_id where t1.total_cost > 1000000
+select t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic where t1.total_cost > 1000000
+select title, ec_fund_scheme from projects where total_cost > 1000000
+select t1.title from projects as t1 join projects as t2 on t1.cordis_ref = t2.ec_fund_scheme where t1.total_cost > 1000000
+select t1.title from projects as t1 join projects as t2 on t1.cordis_ref = t2.cordis_ref where t1.total_cost > 1000000
+select title, ec_ref from projects where total_cost > 1000000
+select t1.title from projects as t1 join projects as t2 on t1.unics_id = t2.unics_id where t1.total_cost > 10000000
+select title from projects where total_cost > 1
+select t1.title from projects as t1 join projects as t2 on t1.unics_id = t2.unics_id where t1.total_cost > 1
+select t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic where t1.total_cost > 1
+select title from projects where total_cost > 1000
+select t1.title from projects as t1 join projects as t2 on t1.unics_id = t2.unics_id where t1.total_cost > 1000
+select t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic where t1.total_cost > 1000
+select t1.title from projects as t1 join projects as t2 on t1.cordis_ref = t2.ec_fund_scheme where t1.total_cost > 1
+select t1.title from projects as t1 join projects as t2 on t1.cordis_ref = t2.cordis_ref where t1.total_cost > 1
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role where t2.member_role = 'PARTNER'
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role where t2.member_role = 'partner'
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role where t1.start_date > '2003-04-19 15:06:20'
+select project, member_name from project_members where member_role = 'partner'
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role where t1.title = 'Partner'
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role where t1.title != "partnership"
+select t1.title, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_role where t1.title = 'Partnership'
+select distinct description from erc_research_domains
+select distinct t1.description from erc_research_domains as t1 join project_subject_areas as t2 on t1.code = t2.subject_area
+select distinct t1.description from erc_research_domains as t1 join activity_types as t2 on t1.code = t2.code
+select distinct t1.description from erc_research_domains as t1 join project_topics as t2 on t1.code = t2.topic
+select distinct t1.description from erc_research_domains as t1 join project_topics as t2 on t1.code = t2.topic group by t1.description
+select distinct t1.description from erc_research_domains as t1 join project_topics as t2 on t1.code = t2.topic group by t1.code
+select distinct t1.description from erc_research_domains as t1 join project_topics as t2 on t1.code = t2.topic group by t2.topic order by count(distinct t1.description) desc limit 1
+select distinct t2.description from erc_research_domains as t1 join activity_types as t2 on t1.code = t2.code
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id
+select country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id= t2.country_id
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_Id
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id;
+select country_name from countries join institutions on institutions.country_id = countries.country_code3
+select t4.country_name from institutions as t1 join countries as t2 on t1.country_id = t2.unics_id join activity_types as t3 on t1.
+select country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id;
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id
+select t2.country_name from institutions as t1 join countries as t2 on t1.country_id = t2.unics_id
+select country_code3 from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id
+select t1.country_code3 from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id= t2.country_id
+select t1.country_name from countries as t1 join institutions as t2 on t1.unics_id = t2.country_id;
+select t2.country_name from institutions as t1 join countries as t2 on t1.country_id= t2.unics_id
+select t2.country_name from institutions as t1 join countries as t2 on t1.country_id = t2.unics_id;
+select country_code2, country_code3 from countries where country_name = "Andorra"
+select country_code2 from countries where country_name = "Andorra" intersect select country_code2 from countries where country_code3 = "Spain"
+select country_code2 from countries where country_name = "Andorra" intersect select country_code2 from countries where country_name = "Spain"
+select country_code2 from countries where country_name = "Andorra" union select country_code2 from countries where country_code3 = "Spain"
+select country_code2 from countries where country_name = "Andorra" intersect select country_code2 from countries where country_code3 = "Switzerland"
+select country_code2, country_code3 from countries where country_name like "%andorra%"
+select country_code2 from countries where country_name = "Andorra" union select country_code2 from countries where country_code3 = "Switzerland"
+select country_code2 from countries where country_name = "Andorra" union select country_code2 from countries where country_name = "Spain"
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = "Framework Partnership Agreement"
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = 'Framework_partnership Agreement'
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = 'Framework Partnership Agreement'
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = "Framework_partnership Agreement"
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = 'Framework_program'
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = 'Framework_partnership_agreement'
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = 'Framework_partnership_Agreement'
+select funding_schemes.code from funding_schemes join projects on projects.ec_fund_scheme = ec_fund_scheme where projects.title = "Framework_program"
+select title from programmes where short_name = 'Transport'
+select title from programmes where title like '%transport%'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where t1.short_name = 'Transport'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where t1.short_name = "Transport"
+select title from programmes where title = 'Transport'
+select title from programmes where short_name = "Transport"
+select title from programmes where short_name = 'Transportation'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where t1.short_name = 'Transportation'
+select t1.member_name, t1.member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = "GTBB"
+select t1.member_name, t1.member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = 'GTBB'
+select member_name, member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = "GTBB"
+select t1.member_name, t1.member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = 'GTBBB'
+select t1.member_name, t1.member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = "GTBBB"
+select t1.member_name, t1.member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = "GTB"
+select t2.member_name, t2.member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.acronym = "GTBB"
+select t1.member_name, t1.member_role from project_members as t1 join projects as t2 on t1.project = t2.unics_id where t2.acronym = 'GTB'
+select member_name, member_role from project_members where project = "GTBB"
+select member_name, member_role from project_members where project = 'GTBB'
+select t1.member_name, t2.member_role from project_members as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.project = 'GTBB'
+select t1.member_name, t2.member_role from project_members as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.project = 'GTBB'
+select t1.member_name, t2.member_role from project_members as t1 join project_members as t2 on t1.unics_id = t2.unics_id join project_member_roles as t3 on t2.member_role = t3.code where t1.project = 'GTBB'
+select t1.member_name, t2.member_role from project_members as t1 join project_members as t2 on t1.unics_id = t2.unics_id join project_member_roles as t3 on t2.member_role = t3.code
+select t1.member_name, t2.member_role from project_members as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.project = 'Globet2.project' and t2.rcn = 'Rcn'
+select t1.member_name, t2.member_role from project_members as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.project = "GTBB"
+select title from programmes where parent = 'FP7'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.parent = 'FP7'
+select title from programmes where parent = "FP7"
+select title from programmes where parent = 'FP7/EU-FP6/FP7/FP8/FP9/FP10/FP11/FP12/FP13/FP12/FP7/FP8/FP9/FP10'
+select title from programmes where parent = 'FP7/EU-FP6/FP7/FP8/FP9/FP10/FP11/FP12/FP13/FP12/FP7/FP8/FP9/FP11'
+select title from programmes where parent = 'FP-7'
+select title from programmes where parent = 'FP7/EU-FP6/FP7/FP8/FP9/FP10/FP12/FP13/FP12/FP7/FP8/FP9/FP10'
+select title from programmes where parent = 'Framework_program 7'
+select title from programmes where parent = 'FP7'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where t1.parent = 'FP7'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where t1.parent = "FP7"
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = parent where t1.parent = 'FP7'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where t1.parent = 'FP-7'
+select title from programmes where parent = "FP7"
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.programme where parent = 'FP7'
+select title, parent from programmes where parent = 'FP7'
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code where rcn in (select t3.code from erc_research_domains as t3 join project_erc_panels as t4 on t3.code = t4.
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code where rcn in (select t3.code from erc_research_domains as t1 join project_erc_panels as t2 on t1.code = t3.code
+select description from erc_panels as t1 join erc_research_domains as t2 on t1.code = t2.code join project_erc_panels
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code where rcn in (select t3.code from erc_research_domains as t1 join project_erc_panels as t2 on t1.code = t3.code join
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code where rcn in (select t3.code from erc_research_domains as t1 join project_erc_panels as t2 on t1.code = t3.code join project_erc_panels as t
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code
+select description from erc_panels as t1 join erc_research_domains as t2 on t1.code = t2.code join project_erc_panels
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code where
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code = t3.code where rcn =
+select t1.description from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel join erc_research_domains as t3 on t1.code + t3.code = t3.code
+select member_name from project_members where activity_type = 'Research Organisations'
+select member_name from project_members where activity_type = 'REGIONAL'
+select member_name from project_members where activity_type = 'Research Organizations'
+select member_name from project_members where activity_type = 'Research Organisation'
+select member_name from project_members where activity_type = 'RE'
+select member_name from project_members where activity_type = 'REGION'
+select member_name, activity_type from project_members where activity_type = 'Research Organisations'
+select member_name, department_name from project_members where activity_type = 'Research Organisations'
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description = 'Research Organisations'
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description = "Research Organisations"
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description = 'Research Organizations'
+select member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description = 'Research Organisations'
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description = 'Research Organisation'
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description like '%research%'
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description = 'Research Organisations'
+select t1.member_name from project_members as t1 join activity_types as t2 on t1.activity_type = t2.code where t2.description like '%research_organisations%'
+select objective from projects where acronym = "DEEPCARBON"
+select objective from projects where framework_program = 'DEEPCARBON'
+select objective from projects where framework_program = "DEEPCARBON"
+select objective from projects where acronym = 'DEEPCARBON'
+select objective from projects where framework_program = 'DEECARBON'
+select objective from projects where framework_program = 'DEEPCARBON'
+select objective from projects where framework_program = 'DEEPERCARBON'
+select objective from projects where framework_program = 'DEEPCORBON'
+select objective from projects where acronym = "DEEPCARBON"
+select objective from projects where acronym = 'DEEPCARBON'
+select objective from projects where acronym = "DEECARBON"
+select objective from projects where acronym = "DEEPERCARBON"
+select objective from projects where acronym = "DEEPCARBON"
+select objective from projects where acronym = "DEEPCORBON"
+select objective from projects where acronym = "DEEPCARBon"
+select objective from projects where acronym = "DEEPCARBON";
+select title from projects where objective like '%carbon_capturing%'
+select title from projects where objective like '%carbon_capture%'
+select title from projects where objective like '%carbon_capturing%'
+select title from projects where objective like '%carbon_capturing%'
+select title from projects where objective like '%carbon%'
+select title, acronym from projects where objective like '%carbon_capturing%'
+select title from projects where objective like "%carbon_capturing%"
+select title from projects where objective like '%carbon_capture%'
+select count(*) from projects where objective like '%carbon_capturing%'
+select count(*) from projects where objective like '%carbon_capture%'
+select count(*) from projects where objective like "%carbon_capturing%"
+select count(*) from projects where objective like '%carbon_capturing%'
+select count(*) from projects where objective like "%carbon_capture%"
+select count(*) from projects where objective like "%carbon_capturing%"
+select count(*) from projects where objective like '%capture%'
+select count(*) from projects where objective like '%carbon%'
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "France") except select institutions_name from institutions where geocode_regions_3 = "Paris"
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Paris")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Paris") except select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Paris")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Paris") except select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "France")
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 like "%france%") except select institutions_name from institutions where geocode_regions_3 like "%paris%"
+select institutions_name from institutions where country_id = "France" except select institutions_name from institutions where geocode_regions_3 = "Paris"
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Paris") except select institutions_name from institutions where geocode_regions_3 = "France"
+select institutions_name from institutions where country_id in (select country_id from institutions where geocode_regions_3 = "Paris") except select institutions_name from institutions where geocode_regions_3 = "Lyon"
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%paris%")
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%paris%")
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%france%")
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%french%") except select institutions_name from institutions where city = "Paris
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%french%") except select institutions_name from institutions
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%france%") except select institutions_name from institutions where city = 'Paris%
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%french%") except select institutions_name from institutions where city = 'Paris%
+select institutions_name from institutions where country_id in (select country_id from institutions where institutions_name like "%france%") except select institutions_name from institutions where city = 'Paris%"; . project_members: unics_id, project, rcn
+select institutions_name from institutions except select institution_id from project_members where member_role = 'coordinator'
+select institutions_name from institutions except select institution_id from project_members where member_role = 'Coordinator'
+select institutions_name from institutions except select t3.institution_id from project_members as t1 join institutions as t2 on t1.institution_id = t2.unics_id join project_members as t3 on t1.project = t3.rcn where t3.member_role = 'coordinator'
+select institutions_name from institutions except select t3.institution_id from project_members as t1 join institutions as t2 on t1.institution_id = t2.unics_id join project_members as t3 on t1.project = t3.rcn where t3.member_role = 'Coordinator'
+select institutions_name from institutions except select t3.institution_id from project_members as t1 join institutions as t2 on t1.institution_id = t2.unics_id join project_members as t3 on t1.project = t3.rcn where t3.institution_id != t3.institution_id
+select institutions_name from institutions except select t3.institution_id from project_members as t1 join project_members as t2 on t1.institution_id = t2.institution_id join project_members as t3 on t1.project = t3.institution_id where t2.member_role = 'coordinator'
+select institutions_name from institutions except select t3.institution_id from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id join project_members as t3 on t2.project = t3.project where t3.member_role = 'coordinator'
+select institutions_name from institutions except select t3.institution_id from project_members as t1 join institutions as t2 on t1.institution_id = t2.unics_id join project_members as t3 on t1.project = t3.rcn
+select institutions_name from institutions where unics_id not in (select institution_id from project_members)
+select institutions_name from institutions except select institution_id from project_members group by institution_id having count(*) >= 2
+select institutions_name from institutions where unics_id not in (select unics_id from project_members)
+select institutions_name from institutions except select institution_id from project_members
+select institutions_name from institutions where unics_id not in (select institution_id from project_members group by institution_id having count(*) >= 2)
+select institutions_name from institutions except select institution_id from project_members group by institution_id having count(*) >= 1
+select institutions_name from institutions where unics_id not in (select unics_id from projects)
+select institutions_name from institutions where unics_id not in (select unics_id from project_members group by institution_id having count(*) >= 2)
+select t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id group by t2.full_name having count(*) >= 2
+select t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id group by t2.full_name having count(*) > 1
+select t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t2.member_name having count(*) > 1
+select t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t2.member_name having count(*) >= 2
+select t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id group by t2.full_name having count (*) >= 2
+select t1.full_name from people as t1 join project_members as t2 on t1.unics_id = t2.member_short_name group by t1.unics_id having count(*) >= 2
+select t2.full_name from projects as t1 join people as t2 on t1.principal_investigator = t2.unics_id group by t2.full_name having count (*) > 1
+select t1.full_name from people as t1 join project_members as t2 on t1.unics_id = t2.member_short_name group by t1.unics_id having count(*) > 1
+select t1.member_name from project_members as t1 join people as t2 on t1.unics_id = t2.unics_id group by t1.member_name having count(*) > 1
+select t1.full_name from people as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.full_name having count(*) > 1
+select member_name from project_members group by member_name having count(*) > 1
+select t1.full_name from people as t1 join project_members as t2 on t1.unics_id = t2.member_name group by t1.full_name having count(*) > 1
+select t1.member_name from project_members as t1 join people as t2 on t1.unics_id = t2.unics_id group by t1.member_name having count (*) > 1
+select t1.member_name from project_members as t1 join people as t2 on t1.member_name = t2.unics_id group by t1.member_name having count(*) > 1
+select t1.member_name from project_members as t1 join people as t2 on t1.unics_id = t2.unics_id group by t1.member_Name having count(*) > 1
+select t1.full_name from people as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.full_name having count (*) > 1
+select title from funding_schemes group by title order by count(*) desc limit 1
+select title from funding_schemes as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.code order by count(*) desc limit 1
+select title from funding_schemes as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by count(*) desc limit 1
+select t2.title from funding_schemes as t1 join subject_areas as t2 on t1.code = t2.code group by t1.code order by count(*) desc limit 1
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by count(*) desc limit 1
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by count(*) desC limit 1
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by count(*) desc limit 1;
+select t2.title from funding_schemes as t1 join subject_areas as t2 on t1.code = t2.code group by t
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by t1.ec_
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area order by
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by ec_con
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by sum(t2.ec_max_con
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area
+select t1.title, t1.description from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code =
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by avg(ec_contribution), t2.subject_
+select t1.title, t1.description from subject_areas as t1 join project_subject_areas as t2 on t1.code
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t1.title order by avg(ec_contribution), t2.sub
+select t1.title from subject_areas as t1 join projects as t2 on t1.
+select t1.title from subject_areas as t1 join projects as t2 on t
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t2.subject_area order by sum(
+select t2.title from funding_schemes as t1 join subject_areas as t2 on t1.code = t2.code group by t
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t2.subject_area order by sum(t
+select t1.title from subject_areas as t1 join project_subject_areas as t2 on t1.code = t2.subject_area group by t2.subject_area order by sum(t2.ec_max_con
+select t1.title from subject_areas as t1 join projects as t2 on t1.
+select title
+select
+cordis
+select institution_id from project_members group by institution_id order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) desc limit 1
+select t1.institutions_name, t2.member_role from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) desc limit 1
+select t1.institutions_name, t2.member_role from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1
+select institution_id, count(*) from project_members group by institution_id order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count (*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) desc limit 1
+select institution_id from project_members group by institution_id order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1
+select institution_id, count(*) from project_members group by institution_id order by count(*) desc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desc limit 1;
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) desC limit 1
+select institution_id from project_members group by institution_id order by count(*) asc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) asc limit 1
+select institution_id from project_members group by institution_id order by count(*) limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) asc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) asc limit 1
+select institution_id, count(*) from project_members group by institution_id order by count(*) asc limit 1
+select institution_id from project_members group by institution_id order by count(*) asc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) asc limit 1
+select t1.institutions_name, t2.rcn from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) asc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) asc limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t1.institutions_name order by count(*) limit 1
+select t1.institutions_name, t2.rcn from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) limit 1
+select t1.institutions_name from institutions as t1 join project_members as t2 on t1.unics_id = t2.institution_id group by t2.institution_id order by count(*) limit 1
+select institution_id from project_members group by institution_id order by count(*) limit 1
+select funding_schemes.title from funding_schemes group by funding_schemes.title order by count(*) desc limit 1
+select funding_schemes.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme join activity_types as t3 on t2.ec_fund_scheme
+select funding_schemes.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme join activity_types
+select funding_schemes.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme join activity_types as t3 on t2.ec_
+select funding_schemes.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme join activity_types as t3 on t2.ec_fund_scheme = ec_framework_program
+select funding_schemes.title from funding_schemes group by funding_schemes.title order by count(*) desc limit 1;
+select funding_schemes.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_
+select funding_schemes.title from funding_schemes group by funding_schemes.title order by sum(ec_contribution)
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by sum(t2.ec_fund_scheme) asc limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by sum(t2.ec_fund_scheme) limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.title order by sum(t2.ec_fund_scheme) asc limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by sum(t2.total_cost) asc limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by sum(t2.total_cost) limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.title order by sum(t2.total_cost) asc limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.title order by sum(t2.ec_fund_scheme) limit 1
+select t1.title from funding_schemes as t1 join projects as t2 on t1.code = t2.ec_fund_scheme group by t1.code order by sum(t2.ec_fund_scheme) asc limit 1;
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution) desc
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution), t2.member_short_name
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution), t2.member_name
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution), t2.member_short_name desc
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution), t2.member_name desc
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution), t2.member_short_Name
+select t2.member_short_name, sum(t1.ec_contribution) from project_members as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by sum(t1.ec_contribution), t2.member_short_Name desc
+select t1.ec_fund_scheme, t2.member_short_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.ec_fund_scheme order by t1.ec_fund_scheme desc
+select t1.ec_fund_scheme, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.ec_fund_scheme order by t1.ec_fund_scheme desc
+select t1.ec_fund_scheme, t2.member_short_name from projects as t1 join project_members as t2 on t1.unics_id = t2.member_short_name order by t1.ec_fund_scheme desc
+select t1.ec_fund_scheme, t2.member_short_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.ec_fund_scheme order by sum(t1.ec_fund_scheme) desc
+select t1.ec_fund_scheme, t2.member_short_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t1.ec_fund_scheme = t3.code order by t1.ec_fund_scheme desc
+select t1.ec_fund_scheme, t2.member_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t1.ec_fund_scheme = t3.code order by t1.ec_fund_scheme desc
+select t1.ec_max_contribution, t2.member_short_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t1.ec_fund_scheme = t3.code order by t1.ec_max_contribution desc
+select t1.ec_max_contribution, t2.member_short_name from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t1.ec_fund_scheme = t3.code order by t1.ec_fund_scheme desc
+select title, start_year from projects order by start_year desc limit 1
+select title, start_year, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by t1.start_year order by t1.start_year desc limit 1
+select title, start_year, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select title, start_year, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by start_year order by t1.start_year desc limit 1
+select title, start_year, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by t1.start_year order by t1.start_date desc limit 1
+select title, start_year, t1.ec_fund_scheme from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select title, start_year, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by t1.start_year order by t1.ec_ref desc limit 1
+select title, start_year, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by start_year order by t1.start_date desc limit 1
+select title from projects order by start_date desc limit 1
+select title, start_date from projects order by start_date desc limit 1
+select title, start_date, t1.title from projects as t1 join activity_types as t2 on t1.cordis_ref = t2.code where t1.start_date = (select max(start_date) from projects)
+select title, start_date, ec_fund_scheme, t1.title from projects as t1 join activity_types as t2 on t1.cordis_ref = t2.code where t1.start_date = (select max(start_date) from projects)
+select title, start_date, ec_fund_scheme, t1.acronym from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by start_date order by t1.start_date desc limit 1
+select title, start_date, t1.title from projects as t1 join activity_types as t2 on t1.cordis_ref = t2.code where t1.start_date = (select max(start_date) from projects)
+select title, start_date, ec_fund_scheme from projects order by start_date desc limit 1
+select title, start_date, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic order by start_date desc limit 1
+select title, start_year from projects order by start_year asc limit 1
+select title, start_year from projects order by start_year limit 1
+select title, start_year, min(start_year) from projects
+select title, start_year, min(start_year) from projects order by start_year asc limit 1
+select title, start_year, min(start_year), ec_fund_scheme from projects order by start_year asc limit 1
+select title, start_year, min(start_year) from projects order by start_year limit 1
+select title, start_year, min(start_year), ec_ref from projects order by start_year asc limit 1
+select title, start_year from projects order by start_year asc limit 1
+select title from projects order by start_date asc limit 1
+select title from projects order by start_date limit 1
+select title, start_date from projects order by start_date asc limit 1
+select title, acronym from projects order by start_date asc limit 1
+select title, start_date, ec_fund_scheme from projects order by start_date asc limit 1
+select title, start_date, ec_ref from projects order by start_date asc limit 1
+select title, start_date from projects order by start_date limit 1
+select title, start_date, ec_fund_scheme from projects order by start_date limit 1
+select start_date from projects order by start_date asc limit 1
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by start_date order by t1.ec_ref limit 1
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by t1.ec_ref order by t1.start_date asc limit 1
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by t1.start_date order by t1.ec_ref limit 1
+select start_date, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by t1.start_date order by t1.start_date asc limit 1
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic group by start_date order by t1.start_date asc limit 1
+select start_date from projects order by start_date asc limit 1
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic order by t1.start_date asc limit 1
+select start_date, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic order by t1.start_date asc limit 1
+select start_date, t1.ec_fund_scheme from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic order by t1.start_date asc limit 1
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select start_date, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic
+select start_date, t1.ec_ref from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic order by t1.start_date limit 1
+select start_date, t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic order by t1.start_date limit 1
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = 'Climate change and Carbon cycle research'
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = "Climate change and Carbon cycle research"
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = 'Climate change and carbon cycle research'
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = "Climate change and carbon cycle research"
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = 'Climate change and Carbon cycle'
+select t1.title from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project where t2.subject_area = 'Climate change and Carbon cycle research'
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = 'Climate change and carbon cycle'
+select title from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = "Climate change and Carbon cycle"
+select t1.title from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project where t2.subject_area = 'CCC'
+select t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic join project_subject_areas as t3 on t2.project = t3.project where t3.subject_area = 'CCC'
+select t1.title from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project where t2.subject_area = 'CCC' group by t2.subject_area having count(*) >= 2
+select t1.title from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project where t2.subject_area = "CCC"
+select t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic join project_subject_areas as t3 on t2.project = t3.project where t3.subject_area = "CCC"
+select t1.title from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project where t2.subject_area = 'CCC' group by t2.subject_area having count(*) >= 3
+select t1.title from projects as t1 join project_topics as t2 on t1.cordis_ref = t2.topic join project_subject_areas as t3 on t2.project = t3.project where t3.subject_area = 'CCC'
+select t1.title from projects as t1 join project_subject_areas as t2 on t1.unics_id = t2.project where t2.subject_area = 'CCC' group by t2.subject_area
+select distinct member_role from project_members
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id
+select member_role from project_members
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id;
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id
+select distinct member_role from project_members;
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id=t2.unics_id
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id= t2.unics_id
+select distinct member_role from project_members
+select distinct member_role, activity_type from project_members
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id join activity_types as t3 on t2.activity_type = t3.code
+select distinct member_role from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id join activity_types as t3 on t2.activity_type = t3.code
+select distinct member_role, project from project_members
+select distinct member_role, activity_type, ec_contribution from project_members
+select distinct member_role, activity_type from projects as t1 join project_members as t2 on t1.unics_id = t2.unics_id
+select count(*) from erc_panels where part_of = 'Life Sciences'
+select count(*) from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel where t1.description like '%life_sciences%'
+select count(*) from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel where t1.description like "%life_sciences%"
+select count(*) from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel where t1.description like '%life_science%'
+select count(*) from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel where t1.description like '%life%'
+select count(*) from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel where t1.description like "%life_science%"
+select count(*) from erc_panels where description like "%life_sciences%"
+select count(*) from erc_panels as t1 join project_erc_panels as t2 on t1.code = t2.panel where t1.description like "%lifesciences%"
+select count(*) from erc_panels where part_of = 'Life Sciences'
+select count(*) from erc_panels where part_of = "Life Sciences"
+select count(*) from erc_panels where part_of like "%life_sciences%"
+select count(*) from (select * from erc_panels where part_of = 'Life Sciences')
+select count(*) from erc_panels where part_of = 'Life sciences'
+select count(*), part_of from erc_panels where part_of = 'Life Sciences'
+select count(*) from erc_panels where part_of = 'Life Sciences'
+select count(*) from erc_panels where part_of = "Life sciences"
+select panel from project_erc_panels where subject_area = 'social_sciences' or subject_area = 'humanitarian aids
+select panel from project_erc_panels where subject_area = 'social_sciences' or subject_area = 'humanitarian aids and
+select panel from project_erc_panels where subject_area = 'social_sciences' and subject_area = 'humanitarian aids and symbiotic relationship between
+select panel from project_erc_panels where subject_area = 'social_sciences' and subject_area = 'humanitarian aids and sym
+select panel from project_erc_panels where subject_area = 'social_sciences' and subject_area = 'humanitarian aids and symbiotic relationship between man,
+select panel from project_erc_panels where subject_area = 'social_sciences' and subject_area = 'humanitarian aids and syphil
+select panel from project_erc_panels where subject_area = 'social_sciences' and subject_area = 'humanitarian aids and sy
+select
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = 'social sciences' or t2.subject_area = 'humanities'
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = 'social sciences and humanities'
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = 'social_sciences_and_humanities'
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = 'Social sciences and humanities'
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = 'social_sciences and humanities'
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = 'social sciences' and t2.subject_area = 'humanities'
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t2.subject_area = "social_sciences" or t2.subject_area = "humanities"
+select count(*) from project_erc_panels as t1 join project_subject_areas as t2 on t1.project = t2.project where t2.subject_area = 'social sciences and humanities'
+select member_name from project_members where member_name like '%private%' and member_short_name like '%profit%'
+select member_name from project_members where member_name like '%private%' and member_name like '%for_profit%'
+select member_name from project_members where member_name like '%private%' or member_name like '%for_profit%'
+select member_name from project_members where member_name like '%private%' or member_name like '%profit%'
+select member_name from project_members where member_name like '%private%' and member_name like '%profit%'
+select member_name from project_members where member_name like '%private%' and member_name like '%forprofit%'
+select member_name from project_members where member_name like '%private%' or member_name like '%forprofit%'
+select member_name from project_members where member_name like '%private%' and member_short_name like '%for_profit%'
+select distinct member_name from project_members where activity_type = 'business'
+select distinct member_name from project_members where activity_type = 'Business'
+select member_name from project_members where activity_type = 'business'
+select distinct member_name from project_members where country = "UK"
+select member_name from project_members where activity_type = 'Business'
+select distinct member_name from project_members where country = "EU" and activity_type = "B2B"
+select distinct member_name from project_members where country = "EU" and activity_type = "B"
+select distinct member_name from project_members where country = "EU" and activity_type = "B2"
+select count(*) from project_members where activity_type = 'Business'
+select count(*) from project_members where activity_type = 'business'
+select count(*) from project_members where member_name like "%company%"
+select count(*) from project_members where member_name = 'Business'
+select count(*) from project_members where member_name like "%business%"
+select count(*) from project_members where member_name = "business"
+select count(*) from project_members where member_name = 'Biz'
+select count(*) from project_members where activity_type = "business"
+select count(*) from project_members where institution_id = 'HEI' or institution_id = 'Secondary Education Establishment'
+select count(*) from project_members where institution_id = 'HEI' or institution_id = 'Secondary'
+select count(*) from project_members where institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 2) or institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 3)
+select count(*) from project_members where institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 2)
+select count(*) from project_members where institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 2) or institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 1)
+select count(*) from project_members where institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 2) or institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 4)
+select count(*) from project_members where institution_id in ( select institution_id from project_members group by institution_id having count(*) >= 2 ) or institution_id not in ( select institution_id from project_members group by institution_id having count(*) >= 2)
+select count(*) from project_members where institution_id = 'HE' or institution_id = 'Secondary'
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Educational Establishment' )
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Edutainment' )
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Edutainment Establishment' )
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Edu/School' )
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Education' )
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Edu/school' )
+select count(*) from project_members where institution_id in ( select institution_id from project_members where activity_type = 'Educational Establishments' )
+select count(*) from project_members where institution_id in (select institution_id from project_members where activity_type = 'Edutainment Establishment')
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t1.topic = 'Robotics'
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t1.topic = "Robotics"
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id join subject_areas as t3 on t1.topic = t3.code where t3.title = 'Robotics'
+select count(*) from project_topics as t1 join project_subject_areas as t2 on t1.project = t2.subject_area where t1.topic = 'Robotics'
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t1.topic = 'Robotica'
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id join subject_areas as t3 on t1.topic = t3.code where t3.title = "Robotics"
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t1.topic = 'Robotics'
+select count(*) from project_topics as t1 join projects as t2 on t1.project = t2.unics_id where t1.topic = 'Robots'
+select count(*) from project_subject_areas where subject_area = 'Robotics'
+select count(*) from project_subject_areas where subject_area = "Robotics"
+select count(*) from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = 'Robotics'
+select count(*) from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = "Robotics"
+select count(*) from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id join subject_areas as t3 on t1.subject_area = t3.code where t3.title = 'Robotics'
+select count(*) from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id join subject_areas as t3 on t1.subject_area = t3.code where t3.title = "Robotics"
+select count(*) from project_subject_areas where subject_area = 'Robotica'
+select count(*) from project_subject_areas as t1 join projects as t2 on t1.project = t2.unics_id where t1.subject_area = 'Robotica'
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_max_contribution) desc limit 1
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(ec_max_contribution) desc limit 1
+select country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_max_contribution) desc limit 1
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(ec_contribution) desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_max_contribution), t2.start_date desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_max_contribution), t2.end_date desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_max_contribution), t2.end_year desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code group by t1.country_name order by count(*) desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by count(*) desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_max_contribution) desc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_max_contribution) desc limit 1;
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_max_contribution) desC limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_max_contribution)
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_max_contribution) des
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) asc limit 1
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.total_cost) asc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.total_cost) limit 1
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) asc limit 1;
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) limit 2
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) limit 1;
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id group by t1.country_name order by sum(t2.ec_contribution) asc limit 2
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id where t1.geocode_country_code != "EU" group by t1.country_name order by sum(t2.total_cost) asc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id where t1.geocode_country_code != "EU" group by t1.country_name order by sum(t2.total_cost) limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by count(*) asc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_fund_scheme) asc limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by sum(t2.ec_fund_scheme) limit 1
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code
+select t1.country_name from countries as t1 join projects as t2 on t1.unics_id = t2.unics_id join funding_schemes as t3 on t2.ec_fund_scheme = t3.code where t1.country_name != "EU" group by t1.country_name order by count(*) limit 1
+select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id
+select count(*) from project_members where country != 'EU'
+select count(*) from project_members where country != "EU"
+select count(*) from project_members where country_id not in (select ec_contribution from project_members where country_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where
+select count(*) from project_members where country != "European Union"
+select count(*) from project_members where country != "Europe"
+select count(*) from project_members where country_id not in (select ec_contribution from project_members where country_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where code
+select count(*) from project_members where country_id not in (select ec_contribution from project_members where country_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where code =
+select count(*) from project_members where country_id not in (select ec_contribution from project_members where country_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where institution_id not in (select ec_contribution from project_members where code in (select
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name != "EU"
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name != 'EU'
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name not in (select t1.country_name from institutions as t3 join project_members as t4 on t3.unics_id = t4.unics_id where t3.geocode_regions_3 = t2.country)
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name not in (select t3.country_name from countries as t3 join project_members as t4 on t3.unics_id = t4.unics_id where t4.geocode_regions_3 = t3.country_name)
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.geocode_country_code != "EU"
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name not in (select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.ec_contribution > 0)
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name not in (select t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t2.ec_contribution >= "EU")
+select distinct t1.country_name from countries as t1 join project_members as t2 on t1.unics_id = t2.unics_id where t1.country_name not in (select t1.country_name from institutions as t3 join project_members as t4 on t3.unics_id = t4.unics_id where t3.geocode_regions_3 = 2)
+select title from programmes where title like '%climate%'
+select title from programmes where title like "%climate%"
+select title from programmes where title like '%climate%' or title like '%ec_fund_scheme%'
+select title from programmes where title like '%climate%'
+select title, rcn from programmes where title like '%climate%'
+select title from programmes where title like '%climate%' or title like '%ec_ref%'
+select title from programmes where title like '%climatic%'
+select title from programmes where title like '%climate%' or title like '%ec_research_program%'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like '%climate%'
+select title, t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like '%climate%'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like "%climate%"
+select title, t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like "%climate%"
+select title, t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like '%climate%' or t1.title like '%ec_fund_scheme%'
+select title, t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like '%climate%' or t1.title like '%ec_framework_program_name%'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like '%climate%' or t1.title like '%ec_fund_scheme%'
+select t1.title from programmes as t1 join project_programmes as t2 on t1.code = t2.project where t1.title like '%climate%' or t1.title like '%ec_framework_program_name%'
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t3 on t1.code = t3.
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t3 on t1.code =
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t
+select t1.title, sum(t2.ec_fund_scheme) from projects as t1 join project_programmes as t
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t3 on t1.code = t
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t3 on
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t3 on t1.code = t2.pro
+select t1.title, sum(t2.ec_fund_scheme) from programmes as t1 join project_programmes as t3 on t1.code = t3.
+select t2.title, sum(t3.ec_contribution) from funding_schemes as t1 join programmes as t2 on t1.code = t2.code join project_programmes
+select t2.title, sum(t3.ec_contribution) from funding_schemes as t1 join programmes as t2 on t1.code = t2.code join
+select t2.title, sum(t3.ec_contribution) from project_programmes as t1 join programmes as t2 on t1.project = t2.code join funding_schemes as t4 on t3.ec_fund_scheme = t4.ec_fund_
+select t2.title, sum(t3.ec_contribution) from project_programmes as t1 join programmes as t2 on t1.project = t2.code join funding_schemes as t4 on t3.ec_fund_scheme =
+select t2.title, sum(t3.ec_contribution) from funding_schemes as t1 join programmes as t2 on t1.code = t2.code join project_programmes as t4 on t4.project = t1.code join
+select t2.title, sum(t3.ec_contribution) from project_programmes as t1 join programmes as t2 on t1.project = t2.code join funding_schemes as t4 on t3.code = t4.ec_
+select t2.title, sum(t3.ec_contribution) from funding_schemes as t1 join programmes as t2 on t1.code = t2.code join project_
+select t2.title, sum(t3.ec_contribution) from project_programmes as t1 join programmes as t2 on t1.project = t2.code join funding_schemes as t4 on

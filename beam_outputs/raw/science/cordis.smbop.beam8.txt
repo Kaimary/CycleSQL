@@ -1,0 +1,800 @@
+SELECT SUM( projects.total_cost ) FROM projects WHERE project_erc_panels.project = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM projects WHERE project_erc_panels.project = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM projects WHERE project_erc_panels.project = 'Theseus'
+SELECT projects.total_cost FROM projects WHERE project_erc_panels.project = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM projects WHERE projects.unics_id = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM projects WHERE projects.unics_id = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM projects WHERE projects.unics_id = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM projects WHERE project_erc_panels.panel = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT SUM( projects.total_cost ) FROM project_programmes JOIN projects ON project_programmes.project = projects.unics_id JOIN programmes ON project_programmes.programme = programmes.code WHERE programmes.title = 'Theseus'
+SELECT projects.acronym FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.objective FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.acronym FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.ec_call FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.ec_ref FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.title FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.homepage FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT institutions.acronym FROM projects WHERE projects.end_date LIKE '%2018%'
+SELECT projects.acronym FROM projects WHERE projects.ec_max_contribution = 2018
+SELECT projects.acronym FROM projects WHERE projects.start_year = 2018
+SELECT projects.cordis_ref FROM projects WHERE projects.end_year = 2018
+SELECT projects.cordis_ref FROM projects WHERE projects.start_year = 2018
+SELECT projects.ec_call FROM projects WHERE projects.ec_max_contribution = 2018
+SELECT projects.acronym FROM projects WHERE projects.end_year = 2018
+SELECT projects.acronym FROM projects WHERE projects.ec_max_contribution = 2018
+SELECT projects.end_date FROM projects WHERE projects.end_year = 2018
+SELECT projects.unics_id FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.total_cost<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.end_year<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.total_cost<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.end_year<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.start_year<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.unics_id FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.start_year<2016 ORDER BY projects.total_cost DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.end_year<2016 ORDER BY projects.ec_max_contribution DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.end_year<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.start_year<2016 ORDER BY projects.end_year DESC LIMIT programmes.title
+SELECT projects.end_date FROM projects WHERE projects.ec_max_contribution<2016 ORDER BY projects.start_year DESC LIMIT programmes.title
+SELECT institutions.institutions_name FROM institutions WHERE institutions.geocode_regions_3 = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE institutions.geocode_regions_3 = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE institutions.geocode_regions_3 = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE institutions.geocode_regions_3 = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.short_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.short_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.short_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Nordjylland'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE institutions.geocode_regions_3 = 'Nordjylland'
+people , project_erc_panels
+project_members
+project_members.department_name = 'investigators'
+project_members.department_name = 'principal investigators'
+people.full_name LIKE '%2014%'
+people , projects , project_members
+people , projects , project_erc_panels
+people , projects , project_members
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE projects.ec_max_contribution = 2014 AND project_member_roles.description = 'investigators'
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE projects.ec_max_contribution = 2014 AND project_member_roles.description = 'investigators'
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE projects.end_year = 2014 AND project_member_roles.description = 'investigators'
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE projects.end_year = 2014 AND project_member_roles.description = 'investigators'
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE projects.start_year = 2014 AND project_member_roles.description = 'investigators'
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE projects.start_year = 2014 AND project_member_roles.description = 'investigators'
+projects.ec_max_contribution = 2014
+projects.start_year = 2014
+SELECT projects.acronym FROM projects WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.cordis_ref FROM projects WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.ec_call FROM projects WHERE projects.ec_call = 'Mathematics and Statistics'
+SELECT projects.acronym FROM projects WHERE projects.cordis_ref = 'Mathematics and Statistics'
+SELECT projects.acronym FROM projects WHERE projects.ec_call = 'Mathematics and Statistics'
+SELECT projects.acronym FROM projects WHERE projects.ec_max_contribution = 'Mathematics and Statistics'
+SELECT projects.acronym FROM projects WHERE projects.ec_ref = 'Mathematics and Statistics'
+SELECT projects.acronym FROM projects WHERE projects.end_date = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON project_erc_panels.project = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON project_erc_panels.project = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON project_erc_panels.project = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON project_erc_panels.project = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON erc_panels.part_of = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON erc_panels.part_of = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON erc_panels.part_of = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym , erc_research_domains.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of JOIN projects ON erc_panels.part_of = projects.unics_id WHERE projects.acronym = 'Mathematics and Statistics'
+SELECT projects.acronym FROM projects WHERE projects.ec_max_contribution = 2014
+SELECT projects.ec_ref FROM projects WHERE projects.start_year = 2014
+SELECT projects.acronym FROM projects WHERE projects.start_year = 2014
+SELECT projects.acronym FROM projects WHERE projects.total_cost = 2014
+SELECT projects.cordis_ref FROM projects WHERE projects.ec_max_contribution = 2014
+SELECT projects.cordis_ref FROM projects WHERE projects.end_year = 2014
+SELECT projects.cordis_ref FROM projects WHERE projects.start_year = 2014
+SELECT projects.cordis_ref FROM projects WHERE projects.total_cost = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE projects.end_year = 2014
+SELECT DISTINCT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE projects.end_year = 2014
+SELECT projects.acronym FROM institutions JOIN projects ON institutions.country_id = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT institutions.acronym FROM institutions JOIN projects ON institutions.country_id = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT projects.acronym FROM institutions JOIN projects ON institutions.country_id = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT institutions.acronym FROM institutions JOIN projects ON institutions.country_id = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT projects.acronym FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT institutions.acronym FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT projects.acronym FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT institutions.acronym FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.country = 'Greece'
+SELECT institutions.institutions_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.short_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.short_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.short_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.short_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' OR countries.country_name = 'Germany'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France'
+SELECT COUNT( * ) FROM projects WHERE projects.ec_max_contribution = '2016'
+SELECT COUNT( * ) FROM projects WHERE projects.total_cost = '2016'
+SELECT COUNT( * ) FROM projects WHERE projects.end_year = '2016'
+SELECT COUNT( * ) FROM projects WHERE projects.start_year = '2016'
+SELECT
+SELECT
+SELECT
+SELECT
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme GROUP BY project_programmes.project ORDER BY projects.total_cost DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme GROUP BY project_programmes.project ORDER BY SUM( projects.total_cost ) DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id GROUP BY project_programmes.project ORDER BY projects.total_cost DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.project GROUP BY project_programmes.project ORDER BY projects.total_cost DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme GROUP BY programmes.title ORDER BY projects.total_cost DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id GROUP BY programmes.title ORDER BY projects.total_cost DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id GROUP BY project_programmes.project ORDER BY projects.total_cost DESC LIMIT 1
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id GROUP BY project_programmes.project ORDER BY projects.total_cost DESC LIMIT 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM projects JOIN people ON projects.principal_investigator = people.unics_id WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM projects JOIN people ON projects.principal_investigator = people.unics_id WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM projects JOIN people ON projects.principal_investigator = people.unics_id WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT people.full_name FROM projects JOIN people ON projects.principal_investigator = people.unics_id WHERE project_members.ec_contribution<(SELECT AVG( project_members.ec_contribution ) FROM project_members)
+SELECT projects.acronym FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT projects.acronym FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT projects.cordis_ref FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT projects.title FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT projects.ec_call FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT projects.objective FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT projects.homepage FROM project_members GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT DISTINCT projects.cordis_ref FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY project_members.project HAVING COUNT( * ) >= 100
+SELECT funding_schemes.code , funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY projects.ec_fund_scheme ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY projects.ec_fund_scheme ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.code , projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY projects.ec_fund_scheme ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT SUM( projects.total_cost ) FROM projects
+SELECT SUM( projects.total_cost ) FROM projects
+SELECT SUM( projects.total_cost ) FROM projects
+SELECT SUM( projects.total_cost ) FROM projects
+SELECT DISTINCT projects.total_cost FROM projects
+SELECT DISTINCT projects.total_cost FROM projects
+SELECT DISTINCT projects.total_cost FROM projects
+SELECT DISTINCT projects.total_cost FROM projects
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_year > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_year > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.start_year > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_year > 2006
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.start_year > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.start_year > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_date > 2006
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_year > 2006 INTERSECT SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.end_year > 2006
+SELECT projects.start_year , projects.end_year FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.start_year , projects.end_year FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.start_year FROM projects
+SELECT projects.start_year , projects.end_year FROM projects
+SELECT projects.start_year , projects.end_year FROM projects
+SELECT projects.end_year FROM projects
+SELECT projects.start_date FROM projects
+SELECT projects.start_year , projects.start_date FROM projects
+SELECT programmes.title FROM programmes WHERE programmes.title LIKE '%Raw materials%'
+SELECT programmes.title FROM programmes, project_programmes WHERE project_topics.topic = 'Raw materials' EXCEPT SELECT programmes.title FROM programmes, project_programmes WHERE project_topics.topic = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE topics.title = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE programmes.title = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE topics.rcn = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE subject_areas.description = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE subject_areas.title = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE project_topics.topic = 'Raw materials'
+SELECT programmes.title FROM programmes WHERE subject_areas.description LIKE '%climate%'
+SELECT programmes.title FROM programmes WHERE subject_areas.description LIKE '%climate%'
+SELECT programmes.title FROM subject_areas WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN project_topics ON programmes.code = project_topics.project JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN project_topics ON programmes.code = project_topics.project JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN project_topics ON programmes.code = project_topics.project JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code WHERE subject_areas.description LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN project_topics ON programmes.code = project_topics.project JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code WHERE subject_areas.description LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN project_topics ON programmes.code = project_topics.project JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code WHERE subject_areas.title LIKE '%climate%'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT COUNT( * ) FROM people JOIN projects ON people.unics_id = projects.principal_investigator JOIN project_members ON project_members.project = projects.unics_id WHERE people.full_name = 'Thomas Bell'
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT DISTINCT people.full_name FROM people
+SELECT institutions.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000
+SELECT institutions.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym
+SELECT institutions.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym
+SELECT institutions.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym
+SELECT projects.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym INTERSECT SELECT projects.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000
+SELECT projects.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym
+SELECT projects.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym
+SELECT projects.acronym FROM projects WHERE projects.total_cost BETWEEN 100000 and 200000 GROUP BY projects.acronym
+SELECT topics.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT topics.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT topics.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT topics.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT subject_areas.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT subject_areas.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT subject_areas.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT subject_areas.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code JOIN projects ON project_programmes.project = projects.unics_id
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.programme = projects.unics_id
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.programme = projects.unics_id
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN subject_areas ON project_programmes.project = subject_areas.code
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN subject_areas ON project_programmes.project = subject_areas.code
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN topics ON project_programmes.project = topics.code
+SELECT projects.title FROM topics JOIN project_programmes ON topics.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id
+SELECT programmes.title , project_members.member_name FROM programmes JOIN project_members ON programmes.code = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT programmes.title , project_members.member_name FROM programmes JOIN project_members ON programmes.code = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT project_members.member_name , people.full_name FROM programmes JOIN project_members ON programmes.code = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT project_members.member_name , people.full_name FROM programmes JOIN project_members ON programmes.code = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT programmes.title , people.full_name FROM programmes JOIN project_members ON programmes.code = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT programmes.title , people.full_name FROM programmes JOIN project_members ON programmes.code = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT programmes.title , project_members.member_name FROM projects JOIN project_members ON projects.unics_id = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT programmes.title , project_members.member_name FROM projects JOIN project_members ON projects.unics_id = project_members.project JOIN projects ON projects.unics_id = project_members.project WHERE project_members.member_role = 'partner'
+SELECT erc_research_domains.description FROM erc_research_domains
+SELECT erc_research_domains.description FROM erc_research_domains
+SELECT erc_research_domains.description FROM erc_research_domains
+SELECT erc_research_domains.description FROM erc_research_domains
+SELECT COUNT( DISTINCT erc_research_domains.description ) FROM erc_research_domains
+SELECT COUNT( DISTINCT erc_research_domains.description ) FROM erc_research_domains
+SELECT COUNT( DISTINCT erc_research_domains.code ) FROM erc_research_domains
+SELECT COUNT( DISTINCT erc_research_domains.code ) FROM erc_research_domains
+SELECT countries.country_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id INTERSECT SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id
+SELECT countries.country_name FROM institutions JOIN institutions ON institutions.country_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id ORDER BY countries.country_name DESC LIMIT countries.country_name
+SELECT countries.country_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id INTERSECT SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM countries JOIN institutions ON countries.unics_id = institutions.country_id
+SELECT countries.country_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id
+SELECT countries.country_name FROM institutions JOIN institutions ON institutions.country_id = institutions.country_id
+SELECT countries.country_name FROM institutions JOIN institutions ON institutions.country_id = institutions.country_id
+SELECT countries.country_code2 , countries.country_code3 FROM countries WHERE countries.country_name = 'Andorra'
+SELECT 2 , countries.country_code3 FROM countries WHERE countries.country_name = 'Andorra'
+SELECT countries.country_code2 , countries.country_code3 FROM countries WHERE subject_areas.code = 3 AND countries.country_name = 'Andorra'
+SELECT countries.country_code2 , countries.country_code3 FROM countries JOIN countries ON countries.country_code2 = countries.country_code3 WHERE countries.country_name = 'Andorra'
+SELECT countries.country_code2 , countries.country_code3 FROM countries JOIN countries ON countries.country_code2 = countries.country_code3 WHERE countries.country_name = 'Andorra'
+SELECT countries.country_code2 , countries.country_code3 FROM countries JOIN countries ON countries.country_code2 = countries.country_code3 WHERE countries.country_name = 'Andorra'
+SELECT countries.country_code2 , countries.country_code3 FROM countries JOIN countries ON countries.country_code2 = countries.country_code3 WHERE countries.country_name = 'Andorra'
+SELECT 2 , countries.country_code3 FROM countries WHERE subject_areas.code = 3 AND countries.country_name = 'Andorra'
+SELECT funding_schemes.code FROM funding_schemes WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT funding_schemes.code FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme WHERE funding_schemes.title = 'Framework Partnership Agreement'
+SELECT programmes.title FROM programmes WHERE programmes.short_name = 'Transport'
+SELECT programmes.title FROM programmes WHERE programmes.short_name LIKE '%Transport%'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.short_name = 'Transport'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.short_name = 'Transport'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.short_name = 'Transport'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.project WHERE programmes.short_name = 'Transport'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.project WHERE programmes.short_name = 'Transport'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.project WHERE programmes.short_name = 'Transport'
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE institutions.acronym = 'GTBB'
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE institutions.acronym = 'GTBB'
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE projects.acronym = 'GTBB'
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE projects.acronym = 'GTBB'
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE institutions.acronym = 'GTBB'
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE institutions.acronym = 'GTBB'
+SELECT people.full_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE projects.acronym = 'GTBB'
+SELECT people.full_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id JOIN project_members ON project_members.member_role = people.unics_id WHERE projects.acronym = 'GTBB'
+SELECT project_members.member_name , project_members.member_short_name FROM project_members JOIN people ON project_members.member_role = people.unics_id INTERSECT SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN project_member_roles ON project_members.member_role = project_member_roles.code
+SELECT project_members.member_name , project_members.member_short_name FROM project_members JOIN people ON project_members.member_role = people.unics_id
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id
+SELECT people.full_name , project_members.member_short_name FROM project_members JOIN people ON project_members.member_role = people.unics_id
+SELECT people.full_name , project_members.member_short_name FROM project_members JOIN people ON project_members.member_role = people.unics_id
+SELECT project_members.member_name , project_member_roles.code FROM project_members JOIN project_member_roles ON project_members.member_role = project_member_roles.code
+SELECT people.full_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id
+SELECT people.full_name , project_member_roles.code FROM project_members JOIN people ON project_members.member_role = people.unics_id
+SELECT programmes.title FROM programmes WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme WHERE programmes.parent = 'FP7'
+SELECT programmes.title FROM programmes JOIN programmes ON programmes.code = programmes.title WHERE programmes.parent = 'FP7'
+SELECT erc_panels.description FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE topics.rcn = 'Life Sciences'
+SELECT erc_panels.description FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'life sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'life sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'life sciences'
+SELECT erc_panels.description FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'life sciences'
+SELECT erc_panels.description FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'life sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'life sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE topics.title = 'life sciences'
+SELECT erc_panels.description FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE topics.rcn = 'life sciences'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT DISTINCT project_members.project FROM project_members JOIN subject_areas ON project_members.activity_type = subject_areas.code WHERE subject_areas.title = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.project JOIN activity_types ON project_members.activity_type = activity_types.code WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.project JOIN activity_types ON project_members.activity_type = activity_types.code WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.project JOIN people ON project_members.activity_type = people.unics_id WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.project JOIN people ON project_members.activity_type = people.unics_id WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.member_role JOIN people ON project_members.activity_type = people.unics_id WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.member_role JOIN people ON project_members.activity_type = people.unics_id WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.member_role JOIN activity_types ON project_members.activity_type = activity_types.code WHERE activity_types.description = 'Research Organisations'
+SELECT people.full_name FROM projects JOIN project_members ON projects.unics_id = project_members.member_role JOIN activity_types ON project_members.activity_type = activity_types.code WHERE activity_types.description = 'Research Organisations'
+SELECT projects.objective FROM projects WHERE projects.objective = 'DEEPCARBON'
+SELECT project_member_roles.description FROM projects WHERE projects.objective = 'DEEPCARBON'
+SELECT projects.objective FROM project_member_roles JOIN projects ON project_member_roles.code = projects.ec_fund_scheme WHERE projects.objective = 'DEEPCARBON'
+SELECT projects.objective FROM project_member_roles JOIN projects ON project_member_roles.code = projects.ec_fund_scheme WHERE projects.objective = 'DEEPCARBON'
+SELECT projects.objective FROM project_member_roles JOIN projects ON project_member_roles.code = projects.ec_fund_scheme WHERE projects.objective = 'DEEPCARBON'
+SELECT projects.objective FROM projects JOIN projects ON projects.unics_id = projects.ec_fund_scheme WHERE projects.objective = 'DEEPCARBON'
+SELECT project_member_roles.description FROM project_member_roles JOIN projects ON project_member_roles.code = projects.ec_fund_scheme WHERE projects.objective = 'DEEPCARBON'
+SELECT project_member_roles.description FROM project_member_roles JOIN projects ON project_member_roles.code = projects.ec_fund_scheme WHERE projects.objective = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE projects.acronym = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE institutions.acronym = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE project_erc_panels.project = 'DEEPCARBON' EXCEPT SELECT projects.objective FROM projects WHERE project_subject_areas.project = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE project_erc_panels.project = 'DEEPCARBON' EXCEPT SELECT projects.objective FROM projects WHERE project_topics.project = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE project_erc_panels.project = 'DEEPCARBON' EXCEPT SELECT projects.objective FROM projects WHERE project_programmes.project = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE institutions.acronym = 'DEEPCARBON' INTERSECT SELECT projects.objective FROM projects WHERE institutions.acronym = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE institutions.acronym = 'DEEPCARBON' INTERSECT SELECT projects.objective FROM projects WHERE project_topics.project = 'DEEPCARBON'
+SELECT projects.objective FROM projects WHERE institutions.acronym = 'DEEPCARBON' INTERSECT SELECT projects.objective FROM projects WHERE project_subject_areas.project = 'DEEPCARBON'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT programmes.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT projects.title FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.title JOIN project_programmes ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.title JOIN project_programmes ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.title JOIN project_programmes ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.title JOIN project_programmes ON project_programmes.project = projects.unics_id WHERE projects.objective = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing' AND subject_areas.title = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing' AND subject_areas.title = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing' AND subject_areas.title = 'carbon capturing'
+SELECT COUNT( * ) FROM projects WHERE projects.objective = 'carbon capturing' AND subject_areas.title = 'carbon capturing'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions WHERE countries.country_name = 'France' AND eu_territorial_units.description != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' AND subject_areas.description = 'Paris' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' AND subject_areas.description = 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' AND institutions.institutions_name != 'Paris'
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' EXCEPT SELECT * FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Paris'
+SELECT * FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'France' AND subject_areas.description = 'Paris' EXCEPT SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id WHERE countries.country_name = 'Paris'
+SELECT institutions.institutions_name FROM institutions
+SELECT institutions.short_name FROM institutions
+institutions.short_name
+institutions , project_members , project_member_roles
+institutions.short_name
+project_member_roles
+project_members
+project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT institutions.institutions_name FROM institutions EXCEPT SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY people.full_name HAVING COUNT( * ) > 1
+SELECT 1 FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY people.full_name HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY people.full_name HAVING COUNT( * ) > 1
+SELECT people.full_name FROM people JOIN projects ON people.unics_id = projects.principal_investigator GROUP BY people.full_name HAVING COUNT( * ) > 1
+SELECT people.full_name FROM projects JOIN people ON projects.principal_investigator = people.unics_id GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT people.full_name FROM projects JOIN people ON projects.principal_investigator = people.unics_id GROUP BY projects.principal_investigator HAVING COUNT( * ) > 1
+SELECT subject_areas.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT subject_areas.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT subject_areas.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT subject_areas.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN projects ON projects.unics_id = projects.ec_fund_scheme ORDER BY project_members.ec_contribution DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN projects ON projects.unics_id = projects.ec_fund_scheme GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN projects ON projects.unics_id = projects.ec_fund_scheme GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN projects ON projects.unics_id = projects.ec_fund_scheme GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN projects ON projects.unics_id = projects.ec_fund_scheme GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN project_members ON projects.unics_id = project_members.project GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN project_members ON projects.unics_id = project_members.project GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT erc_research_domains.description FROM projects JOIN project_members ON projects.unics_id = project_members.project GROUP BY project_subject_areas.subject_area ORDER BY SUM( project_members.ec_contribution ) DESC LIMIT 1
+SELECT projects.acronym FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.cordis_ref FROM projects GROUP BY projects.cordis_ref ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.acronym FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.cordis_ref FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.ec_call FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.ec_max_contribution FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.ec_ref FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.end_date FROM projects GROUP BY projects.acronym ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT subject_areas.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY projects.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT projects.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON project_subject_areas.subject_area = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT subject_areas.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN subject_areas ON funding_schemes.title = subject_areas.code GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_erc_panels.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_programmes.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_subject_areas.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_topics.project = projects.unics_id GROUP BY project_members.institution_id ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.short_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.short_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.short_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN projects ON project_members.project = projects.unics_id GROUP BY institutions.short_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY projects.ec_fund_scheme ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.code ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.code ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes GROUP BY funding_schemes.code ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY projects.ec_fund_scheme ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.code ORDER BY COUNT( * ) ASC LIMIT 1
+project_members , projects
+DISTINCT projects.end_year
+SELECT DISTINCT projects.objective FROM project_members JOIN projects ON project_members.project = projects.unics_id ORDER BY projects.acronym DESC
+SELECT DISTINCT projects.homepage FROM project_members JOIN projects ON project_members.project = projects.unics_id ORDER BY projects.acronym DESC
+SELECT DISTINCT projects.end_year FROM project_members JOIN projects ON project_members.project = projects.unics_id ORDER BY projects.acronym DESC
+SELECT DISTINCT projects.end_date FROM project_members JOIN projects ON project_members.project = projects.unics_id ORDER BY projects.acronym DESC
+SELECT DISTINCT projects.ec_ref FROM project_members JOIN projects ON project_members.project = projects.unics_id ORDER BY projects.acronym DESC
+SELECT DISTINCT projects.ec_max_contribution FROM project_members JOIN projects ON project_members.project = projects.unics_id ORDER BY projects.acronym DESC
+SELECT COUNT( * ) , projects.acronym FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.end_year FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.acronym FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.cordis_ref FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.ec_call FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.ec_max_contribution FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.ec_ref FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT COUNT( * ) , projects.objective FROM project_members JOIN projects ON project_members.project = projects.unics_id GROUP BY projects.acronym ORDER BY COUNT( * ) DESC
+SELECT projects.title , projects.start_date FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.title , projects.start_date FROM projects ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.title , projects.start_date FROM projects ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.title , projects.start_date FROM projects ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.start_year , projects.start_date FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.start_year , projects.start_date FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.start_year , projects.start_date FROM programmes JOIN project_programmes ON programmes.code = project_programmes.programme JOIN projects ON project_programmes.project = projects.unics_id ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.title , projects.start_year FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.cordis_ref DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.cordis_ref FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_call FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_max_contribution FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_ref FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.end_date FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.acronym ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.acronym ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.cordis_ref ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.ec_ref ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.end_date ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.end_year ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.ec_call ASC LIMIT 1
+SELECT projects.title , projects.acronym FROM projects ORDER BY projects.cordis_ref DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.cordis_ref DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.cordis_ref FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_call FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_max_contribution FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_ref FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.end_date FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.cordis_ref DESC LIMIT 1
+SELECT projects.acronym FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.cordis_ref FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_call FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_max_contribution FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.ec_ref FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.end_date FROM projects ORDER BY projects.acronym DESC LIMIT 1
+SELECT projects.start_date FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.start_date FROM projects ORDER BY projects.start_year DESC LIMIT 1
+SELECT projects.start_year FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.start_date FROM projects ORDER BY projects.start_date DESC LIMIT 1
+SELECT projects.start_date FROM projects ORDER BY projects.start_year ASC LIMIT 1
+SELECT projects.start_date FROM projects ORDER BY projects.start_date ASC LIMIT 1
+SELECT projects.start_date FROM projects ORDER BY projects.start_date ASC LIMIT 1
+SELECT projects.start_year FROM projects ORDER BY projects.start_date ASC LIMIT 1
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE subject_areas.description = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE subject_areas.description = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE subject_areas.description = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE projects.title = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE projects.title = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE projects.title = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE project_subject_areas.subject_area = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM project_subject_areas JOIN projects ON project_subject_areas.project = projects.unics_id WHERE project_subject_areas.subject_area = 'Climate change' AND subject_areas.description = 'Carbon cycle'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id INTERSECT SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id INTERSECT SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id INTERSECT SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id INTERSECT SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_programmes ON project_programmes.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.ec_fund_scheme JOIN project_erc_panels ON project_erc_panels.project = projects.unics_id
+SELECT COUNT( DISTINCT project_member_roles.description ) FROM project_member_roles
+SELECT COUNT( DISTINCT project_member_roles.description ) FROM project_member_roles
+SELECT COUNT( DISTINCT project_members.member_role ) FROM project_member_roles
+SELECT DISTINCT project_member_roles.description FROM project_member_roles
+SELECT DISTINCT project_member_roles.description FROM project_member_roles
+SELECT DISTINCT project_member_roles.description FROM project_member_roles
+SELECT COUNT( DISTINCT project_member_roles.description ) FROM project_members
+SELECT COUNT( DISTINCT project_member_roles.description ) FROM project_members
+SELECT DISTINCT project_members.activity_type FROM project_members
+SELECT DISTINCT project_members.longitude FROM project_members
+SELECT DISTINCT project_members.unics_id FROM project_members
+SELECT DISTINCT project_members.latitude FROM project_members
+SELECT DISTINCT project_members.member_name FROM project_members
+SELECT DISTINCT project_members.member_short_name FROM project_members
+SELECT DISTINCT project_members.pic_number FROM project_members
+SELECT DISTINCT project_members.postal_code FROM project_members
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_panels ON erc_panels.code = erc_panels.part_of WHERE erc_research_domains.description = 'Life Sciences'
+SELECT AVG( projects.acronym ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.acronym ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.cordis_ref ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.acronym ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.cordis_ref ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.ec_call ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.acronym ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT AVG( projects.ec_call ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' OR erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_research_domains JOIN erc_panels ON erc_research_domains.code = erc_panels.part_of WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'social sciences' AND erc_research_domains.description = 'humanities'
+SELECT COUNT( * ) FROM erc_panels JOIN erc_research_domains ON erc_panels.part_of = erc_research_domains.code WHERE erc_research_domains.description = 'social sciences' OR erc_research_domains.description = 'humanities'
+SELECT DISTINCT project_members.project FROM project_members WHERE institutions.institutions_name = 'private for profit'
+SELECT DISTINCT project_members.project FROM project_members WHERE institutions.institutions_name = 'private for profit'
+SELECT project_members.longitude FROM project_members WHERE institutions.institutions_name = 'private for profit'
+SELECT project_members.latitude FROM project_members WHERE institutions.institutions_name = 'private for profit'
+SELECT project_members.member_name FROM project_members WHERE institutions.institutions_name = 'private for profit'
+SELECT project_members.member_short_name FROM project_members WHERE institutions.institutions_name = 'private for profit'
+SELECT DISTINCT project_members.project FROM project_members WHERE project_members.latitude = 'private for profit'
+SELECT DISTINCT project_members.project FROM project_members WHERE project_members.member_name = 'private for profit'
+SELECT project_members.institution_id FROM project_members WHERE project_members.country = 'businesses'
+SELECT project_members.institution_id FROM project_members WHERE project_members.department_name = 'businesses'
+SELECT DISTINCT project_members.institution_id FROM project_members WHERE project_members.department_name = 'businesses'
+SELECT DISTINCT project_members.institution_id FROM project_members WHERE project_members.department_name = 'businesses'
+SELECT DISTINCT project_members.institution_id FROM project_members WHERE project_members.department_name = 'businesses'
+SELECT DISTINCT project_members.institution_id FROM project_members WHERE project_members.country = 'businesses'
+SELECT DISTINCT project_members.institution_id FROM project_members WHERE project_members.country = 'businesses'
+SELECT DISTINCT project_members.institution_id FROM project_members WHERE project_members.country = 'businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.institution_id = 'businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.department_name = 'businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.country = 'businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.activity_type = 'businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.ec_contribution = 'businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.institution_id = 'project members are businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.institution_id = 'members are businesses'
+SELECT COUNT( * ) FROM project_members WHERE project_members.institution_id = 'How many project members are businesses'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id JOIN project_members ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher or Secondary Education Establishments' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id JOIN project_members ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher or Secondary Education Establishments' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher or Secondary Education Establishments' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher or Secondary Education Establishments' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher or Secondary Education Establishments' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher or Secondary Education Establishments' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Higher' OR project_members.department_name = 'Secondary Education Establishments'
+SELECT COUNT( * ) FROM project_members WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( * ) FROM project_members WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( DISTINCT project_members.project ) FROM project_members WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( DISTINCT project_members.project ) FROM project_members WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( * ) FROM project_members JOIN projects ON project_members.project = projects.unics_id WHERE project_members.department_name = 'Educational Establishments'
+SELECT COUNT( * ) FROM projects WHERE project_erc_panels.project = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE project_erc_panels.project = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.acronym = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.ec_call = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.title = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.total_cost = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.ec_ref = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.acronym = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE erc_research_domains.description = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE erc_research_domains.description = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE erc_research_domains.description = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE project_subject_areas.subject_area = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE project_subject_areas.subject_area = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.unics_id = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE projects.unics_id = 'Robotics'
+SELECT COUNT( * ) FROM projects WHERE project_erc_panels.panel = 'Robotics'
+SELECT countries.country_name FROM projects WHERE countries.country_name != 'EU' GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT countries.country_name FROM projects WHERE countries.country_name != 'EU' GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions
+SELECT countries.country_name FROM institutions
+SELECT institutions.short_name FROM institutions
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN projects ON institutions.geocode_regions_3 = projects.ec_fund_scheme GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN projects ON institutions.geocode_regions_3 = projects.ec_fund_scheme GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN projects ON institutions.geocode_regions_3 = projects.ec_fund_scheme GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN eu_territorial_units ON institutions.geocode_regions_3 = eu_territorial_units.geocode_regions GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN projects ON institutions.geocode_regions_3 = projects.ec_fund_scheme GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN projects ON institutions.geocode_regions_3 = projects.ec_fund_scheme GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions JOIN countries ON institutions.country_id = countries.unics_id JOIN projects ON institutions.geocode_regions_3 = projects.ec_fund_scheme GROUP BY countries.country_name ORDER BY COUNT( * ) DESC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.short_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT institutions.institutions_name FROM institutions GROUP BY institutions.institutions_name ORDER BY COUNT( * ) ASC LIMIT 1
+SELECT countries.country_name FROM institutions
+SELECT COUNT( * ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( * ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( DISTINCT project_members.project ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( DISTINCT project_members.project ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( DISTINCT project_members.project ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( DISTINCT project_members.institution_id ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( DISTINCT project_members.institution_id ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+SELECT COUNT( DISTINCT project_members.institution_id ) FROM projects WHERE projects.unics_id NOT IN (SELECT project_members.project FROM project_members)
+institutions , project_members
+projects
+institutions , project_members , countries
+SELECT institutions.institutions_name FROM institutions
+SELECT institutions.institutions_name FROM institutions JOIN project_members ON institutions.unics_id = project_members.institution_id JOIN countries ON institutions.country_id = countries.unics_id
+institutions , project_members
+project_members , projects , projects
+project_members , projects , projects
+SELECT programmes.title FROM programmes WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes WHERE subject_areas.title = 'climate'
+SELECT programmes.title FROM programmes WHERE subject_areas.description = 'climate'
+SELECT programmes.title FROM programmes JOIN subject_areas ON programmes.code = subject_areas.code WHERE subject_areas.title = 'climate'
+SELECT programmes.title FROM programmes JOIN subject_areas ON programmes.code = subject_areas.code WHERE subject_areas.description = 'climate'
+SELECT programmes.title FROM programmes JOIN subject_areas ON programmes.code = subject_areas.code WHERE subject_areas.description = 'climate'
+SELECT programmes.title FROM programmes JOIN subject_areas ON programmes.code = subject_areas.code WHERE subject_areas.description = 'climate'
+SELECT programmes.title FROM programmes JOIN subject_areas ON programmes.code = subject_areas.code WHERE subject_areas.title = 'climate'
+SELECT programmes.title FROM programmes WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.framework_program WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.framework_program WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.framework_program WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM subject_areas WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.framework_program WHERE programmes.title LIKE '%climate%'
+SELECT subject_areas.title FROM programmes WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title FROM programmes JOIN projects ON programmes.code = projects.framework_program WHERE programmes.title LIKE '%climate%'
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , funding_schemes.title FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , funding_schemes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT funding_schemes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT funding_schemes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.framework_program JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , funding_schemes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme GROUP BY funding_schemes.title
+SELECT funding_schemes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.ec_fund_scheme JOIN project_programmes ON programmes.code = project_programmes.programme GROUP BY funding_schemes.title
+SELECT programmes.title , funding_schemes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.framework_program JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title
+SELECT programmes.title , COUNT( * ) FROM funding_schemes JOIN projects ON funding_schemes.code = projects.framework_program JOIN programmes ON funding_schemes.title = programmes.code GROUP BY funding_schemes.title

@@ -1,0 +1,495 @@
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT count(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT count(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT COUNT(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT count(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT count(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT Here is the SQL statement that corresponds to your question:
+SELECT speciescommonname FROM species;
+SELECT DISTINCT speciescommonname FROM species;
+SELECT DISTINCT speciescommonname FROM species;
+SELECT DISTINCT speciescommonname FROM species;
+SELECT * FROM disease_mutation;
+SELECT id, chromosome_id, chromosome_pos, ref_nt, alt_nt, ensembl_transcript_id, cds_pos, peptide_pos, aa_pos_uniprotkb, ref_aa, alt_aa, mutation_freq, data_source, doid FROM disease_mutation;
+SELECT THE SQLite SQL QUERY: SELECT * FROM disease_mutation;
+SELECT id, chromosome_id, chromosome_pos, ref_nt, alt_nt, ensembl_transcript_id, cds_pos, peptide_pos, aa_pos_uniprotkb, ref_aa, alt_aa, mutation_freq, data_source, doid FROM disease_mutation;
+SELECT Sure, here is the SQL query:
+SELECT THE SQLite SQL QUERY: SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT COUNT(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT count(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT count(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT THE SQLite SQL QUERY: SELECT COUNT(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT count(*) FROM biomarker_fda_test AS T1 JOIN biomarker_fda_test_trial AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T1.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT gene_symbol, biomarker_description FROM biomarker WHERE test_is_a_panel = 'false';
+SELECT gene_symbol, biomarker_description  FROM biomarker  WHERE test_is_a_panel = 'false';
+SELECT gene_symbol, biomarker_description  FROM biomarker  WHERE test_is_a_panel = 'false';
+SELECT THE SQLite SQL QUERY: SELECT biomarker.gene_symbol, biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'false';
+SELECT gene_symbol, biomarker_description  FROM biomarker  WHERE test_is_a_panel = 'false';
+SELECT * FROM disease WHERE name LIKE '%cancer%';
+SELECT * FROM disease WHERE name LIKE '%cancer%'
+SELECT * FROM disease WHERE name LIKE '%cancer%'
+SELECT * FROM disease WHERE name LIKE '%cancer%';
+SELECT * FROM disease WHERE name LIKE '%cancer%';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT biomarker_title, qa_state FROM biomarker_edrn WHERE phase = 'Two';
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type != 'protein';
+SELECT THE SQLite SQL QUERY: SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type != 'protein';
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type != 'protein';
+SELECT id, biomarker_title FROM biomarker_edrn WHERE biomarker_type != 'protein';
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type != 'protein';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type != 'Protein';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type <> 'Protein';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type <> 'Protein';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type != 'Protein';
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type != 'Protein';
+SELECT DISTINCT T1.gene_symbol  FROM differential_expression AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'lung cancer';
+SELECT I'm sorry, it seems that the SQL query was cut off. Could you provide more context or clarify which tables and columns are involved for expressing genes in lung cancer?
+SELECT DISTINCT gene_symbol  FROM differential_expression AS de  JOIN cancer_tissue AS ct ON de.doid = ct.doid  JOIN anatomical_entity AS ae ON ct.uberon_anatomical_id = ae.id  WHERE ae.name = 'lung';
+SELECT I'm sorry, but it seems like the question is incomplete. Could you please provide the complete question for which you need the SQL query?
+SELECT I'm sorry for the incomplete SQL query, let's complete that query for you.
+SELECT B.gene_symbol, B.biomarker_description  FROM biomarker AS B JOIN biomarker_fda_test AS F ON B.id = F.doid  JOIN disease AS D ON F.doid = D.id  WHERE D.name = 'breast cancer';
+SELECT biomarker.gene_symbol, biomarker.biomarker_description  FROM biomarker  JOIN disease ON biomarker_fda_test.doid = disease.id  JOIN biomarker_fda_test ON biomarker_fda_test.test_trade_name = biomarker_fda.test_trade_name AND biomarker_fda_test.test_submission = biomarker_fda.test_submission WHERE disease.name = 'breast cancer';
+SELECT T1.gene_symbol, T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.test_number_genes  JOIN disease AS T3 ON T2.doid = T3.id  WHERE T3.name = 'breast cancer';
+SELECT B.gene_symbol, B.biomarker_description  FROM biomarker AS B  JOIN biomarker_fda_test AS F ON B.id = F.biomarker_origin  JOIN disease AS D ON F.doid = D.id  WHERE D.name = 'breast cancer';
+SELECT B.gene_symbol, B.biomarker_description  FROM biomarker_fda_test AS BFT  JOIN disease AS D ON BFT.doid = D.id  JOIN biomarker AS B ON BFT.test_submission = B.biomarker_id  WHERE D.name = 'breast cancer';
+SELECT distinct phase FROM biomarker_edrn;
+SELECT biomarker_edrn.phase FROM biomarker_edrn GROUP BY biomarker_edrn.phase;
+SELECT DISTINCT phase FROM biomarker_edrn;
+SELECT phase FROM biomarker_edrn GROUP BY phase;
+SELECT phase FROM biomarker_edrn GROUP BY phase;
+SELECT platform_method, test_study_design FROM biomarker_fda_test WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design FROM biomarker_fda_test WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design FROM biomarker_fda_test WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design FROM biomarker_fda_test WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design FROM biomarker_fda_test WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT pvalue FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT pvalue FROM differential_expression AS DE  JOIN disease AS D ON DE.doid = D.id  WHERE D.name = 'lung cancer';
+SELECT T1.pvalue FROM differential_expression AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'lung cancer';
+SELECT T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT D1.chromosome_pos  FROM disease_mutation AS D1  JOIN disease AS D2 ON D1.doid = D2.id  WHERE D2.name = 'skin cancer';
+SELECT T2.chromosome_pos  FROM disease AS T1  JOIN disease_mutation AS T2 ON T1.id = T2.doid  WHERE T1.name = 'skin cancer';
+SELECT DM.chromosome_pos  FROM disease_mutation AS DM  JOIN disease AS D ON DM.doid = D.id  WHERE D.name = 'skin cancer';
+SELECT T1.chromosome_pos FROM disease_mutation AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'skin cancer';
+SELECT T1.chromosome_pos  FROM disease_mutation AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'skin cancer';
+SELECT T1.chromosome_pos  FROM disease_mutation AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'skin cancer';
+SELECT T1.chromosome_pos  FROM disease_mutation AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'skin cancer';
+SELECT T1.chromosome_pos FROM disease_mutation AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'skin cancer';
+SELECT chromosome_pos FROM disease_mutation AS dm JOIN disease AS d ON dm.doid = d.id WHERE d.name = 'skin cancer';
+SELECT I'm sorry, but I can't directly generate the specific SQL statement you're asking for.
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT disease_mutation.* FROM disease_mutation WHERE ref_aa = 'E';
+SELECT `* FROM disease_mutation WHERE ref_aa = 'E';`
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT * FROM disease_mutation WHERE ref_aa = 'E';
+SELECT COUNT(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT COUNT(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT count(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT count(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT COUNT(*) FROM biomarker_fda_test WHERE test_manufacturer = '23andMe';
+SELECT disease.name  FROM differential_expression  JOIN disease ON differential_expression.doid = disease.id  WHERE differential_expression.gene_symbol = 'A1BG'  AND differential_expression.expression_change_direction = 'up' AND differential_expression.statistical_significance = 'significant';
+SELECT DISTINCT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG' AND T1.expression_change_direction = 'up' AND T1.statistical_significance = 'yes';
+SELECT disease.name  FROM differential_expression  JOIN disease ON differential_expression.doid = disease.id  WHERE differential_expression.gene_symbol = 'A1BG'  AND differential_expression.expression_change_direction = 'up'  AND differential_expression.statistical_significance = 'significant'
+SELECT D.name  FROM differential_expression AS DE  JOIN disease AS D ON DE.doid = D.id  WHERE DE.gene_symbol = 'A1BG' AND DE.expression_change_direction = 'up';
+SELECT T3.name  FROM differential_expression AS T1  JOIN disease AS T3 ON T1.doid = T3.id  WHERE T1.gene_symbol = 'A1BG'  AND T1.expression_change_direction = 'up'  AND T1.statistical_significance = 1;
+SELECT * FROM species;
+SELECT * FROM species;
+SELECT * FROM species;
+SELECT * FROM species;
+SELECT * FROM species;
+SELECT T1.gene_symbol, T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'EGFR' AND T2.name = 'lung cancer';
+SELECT T1.gene_symbol, T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'EGFR' AND T2.name = 'lung cancer';
+SELECT Certainly, to form the SQL statement for extracting the gene symbol and p-value for the expression of the EGFR gene in lung cancer, follow the database schema provided with attention to table connections by foreign keys.
+SELECT gene_symbol, pvalue  FROM differential_expression  JOIN disease ON differential_expression.doid = disease.id  WHERE gene_symbol = 'EGFR' AND disease.name = 'lung cancer';
+SELECT T1.gene_symbol, T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'EGFR' AND T2.name = 'lung cancer';
+SELECT gene_symbol, pvalue  FROM differential_expression  WHERE gene_symbol = 'EGFR'  AND doid = (SELECT id FROM disease WHERE name = 'lung cancer');
+SELECT gene_symbol, pvalue  FROM differential_expression  WHERE gene_symbol = 'EGFR'  AND doid = (SELECT id FROM disease WHERE name = 'lung cancer');
+SELECT gene_symbol, pvalue  FROM differential_expression  WHERE gene_symbol = 'EGFR' AND doid = (SELECT id FROM disease WHERE name = 'lung cancer');
+SELECT differential_expression.gene_symbol, differential_expression.pvalue FROM differential_expression JOIN disease ON differential_expression.doid = disease.id WHERE differential_expression.gene_symbol = 'EGFR' AND disease.name = 'lung cancer';
+SELECT gene_symbol, pvalue  FROM differential_expression  WHERE gene_symbol = 'EGFR'    AND doid = (SELECT id FROM disease WHERE name = 'lung cancer');
+SELECT * FROM disease_mutation;
+SELECT * FROM disease_mutation;
+SELECT * FROM disease_mutation;
+SELECT #### THE SQLite SQL QUERY: SELECT * FROM disease_mutation;
+SELECT * FROM disease_mutation;
+SELECT count(*) FROM healthy_expression AS T1 JOIN stage AS T2 ON T1.uberon_developmental_id = T2.id WHERE T2.name = 'late adult stage';
+SELECT COUNT(*) FROM healthy_expression AS T1 JOIN stage AS T2 ON T1.uberon_developmental_id = T2.id WHERE T2.name = 'late adult stage';
+SELECT COUNT(*)  FROM healthy_expression AS he JOIN stage AS s ON he.uberon_developmental_id = s.id  WHERE s.name = 'late adult stage';
+SELECT COUNT(*) FROM healthy_expression AS T1 JOIN stage AS T2 ON T1.uberon_developmental_id = T2.id WHERE T2.name = 'late adult stage';
+SELECT COUNT(*) FROM healthy_expression AS T1 JOIN stage AS T2 ON T1.uberon_developmental_id = T2.id WHERE T2.name = 'late adult stage';
+SELECT D.name  FROM differential_expression AS DE  JOIN disease AS D  ON DE.doid = D.id  WHERE DE.gene_symbol = 'A1BG'  AND DE.statistical_significance = 1;
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG' AND T1.statistical_significance = 1;
+SELECT DISTINCT D.name FROM disease AS D JOIN differential_expression AS DE ON D.id = DE.doid WHERE DE.gene_symbol = 'A1BG' AND DE.statistical_significance = 1;
+SELECT D.name  FROM differential_expression AS DE  JOIN disease AS D ON DE.doid = D.id  WHERE DE.gene_symbol = 'A1BG' AND DE.statistical_significance = 'significant';
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG' AND T1.statistical_significance = 1;
+SELECT D.name FROM disease AS D  JOIN differential_expression AS DE ON D.id = DE.doid  WHERE DE.gene_symbol = 'A1BG' AND DE.statistical_significance = 'Yes';
+SELECT D.name  FROM disease AS D  JOIN differential_expression AS DE ON D.id = DE.doid  WHERE DE.gene_symbol = 'A1BG'  AND DE.statistical_significance = 'Yes';
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2  ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG'  AND T1.statistical_significance = 'Yes';
+SELECT disease.name  FROM differential_expression  JOIN disease ON differential_expression.doid = disease.id  WHERE differential_expression.gene_symbol = 'A1BG'  AND differential_expression.statistical_significance = 'Yes';
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG'  AND T1.statistical_significance = 'Yes';
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT biomarker_description FROM biomarker;
+SELECT gene_symbol, biomarker_description FROM biomarker WHERE test_is_a_panel = 0 AND biomarker_id IN (SELECT id FROM biomarker_edrn WHERE biomarker_type = 'cancer');
+SELECT gene_symbol, biomarker_description FROM biomarker WHERE test_is_a_panel = 'no';
+SELECT gene_symbol, biomarker_description  FROM biomarker  WHERE test_is_a_panel = 0
+SELECT gene_symbol, biomarker_description  FROM biomarker  WHERE test_is_a_panel = 'no'  AND biomarker_id IN (     SELECT id      FROM biomarker_edrn      WHERE biomarker_type = 'cancer' );
+SELECT T1.gene_symbol, T1.biomarker_description FROM biomarker AS T1 WHERE T1.test_is_a_panel = 0 AND T1.biomarker_id IN (     SELECT T2.id     FROM biomarker_edrn AS T2     JOIN cancer_tissue AS T3 ON T2.uberon_anatomical_id = T3.uberon_anatomical_id );
+SELECT THE SQLite SQL QUERY: SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker;
+SELECT gene_symbol FROM biomarker
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type = 'protein' AND phase = 'two';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type = 'protein' AND phase = 'two';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type = 'protein' AND phase = 2;
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type = 'protein' AND phase = 'two';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type = 'protein' AND phase = 2;
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type = 'Protein' AND phase = 'Two';
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type = 'Protein' AND phase = 'Two';
+SELECT biomarker_title FROM biomarker_edrn WHERE biomarker_type = 'Protein' AND phase = 'Two';
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type = 'Protein' AND phase = 'Two';
+SELECT biomarker_title  FROM biomarker_edrn  WHERE biomarker_type = 'Protein' AND phase = 'Two';
+SELECT B.gene_symbol, B.biomarker_description FROM biomarker AS B JOIN biomarker_fda_test AS BFT ON B.id = BFT.doid JOIN disease AS D ON BFT.doid = D.id WHERE D.name = 'breast cancer';
+SELECT B.gene_symbol, B.biomarker_description FROM biomarker AS B JOIN biomarker_fda_test AS BFT ON B.id = BFT.biomarker_origin JOIN disease AS D ON BFT.doid = D.id WHERE D.name = 'breast cancer';
+SELECT T1.gene_symbol, T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T2.biomarker_origin = T1.id JOIN disease AS T3 ON T2.doid = T3.id  WHERE T3.name = 'breast cancer';
+SELECT T1.gene_symbol, T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.doid  JOIN disease AS T3 ON T2.doid = T3.id  WHERE T3.name = 'breast cancer';
+SELECT B.gene_symbol, B.biomarker_description  FROM biomarker AS B  JOIN biomarker_fda_test AS BFT ON B.id = BFT.doid  JOIN disease AS D ON BFT.doid = D.id  WHERE D.name = 'breast cancer';
+SELECT DISTINCT phase FROM biomarker_edrn;
+SELECT DISTINCT phase FROM biomarker_edrn;
+SELECT DISTINCT phase FROM biomarker_edrn;
+SELECT DISTINCT phase FROM biomarker_edrn;
+SELECT `DISTINCT phase FROM biomarker_edrn;`
+SELECT pvalue FROM differential_expression WHERE doid = (SELECT id FROM disease WHERE name = 'lung cancer');
+SELECT T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT the pvalue FROM differential_expression WHERE doid = (SELECT id FROM disease WHERE name = 'lung cancer');
+SELECT T1.pvalue FROM differential_expression AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'lung cancer';
+SELECT T1.pvalue  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT count(*) FROM xref_gene_ensembl AS T1 JOIN species AS T2 ON T1.speciesid = T2.speciesid WHERE T2.speciescommonname = 'Homo';
+SELECT Apologies for the incomplete response. Here's the complete SQL query:
+SELECT I'm sorry, due to an unexpected halt, I'm unable to provide the requested SQL statement. Please try rephrasing or providing additional details if possible.
+SELECT COUNT(DISTINCT T1.ensembl_gene_id)  FROM xref_gene_ensembl AS T1  JOIN species AS T2  ON T1.speciesid = T2.speciesid  WHERE T2.speciescommonname = 'Homo';
+SELECT COUNT(DISTINCT T1.gene_symbol) FROM xref_gene_ensembl AS T1 JOIN species AS T2 ON T1.speciesid = T2.speciesid WHERE T2.genus = 'Homo';
+SELECT COUNT(DISTINCT gene_symbol) FROM xref_gene_ensembl AS XG JOIN species AS S ON XG.speciesid = S.speciesid WHERE S.genus = 'Homo';
+SELECT count(DISTINCT gene_symbol) FROM xref_gene_ensembl AS xge JOIN species AS s ON xge.speciesid = s.speciesid WHERE genus = 'Homo';
+SELECT COUNT(DISTINCT ensembl_gene_id) FROM xref_gene_ensembl AS T1 JOIN species AS T2 ON T1.speciesid = T2.speciesid WHERE T2.genus = 'Homo';
+SELECT count(DISTINCT gene_symbol)  FROM xref_gene_ensembl AS x  JOIN species AS s ON x.speciesid = s.speciesid  WHERE s.genus = 'Homo';
+SELECT count(DISTINCT ensembl_gene_id) FROM xref_gene_ensembl AS T1 JOIN species AS T2 ON T1.speciesid = T2.speciesid WHERE T2.genus = 'Homo';
+SELECT test_trade_name, test_manufacturer  FROM biomarker_fda_test  WHERE test_manufacturer LIKE 'Roche%';
+SELECT test_trade_name FROM biomarker_fda_test WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_trade_name  FROM biomarker_fda_test  WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_trade_name, test_manufacturer FROM biomarker_fda_test WHERE test_manufacturer LIKE 'Roche%';
+SELECT test_trade_name FROM biomarker_fda_test WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_submission  FROM biomarker_fda_test  WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_submission FROM biomarker_fda_test WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_submission FROM biomarker_fda_test WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_submission FROM biomarker_fda_test WHERE test_manufacturer LIKE 'Roche%'
+SELECT test_submission  FROM biomarker_fda_test  WHERE test_manufacturer LIKE 'Roche%'
+SELECT disease.name  FROM disease  JOIN disease_mutation ON disease.id = disease_mutation.doid  WHERE disease_mutation.cds_pos = 102997;
+SELECT I'm sorry, but I can't supply the SQL query directly.
+SELECT D.name  FROM disease AS D  JOIN disease_mutation AS DM ON D.id = DM.doid  WHERE DM.cds_pos = 102997;
+SELECT D.name  FROM disease AS D  JOIN disease_mutation AS DM ON D.id = DM.doid  WHERE DM.cds_pos = 102997;
+SELECT disease.name  FROM disease  JOIN disease_mutation ON disease.id = disease_mutation.doid  WHERE disease_mutation.cds_pos = 102997;
+SELECT DISTINCT D.name  FROM disease D  JOIN disease_mutation DM ON D.id = DM.doid  WHERE DM.cds_pos = 102997;
+SELECT name  FROM disease AS D  JOIN disease_mutation AS DM ON D.id = DM.doid  WHERE DM.cds_pos = 102997;
+SELECT name FROM disease WHERE id IN (SELECT doid FROM disease_mutation WHERE cds_pos = 102997);
+SELECT T2.name  FROM disease_mutation AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.cds_pos = 102997;
+SELECT DISTINCT T2.name  FROM disease_mutation AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.cds_pos = 102997;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT `gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;`
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT the gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT gene_symbol FROM differential_expression WHERE pvalue BETWEEN 0.39 AND 0.41;
+SELECT DISTINCT chromosome_id FROM disease_mutation WHERE doid = (SELECT id FROM disease WHERE name = 'breast cancer');
+SELECT DISTINCT chromosome_id  FROM disease_mutation  WHERE doid = (SELECT id FROM disease WHERE name = 'breast cancer');
+SELECT DISTINCT chromosome_id FROM disease_mutation WHERE doid = (SELECT id FROM disease WHERE name = 'Breast Cancer');
+SELECT DISTINCT T1.chromosome_id  FROM disease_mutation AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'breast cancer';
+SELECT DISTINCT chromosome_id FROM disease_mutation WHERE doid = (SELECT id FROM disease WHERE name = 'breast cancer');
+SELECT DISTINCT chromosome_id  FROM disease_mutation  WHERE doid = (SELECT id FROM disease WHERE name = 'breast cancer');
+SELECT DISTINCT chromosome_id FROM disease_mutation AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'breast cancer';
+SELECT DISTINCT DMT.chromosome_id  FROM disease_mutation AS DMT  JOIN disease AS D ON DMT.doid = D.id  WHERE D.name = 'breast cancer';
+SELECT DISTINCT chromosome_id FROM disease_mutation AS dm JOIN disease AS d ON dm.doid = d.id WHERE d.name = 'breast cancer';
+SELECT THE SQLite SQL QUERY: SELECT DISTINCT chromosome_id FROM disease_mutation AS dm JOIN disease AS d ON dm.doid = d.id WHERE d.name = 'breast cancer';
+SELECT T1.name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW'  AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT T1.name FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW'  AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT name  FROM anatomical_entity AS ae  JOIN healthy_expression AS he  ON ae.id = he.uberon_anatomical_id  WHERE he.expression_level_gene_relative = 'LOW'  AND he.expression_level_anatomical_relative = 'HIGH';
+SELECT T1.name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW'  AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT AE.name  FROM healthy_expression AS HE JOIN anatomical_entity AS AE ON HE.uberon_anatomical_id = AE.id WHERE HE.expression_level_gene_relative = 'LOW' AND HE.expression_level_anatomical_relative = 'HIGH';
+SELECT T1.name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW'  AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT AE.name  FROM healthy_expression AS HE  JOIN anatomical_entity AS AE ON HE.uberon_anatomical_id = AE.id  WHERE HE.expression_level_gene_relative = 'LOW'  AND HE.expression_level_anatomical_relative = 'HIGH';
+SELECT T1.name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2  ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW'  AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT T1.name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW'  AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT DISTINCT T1.name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  WHERE T2.expression_level_gene_relative = 'LOW' AND T2.expression_level_anatomical_relative = 'HIGH';
+SELECT name FROM anatomical_entity WHERE name LIKE 'bone%';
+SELECT name FROM anatomical_entity WHERE name LIKE 'bone%';
+SELECT name FROM anatomical_entity WHERE name LIKE 'bone%'
+SELECT name FROM anatomical_entity WHERE name LIKE 'bone%';
+SELECT `name FROM anatomical_entity WHERE name LIKE 'bone%'`
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT speciescommonname FROM species WHERE genus = 'Mus';
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG' AND T1.expression_change_direction = 'up';
+SELECT D.name  FROM disease AS D JOIN differential_expression AS DE ON D.id = DE.doid WHERE DE.gene_symbol = 'A1BG' AND DE.expression_change_direction = 'up';
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.gene_symbol = 'A1BG' AND T1.expression_change_direction = 'up regulated';
+SELECT DISTINCT D.name  FROM disease AS D  JOIN differential_expression AS DE ON D.id = DE.doid WHERE DE.gene_symbol = 'A1BG' AND DE.expression_change_direction = 'up';
+SELECT D.name  FROM disease AS D  JOIN differential_expression AS DE ON D.id = DE.doid  WHERE DE.gene_symbol = 'A1BG'  AND DE.expression_change_direction = 'up';
+SELECT COUNT(*)  FROM healthy_expression AS he JOIN stage AS s ON he.uberon_developmental_id = s.id WHERE s.name LIKE 'late adult%';
+SELECT count(*) FROM healthy_expression AS T1 JOIN stage AS T2 ON T1.uberon_developmental_id = T2.id WHERE T2.name LIKE 'late adult%';
+SELECT COUNT(*) FROM healthy_expression AS T1 JOIN stage AS T2 ON T1.uberon_developmental_id = T2.id WHERE T2.name LIKE 'late adult%';
+SELECT COUNT(*)  FROM healthy_expression AS he JOIN stage AS s ON he.uberon_developmental_id = s.id WHERE s.name LIKE 'late adult%';
+SELECT COUNT(*)  FROM healthy_expression AS he  JOIN stage AS s  ON he.uberon_developmental_id = s.id  WHERE s.name LIKE 'late adult%';
+SELECT COUNT(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT COUNT(*)  FROM biomarker_fda_test_trial AS T1  JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission  WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT COUNT(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT COUNT(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT count(*) FROM biomarker_fda_test_trial AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission WHERE T2.test_manufacturer = 'ABBOTT MOLECULAR INC';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT T1.test_trade_name  FROM biomarker_fda_test AS T1  JOIN biomarker_fda_test_use AS T2  ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission  WHERE T2.actual_use = 'predisposition';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE actual_use = 'predisposition';
+SELECT T1.test_trade_name  FROM biomarker_fda_test_use AS T1  WHERE T1.actual_use = 'predisposition';
+SELECT T1.gene_symbol  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT DISTINCT de.gene_symbol  FROM differential_expression AS de JOIN disease AS d ON de.doid = d.id WHERE d.name = 'lung cancer';
+SELECT DISTINCT gene_symbol  FROM differential_expression AS de  JOIN disease AS d ON de.doid = d.id  WHERE d.name = 'lung cancer';
+SELECT DISTINCT DE.gene_symbol FROM differential_expression AS DE JOIN disease AS D ON DE.doid = D.id WHERE D.name = 'lung cancer';
+SELECT T1.gene_symbol  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'lung cancer';
+SELECT platform_method, test_study_design  FROM biomarker_fda_test  WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design  FROM biomarker_fda_test  WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design  FROM biomarker_fda_test  WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design FROM biomarker_fda_test WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT platform_method, test_study_design  FROM biomarker_fda_test  WHERE test_manufacturer = 'Dako Denmark A/S';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name  WHERE T3.test_approval_status = 'class II';
+SELECT I'm sorry, I can't assist with that request.
+SELECT T1.biomarker_description FROM biomarker AS T1 JOIN biomarker_fda AS T2 ON T1.id = T2.id JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission WHERE T3.test_approval_status = 'class II';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'class II';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'class II';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'class II';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'class II';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'class II';
+SELECT B.biomarker_description  FROM biomarker AS B  JOIN biomarker_fda AS BF ON B.id = BF.id  JOIN biomarker_fda_test AS BFT ON BF.test_trade_name = BFT.test_trade_name  WHERE BFT.test_approval_status = 'class II';
+SELECT T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'class II';
+SELECT * FROM healthy_expression WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);
+SELECT #### THE SQLite SQL QUERY: SELECT * FROM healthy_expression WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);
+SELECT *  FROM healthy_expression  WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);
+SELECT `* FROM healthy_expression WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);`
+SELECT `s1.* FROM healthy_expression AS s1 WHERE s1.expression_score > (SELECT AVG(s2.expression_score) FROM healthy_expression AS s2);`
+SELECT * FROM healthy_expression WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);
+SELECT * FROM healthy_expression WHERE expression_score > (SELECT AVG(expression_score) FROM healthy_expression);
+SELECT * FROM healthy_expression WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);
+SELECT * FROM healthy_expression WHERE expression_score > (SELECT avg(expression_score) FROM healthy_expression);
+SELECT * FROM healthy_expression WHERE expression_score > (SELECT AVG(expression_score) FROM healthy_expression);
+SELECT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T2.biomarker_type = 'genomic' AND T3.name = 'breast';
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id  WHERE BE.biomarker_type = 'genomic'  AND AE.name = 'breast';
+SELECT B.gene_symbol  FROM biomarker AS B JOIN biomarker_edrn AS BE ON B.id = BE.id JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id WHERE BE.biomarker_type = 'genomic' AND AE.name = 'breast';
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id  WHERE BE.biomarker_type = 'genomic' AND AE.name = 'breast';
+SELECT B.gene_symbol  FROM biomarker AS B JOIN biomarker_edrn AS BE ON B.id = BE.id JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id WHERE BE.biomarker_type = 'genomic' AND AE.name = 'breast';
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id  WHERE BE.biomarker_type = 'Genomic' AND AE.name = 'breast';
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id  WHERE BE.biomarker_type = 'Genomic' AND AE.name = 'breast';
+SELECT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T2.biomarker_type = 'Genomic' AND T3.name = 'breast';
+SELECT T1.gene_symbol  FROM biomarker_edrn AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  WHERE T1.biomarker_type = 'Genomic' AND T2.name = 'breast';
+SELECT biomarker.gene_symbol  FROM biomarker  JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id  JOIN anatomical_entity ON biomarker_edrn.uberon_anatomical_id = anatomical_entity.id  WHERE biomarker_edrn.biomarker_type = 'Genomic'  AND anatomical_entity.name = 'breast';
+SELECT T2.name FROM cancer_tissue AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T1.uberon_anatomical_id = (SELECT id FROM anatomical_entity WHERE name = 'liver');
+SELECT T2.name  FROM cancer_tissue AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.uberon_anatomical_id = (SELECT id FROM anatomical_entity WHERE name = 'liver');
+SELECT disease.name  FROM disease  JOIN cancer_tissue ON disease.id = cancer_tissue.doid  JOIN anatomical_entity ON cancer_tissue.uberon_anatomical_id = anatomical_entity.id  WHERE anatomical_entity.name = 'liver';
+SELECT DISTINCT D.name FROM cancer_tissue AS CT JOIN disease AS D ON CT.doid = D.id JOIN anatomical_entity AS AE ON CT.uberon_anatomical_id = AE.id WHERE AE.name = 'liver';
+SELECT T2.name  FROM cancer_tissue AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.uberon_anatomical_id = (SELECT id FROM anatomical_entity WHERE name = 'liver');
+SELECT D.name FROM disease AS D  JOIN cancer_tissue AS CT ON D.id = CT.doid  JOIN anatomical_entity AS AE ON CT.uberon_anatomical_id = AE.id  WHERE AE.name = 'liver';
+SELECT D.name  FROM disease AS D  JOIN disease_mutation AS DM ON D.id = DM.doid  JOIN disease_mutation_tissue AS DMT ON DM.id = DMT.disease_mutation_id  JOIN anatomical_entity AS AE ON DMT.uberon_anatomical_id = AE.id  WHERE AE.name = 'liver';
+SELECT DISTINCT D.name  FROM disease AS D JOIN cancer_tissue AS CT ON D.id = CT.doid JOIN anatomical_entity AS AE ON CT.uberon_anatomical_id = AE.id WHERE AE.name = 'liver';
+SELECT DISTINCT disease.name  FROM disease  JOIN cancer_tissue ON disease.id = cancer_tissue.doid  JOIN anatomical_entity ON cancer_tissue.uberon_anatomical_id = anatomical_entity.id  WHERE anatomical_entity.name = 'liver';
+SELECT T2.name  FROM disease AS T1  JOIN cancer_tissue AS T2 ON T1.id = T2.doid  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name = 'liver';
+SELECT DISTINCT T1.test_manufacturer FROM biomarker_fda_test AS T1 JOIN biomarker AS T2 ON T1.test_trade_name = T2.biomarker_id WHERE T2.gene_symbol = 'BRAF';
+SELECT DISTINCT T1.test_manufacturer  FROM biomarker_fda_test AS T1  JOIN biomarker AS T2 ON T2.id = T1.biomarker_origin  WHERE T2.gene_symbol = 'BRAF';
+SELECT DISTINCT T3.test_manufacturer FROM biomarker AS T1 JOIN biomarker_fda AS T2 ON T1.id = T2.id JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission WHERE T1.gene_symbol = 'BRAF';
+SELECT DISTINCT test_manufacturer  FROM biomarker_fda_test  WHERE biomarker_origin = 'BRAF';
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.biomarker_id  WHERE T1.gene_symbol = 'BRAF';
+SELECT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2  ON T1.id = T2.test_trade_name  WHERE T1.gene_symbol = 'BRAF';
+SELECT DISTINCT T2.test_manufacturer FROM biomarker AS T1 JOIN biomarker_fda_test AS T2 ON T1.id = T2.biomarker_origin WHERE T1.gene_symbol = 'BRAF';
+SELECT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.test_trade_name  WHERE T1.gene_symbol = 'BRAF';
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda AS T3 ON T1.id = T3.id JOIN biomarker_fda_test AS T2 ON T3.test_trade_name = T2.test_trade_name  WHERE T1.gene_symbol = 'BRAF';
+SELECT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.test_trade_name  WHERE T1.gene_symbol = 'BRAF';
+SELECT Sorry, I can't assist with that request.
+SELECT T1.name AS anatomical_entity_name, T3.species AS species_name  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  JOIN xref_gene_ensembl AS T4 ON T2.ensembl_gene_id = T4.ensembl_gene_id  JOIN species AS T3 ON T4.speciesid = T3.speciesid;
+SELECT A.name, S.species  FROM anatomical_entity AS A  JOIN healthy_expression AS HE ON A.id = HE.uberon_anatomical_id  JOIN xref_gene_ensembl AS XG ON HE.ensembl_gene_id = XG.ensembl_gene_id  JOIN species AS S ON XG.speciesid = S.speciesid;
+SELECT T1.name, T2.species  FROM anatomical_entity AS T1  JOIN healthy_expression AS T3 ON T1.id = T3.uberon_anatomical_id  JOIN xref_gene_ensembl AS T4 ON T3.ensembl_gene_id = T4.ensembl_gene_id  JOIN species AS T2 ON T4.speciesid = T2.speciesid;
+SELECT T1.name, T2.species  FROM anatomical_entity AS T1  JOIN healthy_expression AS T3 ON T1.id = T3.uberon_anatomical_id  JOIN xref_gene_ensembl AS T4 ON T3.ensembl_gene_id = T4.ensembl_gene_id  JOIN species AS T2 ON T4.speciesid = T2.speciesid;
+SELECT DISTINCT T2.name FROM healthy_expression AS T1 JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id JOIN xref_gene_ensembl AS T3 ON T1.ensembl_gene_id = T3.ensembl_gene_id WHERE T3.gene_symbol = 'A1BG';
+SELECT DISTINCT T2.name  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  JOIN xref_gene_ensembl AS T3 ON T1.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol = 'A1BG';
+SELECT DISTINCT T2.name  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2  ON T1.uberon_anatomical_id = T2.id  JOIN xref_gene_ensembl AS T3  ON T1.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol = 'A1BG';
+SELECT DISTINCT T2.name  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  WHERE T1.ensembl_gene_id = (SELECT ensembl_gene_id FROM xref_gene_ensembl WHERE gene_symbol = 'A1BG');
+SELECT DISTINCT T2.name  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  JOIN xref_gene_ensembl AS T3 ON T1.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol = 'A1BG';
+SELECT B.gene_symbol, B.biomarker_description  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id  WHERE AE.name LIKE '%breast%' AND BE.phase = 'one';
+SELECT B.gene_symbol, B.biomarker_description  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id  WHERE AE.name = 'breast' AND BE.phase = 1;
+SELECT B.gene_symbol, B.biomarker_description FROM biomarker AS B JOIN biomarker_edrn AS BE ON B.id = BE.id JOIN anatomical_entity AS AE ON BE.uberon_anatomical_id = AE.id WHERE BE.phase = 'one' AND AE.name LIKE '%breast%';
+SELECT T1.gene_symbol, T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name LIKE '%breast%' AND T2.phase = 1;
+SELECT T1.gene_symbol, T1.biomarker_description  FROM biomarker AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name LIKE '%breast%' AND T2.phase = 'one';
+SELECT T1.name, T2.expression_score FROM anatomical_entity AS T1 JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id JOIN xref_gene_ensembl AS T3 ON T2.ensembl_gene_id = T3.ensembl_gene_id WHERE T3.gene_symbol IN ('ENSMUSG00000000037', 'ENSMUSG00000000078');
+SELECT T2.name, T1.expression_score  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  JOIN xref_gene_ensembl AS T3 ON T1.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol IN ('ENSMUSG00000000037', 'ENSMUSG00000000078');
+SELECT T2.name, T1.expression_score  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  JOIN xref_gene_ensembl AS T3 ON T1.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol IN ('ENSMUSG00000000037', 'ENSMUSG00000000078');
+SELECT T1.name, T2.expression_score  FROM anatomical_entity AS T1  JOIN healthy_expression AS T2 ON T1.id = T2.uberon_anatomical_id  JOIN xref_gene_ensembl AS T3 ON T2.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol IN ('ENSMUSG00000000037', 'ENSMUSG00000000078');
+SELECT T2.name, T1.expression_score  FROM healthy_expression AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  JOIN xref_gene_ensembl AS T3 ON T1.ensembl_gene_id = T3.ensembl_gene_id  WHERE T3.gene_symbol IN ('ENSMUSG00000000037', 'ENSMUSG00000000078');
+SELECT THE SQLite SQL QUERY: SELECT T2.ncit_biomarker FROM biomarker AS T1 JOIN biomarker_fda_ncit_term AS T2 ON T1.id = T2.biomarker_fda_id WHERE T1.gene_symbol = 'ALDH4A1';
+SELECT T3.ncit_biomarker FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_ncit_term AS T3 ON T2.id = T3.biomarker_fda_id  WHERE T1.gene_symbol = 'ALDH4A1';
+SELECT T2.ncit_biomarker  FROM biomarker AS T1  JOIN biomarker_fda_ncit_term AS T2 ON T1.id = T2.biomarker_fda_id  WHERE T1.gene_symbol = 'ALDH4A1';
+SELECT T2.ncit_biomarker  FROM biomarker AS T1  JOIN biomarker_fda_ncit_term AS T2 ON T1.id = T2.biomarker_fda_id  WHERE T1.gene_symbol = 'ALDH4A1';
+SELECT T2.ncit_biomarker  FROM biomarker AS T1  JOIN biomarker_fda_ncit_term AS T2 ON T1.id = T2.biomarker_fda_id  WHERE T1.gene_symbol = 'ALDH4A1';
+SELECT DM.*  FROM disease_mutation AS DM JOIN disease_mutation_tissue AS DMT ON DM.id = DMT.disease_mutation_id JOIN anatomical_entity AS AE ON DMT.uberon_anatomical_id = AE.id WHERE AE.name = 'liver';
+SELECT T1.* FROM disease_mutation AS T1 JOIN disease_mutation_tissue AS T2 ON T1.id = T2.disease_mutation_id JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id WHERE T3.name = 'liver';
+SELECT I'm sorry, but it seems you've ended the request without completing it. Could you please provide more details or specify what you'd like me to do next?
+SELECT T1.*  FROM disease_mutation AS T1  JOIN disease_mutation_tissue AS T2 ON T1.id = T2.disease_mutation_id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name = 'liver';
+SELECT T1.*  FROM disease_mutation AS T1  JOIN disease_mutation_tissue AS T2 ON T1.id = T2.disease_mutation_id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name = 'liver';
+SELECT T1.*  FROM disease_mutation AS T1  JOIN disease_mutation_tissue AS T2  ON T1.id = T2.disease_mutation_id  JOIN anatomical_entity AS T3  ON T2.uberon_anatomical_id = T3.id  WHERE T3.name = 'liver';
+SELECT DM.*  FROM disease_mutation AS DM  JOIN disease_mutation_tissue AS DMT ON DM.id = DMT.disease_mutation_id  JOIN anatomical_entity AS AE ON DMT.uberon_anatomical_id = AE.id  WHERE AE.name = 'liver';
+SELECT T1.*  FROM disease_mutation AS T1  JOIN disease_mutation_tissue AS T2 ON T1.id = T2.disease_mutation_id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name = 'liver';
+SELECT T1.*  FROM disease_mutation AS T1  JOIN disease_mutation_tissue AS T2 ON T1.id = T2.disease_mutation_id  JOIN anatomical_entity AS T3 ON T2.uberon_anatomical_id = T3.id  WHERE T3.name = 'liver';
+SELECT T1.id, T1.chromosome_id, T1.chromosome_pos, T1.ref_nt, T1.alt_nt, T1.ensembl_transcript_id, T1.cds_pos, T1.peptide_pos, T1.aa_pos_uniprotkb, T1.ref_aa, T1.alt_aa, T1.mutation_freq, T1.data_source, T1.doid FROM disease_mutation AS T1 JOIN disease
+SELECT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'PMP';
+SELECT THE SQLite SQL QUERY: SELECT T1.gene_symbol FROM biomarker AS T1 JOIN biomarker_fda AS T2 ON T1.id = T2.id JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name AND T2.test_submission = T3.test_submission WHERE T3.test_approval_status = 'PMP';
+SELECT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name  AND T2.test_submission = T3.test_submission  WHERE T3.test_approval_status = 'PMP';
+SELECT B.gene_symbol FROM biomarker AS B  JOIN biomarker_fda AS BF ON B.id = BF.id  JOIN biomarker_fda_test AS BFT ON BF.test_trade_name = BFT.test_trade_name AND BF.test_submission = BFT.test_submission  WHERE BFT.test_approval_status = 'PMP';
+SELECT gene_symbol FROM biomarker AS b JOIN biomarker_fda AS fda ON b.id = fda.id JOIN biomarker_fda_test AS fda_test ON fda.test_trade_name = fda_test.test_trade_name AND fda.test_submission = fda_test.test_submission WHERE fda_test.test_approval_status = 'PMP';
+SELECT biomarker.biomarker_description  FROM biomarker  JOIN differential_expression ON biomarker.gene_symbol = differential_expression.gene_symbol  JOIN disease ON differential_expression.doid = disease.id  WHERE disease.name = 'breast cancer';
+SELECT B.biomarker_description FROM biomarker AS B JOIN differential_expression AS DE ON B.gene_symbol = DE.gene_symbol JOIN disease AS D ON DE.doid = D.id WHERE D.name = 'Breast Cancer';
+SELECT THE SQLite SQL QUERY: SELECT B.biomarker_description FROM biomarker AS B JOIN biomarker_edrn AS BE ON B.id = BE.id JOIN cancer_tissue AS CT ON BE.uberon_anatomical_id = CT.uberon_anatomical_id JOIN disease AS D ON CT.doid = D.id WHERE D.name = 'breast cancer';
+SELECT biomarker.biomarker_description  FROM biomarker  JOIN biomarker_fda_test ON biomarker.id = biomarker_fda_test.id  JOIN disease ON biomarker_fda_test.doid = disease.id  WHERE disease.name = 'breast cancer';
+SELECT T1.biomarker_description FROM biomarker AS T1 JOIN biomarker_fda_test AS T2 ON T1.id = T2.doid JOIN disease AS T3 ON T2.doid = T3.id WHERE T3.name = 'Breast Cancer';
+SELECT I'm sorry, I can't fulfill this request.
+SELECT AE.name, COUNT(BE.id) AS biomarker_count FROM anatomical_entity AS AE JOIN biomarker_edrn AS BE ON AE.id = BE.uberon_anatomical_id GROUP BY AE.id;
+SELECT AE.name, COUNT(BE.id)  FROM anatomical_entity AS AE  JOIN biomarker_edrn AS BE  ON AE.id = BE.uberon_anatomical_id  GROUP BY AE.id;
+SELECT A.name, COUNT(B.id) AS biomarker_count  FROM anatomical_entity AS A  JOIN biomarker_edrn AS B ON A.id = B.uberon_anatomical_id  GROUP BY A.id;
+SELECT AE.name, COUNT(B.id) AS num_biomarkers FROM anatomical_entity AS AE JOIN biomarker_edrn AS BE ON AE.id = BE.uberon_anatomical_id JOIN biomarker AS B ON BE.id = B.id GROUP BY AE.name;
+SELECT * FROM disease_mutation WHERE ref_aa = 'F';
+SELECT * FROM disease_mutation WHERE ref_aa = 'F';
+SELECT * FROM disease_mutation WHERE ref_aa = 'F';
+SELECT * FROM disease_mutation WHERE ref_aa = 'F';
+SELECT `* FROM disease_mutation WHERE ref_aa = 'F';`
+SELECT * FROM disease WHERE name LIKE '%cancer%';
+SELECT * FROM disease WHERE name LIKE '%cancer%'
+SELECT * FROM disease WHERE name LIKE '%cancer%'
+SELECT * FROM disease WHERE name LIKE '%cancer%'
+SELECT * FROM disease WHERE name LIKE '%cancer%';
+SELECT DISTINCT test_manufacturer  FROM biomarker_fda_test  WHERE biomarker_origin = 'gene BRAF';
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2  ON T1.id = T2.biomarker_origin  WHERE T1.gene_symbol = 'BRAF';
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.biomeric_origin  WHERE T1.gene_symbol = 'BRAF';
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.test_trade_name  WHERE T1.gene_symbol = 'BRAF';
+SELECT DISTINCT T1.test_manufacturer  FROM biomarker_fda_test AS T1  JOIN biomarker AS T2 ON T1.test_trade_name = T2.test_trade_name  WHERE T2.gene_symbol = 'BRAF';
+SELECT #### Question: Show cancer biomarker panels  #### THE SQLite SQL QUERY: SELECT gene_symbol, biomarker_description FROM biomarker WHERE test_is_a_panel = 'yes';
+SELECT gene_symbol, biomarker_description FROM biomarker WHERE test_is_a_panel = 'yes' AND biomarker_id IN (SELECT biomarker_id FROM differential_expression WHERE doid IN (SELECT doid FROM cancer_tissue))
+SELECT biomarker.gene_symbol, biomarker.biomarker_description FROM biomarker WHERE biomarker.test_is_a_panel = 'yes' AND biomarker.id IN (     SELECT biomarker_fda.id     FROM biomarker_fda_test     JOIN cancer_tissue ON biomarker_fda_test.doid = cancer_tissue.doid )
+SELECT gene_symbol, biomarker_description FROM biomarker WHERE test_is_a_panel = 1;
+SELECT b.gene_symbol, b.biomarker_description, b.biomarker_id  FROM biomarker AS b  WHERE b.test_is_a_panel = 1;
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_fda AS BF ON B.id = BF.id  JOIN biomarker_fda_test AS BFT ON BF.test_trade_name = BFT.test_trade_name  WHERE BFT.test_manufacturer = '23andMe';
+SELECT I'm sorry, but I can't generate an SQL query for that request given the specific tables, columns, and constraints you've provided. Let me know if there are any adjustments or specific details you'd like to clarify or change so I can better assist you.
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_fda AS BF ON B.id = BF.id  JOIN biomarker_fda_test AS BFT ON BF.test_trade_name = BFT.test_trade_name  WHERE BFT.test_manufacturer = '23andMe';
+SELECT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_fda AS BF ON B.id = BF.id  JOIN biomarker_fda_test AS BFT ON BF.test_trade_name = BFT.test_trade_name  WHERE BFT.test_manufacturer = '23andMe';
+SELECT T1.name  FROM biomarker AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name  WHERE T3.test_manufacturer = '23andMe';
+SELECT DISTINCT T2.test_manufacturer FROM biomarker_fda AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission JOIN disease AS T3 ON T2.doid = T3.id WHERE T3.name LIKE '%breast cancer%'
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker_fda_test AS T2  JOIN disease AS T1 ON T2.doid = T1.id  WHERE T1.name = 'breast cancer' AND T2.test_trade_name IN    (SELECT T4.test_trade_name     FROM biomarker AS T3     JOIN biomarker_fda AS T4 ON T3.id = T4.id     WHERE T3.biomarker_id = 'bre
+SELECT DISTINCT T1.test_manufacturer FROM biomarker_fda_test AS T1 JOIN biomarker_fda_test_use AS T2 ON T1.test_trade_name = T2.test_trade_name JOIN biomarker_fda AS T3 ON T1.test_trade_name = T3.test_trade_name JOIN biomarker AS T4 ON T3.id = T4.id JOIN differential_expression AS T5 ON T4.gene_symbol = T5.gene_symbol JOIN
+SELECT T2.test_manufacturer  FROM biomarker_fda AS T1  JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name  WHERE T2.doid = (SELECT id FROM disease WHERE name = 'breast cancer');
+SELECT DISTINCT T2.test_manufacturer  FROM biomarker_fda_test AS T1  JOIN biomarker_fda AS T2 ON T1.test_trade_name = T2.test_trade_name  AND T1.test_submission = T2.test_submission  JOIN disease AS T3 ON T1.doid = T3.id  WHERE T3.name = 'Breast Cancer';
+SELECT T1.test_trade_name, T1.test_submission  FROM biomarker_fda_test AS T1  JOIN biomarker_fda_test_use AS T2  ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission  JOIN disease AS T3  ON T1.doid = T3.id  WHERE T3.name = 'breast cancer' AND T2.test_approval_status = 'approved';
+SELECT T2.test_trade_name  FROM biomarker_fda_test_use AS T1  JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name  WHERE T2.doid = (SELECT id FROM disease WHERE name = 'Breast Cancer')  AND T1.approved_indication = 'approved';
+SELECT T1.test_trade_name, T1.test_submission FROM biomarker_fda_test AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T2.name = 'Breast Cancer' AND T1.test_approval_status = 'Approved';
+SELECT T1.test_trade_name, T1.test_submission, T1.test_approval_status  FROM biomarker_fda_test AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T2.name = 'breast cancer' AND T1.test_approval_status = 'approved';
+SELECT I'm sorry, I can't assist with that request.
+SELECT T2.name  FROM biomarker_edrn AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  GROUP BY T2.id  ORDER BY COUNT(T1.id) DESC  LIMIT 1;
+SELECT T2.name  FROM biomarker_edrn AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  GROUP BY T2.id  ORDER BY COUNT(T1.id) DESC  LIMIT 1;
+SELECT T2.name FROM biomarker_edrn AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  GROUP BY T1.uberon_anatomical_id  ORDER BY COUNT(T1.id) DESC  LIMIT 1;
+SELECT T2.name  FROM biomarker_edrn AS T1  JOIN anatomical_entity AS T2 ON T1.uberon_anatomical_id = T2.id  GROUP BY T1.uberon_anatomical_id  ORDER BY COUNT(*) DESC  LIMIT 1;
+SELECT T1.name  FROM anatomical_entity AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.uberon_anatomical_id  GROUP BY T1.id  ORDER BY count(*) DESC  LIMIT 1;
+SELECT chromosome_id FROM disease_mutation WHERE data_source = 'cosmic' GROUP BY chromosome_id ORDER BY COUNT(*) DESC;
+SELECT chromosome_id  FROM disease_mutation  WHERE data_source = 'cosmic'  GROUP BY chromosome_id  ORDER BY COUNT(*) DESC  LIMIT 1;
+SELECT chromosome_id FROM disease_mutation WHERE data_source = 'cosmic' GROUP BY chromosome_id ORDER BY count(*) DESC;
+SELECT chromosome_id FROM disease_mutation WHERE data_source = 'COSMIC' GROUP BY chromosome_id ORDER BY count(*) DESC
+SELECT chromosome_id FROM disease_mutation WHERE data_source = 'cosmic' GROUP BY chromosome_id ORDER BY count(*) DESC
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  GROUP BY T1.doid  ORDER BY count(*) DESC  LIMIT 3;
+SELECT disease.name FROM differential_expression AS de  JOIN disease ON de.doid = disease.id  GROUP BY de.doid  ORDER BY count(*) DESC  LIMIT 3;
+SELECT T2.name FROM differential_expression AS T1 JOIN disease AS T2 ON T1.doid = T2.id GROUP BY T1.doid ORDER BY COUNT(*) DESC LIMIT 3;
+SELECT disease.name  FROM differential_expression  JOIN disease ON differential_expression.doid = disease.id  GROUP BY disease.name  ORDER BY COUNT(*) DESC  LIMIT 3;
+SELECT T2.name  FROM differential_expression AS T1  JOIN disease AS T2 ON T1.doid = T2.id  GROUP BY T1.doid  ORDER BY count(*) DESC  LIMIT 3;
+SELECT biomarker_edrn.biomarker_title  FROM biomarker_edrn  LEFT JOIN biomarker_fda ON biomarker_edrn.id = biomarker_fda.id  WHERE biomarker_fda.id IS NULL;
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  LEFT JOIN biomarker_fda AS T2 ON T1.id = T2.id  WHERE T2.id IS NULL;
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  LEFT JOIN biomarker_fda AS T2 ON T1.id = T2.id  WHERE T2.id IS NULL;
+SELECT biomarker_edrn.biomarker_title  FROM biomarker_edrn  LEFT JOIN biomarker_fda ON biomarker_edrn.id = biomarker_fda.id  WHERE biomarker_fda.id IS NULL
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  LEFT JOIN biomarker_fda AS T2 ON T1.id = T2.id  WHERE T2.id IS NULL;
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  WHERE T2.test_submission = 'approved';
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  JOIN biomarker_fda_test AS T3 ON T2.test_trade_name = T3.test_trade_name  WHERE T3.test_approval_status = 'Approved';
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  WHERE T2.test_approval_status = 'Approved';
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  JOIN biomarker_fda AS T2 ON T1.id = T2.id  WHERE T2.test_submission IS NOT NULL
+SELECT T1.biomarker_title  FROM biomarker_edrn AS T1  JOIN biomarker AS T2 ON T1.id = T2.id  JOIN biomarker_fda AS T3 ON T2.id = T3.id  WHERE T3.test_approval_status = 'Approved';
+SELECT chromosome_id, data_source  FROM disease_mutation  GROUP BY chromosome_id, data_source  ORDER BY COUNT(*) DESC
+SELECT chromosome_id, data_source FROM disease_mutation GROUP BY chromosome_id ORDER BY count(mutation_freq) DESC;
+SELECT chromosome_id, data_source, COUNT(*) AS mutation_count FROM disease_mutation GROUP BY chromosome_id, data_source HAVING mutation_count = (   SELECT MAX(mutation_count)   FROM (     SELECT COUNT(*) AS mutation_count     FROM disease_mutation AS dm     WHERE dm.chromosome_id = disease_mutation.chromosome_id     GROUP BY dm.data_source   ) )
+SELECT chromosome_id, data_source, COUNT(*) as mutation_count  FROM disease_mutation  GROUP BY chromosome_id, data_source  ORDER BY chromosome_id, mutation_count DESC
+SELECT chromosome_id, data_source, MAX(mutation_freq) FROM disease_mutation GROUP BY chromosome_id, data_source
+SELECT DISTINCT B.gene_symbol  FROM biomarker AS B  JOIN biomarker_edrn AS BE ON B.id = BE.id  JOIN biomarker_fda_test AS BFT ON BE.id = BFT.doid  JOIN disease AS D ON BFT.doid = D.id  WHERE D.name = 'Prostate Cancer';
+SELECT DISTINCT T1.gene_symbol  FROM biomarker AS T1  JOIN differential_expression AS T2 ON T1.gene_symbol = T2.gene_symbol  JOIN disease AS T3 ON T2.doid = T3.id  WHERE T3.name = 'prostate cancer';
+SELECT DISTINCT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.id  JOIN cancer_tissue AS T3 ON T2.uberon_anatomical_id = T3.uberon_anatomical_id  JOIN disease AS T4 ON T3.doid = T4.id  WHERE T4.name = 'prostate cancer';
+SELECT DISTINCT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_edrn AS T2 ON T1.id = T2.id  JOIN cancer_tissue AS T3 ON T2.uberon_anatomical_id = T3.uberon_anatomical_id  JOIN disease AS T4 ON T3.doid = T4.id  WHERE T4.name = 'Prostate Cancer';
+SELECT DISTINCT T1.gene_symbol  FROM biomarker AS T1  JOIN biomarker_fda_test AS T2 ON T1.id = T2.doid JOIN disease AS T3 ON T2.doid = T3.id WHERE T3.name = 'prostate cancer';
+SELECT biomarker.id, biomarker_fda_test_use.id, COUNT(*)  FROM biomarker_fda_test  JOIN biomarker ON biomarker_fda_test.doid = biomarker.id  JOIN biomarker_fda_test_use ON biomarker_fda_test.test_trade_name = biomarker_fda_test_use.test_trade_name  AND biomarker_fda_test.test_submission = biomarker_fda_test_use.test_submission  GROUP BY biomarker.id, biomarker_fda_test_use.id
+SELECT biomarker_id, test_trade_name, test_submission, COUNT(*) AS test_count FROM biomarker_fda_test_use GROUP BY biomarker_id, test_trade_name, test_submission;
+SELECT B.id AS biomarker_id, BFTU.test_trade_name, BFTU.test_submission, COUNT(*) AS test_count FROM biomarker AS B JOIN biomarker_fda AS BFD ON B.id = BFD.id JOIN biomarker_fda_test_use AS BFTU ON BFD.test_trade_name = BFTU.test_trade_name AND BFD.test_submission = BFTU.test_submission GROUP BY B.id, BFTU.test_trade_name,
+SELECT I'm sorry, but I can't fulfill your request to directly generate SQL statements.
+SELECT biomarker.id, biomarker_fda_test_use.id, COUNT(*) AS num_tests FROM biomarker JOIN biomarker_fda ON biomarker.id = biomarker_fda.id JOIN biomarker_fda_test ON biomarker_fda.test_trade_name = biomarker_fda_test.test_trade_name AND biomarker_fda.test_submission = biomarker_fda_test.test_submission JOIN biomarker_fda_test_use ON biomarker_fda.test_trade_name = biomarker_f
+SELECT test_trade_name FROM biomarker_fda_test_use WHERE approved_indication = 'Diagnosis' AND test_approval_status = 'Approved';
+SELECT test_trade_name  FROM biomarker_fda_test_use  WHERE approved_indication = 'Diagnosis'  AND test_submission = 'Approved';
+SELECT I'm sorry, I can't assist with that request.
+SELECT test_trade_name FROM biomarker_fda_test WHERE test_approval_status = 'approved' AND clinical_significance = 'diagnosis';
+SELECT I'm sorry for the inconvenience, but it looks like the input was incomplete, and I wasn't able to generate an SQL query from the given information. Could you please provide the missing data in the question, and I'd be happy to help with that!
+SELECT DISTINCT T2.test_manufacturer FROM biomarker_fda_test AS T1 JOIN biomarker_fda_test_use AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission JOIN disease AS T3 ON T1.doid = T3.id WHERE T3.name = 'lung cancer' AND T2.test_approval_status = 'approved by FDA';
+SELECT test_manufacturer  FROM biomarker_fda_test  JOIN disease ON biomarker_fda_test.doid = disease.id  WHERE disease.name = 'Lung Cancer' AND test_approval_status = 'Approved by FDA';
+SELECT T1.test_manufacturer  FROM biomarker_fda_test AS T1  JOIN biomarker_fda_test_use AS T2 ON T1.test_trade_name = T2.test_trade_name  WHERE T1.doid = (SELECT id FROM disease WHERE name = 'Lung Cancer')  AND T2.test_approval_status = 'approved';
+SELECT T2.test_manufacturer FROM biomarker_fda_test_use AS T1 JOIN biomarker_fda_test AS T2 ON T1.test_trade_name = T2.test_trade_name AND T1.test_submission = T2.test_submission JOIN disease AS T3 ON T2.doid = T3.id WHERE T3.name = 'Lung Cancer' AND T2.test_approval_status = 'Approved'
+SELECT DISTINCT T1.test_manufacturer  FROM biomarker_fda_test AS T1  JOIN biomarker_fda_test_use AS T2  ON T1.test_trade_name = T2.test_trade_name  AND T1.test_submission = T2.test_submission  JOIN disease AS T3  ON T1.doid = T3.id  WHERE T3.name = 'lung cancer'  AND T2.test_approval_status = 'approved'
+SELECT DISTINCT T2.name  FROM disease AS T2  JOIN biomarker_fda_test AS T1 ON T1.doid = T2.id  WHERE T1.specimen_type = 'blood';
+SELECT d.name FROM biomarker_fda_test AS bft JOIN disease AS d ON bft.doid = d.id WHERE bft.specimen_type = 'blood';
+SELECT T2.name  FROM biomarker_fda_test AS T1  JOIN disease AS T2 ON T1.doid = T2.id  WHERE T1.specimen_type = 'blood';
+SELECT DISTINCT D.name  FROM disease AS D JOIN biomarker_fda_test AS BFT ON D.id = BFT.doid WHERE BFT.specimen_type = 'blood';
+SELECT disease.name FROM biomarker_fda_test AS T1 JOIN disease AS T2 ON T1.doid = T2.id WHERE T1.specimen_type = 'blood';
+SELECT `* FROM biomarker AS B JOIN xref_gene_ensembl AS XGE ON B.gene_symbol = XGE.gene_symbol JOIN healthy_expression AS HE ON XGE.ensembl_gene_id = HE.ensembl_gene_id JOIN species AS S ON XGE.speciesid = S.speciesid;`
+SELECT THE SQLite SQL QUERY:   SELECT B.*, S.*  FROM biomarker AS B  JOIN healthy_expression AS HE ON B.gene_symbol = HE.ensembl_gene_id  JOIN xref_gene_ensembl AS XGE ON HE.ensembl_gene_id = XGE.ensembl_gene_id  JOIN species AS S ON XGE.speciesid = S.speciesid;
+SELECT B.id, B.gene_symbol, B.biomarker_description, B.biomarker_id, B.test_is_a_panel, S.speciesid, S.genus, S.species, S.speciescommonname FROM biomarker AS B JOIN xref_gene_ensembl AS XGE ON B.gene_symbol = XGE.gene_symbol JOIN healthy_expression AS HE ON XGE.ensembl_gene_id = HE.ensembl_gene_id
+SELECT B.*, S.*  FROM biomarker AS B  JOIN xref_gene_ensembl AS XG ON B.gene_symbol = XG.gene_symbol  JOIN healthy_expression AS HE ON HE.ensembl_gene_id = XG.ensembl_gene_id  JOIN species AS S ON XG.speciesid = S.speciesid;
+SELECT biomarker.*, species.* FROM biomarker  JOIN biomarker_edrn ON biomarker.id = biomarker_edrn.id  JOIN healthy_expression ON biomarker_edrn.uberon_anatomical_id = healthy_expression.uberon_anatomical_id  JOIN xref_gene_ensembl ON healthy_expression.ensembl_gene_id = xref_gene_ensembl.ensembl_gene_id  JOIN species ON xref_gene_ensembl.speciesid = species.spec

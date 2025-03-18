@@ -38,6 +38,9 @@ case $MODEL_NAME in
     "gpt-4")
     BEAM_SIZE=5
     ;;
+    "chess")
+    BEAM_SIZE=5
+    ;;
     "dailsql")
     BEAM_SIZE=8
     ;;
@@ -48,7 +51,7 @@ case $MODEL_NAME in
     BEAM_SIZE=8
     ;;
     "resdsql")
-    BEAM_SIZE=8
+    BEAM_SIZE=6
     ;;
     "resdsql-3b")
     BEAM_SIZE=8

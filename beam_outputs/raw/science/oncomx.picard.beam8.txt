@@ -1,0 +1,792 @@
+select distinct mutation_freq from disease_mutation where ref_aa = 'E'
+select distinct mutation_freq from disease_mutation where ref_aa = "E"
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join healthy_expression as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id
+select t1.name from disease as t1 join disease_mutation as t2 on t1.id = t2.disease_mutation_id
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join healthy_expression as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id where t1.ref_a
+select t1.name from disease as t1 join disease_mutation as t2 on t1.id = t2.disease_mutation
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join healthy_expression as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id where t1.ref_aa
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join healthy_expression as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id
+select count(*) from ( select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.biomarker_origin = '23andme' )
+select count(*) from biomarker_fda_test where test_manufacturer = "23andMe"
+select count(*) from biomarker_fda_test where test_manufacturer = "23andme"
+select count(*) from ( select test_manufacturer from biomarker_fda_test where test_submission = 'T1.test_submission' and test_manufacturer = '23andme' )
+select count(*) from ( select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.biomarker_origin = '23andMe' )
+select count(*) from ( select test_manufacturer from biomarker_fda_test where test_submission = 'T1.test_trade_name' and test_manufacturer = '23andme' )
+select count(*) from ( select test_manufacturer from biomarker_fda_test where test_manufacturer = '23andme' )
+select count(*) from ( select test_manufacturer from biomarker_fda_test where test_submission = '23andme' )
+select speciescommonname from species where species = 'Mus'
+select speciescommonname from species where species = "Mus"
+select speciescommonname from species where species = "mus"
+select speciescommonname from species where species = 'mus'
+select speciescommonname from species where species='Mus'
+select speciescommonname from species where species = "Mus";
+select speciescommonname from species where species = 'Mus';
+select speciescommonname from species where species = 'Musculus'
+select species from species
+select species from species group by speciesid order by count(*) desc limit 1
+select distinct species from species
+select species from species group by speciesid
+select species from species group by speciesid order by count(*) asc limit 1
+select distinct species from species group by speciesid order by count(*) desc limit 1
+select species from species group by speciesid order by count(*), count(*) desc limit 1
+select species from species group by speciesid order by count(*) desc limit 1;
+select * from disease_mutation
+select distinct disease_mutation_id from disease_mutation_tissue
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id;
+select distinct disease_mutation_id from disease_mutation_article
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id;
+select distinct disease_mutation_id from disease_mutation_tissue ;
+select biomarker_description from biomarker
+select biomarker_description from biomarker;
+select distinct biomarker_description from biomarker
+select biomarker_description from biomarker
+select bioMarker_description from biomarker
+select biomarker_description from bioMarker
+select distinct biomarker_description from biomarker;
+select biomarker_description from biomarker
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC'
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBT MOLECULAR INC'
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABOTT MOLECULAR INC'
+select count(*) from ( select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda_test as t2 on t1.test_submission = t2.test_submission where t1.biomarker_origin = 'ABBOTT MOLECULAR INC' )
+select count(*) from ( select * from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC' )
+select count(*) from ( select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda_test as t2 on t1.test_submission = t2.test_submission where t1.biomarker_origin = 'ABBT MOLECULAR INC' )
+select count(*) from ( select * from biomarker_fda_test where test_manufacturer = 'ABBT MOLECULAR INC' )
+select count(*) from ( select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.biomarker_origin = 'ABBOTT MOLECULAR INC' )
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'false'
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'False'
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'false'
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'FALSE'
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'fals'
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'false'
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'false';
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel > 'false'
+select * from disease where name like '%cancer%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancer%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancer%' or t1.name like '%disease_mutation_id%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancer%' or t1.name like '%%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancer%' or t1.name like '%%cancer%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like "%cancer%"
+select * from disease where name like '%cancer%' or name like '%disease_id%'
+select * from disease where name like "%cancer%"
+select biomarker_title, qa_state from biomarker_edrn where phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t2.biomarker_id = t1.id where t1.phase = 2
+select biomarker_title, qa_state from biomarker_edrn where phase = 2;
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.phase = 2;
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t2.biomarker_id = t1.id where phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where phase = 2;
+select biomarker_title, qa_state from biomarker_edrn where phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where phase = 2
+select biomarker_title, qa_state from biomarker_edrn where phase = 2;
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t2.biomarker_id = t1.id where t1.phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t2.biomarker_id = t1.id where phase = 2
+select t1.biomarker_title, t1.qa_state from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.phase = 2;
+select biomarker_title, qa_state from biomarker_edrn where phase = 2
+select gene_symbol from biomarker
+select distinct t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.biomarker_id = t2.gene_symbol where t1.biomarker_id not in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id)
+select distinct t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t2.gene_symbol = t1.gene_symbol where t1.biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id)
+select distinct t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t2.gene_symbol = t1.gene_symbol where t1.biomarker_id not in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id)
+select distinct t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t2.gene_symbol = t1.gene_symbol where t1.biomarker_id not in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.uberon_anatomical_id)
+select distinct t1.gene_symbol from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id
+select distinct t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.biomarker_id = t2.gene_symbol
+select distinct t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.biomarker_id = t2.gene_symbol where t1.biomarker_id not in (select t1.biomarker_id from biomarker_alias)
+select biomarker_type from biomarker_edrn except select biomarker_type from biomarker_edrn
+select biomarker_type from biomarker_edrn except select t1.biomarker_type from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.biomarker_type = 'protein'
+select biomarker_type from biomarker_edrn except select t1.biomarker_type from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id
+select biomarker_type from biomarker_edrn except select t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'protein'
+select biomarker_type from biomarker_edrn except select t1.biomarker_type from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.biomarker_type = 'protoporphyrinogen IX'
+select biomarker_type from biomarker_edrn except select t1.biomarker_type from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.biomarker_type = "protein"
+select biomarker_type from biomarker_edrn except select t1.biomarker_type from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.biomarker_type = 'protein'
+select biomarker_type from biomarker_edrn except select t1.biomarker_type from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where biomarker_type = 'protein'
+select biomarker_title from biomarker_edrn where biomarker_type != "Protein"
+select biomarker_title from biomarker_edrn where biomarker_type != "Protoporphyrinogen IX"
+select biomarker_title from biomarker_edrn where biomarker_type != "Protoporphyrinogen"
+select biomarker_title from biomarker_edrn where biomarker_type != 'Protein'
+select biomarker_title from biomarker_edrn where biomarker_type != 'Protoporphyrinogen IX'
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.biomarker_type != "Protoporphyrinogen IX"
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.biomarker_type != "Protein"
+select biomarker_title from biomarker_edrn where biomarker_type not in (select biomarker_type from biomarker_edrn)
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.biomarker_id = t2.gene_symbol
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.biomarker_id = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id = t2.disease_mu
+select gene_symbol from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id = t2.disease_mu
+select gene_symbol from
+select
+oncomx
+select
+select
+select gene_symbol, biomarker_description from biomarker where biomarker_description like '%breast%'
+select gene_symbol, biomarker_description from biomarker where biomarker_description like '%breast cancer%'
+select gene_symbol, biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id
+select gene_symbol, biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_anatomical_id
+select gene_symbol, biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id group by t3.
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id group by t1.biomarker_id having name = 'breast3 on t2.
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id group by t1.biomarker_id having name = 'breast3
+select gene_symbol, biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_anatomical_id group by t3.
+select distinct phase from biomarker_edrn
+select distinct phase from biomarker_edrn;
+select distinct phase from biomarker_edrn
+select distinct phase from biomarker_Edrn
+select distinct phase from biomarker_edrN
+select distinct phase from biomarker_edrn
+select distinct phase from biomarker_EdRN
+select distinct phase from biomarker_edr
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako Denmark A/S'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = "Dako Denmark A/S"
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = "Dako danmark a/S"
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = "Dako Denmark a/S"
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = "Dako Denmark A/S";
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako Denmark'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = "Dako danmark A/S"
+select t2.pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = "lung cancer"
+select pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = "lung cancer"
+select t2.pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = 'lung cancer'
+select pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = 'lung cancer'
+select t2.pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = "lung cancer";
+select t2.pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = "lung cancer"
+select t2.pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = "lung"
+select t2.pvalue from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t1.name = "lung cancer "
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join cancer_tissue as t2 on t1.uberon_anatomical_id = t2.uberon_anatomical_id
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join healthy_expression as t2 on t1.disease_mutation_id
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join cancer_tissue as t2 on t1.uberon_anatomical_id=t2.uberon_anatomical_id
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join healthy_expression as t2
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join cancer_tissue as t2 on t1.uberon_anatomical_id = t2.uberon_anatomical_id where
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join cancer_tissue as t2 on t1.uberon_anatomical_id = t2.uberon_anatomical_id
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join cancer_tissue as t2 on t1.uberon_anatomical_id = t2.uberon_anatomical_id where t3.name = 'skin cancer' or t3.disease_mutation_id = t2.
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_tissue as t2 on t1.disease_mutation_id = t2.disease_mutation_id
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_tissue as t2 on t1.disease_mutation_id = t2.disease_mutation_
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_article as t2 on t1.disease_mutation_id = t2.disease_mutation_id where aa_pos_uniprotkb = -
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_article as t2 on t1.disease_mutation_id = t2.disease_mutation_id where
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_article as t2 on t1.disease_mutation_id = t2.disease_mutation_id where aa_pos_uniprotkb
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_article as t2 on t1.disease_mutation_id = t2.disease_mutation_id where aa_pos_uniprotkb = '%aa%' and t
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_article as t2 on t1.disease_mutation_id = t2.disease_mutation_id where aa_pos_uniprotkb = '%aa%" and t
+select chromosome_pos from disease_mutation where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation_article as t2 on t1.disease_mutation_id = t2.disease_mutation_id where aa_pos_uniprotkb = '%aa%' and
+select * from disease_mutation where ref_aa = "E"
+select * from disease_mutation where ref_aa = 'E'
+select * from disease_mutation where ref_aa like "%e%"
+select * from disease_mutation where ref_aa like '%e%'
+select * from disease_mutation where ref_aa = "E%"
+select * from disease_mutation where ref_aa = 'E%'
+select * from disease_mutation where ref_aa = "%e%"
+select * from disease_mutation where ref_aa = "E"
+select count(*) from biomarker_fda_test where test_manufacturer = "23andMe"
+select count(*) from biomarker_fda_test where test_manufacturer = "23andme"
+select count(*) from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer = "23andme"
+select count(*) from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer = "23andMe"
+select count(*) from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer = "23andMe";
+select count(*) from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer = "23andme";
+select count(*) from biomarker_fda_test where test_manufacturer = "23andMe";
+select count(*) from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance >= 1
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance >= 2 and t2.expression_change_direction = "up"
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance > (select max(statistical_significance) from differential_expression)
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance >= 2 and t2.expression_change_direction = "up"
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance >= 2 and t2.expression_change_direction >= 1
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance > (select statistical_significance from differential_expression)
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance > (select max(statistical_significance) from differential_expression) and t2.gene_symbol = 'A1BG'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance > (select max(statistical_significance) from differential_expression) and t2.gene_symbol = 'a1bg'
+select * from species
+select * from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id where t1.speciesid not in (select t1.speciesid from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id)
+select * from species as t1 join biomarker as t2 on t1.speciesid = t2.biomarker_id
+select * from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id where t1.speciesid not in (select t2.uberon_anatomical_id from disease_mutation_tissue as t3 join healthy_expression as t4 on t3.uberon_anatomical_id = t4.uberon_anatomical_id)
+select * from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id where t1.speciesid not in (select t1.speciesid from disease_mutation_tissue as t3 join healthy_expression as t4 on t3.uberon_anatomical_id = t4.uberon_anatomical_id)
+select * from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id where t1.speciesid not in (select t1.speciesid from species as t1 join disease_mutation_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id)
+select * from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id where t1.speciesid not in (select t1.speciesid from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.disease_mutation_id)
+select * from species as t1 join disease_mutation_tissue as t2 on t1.speciesid = t2.uberon_anatomical_id where t1.speciesid not in (select t1.speciesid from species as t1 join disease_mutation_tissue as t2 on t2.disease_mutation_id = t2.disease_mutation_id)
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join cancer_tissue as t3 on t3.
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join cancer_tissue as t3 on t3.uberon_anatomical_id = t4.uberon_anatomical_id and t2.
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id = t2.disease_mu
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join cancer_tissue as t3 on t3.uberon_anatomical_id = t4.uberon_anatomical_id and t4.disease_mutation_id
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join cancer_tissue as t3 on t3.uberon_anatomical_id = t4.uberon_anatomical_id and t2.gene_symbol
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join cancer_tissue as t3 on t3.uberon_anatomical_id = t4.uberon_anatomical_id and t2.gene_symbol = t
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol join cancer_tissue as t3 on t3.uberon_anatomical_id = t4.uberon_anatomical_id and t
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol where t1.gene_symbol = 'EGFR' and t2.uberon_anatomical_i
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol where t2.gene_symbol = 'EGFR' and t2.uberon_anatomical_i
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol where t1.gene_symbol = 'EGFR' and t2.uberon_an
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t1.gene_symbol = t2.gene_symbol where t2.gene_symbol = 'EGFR' and t2.uberon_an
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2
+select gene_symbol, pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.gene_symbol = t2.gene_s
+select t1.gene_symbol, t1.pvalue from differential_expression as t1 join biomarker as t2 on t2.biomarker_id
+select * from disease_mutation
+select * from disease_mutation;
+select * from disease_mutation
+select * From disease_mutation
+select * from disease_mutation;
+select * From disease_mutation;
+select * From disease_mutation
+select * from disease
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "late adult"
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "late adult stage"
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name = 'late adult'
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name = "late adult"
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "late_adult"
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name = 'late adult'
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name = 'late adult stage'
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name = 'late_adult'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 1
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 'A1BG'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = '*' and t2.gene_symbol = 'A1BG'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance >= 1
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = '*' and t2.gene_symbol = "A1BG"
+select distinct t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 1
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = '*' and t2.gene_symbol = "a1bg"
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = '*' and t2.gene_symbol = 'A1B'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 'Yes'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 'Y'
+select distinct t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 'Yes'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 'Yes'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance >= 'Yes'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance > 'Yes'
+select t1.name, t1.id from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 'Yes'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.statistical_significance = 1
+select biomarker_description from biomarker
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id
+select t1.biomarker_description from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.id
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id;
+select biomarker_description from biomarker;
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id;
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_ncit_term as t2 on t1.biomarker_id = t2.biomarker_
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'No'
+select gene_symbol, biomarker_description from biomarker except select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id
+select gene_symbol, biomarker_description from biomarker except select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker as t2 on t1.biomarker_id = t2.biomarker_id
+select gene_symbol, biomarker_description from biomarker except select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_fda_ncit_term as t2 on t1.biomarker_id = t2.biomarker_fda_id
+select gene_symbol, biomarker_description from biomarker except select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_fda_ncit_term as t2 on t1.biomarker_id = t2.biomarker_fda_id group by t1.biomarker_id having count(*) >= 2
+select gene_symbol, biomarker_description from biomarker except select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker as t2 on t1.biomarker_id = t2.biomarker_id join cancer_tissue as t3 group by t1.biomarker_id having count(*) >= 2
+select gene_symbol, biomarker_description from biomarker except select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_fda_ncit_term as t2 on t1.biomarker_id = t2.biomarker_fda_id group by t1.biomarker_id having count(*) >= 1
+select gene_symbol, biomarker_description from biomarker where test_is_a_panel = 'NO'
+select test_trade_name from biomarker_fda_test_use where actual_use = 'predisposition'
+select test_trade_name from biomarker_fda_test_use where actual_use = "predisposition"
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where t2.actual_use = 'predisposition'
+select test_trade_name from biomarker_fda_test_use where actual_use = 'Predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where t2.actual_use = "predisposition"
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t2.actual_use = 'predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where t2.actual_use = 'Predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t2.actual_use = "predisposition"
+select gene_symbol from biomarker
+select gene_symbol from biomarker
+select distinct gene_symbol from biomarker
+select gene_symbol from biomarker
+select gene_symbol from Biomarker
+select gene_sYMbol from biomarker
+select gene_symbol from bioMarker
+select gene_sYmbol from biomarker
+select biomarker_type from biomarker_edrn where phase = 2
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 2 and t2.biomarker_type = 'protein'
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'protein' and t2.phase = 2
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'protoporphyrinogen IX' and t2.phase = 2
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 2 and t2.biomarker_type = 'protoporphyrinogen IX'
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = "protein" and t2.phase = 2
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 2 and t2.biomarker_type = "protein"
+select t1.biomarker_id from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'protein' and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = 'Protein' and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = "Protein" and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = 'Protoporphyrinogen IX' and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = "Protoporphyrinogen IX" and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = "Protein" and phase = "2"
+select biomarker_title from biomarker_edrn where biomarker_type = "Protoporphyrinogen II" and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = 'Protoporphyrinogen II' and phase = 2
+select biomarker_title from biomarker_edrn where biomarker_type = "Protoporphyrinogen IX" and phase = "2"
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = "breast cancer"
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = 'breast cancer'
+select t2.gene_symbol, t2.biomarker_description from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.name = "breast cancer"
+select gene_symbol, biomarker_description from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = "breast cancer"
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = "breast cancer";
+select t2.gene_symbol, t2.biomarker_description from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t1.name = 'breast cancer'
+select gene_symbol, biomarker_description from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = 'breast cancer'
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = "breast cancer "
+select distinct phase from biomarker_edrn
+select distinct (phase) from biomarker_edrn
+select distinct phase from biomarker_edrn
+select distinct phase from biomarker_edrN
+select distinct phase from biomarker_EDRN
+select distinct phase from biomarker_eDRN
+select distinct phase from biomarker_edrn
+select distinct phase from biomarker_eDRn
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = 'lung cancer'
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = t2.disease_mutation_id and t1.subjects_total >= 2
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = t2.disease_mutation_id and t1.subjects_total > 100
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = "lung cancer"
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = 'lung'
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = t2.disease_mutation_id and t1.subjects_total >= 4
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = 'Lung Cancer'
+select pvalue from differential_expression as t1 join disease_mutation_tissue as t2 on t1.doid = t2.disease_mutation_id where t2.disease_mutation_id = "lung"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.speciescommonname = "Homo"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.speciescommonname = "homo"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.species = "Homo"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.speciescommonname = 'Homo'
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.speciescommonname = "Homo sapiens"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.speciescommonname = "homo sapiens"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.species = 'Homo'
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.species = "homo"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.genus = "Homo"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.genus = 'Homo'
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.genus = "homo"
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.genus = 'homo'
+select count(*), t1.gene_symbol from xref_gene_ensembl as t1 join species as t2 on t1.speciesid = t2.speciesid where t2.genus = "Homo"
+select count(*), t1.gene_symbol from xref_gene_ensembl as t1 join species as t2 on t1.speciesid = t2.speciesid where t2.genus = 'Homo'
+select count(*) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.genus = "Homo";
+select count( *) from species as t1 join xref_gene_ensembl as t2 on t1.speciesid = t2.speciesid where t1.genus = "Homo"
+select test_trade_name from biomarker_fda_test where test_manufacturer like '%roche%'
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_trial as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like '%roche%'
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like '%roche%'
+select test_manufacturer from biomarker_fda_test where test_manufacturer like '%roche%'
+select test_trade_name, test_manufacturer from biomarker_fda_test where test_manufacturer like '%roche%'
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like '%roche%'
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_drug as t2 on t1.test_manufacturer = t2.biomarker_fda_id where t1.test_manufacturer like '%roche%'
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_trial as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like "%roche%"
+select test_submission from biomarker_fda_test where test_manufacturer like '%roche%'
+select t1.test_submission from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_trade_name where t1.test_manufacturer like '%roche%'
+select t1.test_submission from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like '%roche%'
+select t1.test_submission from biomarker_fda_test as t1 join biomarker_fda_test_trial as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like '%roche%'
+select t1.test_submission from biomarker_fda_test as t1 join biomarker_fda_test_trial as t2 on t1.test_submission = t2.test_trade_name where t1.test_manufacturer like '%roche%'
+select test_submission from biomarker_fda_test where test_manufacturer like "%roche%"
+select t1.test_submission from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_trade_name where t1.test_manufacturer like "%roche%"
+select t1.test_submission from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer like "%roche%"
+select t1.name from disease as t1 join disease_mutation as t2 on t1.id = 102997
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.cd
+select name from disease where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation as t2 on t1.disease_mutation_id = t2.id where t2.cd
+select name from disease where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation as t2 on t1.disease_mutation_id = t2.id where t2.cds_pos like "%102997%" or t2.cds_pos like "%102997%
+select name from disease where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation as t2 on t1.disease_mutation_id = t2.id where t2.cds_pos
+select name from disease where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation as t2 on t1.disease_mutation_id = t2.id where t2.cds_pos like "%102997%" or t2.cds_pos like "%102997%
+select name from disease where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation as t2 on t1.disease_mutation_id = t2.id where t2.cds_pos like "%102999" or t2.cds_pos
+select name from disease where disease_mutation_id in (select t1.disease_mutation_id from disease_mutation_tissue as t1 join disease_mutation as t2 on t1.disease_mutation_id = t2.id where t2.cds_pos like "%102997%" or
+select t1.name from disease as t1 join disease_mutation as t2 on t1.id = 102997
+select t1.name, t2.disease_mutation_id from disease as t1 join disease_mutation_tissue as t2 on t1.id = 102997
+select t1.name, t2.disease_mutation_id from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id
+select t1.name, t2.disease_mutation_id from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where cds_pos = 10290
+select t1.name, t2.disease_mutation_id from disease as t1 join disease_mutation_tissue as t2 on t1.
+select t1.name, t2.disease_mutation_id from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where cds_pos = 1029
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.38 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.42
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.38 and 0.42
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.42
+select gene_symbol from differential_expression where t1.pvalue between 0.39 and 0.
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.38 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.42
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.41
+select gene_symbol from differential_expression where statistical_significance between 0.39 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.41
+select gene_symbol from differential_expression where pvalue between 0.38 and 0.41;
+select gene_symbol from differential_expression where pvalue between 0.39 and 0.42
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in ( select distinct chromosome_id
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in ( select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in ( select distinct chromosome_id from disease_mutation
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id
+select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from disease_mutation where disease_mutation_id in (select distinct chromosome_id from
+select distinct chromosome_id from disease_mutation where disease_mutation_id like '%breast cancer%
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer%20id%20id%20id%20id%20
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer%20id%20id%20id%20
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer%20id%20id%20
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer%20id%20
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer%20id%20id%20id%20i
+select distinct chromosome_id from disease_mutation where disease_mutation_id = 'breast_cancer%20
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "HIGH"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" and t2.expression_level_anatomical_relative = "HIGH"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = 'LOW' and t2.expression_level_anatomical_relative = 'HIGH'
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "H"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "HIGH"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "HIG"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join differential_expression as t2 on t1.id = t2.subjects_total
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "H"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = 'LOW' intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = 'HIGH'
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "HIGH"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = 'LOW' intersect select t1.name from anatomical_entity as t1 join differential_expression as t2 on t1.id = t2.subjects_total
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = 'LOW' and t2.expression_level_anatomical_relative = 'HIGH'
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = 'LOW' intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = 'HIGH'
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" and t2.expression_level_anatomical_relative = "HIGH"
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join differential_expression as t2 on t1.id = t2.subjects_total
+select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_gene_relative = "LOW" intersect select t1.name from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.expression_level_anatomical_relative = "H"
+select name from anatomical_entity where name like '%bone%'
+select name from anatomical_entity where name like "%bone%"
+select name from anatomical_entity where name like '%bony%'
+select name from anatomical_entity where name like '%bon*%'
+select name from anatomical_entity where name like "%bony%"
+select name from anatomical_entity where name like '%bone%' or name like '%skin%'
+select name from anatomical_entity where name like '%bone%' or name like '%bone%'
+select name from anatomical_entity where name like '%bon*'
+select speciescommonname from species where genus = 'Mus'
+select speciescommonname from species where genus = "Mus"
+select speciescommonname from species where genus = "mus"
+select speciescommonname from species where genus = 'Mus';
+select speciescommonname from species where genus = 'mus'
+select speciescommonname from species where genus = 'Musculus'
+select speciescommonname from species where genus = "Mus";
+select speciescommonname from species where genus = 'Mus'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction = 'up'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction = "up"
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction > (select expression_change_direction from differential_expression as t3 join biomarker as t4 on t3.gene_symbol = t4.gene_symbol where t3.gene_symbol = 'A1')
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction = 'up'
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction > (select expression_change_direction from differential_expression as t3 join biomarker as t4 on t3.gene_symbol = t4.gene_symbol where t3.gene_symbol = 'A1BG')
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction > (select expression_change_direction from differential_expression as t3 join biomarker as t4 on t3.gene_symbol = t2.gene_symbol where t3.gene_symbol = 'A1')
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction > (select expression_change_direction from differential_expression as t3 join biomarker as t4 on t3.gene_symbol = t4.gene_symbol)
+select t1.name from disease as t1 join differential_expression as t2 on t1.id = t2.gene_symbol where t2.expression_change_direction > (select expression_change_direction from differential_expression as t3 join biomarker as t4 on t3.gene_symbol = t4.gene_symbol where t3.expression_change_direction = "up")
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name like '%late_adult%'
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name like '%lateadult%'
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name like '%late_adult%'
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name like "%late_adult%"
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name like 'late_adult%'
+select count(*) from stage as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t1.name like 'late_adult'
+select count(*) from stage where name like '%late_adult%'
+select count(*) from healthy_expression as t1 join stage as t2 on t1.uberon_anatomical_id = t2.id where t2.name like "%late_adult%"
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC'
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBT MOLECULAR INC'
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC'
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC.'
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBT MOLECULAR INC.'
+select count(*) from ( select * from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC' )
+select count(*) from biomarker_fda_test where test_manufacturer = 'ABBOTT MOLECULAR INC.'
+select count(*) from biomarker_fda_test where test_manufacturer = "ABBOTT MOLECULAR INC"
+select test_trade_name from biomarker_fda_test_use where actual_use = 'predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where t2.actual_use = 'predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t2.actual_use = 'predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where t2.actual_use = "predisposition"
+select test_trade_name from biomarker_fda_test_use where actual_use = "predisposition"
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t2.actual_use = "predisposition"
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where actual_use = 'predisposition'
+select t1.test_trade_name from biomarker_fda as t1 join biomarker_fda_test_use as t2 on t1.id = t2.test_trade_name where t2.actual_use = 'predisposing'
+select t1.gene_symbol from biomarker as t1 join disease as t2 on t1.biomarker_id = t2.id where t2.name = "lung cancer"
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id >= 2
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id =
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t3.disease_mutation_id
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease_mutation_tissue as t3 on t2.disease_
+select t1.gene_symbol from biomarker as t1 join differential_expression as t2 on t1.gene_symbol = t2.gene_symbol join disease as t3 on t3.id =
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako Denmark A/S'
+select t1.platform_method, t1.test_study_design from biomarker_fda_test as t1 join biomarker_fda_test_trial as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer = 'Dako Denmark A/S'
+select t1.platform_method, t1.test_study_design from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission where t1.test_manufacturer = 'Dako Denmark A/S'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako danmark a/s'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako Denmark a/S'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako danmark a/S'
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = "Dako Denmark A/S"
+select platform_method, test_study_design from biomarker_fda_test where test_manufacturer = 'Dako DENMARK A/S'
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where test_approval_status = 'class II
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where test_approval_status = 'II
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where test_approval_status =
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where test_approval_status = '
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where t2.test_
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where t2.test_appro
+select biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where t2.test_appro
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where test_approval_status = 'II%
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = 2 where t2.test_approval_status = 'class II'
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = 2 where t2.test_approval_status = 'II'
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = 2 where t2.test_approval_status = "class II"
+select t1.biomarker_description from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_
+select t1.biomarker_description from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.biomarker_
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = 2 where t2.test_approval_status = 'class 2'
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = 2 where t2.test_approval_status = "Class II"
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_
+select * from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select t1.biomarker_description from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id where t2.expression_score > (select avg(expression_score) from healthy_expression)
+select * from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select t1.biomarker_description from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id where t2.expression_score > (select avg(expression_score) from healthy_expression)
+select t1.biomarker_description from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id where t2.expression_score > ( select avg(expression_score) from healthy_expression )
+select t1.biomarker_description from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id where t2.expression_score > (select avg(expression_score) from healthy_expression)
+select * from healthy_expression where expression_score > (select avg(expression_score))
+select t1.biomarker_description from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id where t2.expression_score > ( select avg(expression_score) from healthy_expression)
+select expression_score from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select expression_level_gene_relative from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select expression_level_gene_relative from healthy_expression group by expression_level_gene_relative having sum(expression_score) > (select avg(expression_score) from healthy_expression)
+select expression_level_gene_relative from healthy_expression group by expression_level_gene_relative having avg(expression_score) > (select avg(expression_score) from healthy_expression)
+select expression_level_anatomical_relative from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select expression_score from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select distinct expression_score from healthy_expression where expression_score > (select avg(expression_score) from healthy_expression)
+select expression_level_gene_relative from healthy_expression group by expression_level_gene_relative having sum(expression_score) > (select avg(expression_score) from healthy_expression)
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t2.biomarker_type = 'genomic' and t3.name = 'breast'
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'genomic' and t2.uberon_anatomical_id = 'breast'
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t2.biomarker_type = "genomic" and t3.name = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = "genomic" and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'genomic' and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'genomics' and t2.uberon_anatomical_id = 'breast'
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t2.biomarker_type = 'genomics' and t3.name = 'breast'
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = "genomics" and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'Genomic' and t2.uberon_anatomical_id = 'breast'
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'Genomic' and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'Genomics' and t2.uberon_anatomical_id = 'breast'
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = "Genomic" and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'Genomics' and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = 'Genomic' and t2.uberon_anatomical_id = 'breast';
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.biomarker_type = "Genomics" and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where biomarker_type = 'Genomic' and t2.uberon_anatomical_id = 'breast'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = 'liver'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = "liver"
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = t2.uberon_anatomical_id group by t2.disease_mutation_id having t1.name like '%liver%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = t2.uberon_anatomical_id group by t2.disease_mutation_id having t1.name like "%liver%"
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = t2.uberon_anatomical_id group by t1.name having count(*) >= 2
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = t2.uberon_anatomical_id group by t2.disease_mutation_id having t1.id like '%liver%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = t2.uberon_anatomical_id group by t1.name having count(*) >= 1
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = t2.uberon_anatomical_id group by t2.disease_mutation_id having t2.uberon_anatomical_id = t2.uberon_anatomical_id
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = "liver"
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t3.name = 'liver'
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t3.name = 'liver'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t3.name = "liver"
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join anatomical_entity as t3 on t3.id = t2.uberon_anatomical_id where t3.name = "liver"
+select t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = "liver"
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t2.uberon_anatomical_id = 'liver'
+select distinct t2.name from disease_mutation_tissue as t1 join disease as t2 on t1.disease_mutation_id = t2.id where t1.uberon_anatomical_id = "liver"
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id join biomarker_fda_test as t3 on t1.test_trade_name = t3.test_trade_name and t1.test_submission = t3.test_submission
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id join biomarker_fda_test as t3 on t1.test_trade_name = t3.test_trade_name and t3.test_submission = t4.test_submission join biomarker_fda as t4 on t2.biomarker_
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t1.test_manufacturer = t2.
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id join biomarker_fda_test as t3 on t1.test_trade_name = t3.test_trade_name and t3.test_submission = t4.test_submission join biomarker_fda on t2.
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id join biomarker_fda_test as t3 on t1.test_trade_name = t3.test_trade_name and t3.test_submission = t4.test_submission join
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id join biomarker_fda_test as t3 on t1.test_trade_name = t3.test_trade_name and t3.test_submission = t4.test_submission join biomarker_fda as t4 on t3.biomarker_
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join cancer_tissue as t2 on t2.uberon_anatomical_id = t2.uberon_anatomical_id join biomarker_fda_test as t3 on t1.test_trade_name = t3.test_trade_name and t3.test_submission = t4.test_submission join biomarker_fda as t4 on t
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda
+select distinct test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda as t2
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fd
+select distinct test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda as t2
+select distinct test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda_test
+select distinct test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.id where t1.gene_symbol = 'BRAF
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.id where t1.gene_symbol =
+select name from anatomical_entity union select speciescommonname from species
+select name from anatomical_entity union select species from species
+select name from anatomical_entity join species on speciesid = speciesid
+select t1.name, t2.speciescommonname from anatomical_entity as t1 join species as t2 on t1.id = t2.speciesid
+select t1.name, t2.speciescommonname from anatomical_entity as t1 join species as t2 on t1.id=t2.speciesid
+select t1.name, t2.speciescommonname from anatomical_entity as t1 join species as t2 on t1.id = t2.speciesiD
+select t1.name, t2.speciescommonname from anatomical_entity as t1 join species as t2 on t1.id = t2.species
+select t1.name, t2.speciescommonname from anatomical_entity as t1 join species as t2 on t1.id = t2.speciesid join disease_mutation_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_anatomical_
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t1.ensembl_gene_id = t2.gene_symbol where t2.gene_symbol = "A1BG"
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t1.ensembl_gene_id = t2.gene_symbol where t2.gene_symbol = 'A1BG'
+select distinct uberon_anatomical_id from healthy_expression where ensembl_gene_id = 'A1BG'
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t1.ensembl_gene_id = t2.gene_symbol where t2.gene_symbol = "a1bg"
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t2.biomarker_id = t1.ensembl_gene_id where t2.gene_symbol = "A1BG"
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t2.biomarker_id = t1.ensembl_gene_id where t2.gene_symbol = 'A1BG'
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t1.ensembl_gene_id = t2.gene_symbol where t2.gene_symbol = "A1B"
+select distinct t1.uberon_anatomical_id from healthy_expression as t1 join biomarker as t2 on t1.ensembl_gene_id = t2.gene_symbol where t2.gene_symbol = 'A1BG%'
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 1 and t2.uberon_anatomical_id = "breast"
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 1 and t2.biomarker_type = 'breast'
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 1 and t2.uberon_anatomical_id = 'breast'
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_anatomical_id group by t3.uberon_anatomical_id having phase = 1
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id group by t3.uberon_anatomical_id having phase = 1
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 1 and t2.biomarker_type = 'Breast'
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 1 and t2.biomarker_type = "breast"
+select t1.gene_symbol, t1.biomarker_description from biomarker as t1 join biomarker_edrn as t2 on t1.biomarker_id = t2.id where t2.phase = 1 and t2.uberon_anatomical_id = "breast";
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 'ENSMUSG00000000037' or t2.ensembl_gene_id = 'ENSMUSG00000000078'
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 'ENSMUSG00000000037' or t2.ensembl_gene_id = 'ENSMUSG00000000078'
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 00000000037 or t2.ensembl_gene_id = 00000000078
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 'ENSMUSG00000000038' or t2.ensembl_gene_id = 'ENSMUSG00000000078'
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 00000000037 union select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = t2.uberon_anatomical_id
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 00000000037 union select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 000000000000078
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 00000000037 union select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 0000000000078
+select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 00000000037 union select t1.name, t2.expression_score from anatomical_entity as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id where t2.ensembl_gene_id = 0000000000000078
+select t1.ncit_biomarker from biomarker_fda_ncit_term as t1 join biomarker as t2 on t1.biomarker_fda_id = t2.biomarker_id where t2.gene_symbol = "ALDH4A1"
+select t1.ncit_biomarker from biomarker_fda_ncit_term as t1 join biomarker as t2 on t1.biomarker_fda_id = t2.biomarker_id where t2.gene_symbol = 'ALDH4A1'
+select ncit_biomarker from biomarker_fda_ncit_term as t1 join biomarker as t2 on t1.biomarker_fda_id = t2.biomarker_id where t2.gene_symbol = "ALDH4A1"
+select ncit_biomarker from biomarker_fda_ncit_term as t1 join biomarker as t2 on t1.biomarker_fda_id = t2.biomarker_id where t2.gene_symbol = 'ALDH4A1'
+select ncit_biomarker, t1.biomarker_id from biomarker as t1 join biomarker_fda_ncit_term as t2 on t1.biomarker_id = t2.biomarker_fda_id where t1.gene_symbol = "ALDH4A1"
+select t1.ncit_biomarker from biomarker_fda_ncit_term as t1 join biomarker as t2 on t1.biomarker_fda_id = t2.biomarker_id where t2.gene_symbol = "ALDH4A1";
+select t1.ncit_biomarker from biomarker_fda_ncit_term as t1 join biomarker as t2 on t1.biomarker_fda_id = t2.biomarker_id where t2.gene_symbol = "aldh4a1"
+select ncit_biomarker, t1.biomarker_id from biomarker as t1 join biomarker_fda_ncit_term as t2 on t1.biomarker_id = t2.biomarker_fda_id where t1.gene_symbol = 'ALDH4A1'
+select * from disease_mutation_tissue where uberon_anatomical_id = "liver"
+select * from disease_mutation_tissue where uberon_anatomical_id = 'liver'
+select * from disease_mutation_tissue as t1 join disease as t2 on t1.disease_mutation_id = t2.id where t1.uberon_anatomical_id = "liver"
+select distinct * from disease_mutation_tissue as t1 join disease as t2 on t1.disease_mutation_id = t2.id where t1.uberon_anatomical_id = "liver"
+select * from disease_mutation_tissue as t1 join disease as t2 on t1.disease_mutation_id = t2.id where t1.uberon_anatomical_id = 'liver'
+select distinct * from disease_mutation_tissue as t1 join disease as t2 on t1.disease_mutation_id = t2.id where t1.uberon_anatomical_id = 'liver'
+select * from disease_mutation_tissue where uberon_anatomical_id = "liver";
+select distinct * from disease_mutation_tissue where uberon_anatomical_id = "liver"
+select t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "liver"
+select distinct t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "liver"
+select t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name = 'liver'
+select t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "Liver"
+select distinct t2.disease_mutation_id from anatomical_entity as t1 join disease_mutation_tissue as t2 on t1.id = t2.uberon_anatomical_id where t1.name = "liver"
+select t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name like "%liver%"
+select t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name = "liver";
+select t1.disease_mutation_id from disease_mutation_tissue as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id where t2.name = 'Liver'
+select t1.gene_symbol from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where t2.
+select t1.gene_symbol from biomarker as t1 join biomarker_fd
+select t1.gene_symbol from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.id where t2.test_
+select gene_symbol from biomarker as t1 join biomarker_fda_test
+select
+oncomx
+select
+select t
+select biomarker_description from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join cancer_tissue as t2 on t1.biomarker_id = t2.uberon_anatomical_id)
+select biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id
+select biomarker_description from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id)
+select biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id where t2.disease_mutation_id = 'breast cancer'
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id where t2.disease_mutation_id = 'breast cancer'
+select biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_anatomical_id
+select biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id where t2.disease_mutation_id = 'breast'
+select t2.name, count(*) from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id group by t2.id
+select t1.name, count(*) from anatomical_entity as t1 join biomarker as t2 on t1.id = t2.biomarker_id group by t1.id
+select t2.name, count(*) from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id group by t2.name
+select t2.name, count(*) from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id group by t1.uberon_anatomical_id
+select t1.name, count(*) from anatomical_entity as t1 join biomarker as t2 on t1.id = t2.biomarker_id group by t1.name
+select t2.name, count(*) from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id= t2.id group by t2.id
+select t2.name, count(*) from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id group by t1.id
+select t2.name, count(*) from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id= t2.id group by t2.name
+select * from disease_mutation where ref_aa = 'F'
+select * from disease_mutation where ref_aa = "F"
+select * from disease_mutation where ref_aa >= "F"
+select * from disease_mutation where ref_aa >= 'F'
+select * from disease_mutation where ref_aa = 0
+select * from disease_mutation where ref_aa = 'F%'
+select * from disease_mutation where ref_aa = 'F'
+select * from disease_mutation where ref_aa = 'f'
+select * from disease where name like '%cancer%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancer%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id join cancer_tissue as t3 on t2.uberon_anatomical_id = t3.uberon_anatomical_id where t1.name like '%cancer%'
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like "%cancer%"
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancer%' or t1.name like '%disease_mutation_id%'
+select * from disease where name like "%cancer%"
+select distinct t1.name from disease as t1 join disease_mutation_tissue as t2 on t1.id = t2.disease_mutation_id where t1.name like '%cancerous%'
+select distinct t1.test_manufacturer from biomarker_fda_test as t1 join disease_mutation_tissue as t2 on t1.biomarker_
+select distinct test_manufacturer from biomarker_fda_test where gene_symbol = 'BRAF%
+select distinct test_manufacturer from biomarker_fda_test as t1
+select distinct test_manufacturer from biomarker_fda_test as t1 join biomarker as t2 on
+select distinct
+select distinct
+select distinct
+oncomx
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_id having count(*) >= 2
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_description having count(*) >= 2
+select t1.biomarker_description, t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_id having count(*) >= 2
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_id having count(*) >= 1
+select t1.biomarker_description, t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_id having count(*) >= 1
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_description having count(*) >= 1
+select t1.biomarker_description from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_id having t2.disease_mutation_id >= 2
+select t1.biomarker_description, t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id group by t1.biomarker_id having t2.disease_mutation_id >= 2
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_
+select t1.biomarker_description from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.biomarker_
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id + t2.test_submission = t2.test_submission join disease_mutation_tissue as t3 on t3.disease_mutation_id
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id + t2.test_submission = t2.test_submission
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.biomarker_
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_internal_i
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_internal_
+select t1.biomarker_description, t2.test_trade_name from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.biomarker_internal_i
+select test_manufacturer from biomarker_fda_test where biomarker_origin = 'breast cancer'
+select test_manufacturer from biomarker_fda_test where biomarker_origin = 'breast_cancer'
+select test_manufacturer from biomarker_fda_test where biomarker_origin = 'breast_cancer'
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fd
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.biomarker_
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select biomarker_id from biomarker
+select test_manufacturer from biomarker_fda_test where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_trade_name = t2.test_trade_name join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uber
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission join cancer_tissue
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_trade_name = t2.test_trade_name join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_an
+select test_trade_name from biomarker_fda_test_use where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_internal_
+select t1.test_trade_name from biomarker_fda_test as t1 join biomarker_fda_test_use as t2 on t1.test_submission = t2.test_submission join cancer_tissue as t3 on t3.uberon_anatomical_id = t2.uberon_an
+select test_trade_name from biomarker_fda_test_use where biomarker_id in (select t1.biomarker_id from biomarker as t1 join biomarker_fda_test_use as t2 on t1.biomarker_id = t2.biomarker_internal_
+select
+select
+select t1.name from anatomical_entity as t1 join biomarker_edrn as t2 on t1.id = t2.uberon_anatomical_id group by t1.id order by count(*) desc limit 1
+select t1.name from anatomical_entity as t1 join biomarker_edrn as t2 on t1.id = t2.uberon_anatomical_id group by t1.name order by count(*) desc limit 1
+select t2.name from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id group by t2.name order by count(*) desc limit 1
+select t2.name from biomarker_edrn as t1 join anatomical_entity as t2 on t1.uberon_anatomical_id = t2.id group by t2.id order by count(*) desc limit 1
+select t1.description from anatomical_entity as t1 join biomarker_edrn as t2 on t1.id = t2.uberon_anatomical_id group by t1.description order by count(*) desc limit 1
+select t1.name from anatomical_entity as t1 join disease_mutation_tissue as t2 on t1.id = t2.uberon_anatomical_id group by t1.id order by count(*) desc limit 1
+select t1.name from anatomical_entity as t1 join biomarker as t2 on t1.id = t2.biomarker_id group by t1.id order by count(*) desc limit 1
+select t1.name from anatomical_entity as t1 join biomarker_edrn as t2 on t1.id = t2.uberon_anatomical_id group by t1.id order by count(*) desc limit 1;
+select chromosome_id from disease_mutation group by chromosome_id order by count(*) desc limit 1
+select t1.chromosome_id from disease_mutation as t1 join healthy_expression as t2 on t1.chromosome_id = t2.uberon_anatomical_id group by t1.chromosome_id order by count(*) desc limit 1
+select t1.chromosome_id from disease_mutation as t1 join healthy_expression as t2 on t1.id = t2.uberon_anatomical_id group by t1.chromosome_id order by count(*) desc limit 1
+select chromosome_id from disease_mutation where data_source = 'Cosmic' group by chromosome_id order by count(*) desc limit 1
+select chromosome_id, count(*) from disease_mutation group by chromosome_id order by count(*) desc limit 1
+select chromosome_id from disease_mutation where data_source = 'cosmic' group by chromosome_id order by count(*) desc limit 1
+select t1.chromosome_id from disease_mutation as t1 join healthy_expression as t2 on t1.chromosome_id = t2.uberon_anatomical_id group by t1.chromosome_id order by count(*) desc limit 1
+select t1.chromosome_id from disease_mutation as t1 join healthy_expression as t2 on t1.chromosome_id = t2.uberon_anatomical_id group by t1.chromosome_Id order by count(*) desc limit 1
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count(*) desc limit 3
+select biomarker_type from biomarker_edrn group by biomarker_type order by count(*) desc limit 3
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count(*) desc limit 3;
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count(*), t2.statistical_significance desc limit 3
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count(*), t2.pvalue desc limit 3
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count( *) desc limit 3
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count(*) desc limit 1
+select t1.biomarker_type from biomarker_edrn as t1 join differential_expression as t2 on t1.id = t2.gene_symbol group by t1.biomarker_type order by count (*) desc limit 3
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id except select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id join biomarker_fda as t3 on t2.biomarker_id = t3.id
+select biomarker_type from biomarker_edrn where id not in (select biomarker_fda_id from biomarker_fda_ncit_term)
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id except select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id join biomarker_fda_ncit_term as t3 on t2.biomarker_id = t3.biomarker_fda_id
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id except select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id join biomarker_fda_test_use as t3 on t2.biomarker_id = t3.id
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id except select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id join biomarker_fda as t3 on t2.biomarker_id = t3.id where t2.biomarker_id = t3.id
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id except select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id
+select id from biomarker_edrn except select id from biomarker_fda
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id except select t1.biomarker_title from biomarker_edrn as t1 join biomarker as t2 on t1.id = t2.biomarker_id join biomarker_fda as t3 on t2.biomarker_id = t3.id where t2.biomarker_id = (select biomarker_id)
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker_fda_test_use as t2 on t1.id = t2.biomarker_fd
+select t1.biomarker_title from biomarker_edrn as t1 join biomarker_fda_test_use as t2 on t1.id = t2.biomarker_fdA_i
+select t1.biomarker_title
+select
+oncomx
+select
+on
+select
+select data_source, chromosome_id from disease_mutation group by chromosome_id order by count(*) desc limit 1
+select data_source, chromosome_id from disease_mutation group by data_source
+select data_source, count(*) from disease_mutation group by data_source
+select data_source, count(*) from disease_mutation group by chromosome_id
+select data_source, chromosome_id, count(*) from disease_mutation group by chromosome_id
+select data_source, chromosome_id, count(*) from disease_mutation group by chromosome_id order by count(*) desc limit 1
+select data_source from disease_mutation group by data_source order by count(*) desc limit 1
+select data_source, chromosome_id from disease_mutation group by data_source, chromosome_id
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id)
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join cancer_tissue as t2 on t1.biomarker_id = t2.uberon_anatomical_id)
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id)
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id) and t2.expression_level_gene_relative >=
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id) and t2.expression_level_anatomical_relative >=
+select gene_symbol from biomarker where biomarker_id in (select t1.biomarker_id from biomarker as t1 join disease_mutation_tissue as t2 on t1.biomarker_id = t2.disease_mutation_id) and t2.expression_level_anatomical_relative >=
+select gene_symbol from biomarker
+select t1.biomarker_id, count(*) from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_
+select count(*), t1.biomarker_id from biomarker as t1 join biomarker_fda_test as t2 on t1.biomarker_id = t2.biomarker_
+select t1.biomarker_id, count(*) from biomarker as t1 join biomarker_fda as t2 on t1.biomarker_id = t2.biomarker_
+select
+select count
+oncomx
+select
+on
+select test_trade_name from biomarker_fda_test_use where approved_indication = "diagnosis"
+select test_trade_name from biomarker_fda_test_use where approved_indication = "Diagnostic"
+select test_trade_name from biomarker_fda_test_use where approved_indication = 'Diagnostic'
+select test_trade_name from biomarker_fda_test_use where approved_indication = 'Diagnosis'
+select test_trade_name from biomarker_fda_test_use where approved_indication = "Diagnosis"
+select test_trade_name from biomarker_fda_test_use where approved_indication = 'Diagnose'
+select test_trade_name from biomarker_fda_test_use where approved_indication = 'diagnosis'
+select test_trade_name from biomarker_fda_test_use where approved_indication = "Diagnose"
+select test_manufacturer from biomarker_fda_test where test_approval_status = 'Approved' and test_submission = 'Test_submission'
+select test_manufacturer from biomarker_fda_test where test_approval_status = 'Approved' and test_submission = 'Test_Submission'
+select test_manufacturer from biomarker_fda_test where test_approval_status = 'Approved' and test_submission = 'Test_Submission'
+select test_manufacturer from biomarker_fda_test where test_approval_status = 'Approved' and test_submission = 'Test_submission'
+select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_submission = t2.test_submission
+select test_manufacturer from biomarker_fda_test where test_approval_status = 'Approved'
+select t1.test_manufacturer from biomarker_fda_test as t1 join biomarker_fda as t2 on t1.test_trade_name = t2.test_trade_name
+select test_manufacturer from biomarker_fda_test
+select distinct t1.name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 'yes'
+select distinct t1.name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 'Yes'
+select distinct name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 'Yes'
+select distinct name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 'yes'
+select distinct t1.name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 1
+select distinct name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 1
+select distinct t1.name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 'Yes' or t2.test_is_a_panel = 'No'
+select distinct t1.name from disease as t1 join biomarker as t2 on t1.id = t2.biomarker_id where t2.test_is_a_panel = 'yes' or t2.test_is_a_panel = 'No'
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid = t2.uberon_anatomical_id
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.id = t2.ensembl_gene_id join species as t3 on t3.speciesid = t2.uberon_anatomical_id
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid= t2.uberon_anatomical_id
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid = t2.uberon_anatomical_id
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid=t2.uberon_anatomical_id
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid= t2.uberon_anatomical_id
+select t1.biomarker_id, t3.speciesid from biomarker as t1 join healthy_expression as t2 on t1.biomarker_id = t2.ensembl_gene_id join species as t3 on t3.speciesid = t2.uberon_anatomical_Id

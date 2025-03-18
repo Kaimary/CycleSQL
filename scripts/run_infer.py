@@ -1,10 +1,11 @@
+from copy import deepcopy
 import os, json, torch, argparse, sqlite3
 from tqdm import tqdm
 from typing import Union
 from prettytable import PrettyTable
 
 from transformers import AutoConfig, AutoModelForSequenceClassification, AutoTokenizer
-from spider_utils.evaluation import build_foreign_key_map_from_json, build_valid_col_units, rebuild_sql_col, rebuild_sql_val
+from spider_utils.evaluation import build_foreign_key_map_from_json, build_valid_col_units, eval_exec_match1, rebuild_sql_col, rebuild_sql_val
 
 from spinner import Spinner
 from src.explainer import Explainer
@@ -60,6 +61,8 @@ if __name__ == '__main__':
     prev_db_id = None
     outputs, outputs2 = [], []
     for idx, ex in tqdm(enumerate(data), total=len(data)):
+        gold_idx=-1
+        
         db_id = ex['db_id']
         if db_id != prev_db_id:
             db_file = os.path.join(args.db_dir, db_id, f'{db_id}.sqlite')
@@ -74,10 +77,19 @@ if __name__ == '__main__':
         gold = ex['query']
         try: g_sql, _ = get_sql(schema2ids, gold)
         except: pass
-    
+
         sqls = []
         pred = None
         beams = beam_preds[idx*args.beam_size: (idx+1)*args.beam_size]
+        for idx, sql in enumerate(beams):
+            try: 
+                p_sql, _ = get_sql(schema2ids, sql)
+                if eval_exec_match1(db_file, sql, gold, deepcopy(p_sql), deepcopy(g_sql)) == 1: 
+                    gold_idx=idx
+                    break
+            except:
+                continue
+            
         for idy, sql in enumerate(beams):
             try:
                 if nl2tuple:
@@ -148,6 +160,48 @@ if __name__ == '__main__':
                     predicted_class_id = logits.argmax().item()
                     if predicted_class_id == 0: # entailment
                         pred = sql
+                        if eval_exec_match1(db_file, sql, gold, deepcopy(p_sql), deepcopy(g_sql)) != 1 and gold_idx > -1:
+                            p_sql, _ = get_sql(schema2ids, beams[gold_idx])
+                            # Generate natural language explanation (and result)
+                            rewrite_sql = rewrite_asterisk_query(sql, schema, db_file)
+                            p_rewrite_sql, table2alias = get_sql(schema2ids, rewrite_sql)
+                            result_set: Union[list, list, list] = execute_sqlite_query(rewrite_sql, p_rewrite_sql, db_file)  # rows, cols, types
+                            if not result_set[1]: continue # skip if sql is invalid
+                            print(f"\nNL query: {nl}\nPredicted SQL index: {idx}\nPredicted SQL: {sql}\nPredicted SQL Explanation:{exp}\nResult: {result}")
+                            # To have `accurate` join semantics, we calculate the statistics of the newly (joined) table
+                            # and determine the semantics of `asterisk` symbol in SQL from statistics
+                            table2statistics = get_db_statistics(sql, p_sql, table2alias, schema, cursor)
+                            join_semantics, group_semantics = parse_query_semantics(p_sql, schema, relation2tables, table2statistics)
+                            
+                            # Overall explanation of the query execution with following aspects:
+                            # - row and column counts the query returned
+                            # - any filtering criteria (WHERE clause)
+                            # - any sorting criteria (ORDER LIMIT clause)
+                            filtering_modifier: str = clause2dialect(p_sql, schema, group_semantics, cls_type='where', prefix='filtered by ', bracket=True)
+                            filtering_modifier += clause2dialect(p_sql, schema, group_semantics, cls_type='having', prefix=' and ', bracket=True) if filtering_modifier else \
+                                clause2dialect(p_sql, schema, group_semantics, cls_type='having', prefix='filtered by ', bracket=True)
+                            sorting_modifier: str = clause2dialect(p_sql, schema, group_semantics, cls_type='orderBy', prefix='sorted ', bracket=True)
+                            exp = f'The query returns a result set with {len(result_set[1])} column{"s" if len(result_set[1]) > 1 else ""} ' + \
+                                f'[{", ".join([f"{c}" if any(kw in "".join(c.split()).lower() for kw in EXCLUDE_KEYWORDS) or t== "NoneType" else f"{c} ({t})" for c, t in zip(result_set[1], result_set[2])])}] and ' + \
+                                f'{len([r for r in result_set[0] if any(c for c in r)])} row{"s" if len(result_set[0]) > 1 else ""}{", " if filtering_modifier else ""}' + \
+                                f'{filtering_modifier if filtering_modifier else ""}{", " if sorting_modifier else ""}{sorting_modifier if sorting_modifier else ""}.'
+
+                            # If no provenance, only use the above `overall explanation` and skip explanation process
+                            if not result_set[0] or all(r is None for r in result_set[0][0]):
+                                result = ''
+                            else:
+                                exp += f'{" Among them, t" if len(result_set[0]) > 1 else " T"}he result, {"for example, " if len(result_set[0]) > 1 else ""}'
+                                # Randomly select one to-explained query result
+                                to_explain_result: PrettyTable = \
+                                    get_one_query_result(result_set, p_rewrite_sql, None)
+                                explainer.set_database_context(db_id, schema, schema2ids, relation2tables, table2statistics, table2alias, join_semantics, group_semantics)
+                                explainer.set_context(question=nl, sql=rewrite_sql, parsed_sql=p_rewrite_sql, result=to_explain_result)
+                                # Specific explanation of the query execution on one specific query result
+                                exp += explainer.explain()
+                                result = ", ".join([f"{field}: {value}" for field, value in \
+                                    zip(to_explain_result.field_names, to_explain_result.rows[0])]).strip()
+                                
+                            print(f"Gold SQL Index: {gold_idx}\nGold SQL: {gold}\nGold SQL Explanation: {exp}\nResult: {result}")
                         break
                 # data['label'] = 0 if eval_exec_match1(db_file, sql, gold, deepcopy(p_sql), deepcopy(g_sql)) == 1 else 1
             except: continue

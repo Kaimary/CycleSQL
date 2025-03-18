@@ -106,7 +106,7 @@ def result_eq(result1: List[Tuple], result2: List[Tuple], order_matters: bool) -
     # if one of the permutation make result_1, result_2 equivalent, then they are equivalent
     for perm in get_constraint_permutation(tab1_sets_by_columns, result2):
         if len(perm) != len(set(perm)):
-            continue
+            return False
         if num_cols == 1:
             result2_perm = result2
         else:
