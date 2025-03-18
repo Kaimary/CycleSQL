@@ -68,14 +68,15 @@ pip install -r requirements.txt
 2. Download the [Spider](https://yale-lily.github.io/spider) and the other three robustness variants ([Spider-Realistic](https://drive.google.com/file/d/19tsgBGAxpagULSl9r85IFKIZb4kyBGGu/view?usp=sharing),  [Spider-Sync](https://drive.google.com/file/d/19tsgBGAxpagULSl9r85IFKIZb4kyBGGu/view?usp=sharing), and [Spider-DK](https://drive.google.com/file/d/19tsgBGAxpagULSl9r85IFKIZb4kyBGGu/view?usp=sharing)), and put the data into the <strong>data</strong> folder. Unpack the datasets and create the following directory structure:
 ```
 /data
-├── database
-│   └── ...
-├── dev.json
-├── dev_gold.sql
-├── tables.json
-├── train_gold.sql
-├── train.json
-└── train.json
+├── spider
+│   └── database
+│   |   └── ...
+│   ├── dev.json
+│   ├── dev_gold.sql
+│   ├── tables.json
+│   ├── train_gold.sql
+│   ├── train.json
+│   └── train.json
 ```
 
 
@@ -99,10 +100,26 @@ Model  | Download Model
 put the model checkpoint put the data into the <strong>saved_models</strong> folder.
 
 ## 👀 Inference
-The evaluation script is located in the root directory `run_inference.sh`.
+The evaluation script is located in the root directory `run_infer.sh`.
 You can run it with:
 ```
 $ bash run_infer.sh <dataset_name> <model_name> <test_file_path> <model_raw_beam_output_file_path> <table_path> <db_dir> <test_suite_db_dir>
 ```
 
-The evaluation script will create the directory `outputs` in the current directory and generate the result outcomes.
+Here is a running example for CycleSQL with the RESDSQL model on the Spider Dev dataset:
+```
+$ bash run_infer.sh spider_dev resdsql data/spider/dev.json beam_outputs/raw/spider/resdsql.dev.beam8.txt data/spider/tables.json data/spider/database data/spider/ts_database
+```
+The evaluation script will create the directory `outputs` in the current directory and generate the following result outcomes:
+```shell
+|-- <dataset_name>
+    |-- <base_model_name>
+       |-- pred.txt # top-1 sql outputs from CycleSQL
+       |-- eval_result.txt # evaluation results (utilized Spider evaluation script)
+```
+
+
+## 🌈 Contributing
+This project welcomes contributions and suggestions 👍. 
+
+If you find bugs in our code, encounter problems when running the code, or have suggestions for CycleSQL, please submit an issue or reach out to me (kaimary1221@163.com)!
