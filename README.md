@@ -95,7 +95,7 @@ The natural language inference model checkpoint will be uploaded in the followin
 
 Model  | Download Model
 ----|----
-`nli-classifier`  | [nli-classifier.tar.gz]([https://drive.google.com/file/d/13oOEkAHwF7i0iiWgVBdcMBR8lijEuF4o/view?usp=share_link](https://drive.google.com/file/d/1Efe3zsh9HaxX3FVhu7SvwynLFs6KJaLp/view?usp=sharing))
+`nli-classifier`  | [nli-classifier.tar.gz](https://drive.google.com/file/d/1Efe3zsh9HaxX3FVhu7SvwynLFs6KJaLp/view?usp=sharing)
 
 put the model checkpoint put the data into the <strong>saved_models</strong> folder.
 
