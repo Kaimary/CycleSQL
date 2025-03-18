@@ -79,6 +79,21 @@ pip install -r requirements.txt
 │   └── train.json
 ```
 
+### 🌪️ Try it
+
+Try to run CycleSQL (with the RESDSQL model) using corresponding beam outputs on the Spider Dev dataset:
+```
+$ bash run_infer.sh spider_dev resdsql data/spider/dev.json beam_outputs/raw/spider/resdsql.dev.beam8.txt data/spider/tables.json data/spider/database data/spider/ts_database
+```
+
+After running, the directory `outputs` will be generated in the current directory with the following outcomes:
+```shell
+|-- spider # dataset name
+    |-- resdsql # base model name
+       |-- pred.txt # top-1 sql outputs from CycleSQL
+       |-- eval_result.txt # evaluation results (utilized Spider evaluation script)
+```
+
 ### 📚 Code Structure
 
 - Here is an overview of the code structure:
@@ -118,14 +133,6 @@ The evaluation script is located in the root directory `run_infer.sh`.
 You can run it with:
 ```
 $ bash run_infer.sh <dataset_name> <model_name> <test_file_path> <model_raw_beam_output_file_path> <table_path> <db_dir> <test_suite_db_dir>
-```
-
-The evaluation script will create the directory `outputs` in the current directory and generate the following result outcomes:
-```shell
-|-- <dataset_name>
-    |-- <base_model_name>
-       |-- pred.txt # top-1 sql outputs from CycleSQL
-       |-- eval_result.txt # evaluation results (utilized Spider evaluation script)
 ```
 
 
