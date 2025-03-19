@@ -126,7 +126,7 @@ Model  | Download Link
 ----|----
 `nli-classifier`  | [nli-classifier.tar.gz](https://drive.google.com/file/d/1Efe3zsh9HaxX3FVhu7SvwynLFs6KJaLp/view?usp=sharing)
 
-put the model checkpoint put the data into the <strong>saved_models</strong> folder.
+Just put the model checkpoint into the <strong>saved_models/checkpoint-500</strong> folder.
 
 ## 👀 Inference
 The evaluation script is located in the root directory `run_infer.sh`.
