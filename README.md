@@ -34,7 +34,7 @@ The objective of NL2SQL translation is to convert a natural language query into 
 
 While significant advancements in enhancing overall translation accuracy, current end-to-end models face persistent challenges in producing desired quality output during their initial attempt, owing to the treatment of language translation as a "one-time deal".
 
-To tackle the problem, Cyclesql introduces natural language explanations of query results as self-provided feedback and uses the feedback to validate the correctness of the translation iteratively, hence improving the overall translation accuracy. 
+To tackle the problem, CycleSQL introduces natural language explanations of query results as self-provided feedback and uses the feedback to validate the correctness of the translation iteratively, hence improving the overall translation accuracy. 
 
 This is the approach used in the CycleSQL method.
 
