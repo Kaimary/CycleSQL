@@ -4,7 +4,7 @@ from colorama import Fore, Style
 from prettytable import PrettyTable
 
 from spider_utils.process_sql import get_sql
-from src.refiner.refiner import Refiner
+# from src.refiner.refiner import Refiner
 from src.translator.xql2nl import Translator
 from src.annotator.annotate import Annotator
 from src.utils import EXCLUDE_KEYWORDS, Query_type, break_down_query, clause2dialect, execute_sqlite_query, extract_parsed_from_structure, \
@@ -24,7 +24,7 @@ class Explainer:
 
         self._annotator = Annotator()
         self._translator = Translator()
-        self._refiner = Refiner()
+        # self._refiner = Refiner()
     
         self._db_id = None
 
